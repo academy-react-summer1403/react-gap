@@ -1,19 +1,52 @@
-import Footer from '../component/common/Footer/Footer';
-import Landing from '../screens/Landing';
+import { createBrowserRouter, 
+  RouterProvider } 
+  from 'react-router-dom';
+
+
 import './App.css'
 import React from 'react'
+import Error404 from '../component/Error404/Error404';
+import Layout from '../component/Layout/Layout';
+import Landing from '../component/LandingHolder/Landing';
+import Login from '../component/LoginForm/Login';
+
 
 const index = () => {
-  return (
+
+  const Routers = createBrowserRouter([
+    {
+      path:'/',
+      element:<Layout/>,
+      children:[
+         {
+          path:'/landing',
+          element:<Landing/>,
+         
+        },
+        {
+          path:'/Error',
+          element:<Error404/>,
+        
+        },
+        {
+          path:'/Login',
+          element:<Login/>,
+        
+        },
+
+       
+
+       
+        
+      ]
+    }
+  ])
+ 
+  return(
     <div>
-
-      {/* Routers */}
-
-      <Landing/>
-      
-     
-      
+      <RouterProvider router={Routers}/>
     </div>
+
   )
 }
 
