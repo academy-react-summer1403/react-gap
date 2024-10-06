@@ -11,13 +11,14 @@ const Header = () => {
        <div> دوره ها </div>
        <div> مقالات </div>
        <div> درباره ما </div>
+       
       <div>
         <img src="" alt="" />
       </div>
 
       <button> ثبت نام / ورود </button>
  
-    
+     
 
     </div>
 
