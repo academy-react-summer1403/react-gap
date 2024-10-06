@@ -1,11 +1,19 @@
 import React from 'react'
+import HeroSection from './HeroSection'
 
 const Landing = () => {
   return (
-    <div className='border-2 w-96 h-10'>
+    <HeroSection/>
+
+
    
-    </div>
+
+
+
+
   )
+
+ 
 }
 
 export default Landing

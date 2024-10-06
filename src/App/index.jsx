@@ -19,7 +19,7 @@ const index = () => {
       element:<Layout/>,
       children:[
          {
-          path:'/landing',
+          path:'/',
           element:<Landing/>,
          
         },
