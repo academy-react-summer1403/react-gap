@@ -5,19 +5,19 @@ import HeroSection from '../../component/LandingHolder/HeroSection';
 
 
 const Landing = () => {
-  return (
-    <div>
+    return (
+      <div>
 
-     <Header/>
+      <Header/>
 
-     <HeroSection/>
+      <HeroSection/>
 
-     <Footer/>
-   
+      <Footer/>
+    
 
-     
-    </div>
-  )
+      
+      </div>
+    )
 }
 
 export default Landing;
