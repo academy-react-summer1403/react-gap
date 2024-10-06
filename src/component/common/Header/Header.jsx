@@ -10,19 +10,19 @@ const Header = () => {
 
 
 
-            <div className=' flex  gap-2 border-2 w-60 h-10 m-6'>
+            <div className=' flex  gap-2  w-60 h-10 m-6'>
             <div className='border-2 w-9 h-10' ><img src="" alt="" /></div>
-             <h1> آکادمی اچ وان </h1>
+             <h1 className='text-[#22445D;] font-inter'> آکادمی اچ وان </h1>
             </div>
      
      
        
-       <div className='flex gap-6 justify-center border-2 w-96 h-10 m-6'>
+       <div className='flex gap-6 justify-center w-96 h-10 m-6'>
 
-       <button className='border-2 w-360 h-10 font-inter'> صفحه اصلی </button>
-       <div> دوره ها </div>
-       <div> مقالات </div>
-       <div> درباره ما </div>
+       <button className='w-[110px] h-[37px] bg-[#6D676757;] rounded-lg text-[#22445D;] font-inter'> صفحه اصلی </button>
+       <div className='text-[#22445D;]'> دوره ها </div>
+       <div  className='text-[#22445D;]' > مقالات </div>
+       <div  className='text-[#22445D;]'> درباره ما </div>
 
        </div>
        
@@ -32,7 +32,7 @@ const Header = () => {
 
 
 <div className='m-6'>
-   <button> ثبت نام / ورود </button>
+   <button className='w-[110px] h-[37px] bg-[#00DF9D;] rounded-lg text-[#22445D;]  font-inter'> ثبت نام / ورود </button>
  
 </div>
      
