@@ -13,52 +13,43 @@ import Login from '../component/LoginForm/Login';
 
 const index = () => {
 
-  const Routers = createBrowserRouter([
-    {
-      path:'/',
-      element:<Layout/>,
-      children:[
-         {
-          path:'/landing',
-          element:<Landing/>,
-         
-        },
-        {
-          path:'/Error',
-          element:<Error404/>,
+    const Routers = createBrowserRouter([
+      {
+        path:'/',
+        element:<Layout/>,
+        children:[
+          {
+            path:'/landing',
+            element:<Landing/>,
+          
+          },
+          {
+            path:'/Error',
+            element:<Error404/>,
+          
+          },
+          {
+            path:'/Login',
+            element:<Login/>,
+          
+          },
+
         
-        },
-        {
-          path:'/Login',
-          element:<Login/>,
+
         
-        },
+          
+        ]
+      }
+      ])
+  
+    return(
+      <div>
 
-       
+        <RouterProvider router={Routers}/>
 
-       
-        
-      ]
-    }
-  ])
- 
-  return(
-    <div>
-<<<<<<< HEAD
+      </div>
 
-      {/* Routers */}
-
-      <Landing/>
-      
-      
-     
-      
-=======
-      <RouterProvider router={Routers}/>
->>>>>>> develope
-    </div>
-
-  )
+    )
 }
 
 export default index;
