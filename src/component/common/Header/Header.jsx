@@ -1,6 +1,6 @@
 import React from 'react'
 import { Fragment } from 'react'
-import cours from '../screens/Landing/cours';
+// import cours from '../screens/Landing/cours';
 
 const Header = () => {
   return (
