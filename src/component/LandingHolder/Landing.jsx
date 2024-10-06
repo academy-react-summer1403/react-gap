@@ -2,12 +2,8 @@ import React from 'react'
 
 const Landing = () => {
   return (
-    <div>
-   <h1>
-    landing
-
+    <div className='border-2 w-9 h-10'>
    
-   </h1>
     </div>
   )
 }
