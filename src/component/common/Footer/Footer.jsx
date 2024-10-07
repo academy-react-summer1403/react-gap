@@ -11,7 +11,7 @@ const Footer = () => {
           <h1 className='font-inter text-3xl text-[#444444;]'> خدمات </h1>
           <div className='w-[327px] h-[200px]  mt-5 ' >
 
-          <h2 className='text-2xl text-[#444444;] m-2'>آموزش رایگان </h2>
+          <h2 className='text-2xl text-[#444444;] m-2'>آموزش رایگان </h2>+
           <h2 className='text-2xl text-[#444444;] m-2'> مشاوره رایگان </h2>
           <h3 className='text-2xl text-[#444444;] m-2'> فرصت های شغلی </h3>
 
