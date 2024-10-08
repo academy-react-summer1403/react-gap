@@ -6,7 +6,7 @@ const Footer = () => {
 
       <div className='border-t-2 border-t-[#807A7A]  w-[1460px] h-[100px] relative top-[341px] -left-[20px] '></div>
 
-      <div className='flex justify-start gap-[80px] w-screen h-[342px] border-2 relative -top-[100px]'>
+      <div className='flex justify-start gap-[80px] h-[342px] relative -top-[100px]'>
         <div className='w-[327px] h-[252px] mt-20 mr-36'>
           <h1 className='font-inter text-3xl text-[#444444;]'> خدمات </h1>
           <div className='w-[327px] h-[200px]  mt-5 ' >

@@ -23,23 +23,21 @@ const index = () => {
           element:<Landing/>,
          
         },
-        {
-          path:'/Error',
-          element:<Error404/>,
-        
-        },
-        {
+       
+       ],},
+
+      {
           path:'/Login',
           element:<Login/>,
         
-        },
-
-       
-
-       
+      },
+       {
+          path:'/Error',
+          element:<Error404/>,
         
-      ]
-    }
+        }
+
+
   ])
  
   return(
