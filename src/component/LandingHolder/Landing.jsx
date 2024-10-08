@@ -1,12 +1,17 @@
 import React from 'react'
 import HeroSection from './HeroSection'
+import MyService from './MyService'
 
 const Landing = () => {
   return (
-    <HeroSection/>
+    <div>
 
-
+    
    
+   
+ <HeroSection/>
+<MyService/>
+   </div>
 
 
 

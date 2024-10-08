@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroSection from '../../component/LandingHolder/HeroSection';
 import Landing from '../../component/LandingHolder/Landing'
+import MyService from '../../component/LandingHolder/MyService';
 
 
 const Landing = () => {
@@ -12,6 +13,7 @@ const Landing = () => {
 
      <HeroSection/>
      <Landing/>
+     <MyService/>
     
    
 

@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Footer = () => {
   return (
     <div className='w-screen h-[442px] bg-[#A4F6DE;]'>
