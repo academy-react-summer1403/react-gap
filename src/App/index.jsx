@@ -24,14 +24,15 @@ const index = () => {
           element:<Landing/>,
          
         },
-       
-       ],},
-
-      {
+        {
+          path:'/Error',
+          element:<Error404/>,
+        
+        },
+        {
           path:'/Login',
           element:<Login/>,
         
-<<<<<<< HEAD
         },
         {
           path:'/cours',
@@ -42,16 +43,9 @@ const index = () => {
        
 
        
-=======
-      },
-       {
-          path:'/Error',
-          element:<Error404/>,
->>>>>>> 9ac2ca6c2addf15da1eaf8cbbe9570f2a9650b07
         
-        }
-
-
+      ]
+    }
   ])
  
   return(
