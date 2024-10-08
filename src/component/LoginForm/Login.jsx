@@ -17,7 +17,8 @@ const Login = () => {
           <div className='flex justify-center relative  top-[100px] w-[400px] h-[400px]'>
 
   <form action="">
-          <h1 className=' relative -top-[20px] font-inter'>ورود به سیستم</h1>
+
+          <h1 className=' relative -top-[20px] font-inter'>ورود به  سیستم</h1>
           <div className='input-box'>
 
           <input  className=' rounded-lg  w-[340px] h-[35px] mt-4 i relative px-5 border-2 border-[#158B68]' type='text'    placeholder='شماره همراه' required  />
