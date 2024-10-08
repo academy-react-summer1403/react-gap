@@ -25,7 +25,7 @@ const Login = () => {
           </div>
           <div className='input-box '>
           <input className='border-2 rounded-lg  w-[340px] h-[35px] mt-4 relative px-5  border-[#158B68]' type='password' placeholder='رمز عبور' required />
-          <IoKeyOutline  className=' relative -top-6 right-1'/>
+                 <div> <IoKeyOutline  className=' relative -top-6 right-1 '/></div>
           </div>
           <div className='remember-forget'>
             <br />
