@@ -1,5 +1,7 @@
-import { createBrowserRouter, 
-  RouterProvider } 
+import {
+  createBrowserRouter,
+  RouterProvider
+}
   from 'react-router-dom';
 
 
@@ -35,28 +37,39 @@ const index = () => {
         
         },
         {
-          path:'/cours',
-          element:<Cours/>,
-        
+          path: '/cours',
+          element: <Cours />,
+    
         },
 
-       
+      ],
+    },
 
-       
-        
-      ]
-    }
+    {
+      path: '/Login',
+      element: <Login />,
+      errorElement:<Error404/>
+    },
+
+
+
+    {
+      path: '/Error',
+      element: <Error404 />,
+
+    },
+
+
   ])
- 
-  return(
+
+  return (
     <div>
-      <RouterProvider router={Routers}/>
+      <RouterProvider router={Routers} />
     </div>
 
   )
 
-  
+
 }
 
 export default index;
-  
