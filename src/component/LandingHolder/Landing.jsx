@@ -1,15 +1,19 @@
 import React from 'react'
+import HeroSection from './HeroSection'
 
 const Landing = () => {
   return (
-    <div>
-   <h1>
-    landing
+    <HeroSection/>
+
 
    
-   </h1>
-    </div>
+
+
+
+
   )
+
+ 
 }
 
 export default Landing

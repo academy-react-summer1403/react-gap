@@ -1,18 +1,18 @@
 import React from 'react'
-import Header from '../../component/common/Header/Header';
-import Footer from '../../component/common/Footer/Footer';
 import HeroSection from '../../component/LandingHolder/HeroSection';
+import Landing from '../../component/LandingHolder/Landing'
 
 
 const Landing = () => {
   return (
     <div>
 
-     <Header/>
+    
+     
 
      <HeroSection/>
-
-     <Footer/>
+     <Landing/>
+    
    
 
      
