@@ -18,14 +18,23 @@ const index = () => {
 
   const Routers = createBrowserRouter([
     {
-      path: '/',
-      element: <Layout />,
-      children: [
+      path:'/',
+      element:<Layout/>,
+      children:[
+         {
+          path:'/',
+          element:<Landing/>,
+         
+        },
         {
-          path: '/',
-          element: <Landing />,
-          errorElement:<Error404/>
-
+          path:'/Error',
+          element:<Error404/>,
+        
+        },
+        {
+          path:'/Login',
+          element:<Login/>,
+        
         },
         {
           path: '/cours',

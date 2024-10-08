@@ -3,7 +3,6 @@ import HeroSection from './HeroSection'
 import MyService from './MyService'
 
 const Landing = () => {
- 
   return (
     <div>
 
