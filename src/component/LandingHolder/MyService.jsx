@@ -2,10 +2,10 @@ import React from 'react'
 
 const MyService = () => {
   return (
-    <div className='flex justify-center flex-wrap w-screen h-[800px] border-2 border-black ' >
+    <div className=' w-screen h-[500px] border-2 border-black ' >
 
       <div>
-        <div className='flex justify-center flex-wrap w-[1000px] h-[100px] border-2 border-red-400'>
+        <div className='  h-[100px] border-2 text-center border-red-400'>
 
           <h1 className='text-[#22445D;] text-2xl' > خدمات ما </h1>
           <br />
@@ -17,7 +17,14 @@ const MyService = () => {
 
 
 
-      <div className='border-2 border-t-red-950 w-screen'></div>
+      <div className='flex flex-wrap gap-4 border-2 justify-between border-blue-500 w-[80%] mx-auto'>
+        <div className='border-2 border-red-500 w-1/4'>1</div>
+        <div className='border-2 border-red-500 w-1/4'>2</div>
+        <div className='border-2 border-red-500 w-1/4'>3</div>
+        <div className='border-2 border-red-500 w-1/4'>4</div>
+        <div className='border-2 border-red-500 w-1/4'>5</div>
+        <div className='border-2 border-red-500 w-1/4'>6</div>
+      </div>
 
 
 
