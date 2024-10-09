@@ -5,7 +5,7 @@ import {
   from 'react-router-dom';
 
 
-import './App.css'
+
 import React from 'react'
 import Error404 from '../component/Error404/Error404';
 import Layout from '../component/Layout/Layout';
