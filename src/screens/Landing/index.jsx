@@ -1,13 +1,14 @@
 import React from 'react'
-import Header from '../../component/common/Header/Header';
-import Footer from '../../component/common/Footer/Footer';
 import HeroSection from '../../component/LandingHolder/HeroSection';
+import Landing from '../../component/LandingHolder/Landing'
+import MyService from '../../component/LandingHolder/MyService';
 
 
 const Landing = () => {
     return (
       <div>
 
+<<<<<<< HEAD
       <Header/>
 
       <HeroSection/>
@@ -15,6 +16,16 @@ const Landing = () => {
       <Footer/>
       
     
+=======
+    
+     
+
+     <HeroSection/>
+     <Landing/>
+     <MyService/>
+    
+   
+>>>>>>> develope
 
       
       </div>
