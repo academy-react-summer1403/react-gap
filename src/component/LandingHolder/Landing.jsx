@@ -1,6 +1,8 @@
 import React from 'react'
 import HeroSection from './HeroSection'
 import MyService from './MyService'
+import BoxItem from './BoxItem'
+import Category from './Category'
 
 const Landing = () => {
   return (
@@ -11,6 +13,8 @@ const Landing = () => {
    
  <HeroSection/>
 <MyService/>
+<BoxItem/>
+<Category/>
    </div>
 
 

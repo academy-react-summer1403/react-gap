@@ -1,38 +1,132 @@
-import React from 'react'
+import React from "react";
 
 const MyService = () => {
   return (
-    <div className=' w-screen h-[500px] border-2 border-black ' >
-
+    <div className=" w-screen">
       <div>
-        <div className='  h-[100px] border-2 text-center border-red-400'>
+        <div className="  h-[100px]  text-center m-20">
+          <h1 className="text-[#22445D;] text-4xl"> خدمات ما </h1>
 
-          <h1 className='text-[#22445D;] text-2xl' > خدمات ما </h1>
-          <br />
-          <p className='text-[#22445D;] '> ما فرصت آماده شدن براِی زندگی را فراهم می کنیم </p>
+          <p className="text-[#22445D;] text-2xl font-normal mt-2">
+            {" "}
+            ما فرصت آماده شدن براِی زندگی را فراهم می کنیم{" "}
+          </p>
+        </div>
+      </div>
 
+      <div className="flex flex-wrap gap-[20px] justify-between w-[90%] h-[350px] mx-auto mt-10">
+        <div className="flex gap-2 w-[400px] h-[120px]">
+          <div className="w-[130px] h-[120px]">
+            <img className="w-[100%] h-[100%]" src="./pic.png" alt="" />
+          </div>
+
+          <div className="w-[370px] h-[130px]">
+            <h1 className="text-[18px]"> اساتید مجرب </h1>
+            <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
+              {" "}
+              لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
+              توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود{" "}
+            </h2>
+          </div>
         </div>
 
+        <div className="flex gap-2 w-[400px] h-[120px]">
+          <div className="w-[130px] h-[120px]">
+            <img
+              className="w-[100%] h-[100%]"
+              src="./iconServise6.png"
+              alt=""
+            />
+          </div>
+
+          <div className="w-[370px] h-[130px]">
+            <h1 className="text-[18px]"> مشاوره رایگان </h1>
+            <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
+              {" "}
+              لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
+              توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود{" "}
+            </h2>
+          </div>
+        </div>
+
+        <div className="flex gap-2 w-[400px] h-[120px]">
+          <div className="w-[130px] h-[120px]">
+            <img
+              className="w-[100%] h-[100%]"
+              src="./iconServise3.png"
+              alt=""
+            />
+          </div>
+
+          <div className="w-[370px] h-[130px]">
+            <h1 className="text-[18px]"> فرصت های شغلی </h1>
+            <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
+              {" "}
+              لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
+              توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود{" "}
+            </h2>
+          </div>
+        </div>
+
+        <div className="flex gap-2 w-[400px] h-[120px]">
+          <div className="w-[130px] h-[120px]">
+            <img
+              className="w-[100%] h-[100%]"
+              src="./iconServise4.png"
+              alt=""
+            />
+          </div>
+
+          <div className="w-[370px] h-[130px]">
+            <h1 className="text-[18px]"> اراِیه مدارک معتبر </h1>
+            <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
+              {" "}
+              لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
+              توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود{" "}
+            </h2>
+          </div>
+        </div>
+
+        <div className="flex gap-2 w-[400px] h-[120px]">
+          <div className="w-[130px] h-[120px]">
+            <img
+              className="w-[100%] h-[100%]"
+              src="./iconServise5.png"
+              alt=""
+            />
+          </div>
+
+          <div className="w-[370px] h-[130px]">
+            <h1 className="text-[18px]"> دوره های جامع و متنوع </h1>
+            <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
+              {" "}
+              لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
+              توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود{" "}
+            </h2>
+          </div>
+        </div>
+
+        <div className="flex gap-2 w-[400px] h-[120px]">
+          <div className="w-[130px] h-[120px]">
+            <img
+              className="w-[100%] h-[100%]"
+              src="./iconServise6.png"
+              alt=""
+            />
+          </div>
+
+          <div className="w-[370px] h-[130px]">
+            <h1 className="text-[18px]"> آموزش پروژه محور </h1>
+            <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
+              {" "}
+              لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
+              توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود{" "}
+            </h2>
+          </div>
+        </div>
       </div>
-
-
-
-      <div className='flex flex-wrap gap-4 border-2 justify-between border-blue-500 w-[80%] mx-auto'>
-        <div className='border-2 border-red-500 w-1/4'>1</div>
-        <div className='border-2 border-red-500 w-1/4'>2</div>
-        <div className='border-2 border-red-500 w-1/4'>3</div>
-        <div className='border-2 border-red-500 w-1/4'>4</div>
-        <div className='border-2 border-red-500 w-1/4'>5</div>
-        <div className='border-2 border-red-500 w-1/4'>6</div>
-      </div>
-
-
-
-
-
-
     </div>
-  )
-}
+  );
+};
 
-export default MyService
+export default MyService;

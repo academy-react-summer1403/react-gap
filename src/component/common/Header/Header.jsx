@@ -13,10 +13,10 @@ const Header = () => {
 
             <div className=' flex  gap-2  w-60 h-10 m-6'>
             <div className='border-2 border-black w-[50px] h-[50px]' > 
-               <img src='./Logo.png'/>
+               <img className="" src='./Logo.png'/>
             </div>
 
-             <h1 className='text-[#22445D;] font-inter text-2xl m-3'>
+             <h1 className='text-[#22445D;] font-inter text-2xl m-3 font-medium'>
                آکادمی اچ وان 
              </h1>
             </div>
