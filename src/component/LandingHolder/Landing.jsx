@@ -7,10 +7,8 @@ const Landing = () => {
     <div>
 
     
-<<<<<<< HEAD
 
-    </div>
-=======
+  
    
    
  <HeroSection/>
@@ -20,7 +18,6 @@ const Landing = () => {
 
 
 
->>>>>>> develope
   )
 
  
