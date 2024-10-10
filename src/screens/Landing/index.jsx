@@ -1,23 +1,35 @@
 import React from 'react'
-import Header from '../../component/common/Header/Header';
-import Footer from '../../component/common/Footer/Footer';
 import HeroSection from '../../component/LandingHolder/HeroSection';
+import Landing from '../../component/LandingHolder/Landing'
+import MyService from '../../component/LandingHolder/MyService';
 
 
 const Landing = () => {
-  return (
-    <div>
+    return (
+      <div>
 
-     <Header/>
+<<<<<<< HEAD
+      <Header/>
+
+      <HeroSection/>
+
+      <Footer/>
+      
+    
+=======
+    
+     
 
      <HeroSection/>
-
-     <Footer/>
+     <Landing/>
+     <MyService/>
+    
    
+>>>>>>> develope
 
-     
-    </div>
-  )
+      
+      </div>
+    )
 }
 
 export default Landing;
