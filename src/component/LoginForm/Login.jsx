@@ -25,8 +25,8 @@ const Login = () => {
           <FaMobileAlt  className=' relative -top-6 fill-[#158B68]'/>
           </div>
           <div className='input-box '>
-          <input className='border-2 rounded-lg  w-[340px] h-[35px] mt-4 relative px-5  border-[#158B68]' type='password' placeholder='رمز عبور' required />
-     <div> <IoKeyOutline  className=' relative -top-6 right-1 '/></div>
+          <input className='border-2 rounded-lg  w-[340px] h-[35px] mt-4 relative px-5  border-[#158B68]' type='password' placeholder='رمز عبور' required />  
+           <div> <IoKeyOutline  className=' relative -top-6 right-1 '/></div>
           </div>
           <div className='remember-forget'>
             <br />
