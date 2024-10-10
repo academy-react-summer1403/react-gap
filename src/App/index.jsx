@@ -10,6 +10,7 @@ import Layout from '../component/Layout/Layout';
 import Landing from '../component/LandingHolder/Landing';
 import Login from '../component/LoginForm/Login';
 import LoginSystem from '../component/LoginSystem/LoginSystem';
+import Register from '../Register/Register';
 
 
 const index = () => {
@@ -41,7 +42,11 @@ const index = () => {
           
           },
 
-        
+          {
+            path:'/Register',
+            element:<Register/>,
+          
+          },
 
         
           

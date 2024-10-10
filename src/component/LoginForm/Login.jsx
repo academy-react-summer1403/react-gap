@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { FaMobileAlt } from "react-icons/fa";
-import { IoKeyOutline } from "react-icons/io5";
+import { GoKey } from "react-icons/go";
 import { AiOutlineHome } from "react-icons/ai";
 
 const Login = () => {
@@ -26,7 +26,7 @@ const Login = () => {
           </div>
           <div className='input-box '>
           <input className='border-2 rounded-lg  w-[340px] h-[35px] mt-4 relative px-5  border-[#158B68]' type='password' placeholder='رمز عبور' required />  
-           <div> <IoKeyOutline  className=' relative -top-6 right-1 '/></div>
+          <div> <GoKey  className=' relative -top-6 right-1 fill-[#158B68]'/></div>
           </div>
           <div className='remember-forget'>
             <br />
@@ -36,7 +36,7 @@ const Login = () => {
 
             <br/>
               
-              <div> <AiOutlineHome className=' relative right-80 top-[-300px] size-8 fill-[#158B68]' /> </div>
+              <div> <AiOutlineHome className=' relative right-80 top-[-300px] size-6 fill-[#158B68]' /> </div>
               
               
         

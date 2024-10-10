@@ -20,7 +20,7 @@ const LoginSystem = () => {
 
                 </div>
                   <br />
-                  <div> <AiOutlineHome className=' relative right-80 top-[-230px] size-8 fill-[#158B68]' /> </div>
+                  <div> <AiOutlineHome className=' relative right-80 top-[-230px] size-6 fill-[#158B68]' /> </div>
 
                 <div className="register-link">
                   
