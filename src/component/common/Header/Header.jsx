@@ -1,57 +1,52 @@
-import React from 'react'
-import { Fragment } from 'react'
-// import cours from '../screens/Landing/cours';
-
+import React from "react";
+import { Fragment } from "react";
+import { LuSearch } from "react-icons/lu";
 
 const Header = () => {
   return (
-   <Fragment>
-    <div className='flex justify-between
-     w-screen h-20 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]  ' >
+    <Fragment>
+      <div
+        className="flex justify-between
+     w-screen h-20 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]  "
+      >
+        <div className=" flex  gap-2  w-60 h-10 m-6">
+          <div className="w-[50px] h-[50px] border-2">
+            <img src="./" alt="" />
+          </div>
 
+          <h1 className="text-[#22445D;] font-inter text-2xl m-3 font-medium">
+            آکادمی اچ وان
+          </h1>
+        </div>
 
+        <div className="flex gap-6 justify-center h-[70px] m-6 mb-3">
+          <button className="w-[120px] h-[47px] bg-[#6D676757;] text-lg rounded-lg text-[#158B68;] font-inter relative -left-7">
+            {" "}
+            صفحه اصلی{" "}
+          </button>
 
-            <div className=' flex  gap-2  w-60 h-10 m-6'>
-            <div className='border-2 border-black w-[50px] h-[50px]' > 
-               <img className="" src='./Logo.png'/>
-            </div>
+          <div className="flex gap-6 justify-center relative top-2 w-[300px] ">
+            <div className="text-[#22445D;] text-xl"> دوره ها </div>
+            <div className="text-[#22445D;] text-xl"> مقالات </div>
+            <div className="text-[#22445D;] text-xl"> درباره ما </div>
+          </div>
+        </div>
 
-             <h1 className='text-[#22445D;] font-inter text-2xl m-3 font-medium'>
-               آکادمی اچ وان 
-             </h1>
-            </div>
-     
-     
-       
-       <div className='flex gap-6 justify-center h-[70px] m-6 mb-3'>
+        <div>
+          <img src="./" alt="" />
+        </div>
 
-       <button className='w-[150px] h-[57px] bg-[#E8F2F8;] rounded-lg text-[#22445D;] font-inter relative -left-7'> صفحه اصلی </button>
-
-       <div className='flex gap-6 justify-center relative top-2 w-[300px] '>
-          <div className='text-[#22445D;] text-xl'> دوره ها </div>
-       <div  className='text-[#22445D;] text-xl' > مقالات </div>
-       <div  className='text-[#22445D;] text-xl'> درباره ما </div>
-       </div>
-     
-
-       </div>
-       
-      <div>
-        <img src="./" alt="" />
+        <div className="flex m-6">
+          <div className="w-[30px] h-[30px] ml-[40px] mt-4">
+          <LuSearch className="w-[100%] h-[100%]"/>
+          </div>
+          <button className="w-[145px] h-[57px] bg-[#00DF9D;] text-xl rounded-lg text-[#22445D;] font-inter relative left-6">
+            ورود/ ثبت نام
+          </button>
+        </div>
       </div>
+    </Fragment>
+  );
+};
 
-
-<div className='m-6'>
-   <button className='w-[150px] h-[57px] bg-[#00DF9D;] rounded-lg text-[#22445D;]  font-inter relative left-6'> ثبت نام / ورود </button>
- 
-</div>
-     
-     
-
-    </div>
-
-   </Fragment>
-  )
-}
-
-export default Header
+export default Header;

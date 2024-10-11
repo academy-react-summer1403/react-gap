@@ -5,7 +5,7 @@ const MyService = () => {
     <div className=" w-screen">
       <div>
         <div className="  h-[100px]  text-center m-20">
-          <h1 className="text-[#22445D;] text-4xl"> خدمات ما </h1>
+          <h1 className="text-[#22445D;] text-4xl "> خدمات ما </h1>
 
           <p className="text-[#22445D;] text-2xl font-normal mt-2">
             {" "}
@@ -21,8 +21,8 @@ const MyService = () => {
           </div>
 
           <div className="w-[370px] h-[130px]">
-            <h1 className="text-[18px]"> اساتید مجرب </h1>
-            <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
+            <h1 className="text-[18px] text-[#22445D;]"> اساتید مجرب </h1>
+            <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal ">
               {" "}
               لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
               توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود{" "}
@@ -40,7 +40,7 @@ const MyService = () => {
           </div>
 
           <div className="w-[370px] h-[130px]">
-            <h1 className="text-[18px]"> مشاوره رایگان </h1>
+            <h1 className="text-[18px] text-[#22445D;]"> مشاوره رایگان </h1>
             <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
               {" "}
               لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
@@ -59,7 +59,7 @@ const MyService = () => {
           </div>
 
           <div className="w-[370px] h-[130px]">
-            <h1 className="text-[18px]"> فرصت های شغلی </h1>
+            <h1 className="text-[18px] text-[#22445D;]"> فرصت های شغلی </h1>
             <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
               {" "}
               لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
@@ -78,7 +78,7 @@ const MyService = () => {
           </div>
 
           <div className="w-[370px] h-[130px]">
-            <h1 className="text-[18px]"> اراِیه مدارک معتبر </h1>
+            <h1 className="text-[18px] text-[#22445D;]"> اراِیه مدارک معتبر </h1>
             <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
               {" "}
               لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
@@ -97,7 +97,7 @@ const MyService = () => {
           </div>
 
           <div className="w-[370px] h-[130px]">
-            <h1 className="text-[18px]"> دوره های جامع و متنوع </h1>
+            <h1 className="text-[18px] text-[#22445D;]"> دوره های جامع و متنوع </h1>
             <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
               {" "}
               لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
@@ -116,7 +116,7 @@ const MyService = () => {
           </div>
 
           <div className="w-[370px] h-[130px]">
-            <h1 className="text-[18px]"> آموزش پروژه محور </h1>
+            <h1 className="text-[18px] text-[#22445D;]"> آموزش پروژه محور </h1>
             <h2 className="text-[12px] mt-3 text-[#21394B;] font-normal">
               {" "}
               لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط
