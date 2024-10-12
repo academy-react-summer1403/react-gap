@@ -9,6 +9,7 @@ import Article from '../common/Article/Article'
 import Suggest from './Suggest'
 
 
+
 const Landing = () => {
   return (
     <div>
@@ -16,7 +17,7 @@ const Landing = () => {
     
    
    
- <HeroSection/>
+<HeroSection/>
 <MyService/>
 <BoxItem/>
 <Category/>
@@ -24,6 +25,8 @@ const Landing = () => {
 <Introduction/>
 <Article/>
 <Suggest/>
+
+
 
    </div>
 

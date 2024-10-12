@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="flex justify-start  w-screen h-[700px] bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]">
+    <div className="flex justify-start h-[700px] bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]">
       <div className="  w-[800px] h-[400px] relative top-32 left-1 ">
         <h1 className=" font-inter text-6xl text-[#21394B] mx-16 ;">
           آموزشگاه اچ وان{" "}

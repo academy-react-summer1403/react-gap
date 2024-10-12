@@ -2,7 +2,7 @@ import React from "react";
 
 const Introduction = () => {
   return (
-    <div className="w-screen h-[800px] bg-gradient-to-r from-[#A4F6DE] to-[#ffffff] ">
+    <div className=" h-[800px] bg-gradient-to-r from-[#A4F6DE] to-[#ffffff] ">
       <div className=" h-[100px]  text-center relative top-[30px] ">
         <h1 className="text-[#22445D;] text-4xl"> حرفه ای های ما</h1>
 

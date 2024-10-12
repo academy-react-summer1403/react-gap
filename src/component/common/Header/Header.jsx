@@ -7,11 +7,11 @@ const Header = () => {
     <Fragment>
       <div
         className="flex justify-between
-     w-screen h-20 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]  "
+     h-20 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]  "
       >
         <div className=" flex  gap-2  w-60 h-10 m-6">
-          <div className="w-[50px] h-[50px] border-2">
-            <img src="./" alt="" />
+          <div className="w-[50px] h-[50px]">
+            <img src="./h11.png" alt="" />
           </div>
 
           <h1 className="text-[#22445D;] font-inter text-2xl m-3 font-medium">
@@ -38,7 +38,7 @@ const Header = () => {
 
         <div className="flex m-6">
           <div className="w-[30px] h-[30px] ml-[40px] mt-4">
-          <LuSearch className="w-[100%] h-[100%]"/>
+            <LuSearch className="w-[100%] h-[100%]" />
           </div>
           <button className="w-[145px] h-[57px] bg-[#00DF9D;] text-xl rounded-lg text-[#22445D;] font-inter relative left-6">
             ورود/ ثبت نام

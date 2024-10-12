@@ -4,7 +4,7 @@ const Category = () => {
   return (
     <div>
           <div>
-        <div className="  h-[100px]  text-center m-20">
+        <div className="h-[100px]  text-center m-20">
           <h1 className="text-[#22445D;] text-4xl">  دسته بندی </h1>
 
           <p className="text-[#22445D;] text-2xl font-normal mt-3">

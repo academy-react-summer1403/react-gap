@@ -2,7 +2,7 @@ import React from 'react'
 
 const Article = () => {
   return (
-    <div className='w-screen h-[800px]' >
+    <div className='h-[800px]' >
          <div className=" h-[100px]  text-center relative top-[30px] ">
         <h1 className="text-[#22445D;] text-4xl"> اخبار و مقالات </h1>
 

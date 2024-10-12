@@ -8,7 +8,7 @@ const Suggest = () => {
     txt: yup.string().required("پر کردن این فیلد اجباریست"),
   });
   return (
-    <div className="w-screen h-[800px]">
+    <div className=" h-[800px]">
       <div className=" h-[100px]  text-center relative top-[30px] ">
         <h1 className="text-[#22445D;] text-4xl"> پیشنهادات و انتقادات </h1>
 
@@ -27,7 +27,11 @@ const Suggest = () => {
             >
               <Form>
                 <Field
-                  className="w-[600px] h-[60px] border-2 border-[#158B68] mt-2 rounded-lg bg-[#FBF6F6;]"
+                  className="w-[600px] h-[60px] border-2 border-[#158B68] mt-2 rounded-lg bg-[#FBF6F6;] outline-none 
+                  placeholder: text-xl
+                   placeholder:text-[#22445D;]
+                    placeholder:p-6
+                    placeholder:font-medium"
                   name="lastName"
                   placeholder="نام و نام خانوادگی..."
                 />
@@ -37,17 +41,33 @@ const Suggest = () => {
                   className="text-[#12926C]"
                 />
                 <Field
-                  className="w-[600px] h-[60px] border-2 border-[#158B68]  mt-3 rounded-xl bg-[#FBF6F6;]"
+                  className="w-[600px] h-[60px] border-2 border-[#158B68]  mt-3 rounded-xl bg-[#FBF6F6;] outline-none
+                    placeholder: text-xl
+                   placeholder:text-[#22445D;]
+                    placeholder:p-6 
+                     placeholder:font-medium"
                   name="email"
                   placeholder="ایمیل ..."
                 />
-                <ErrorMessage name="email" component={"p"} className="text-[#12926C]" />
+                <ErrorMessage
+                  name="email"
+                  component={"p"}
+                  className="text-[#12926C]"
+                />
                 <Field
-                  className="w-[600px] h-[140px] border-2 border-[#158B68] mt-3 rounded-lg bg-[#FBF6F6;]"
+                  className="w-[600px] h-[140px] border-2 border-[#158B68] mt-3 rounded-lg bg-[#FBF6F6;] outline-none
+                    placeholder: text-xl
+                   placeholder:text-[#22445D;]
+                    placeholder:p-6
+                     placeholder:font-medium"
                   name="txt"
                   placeholder="متن ..."
                 />
-                <ErrorMessage name="txt" component={"p"} className="text-[#12926C]" />
+                <ErrorMessage
+                  name="txt"
+                  component={"p"}
+                  className="text-[#12926C]"
+                />
               </Form>
             </Formik>
           </div>

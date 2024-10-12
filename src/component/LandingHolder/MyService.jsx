@@ -2,7 +2,7 @@ import React from "react";
 
 const MyService = () => {
   return (
-    <div className=" w-screen">
+    <div>
       <div>
         <div className="  h-[100px]  text-center m-20">
           <h1 className="text-[#22445D;] text-4xl "> خدمات ما </h1>
