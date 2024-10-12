@@ -49,14 +49,17 @@ const Slider = () => {
                 >
                   <SwiperSlide>
                     <div className="flex flex-wrap border-2 border-blue-950 w-[98%] h-[600px] rounded-3xl ">
-                      <div className="border-2 border-black w-[150px] h-[150px] relative ">
+                      <div className="w-[100%] h-[70%] border-2">
+                        <div className="border-2 border-black w-[150px] h-[150px]  relative bottom-2 right-36 ">
                         <img src="" alt="" />
                       </div>
-                      <div className="border-2 border-black w-[80%] h-[70%] mx-auto">
+                      <div className="border-2 border-black w-[100%] h-[100%] mx-auto">
                         <div className=""></div>
                         <div>{item.name}</div>
                         <div>{item.icon}</div>
+                      </div> 
                       </div>
+                     
                     </div>
                   </SwiperSlide>
                   <SwiperSlide>
