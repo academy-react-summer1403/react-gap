@@ -1,7 +1,9 @@
 import React from 'react'
 import Filter from '../../../component/Cours/Filter'
+import CardCours from '../../../component/Cours/CardCours'
 
-const cours = () => {
+
+const LandingCourses = () => {
   return (
     <div>
       <div className='flex-auto w-screen  flex-wrap-reverse'>
@@ -12,25 +14,15 @@ const cours = () => {
           <input className='border-2 h-[40px] w-[440px] border-color:[#158B68] bg-[#ffff] relative mr-[80px] ms-[490px]' />
         </div>
         <div className='flex  gap-5 flex-wrap-reverse mx-0'>
-          <div className='border-2 h-[506px] w-[299px] bg-[#ffff]  rounded-3xl  mr-[90px] mb-[890px] shadow-md'>
+          <div className=' h-[506px] w-[230px] bg-[#FBF6F6]  rounded-3xl  mr-[90px] mb-[1160px] shadow-md'>
             <Filter />
-
           </div>
-          <div className='border-2 h-[1400px] w-[1036px] bg-[#ffff] flex  flex-wrap-reverse justify-center gap-[20px]  mb-[90px]rounded-3xl shadow mr-[10px] mt-[10px]'>
-            <div className='flex  flex-wrap-reverse justify-center gap-[20px]  mb-[50px]'>
-              <div className='border-2 h-[406px] w-[259px] bg-[#ffff]  rounded-3xl'></div>
-              <div className='border-2 h-[406px] w-[259px] bg-[#ffff]  rounded-3xl'></div>
-              <div className='border-2 h-[406px] w-[259px] bg-[#ffff]  rounded-3xl'></div>
-              <div className='border-2 h-[406px] w-[259px] bg-[#ffff]  rounded-3xl'></div>
-              <div className='border-2 h-[406px] w-[259px] bg-[#ffff]  rounded-3xl'></div>
-              <div className='border-2 h-[406px] w-[259px] bg-[#ffff]  rounded-3xl'></div>
-              <div className='border-2 h-[406px] w-[259px] bg-[#ffff]  rounded-3xl'></div>
-              <div className='border-2 h-[406px] w-[259px] bg-[#ffff]  rounded-3xl'></div>
-              <div className='border-2 h-[406px] w-[259px] bg-[#ffff]  rounded-3xl'></div>
-            </div>
-
+          <div>
+            <CardCours/>
           </div>
         </div>
+
+
         <div className=' not-italic	 text-xl my-24 text-center '> دوره های برتر
           <h1> ساختن دنیایی بهتر، یک دوره در یک زمان </h1>
         </div>
@@ -39,7 +31,7 @@ const cours = () => {
         </div>
         <button className='border-2 h-[60px] w-[240px] rounded-3xl border-color:[#158B68] bg-[#12926C] relative mt-[24px] mr-[630px]'>مشاهده دوره های بیشتر </button>
 
-
+ 
 
 
 
@@ -52,4 +44,4 @@ const cours = () => {
   )
 }
 
-export default cours
+export default LandingCourses

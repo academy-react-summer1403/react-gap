@@ -4,34 +4,57 @@ import React from 'react'
 const Filter = () => {
   return (
     <div className=''>
-      <h1 className='border-2 h-[20px] w-[90%] bg-[#FBF6F6] not-italic	 text-xl  text-center'>فیلترها</h1>
-      <div className="collapse bg-base-200">
-        <input type="radio" name="my-accordion-1" defaultChecked />
-        <div className="collapse-title text-xl font-medium">تکنولوژی</div>
-        <div className="collapse-content">
-        <div className=" text-xl font-medium">نوع برگذاری
-          <div className='border-2 h-[120px] w-[90%] bg-[#FBF6F6] not-italic	 text-xl  text-center'>
-            <lable className=''>حضوری</lable>
-            <lable> آنلاین</lable>
-            <lable>آنلاین-حضوری </lable>
-          </div>
+    <h1 className='text-center text-xl relative'> فیلترها </h1>
+    <ul className='mt-9 transition list-none'>
+    <div className='text-start  mb-[10px] mr-[30px] text-lg font-normal'> تکنولوژی 
+      <li className='relative m-[15px 0] overflow-hidden transition'>
+      <div className='text-right mr-[30px]'>
+        <input type="radio" name="ca"/>
+        <lable className='text-center text-[14px] indent-1 inline-block'><span className='mr-[10px] font-normal '>   حضوری </span></lable>
         </div>
+      
+        <div className='text-right mr-[30px]'>
+        <input type="radio" name="ca"/>
+        <lable className='text-center text-[14px] inline-block '><span className='mr-[10px] font-normal '>  آنلاین  </span></lable>
+        </div>
+        
+        <div className='text-right mr-[30px]'>
+        <input type="radio" name="ca"/>
+        <lable className='text-center text-[14px] inline-block '><span className='mr-[10px] font-normal '>  آنلاین-حضوری</span></lable>
+        </div>
+      </li>
+
+    </div>
+    <div className='border w-[80%] relative mr-[18px] mb-[10px] border-[#5BE1B9]'></div>
+    <div className='  text-right mr-[30px] text-lg font-normal '> نوع برگزاری  
+      <div className=' flex flex-col border border-[#5BE1B9] h-[100px] w-[95%] -mr-[20px] mt-[10px] rounded-2xl'>
+        <div className='text-right mr-[30px]'>
+        <input type="radio" name="ca"/>
+        <lable className='text-center text-[14px] indent-1 inline-block'><span className='mr-[10px] font-normal '>   حضوری </span></lable>
+        </div>
+      
+        <div className='text-right mr-[30px]'>
+        <input type="radio" name="ca"/>
+        <lable className='text-center text-[14px] inline-block '><span className='mr-[10px] font-normal '>  آنلاین  </span></lable>
+        </div>
+        
+        <div className='text-right mr-[30px]'>
+        <input type="radio" name="ca"/>
+        <lable className='text-center text-[14px] inline-block '><span className='mr-[10px] font-normal '>  آنلاین-حضوری</span></lable>
         </div>
       </div>
-      <div className="collapse bg-base-200">
-        <input type="radio" name="my-accordion-1" />
-        <div className="collapse-title text-xl font-medium">سطح دوره</div>
-        <div className="collapse-content">
-          <p>hello</p>
-        </div>
-      </div>
-      <div className="collapse ">
-        <input type="radio" name="my-accordion-1" />
-        <div className="collapse-title text-xl font-medium">قیمت</div>
-        <div className="collapse-content">
-          <p>hello</p>
-        </div>
-      </div>
+    </div>
+
+    <div className='text-start  mb-[10px] mr-[30px] text-lg font-normal'> سطح دوره </div>
+    <div className='border w-[80%] relative mr-[18px] mb-[10px] border-[#5BE1B9]'></div>
+
+    <div className='text-start mb-[10px] mr-[30px] text-lg font-normal '> قیمت  </div>
+    <div className='border w-[80%] relative mr-[18px] mb-[10px] border-[#5BE1B9]'></div>
+
+    <button className='h-[30px] w-[100px] rounded-[5px]  bg-[#5BE1B9] relative mr-[80px] mb-[90px]'>
+    <spn className='font-sans my-0.5 text-xs font-normal py-px-[20px] '>پاک کردن فیلترها </spn>
+    </button>
+    </ul>
     </div>
   )
 }
