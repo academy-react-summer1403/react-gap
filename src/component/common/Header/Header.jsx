@@ -26,7 +26,7 @@ const Header = () => {
               {" "}
               دوره ها{" "}
             </NavLink>
-            <NavLink to={"/News"} className="text-xl">
+            <NavLink to={"/News"} className="text-xl hover:text-[#158B68;]">
               {" "}
               مقالات{" "}
             </NavLink>
