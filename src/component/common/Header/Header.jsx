@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <Fragment>
-      <div className="flex justify-between   h-20 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]  ">
+      <div className="flex justify-between   h-24 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]  ">
         <Link to="/" className="flex  gap-2  w-60 h-20 m-6">
           <div className=" w-[50px] h-[50px]">
             <img src="./h11.png" className="" />
