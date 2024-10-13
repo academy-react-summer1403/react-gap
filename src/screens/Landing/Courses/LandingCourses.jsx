@@ -6,7 +6,7 @@ import CardCours from '../../../component/Cours/CardCours'
 const LandingCourses = () => {
   return (
     <div>
-      <div className='flex-auto w-screen  flex-wrap-reverse'>
+      <div className='flex-auto flex-wrap-reverse'>
         <div className=' not-italic	 text-xl my-24 text-center '> لیست دوره ها </div>
         <div className=' border-2 h-[150px] w-[90%] bg-[#FBF6F6]  rounded-3xl mr-[80px] -mt-[80px] '>
           <button className='border-2 h-[60px] w-[140px] rounded-3xl border-color:[#158B68] bg-[#ffff] relative mt-[60px] mr-[80px]'>  </button>

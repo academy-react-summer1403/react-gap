@@ -5,8 +5,8 @@ import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <Fragment>
-      <div className="flex justify-between     w-screen h-20 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]  ">
-        <Link to="/" className=" flex  gap-2  w-60 h-10 m-6">
+      <div className="flex justify-between   h-20 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]  ">
+        <Link to="/" className="flex  gap-2  w-60 h-20 m-6">
           <div className=" w-[50px] h-[50px]">
             <img src="./h11.png" className="" />
           </div>
@@ -18,11 +18,11 @@ const Header = () => {
 
         <div className="flex gap-6 justify-center h-[70px] m-6 mb-3">
           <div className="flex gap-6 justify-center relative top-2 w-[400px] ">
-            <NavLink to={"/"} className=" text-xl">
+            <NavLink to={"/"} className=" text-xl hover:text-[#158B68;]">
               {" "}
               صفحه اصلی{" "}
             </NavLink>
-            <NavLink to={"/courses"} className=" text-xl">
+            <NavLink to={"/courses"} className=" text-xl hover:text-[#158B68;]">
               {" "}
               دوره ها{" "}
             </NavLink>
@@ -30,7 +30,7 @@ const Header = () => {
               {" "}
               مقالات{" "}
             </NavLink>
-            <NavLink className="text-xl"> درباره ما </NavLink>
+            <NavLink className="text-xl hover:text-[#158B68;]"> درباره ما </NavLink>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ const Header = () => {
         </div>
 
         <div className="m-6">
-          <button className="w-[150px] h-[57px] bg-[#00DF9D;] rounded-lg text-[#22445D;]  font-inter relative left-6">
+          <button className="hover:text-[#158B68;] w-[150px] h-[57px] bg-[#00DF9D;] rounded-lg text-[#22445D;]  font-inter relative left-6">
             {" "}
             ثبت نام / ورود
           </button>

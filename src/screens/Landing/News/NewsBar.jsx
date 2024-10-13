@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsBar = () => {
   return (
-    <div className="flex  justify-center w-screen  flex-wrap">
+    <div className="flex  justify-center flex-wrap">
       <h1 className=" relative mt-[20px] text-4xl "> لیست اخبار و مقالات </h1>
 
       <div className=" border-2 h-[130px] w-[90%] bg-[#FBF6F6] rounded-3xl -mr-[0px] mt-[60px] ">
