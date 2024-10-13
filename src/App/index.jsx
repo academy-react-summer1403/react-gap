@@ -109,7 +109,7 @@ const index = () => {
   ])
 
   return (
-    <div className='bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-hidden  border-2 border-red-500'>
+    <div>
       <RouterProvider router={Routers} />
     </div>
 
