@@ -14,6 +14,11 @@ import Login from '../component/LoginForm/Login';
 import LoginSystem from '../component/LoginSystem/LoginSystem';
 import Register from '../Register/Register';
 import Cours from '../screens/Landing/cours/cours';
+import RegisterStep from '../component/RegisterStep/RegisterStep';
+import RegisterStep1 from '../component/RegisterStep1/RegisterStep1';
+import RegisterStep2 from '../component/RegisterStep2/RegisterStep2';
+import NewPass from '../component/NewPass/NewPass';
+
 
 
 const index = () => {
@@ -78,7 +83,28 @@ const index = () => {
       element:<Register/>,
     
     },
+    {
+      path:'/RegisterStep',
+      element:<RegisterStep/>,
+    
+    },
 
+    {
+      path:'/RegisterStep1',
+      element:<RegisterStep1/>,
+    
+    },
+
+    {
+      path:'/RegisterStep2',
+      element:<RegisterStep2/>,
+    
+    },
+    {
+      path:'/NewPass',
+      element:<NewPass/>,
+    
+    },
 
   ])
 
