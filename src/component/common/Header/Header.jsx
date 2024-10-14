@@ -3,17 +3,7 @@ import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
-<<<<<<< HEAD
-    return (
-    <Fragment>
 
-
-
-
-  
-    <div className='flex justify-between
-     w-screen h-20 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]  ' >
-=======
   return (
     <Fragment>
       <div className="flex justify-between   h-24 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]  ">
@@ -21,7 +11,6 @@ const Header = () => {
           <div className=" w-[50px] h-[50px]">
             <img src="./h11.png" className="" />
           </div>
->>>>>>> 5336c113e2a7271e1bc01e58b96b632d70772bff
 
           <h1 className="text-[#22445D;] font-inter text-2xl m-3">
             آکادمی اچ وان
@@ -60,24 +49,4 @@ const Header = () => {
     </Fragment>
   );
 };
-
-<<<<<<< HEAD
-
-<div className='m-6'>
-   <button className='w-[150px] h-[57px] bg-[#00DF9D;] rounded-lg text-[#22445D;]  font-inter relative left-6'> ثبت نام / ورود </button>
- 
-</div>
-     
-     
-
-    </div>
-
-</Fragment>
-  )
-}
-
-
-export default Header
-=======
 export default Header;
->>>>>>> 5336c113e2a7271e1bc01e58b96b632d70772bff

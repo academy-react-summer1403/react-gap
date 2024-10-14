@@ -1,9 +1,9 @@
 import React from 'react'
-import Filter from '../../../component/Cours/Filter'
-import CardCours from '../../../component/Cours/CardCours'
+import Filter from '../../component/Cours/Filter'
+import CardCours from '../../component/Cours/CardCours'
 
 
-const LandingCourses = () => {
+const Courses = () => {
   return (
     <div>
       <div className='flex-auto flex-wrap-reverse'>
@@ -44,4 +44,4 @@ const LandingCourses = () => {
   )
 }
 
-export default LandingCourses
+export default Courses
