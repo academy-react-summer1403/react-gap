@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Error404 = () => {
   return (
-    <div className='flex  justify-center flex-col w-screen h-[680px] mt-6 ml-6'>
+    <div className='flex  justify-center flex-col  h-[680px] mt-6 ml-6'>
 
       <div className='w-[1100px] h-[520px] mr-[190px]'>
         <img src='./Mask Group.png' />
