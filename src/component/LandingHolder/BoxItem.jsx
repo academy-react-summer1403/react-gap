@@ -2,7 +2,7 @@ import React from "react";
 
 const BoxItem = () => {
   return (
-   <div className="bg-[#A4F6DE;] rounded-xl w-[90%] h-[350px] mx-auto">
+   <div className="bg-[#A4F6DE;] rounded-xl w-[90%] h-[350px] mx-auto mt-20">
 
     <div className="flex justify-center gap-[150px] w-[90%] h-[250px] mx-auto relative top-12">
         <div className="flex justify-center flex-wrap gap-3 w-[150px] h-[220px]">

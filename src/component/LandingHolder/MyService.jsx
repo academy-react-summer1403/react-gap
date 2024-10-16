@@ -4,7 +4,7 @@ const MyService = () => {
   return (
     <div>
       <div>
-        <div className="  h-[100px]  text-center m-20">
+        <div className="    text-center m-20">
           <h1 className="text-[#22445D;] text-4xl "> خدمات ما </h1>
 
           <p className="text-[#22445D;] text-2xl font-normal mt-2">
@@ -14,7 +14,7 @@ const MyService = () => {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-[20px] justify-between w-[90%] h-[350px] mx-auto mt-10">
+      <div className="flex flex-wrap gap-[20px] justify-center md:justify-around w-[90%] mx-auto mt-10">
         <div className="flex gap-2 w-[400px] h-[120px]">
           <div className="w-[130px] h-[120px]">
             <img className="w-[100%] h-[100%]" src="./pic.png" alt="" />
