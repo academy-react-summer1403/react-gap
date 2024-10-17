@@ -2,9 +2,9 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="flex justify-start h-[700px] bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF]">
-      <div className="  w-[800px] h-[400px] relative top-32 left-1 ">
-        <h1 className=" font-inter text-6xl text-[#21394B] mx-16 ;">
+    <div className="flex justify-start h-[700px] bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF] dark:from-[#22445D] dark:to-[#FFFFFF] ">
+      <div className="  w-[800px] h-[400px] relative top-32 left-1 text-center lg:text-right ">
+        <h1 className="font-inter xl:text-6xl text-[#21394B] mx-16 md:text-4xl text-4xl sm:text-4xl">
           آموزشگاه اچ وان{" "}
         </h1>
         <h3 className="m-14 text-[#22445D;] text-xl font-normal">
@@ -20,7 +20,7 @@ const HeroSection = () => {
         </button>
       </div>
 
-      <div className=" w-[650px] h-[500px] m-16">
+      <div className=" hidden w-[650px] h-[500px] m-16 lg:block">
         <img src="./ImgHero.png" alt="Img" />
       </div>
     </div>

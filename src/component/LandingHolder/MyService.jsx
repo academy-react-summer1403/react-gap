@@ -2,9 +2,9 @@ import React from "react";
 
 const MyService = () => {
   return (
-    <div>
+    <div className="">
       <div>
-        <div className="    text-center m-20">
+        <div className="text-center m-20">
           <h1 className="text-[#22445D;] text-4xl "> خدمات ما </h1>
 
           <p className="text-[#22445D;] text-2xl font-normal mt-2">
