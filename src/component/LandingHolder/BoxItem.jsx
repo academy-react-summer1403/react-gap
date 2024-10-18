@@ -6,7 +6,7 @@ const BoxItem = () => {
       <div className="flex flex-wrap justify-center gap-10 w-[90%] py-10 mx-auto ">
 
         
-        <div className="flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px] ">
+        <div  className="flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px]  hover:scale-75 duration-75">
           <div className="w-[100px] h-[110px]">
             <img className="w-[100%] h-[100%]" src="./pic2.png" alt="" />
           </div>
@@ -23,9 +23,9 @@ const BoxItem = () => {
           </div>
         </div>
 
-        <div className=" flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px] ">
+        <div className=" flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px]  hover:scale-75 duration-75">
           <div className="w-[100px] h-[110px]">
-            <img className="w-[100%] h-[100%]" src="./pic2.png" alt="" />
+            <img className="w-[100%] h-[100%]" src="./pic3.png" alt="" />
           </div>
 
           <div className="w-[150px] h-[100px]">
@@ -40,13 +40,13 @@ const BoxItem = () => {
           </div>
         </div>
 
-        <div className=" flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px] ">
+        <div className=" flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px]  hover:scale-75 duration-75 ">
           <div className="w-[100px] h-[110px]">
-            <img className="w-[100%] h-[100%]" src="./pic2.png" alt="" />
+            <img className="w-[100%] h-[100%]" src="./pic4.png" alt="" />
           </div>
 
           <div className="w-[150px] h-[100px]">
-            <h1 className="text-[#158B68;] text-2xl text-center ">
+            <h1 className="text-[#158B68;] text-2xl text-center">
               {" "}
                 دوره آموزشی{" "}
             </h1>
@@ -57,9 +57,9 @@ const BoxItem = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px] ">
+        <div className="flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px] hover:scale-75 duration-75 ">
           <div className="w-[100px] h-[110px]">
-            <img className="w-[100%] h-[100%]" src="./pic2.png" alt="" />
+            <img className="w-[100%] h-[100%]" src="./pic5.png" alt="" />
           </div>
 
           <div className="w-[150px] h-[100px]">

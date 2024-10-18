@@ -15,7 +15,7 @@ const MyService = () => {
       </div>
 
       <div className="flex flex-wrap gap-[20px] justify-center md:justify-around w-[90%] mx-auto mt-10">
-        <div className="flex gap-2 w-[400px] h-[120px]">
+        <div className="flex gap-2 w-[400px] h-[120px] hover:shadow-2xl">
           <div className="w-[130px] h-[120px]">
             <img className="w-[100%] h-[100%]" src="./pic.png" alt="" />
           </div>
@@ -30,7 +30,7 @@ const MyService = () => {
           </div>
         </div>
 
-        <div className="flex gap-2 w-[400px] h-[120px]">
+        <div className="flex gap-2 w-[400px] h-[120px]  hover:shadow-2xl">
           <div className="w-[130px] h-[120px]">
             <img
               className="w-[100%] h-[100%]"
@@ -49,7 +49,7 @@ const MyService = () => {
           </div>
         </div>
 
-        <div className="flex gap-2 w-[400px] h-[120px]">
+        <div className="flex gap-2 w-[400px] h-[120px]  hover:shadow-2xl">
           <div className="w-[130px] h-[120px]">
             <img
               className="w-[100%] h-[100%]"
@@ -68,7 +68,7 @@ const MyService = () => {
           </div>
         </div>
 
-        <div className="flex gap-2 w-[400px] h-[120px]">
+        <div className="flex gap-2 w-[400px] h-[120px]  hover:shadow-2xl">
           <div className="w-[130px] h-[120px]">
             <img
               className="w-[100%] h-[100%]"
@@ -87,7 +87,7 @@ const MyService = () => {
           </div>
         </div>
 
-        <div className="flex gap-2 w-[400px] h-[120px]">
+        <div className="flex gap-2 w-[400px] h-[120px]  hover:shadow-2xl">
           <div className="w-[130px] h-[120px]">
             <img
               className="w-[100%] h-[100%]"
@@ -106,7 +106,7 @@ const MyService = () => {
           </div>
         </div>
 
-        <div className="flex gap-2 w-[400px] h-[120px]">
+        <div className="flex gap-2 w-[400px] h-[120px]  hover:shadow-2xl">
           <div className="w-[130px] h-[120px]">
             <img
               className="w-[100%] h-[100%]"

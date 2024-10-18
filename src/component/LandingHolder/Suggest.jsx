@@ -73,7 +73,7 @@ const Suggest = () => {
           </div>
           <button
             type="submit "
-            className="w-[120px] h-[50px] bg-[#5BE1B9;] rounded-lg mt-[70px]"
+            className="w-[120px] h-[50px] bg-[#5BE1B9;] rounded-lg mt-[70px] shadow-xl"
           >
             ارسال
           </button>

@@ -17,7 +17,7 @@ const Category = () => {
       <div className="flex flex-wrap justify-center w-[90%] mx-auto gap-[40px]">
 
 
-        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-xl">
+        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-2xl hover:scale-75 duration-75">
           <div className=" w-[20%] mt-10">
             <img src="./cat1.png" alt="" />
           </div>
@@ -32,7 +32,7 @@ const Category = () => {
           </div>
         </div>
 
-        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-xl">
+        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-2xl hover:scale-75 duration-75 ">
           <div className=" w-[20%] mt-10">
             <img src="./cat1.png" alt="" />
           </div>
@@ -47,7 +47,7 @@ const Category = () => {
           </div>
         </div>
 
-        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-xl">
+        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-xl hover:scale-75 duration-75">
           <div className=" w-[20%] mt-10">
             <img src="./cat1.png" alt="" />
           </div>
@@ -62,7 +62,7 @@ const Category = () => {
           </div>
         </div>
 
-        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-xl">
+        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-xl hover:scale-75 duration-75">
           <div className=" w-[20%] mt-10">
             <img src="./cat1.png" alt="" />
           </div>

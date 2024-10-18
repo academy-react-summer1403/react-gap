@@ -1,4 +1,6 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import NavBar from "../common/NavBarHero/NavBar";
 
 const HeroSection = () => {
   return (
@@ -14,15 +16,24 @@ const HeroSection = () => {
           دهندگان وب نیست. طراحان گرافیک نیز از آن با نرم افزارهای مختلفی مانند
           فوتوشاپ استفاده می کنند.
         </h3>
-        <button className="w-[210px] h-[75px] rounded-[50px] text-[#22445D;] text-2xl font-inter bg-[#12926C;] text-[#ffffff] mx-16 ">
+
+        <div>
+          <NavLink to={"/courses"}>
+             <button className="w-[210px] h-[75px] rounded-[50px] text-[#22445D;] text-2xl font-inter bg-[#12926C;] text-[#ffffff] mx-16 animate-pulse ">
           {" "}
           شروع یادگیری{" "}
         </button>
+          </NavLink>
+         
+        </div>
+        
       </div>
 
       <div className=" hidden w-[650px] h-[500px] m-16 lg:block">
         <img src="./ImgHero.png" alt="Img" />
       </div>
+
+      <NavBar/>
     </div>
   );
 };
