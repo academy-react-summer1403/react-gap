@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { SlArrowDown } from "react-icons/sl";
 import { GoSearch } from "react-icons/go";
@@ -72,3 +73,4 @@ const BarCourses = () => {
 }
 
 export default BarCourses
+

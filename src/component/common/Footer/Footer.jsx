@@ -24,7 +24,7 @@ const Footer = () => {
   <nav>
     <h6 className="footer-title  text-3xl">اخبار آموزشگاه</h6>
     <a className="link link-hover text-xl"> برای دریافت اخبار بروز آموزشگاه ایمیل خود را وارد کنید. </a>
-   
+
   </nav>
   <form>
     <h6 className="footer-title text-3xl">اخبار آموزشگاه</h6>

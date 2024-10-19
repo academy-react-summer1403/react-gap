@@ -28,7 +28,7 @@ const CardCours = () => {
                  
                 <div key={index} className=' h-[510px] w-[345px] bg-[#FBF6F6] rounded-3xl  mb-20 '>
 
-                   
+                    
 
                  
                     <div className='w-[100px] h-[100px] mt-[-60px] mr-[120px] animate-pulse'>
@@ -83,18 +83,18 @@ const CardCours = () => {
                       {item.reservation}         
                     </button>
 
-                   
+                    
 
-                       </div>
+                        </div>
 
-              
-            )
-        })}
-  </div>
+                
+              )
+          })}
+    </div>
 
                   <div className='mr-[420px] mb-[100px]'>
 
-                  <div className="join">
+                    <div className="join">
                   <button className="join-item btn btn-xs bg-[#5BE1B9] w-[70px] h-[70px]">1</button>
                   <button className="join-item btn btn-xs btn-active bg-[#FBF6F6] w-[70px] h-[70px]">2</button>
                   <button className="join-item btn btn-xs bg-[#5BE1B9] w-[70px] h-[70px]">3</button>

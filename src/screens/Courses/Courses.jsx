@@ -1,11 +1,15 @@
 import React from 'react'
-import Filter from '../../../component/Cours/Filter'
-import CardCours from '../../../component/Cours/CardCours'
+
+import CardCours from '../../component/Cours/CardCours'
+import Filter from '../../component/Cours/Filter'
+
+
 import BarCourses from './BarCourses'
 import SliderCourses from './SliderCourses'
 
 
-const LandingCourses = () => {
+
+const Courses = () => {
   return (
     <div>
       <BarCourses/>
@@ -31,4 +35,4 @@ const LandingCourses = () => {
   )
 }
 
-export default LandingCourses
+export default Courses
