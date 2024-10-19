@@ -8,6 +8,7 @@ import Cours from "../screens/Landing/Courses/LandingCourses";
 import News from "../screens/News/News";
 import UserPanel from "../component/UserPanel";
 
+
 const index = () => {
   const Routers = createBrowserRouter([
     {
@@ -49,7 +50,7 @@ const index = () => {
     },
 {
  path:"/Panel",
- element:<UserPanel/>
+ element:<UserPanel/>,
 }
   ]);
 

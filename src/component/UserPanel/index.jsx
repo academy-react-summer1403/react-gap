@@ -6,6 +6,7 @@ import PanelContent from './PanelContent/PanelContent'
 
 
 
+
 const UserPanel = () => {
   return (
     <div>
@@ -13,6 +14,8 @@ const UserPanel = () => {
       <HeaderPanel/>
       <SaitBar/>
       <PanelContent/>
+      
+
       
      
     
