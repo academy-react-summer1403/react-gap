@@ -14,23 +14,23 @@ const Landing = () => {
   return (
     <div>
 
+      
+
     
-
-  
-   
-   
-<HeroSection/>
-<MyService/>
-<BoxItem/>
-<Category/>
-<Courses/>
-<Introduction/>
-<Article/>
-<Suggest/>
+    
+    
+  <HeroSection/>
+  <MyService/>
+  <BoxItem/>
+  <Category/>
+  <Courses/>
+  <Introduction/>
+  <Article/>
+  <Suggest/>
 
 
 
-   </div>
+    </div>
 
 
 
