@@ -1,4 +1,3 @@
-import { div } from "framer-motion/client";
 
 const SaitBar = () => {
   return (
@@ -25,7 +24,7 @@ const SaitBar = () => {
       <div className="flex flex-wrap w-[100%] h-[20%]">
         <div className="border-2 border-red-600 w-[100%] h-[30%]"> بازگشت به خانه</div>
         <div className="border-2 border-red-600 w-[100%] h-[30%]">
-           خروج
+            خروج
         </div>
       </div>
     </div>

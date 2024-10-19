@@ -1,13 +1,9 @@
 import React from 'react'
-<<<<<<< HEAD
-import Filter from '../../component/Cours/Filter'
-import CardCours from '../../component/Cours/CardCours'
-=======
 
 import CardCours from '../../component/Cours/CardCours'
 import Filter from '../../component/Cours/Filter'
 
->>>>>>> zameni.new.login
+
 import BarCourses from './BarCourses'
 import SliderCourses from './SliderCourses'
 
