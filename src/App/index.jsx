@@ -7,6 +7,7 @@ import Login from "../component/LoginForm/Login";
 import Cours from "../screens/Landing/Courses/LandingCourses";
 import News from "../screens/News/News";
 import UserPanel from "../component/UserPanel";
+import HolderConnect from "../component/HolderConnecting/HolderConnect";
 
 const index = () => {
   const Routers = createBrowserRouter([
@@ -34,6 +35,10 @@ const index = () => {
           path: "/News",
           element: <News />,
         },
+        {
+          path:"/Connect",
+          element:<HolderConnect/>
+        }
       ],
     },
 
