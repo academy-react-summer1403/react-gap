@@ -16,12 +16,12 @@ const CardNews = () => {
 
 return (
 <div class>
-    <div className='border-2 w-[90%]  mt-[30px] mr-[90px] rounded-3xl shadow-xl'>
-      <div className='w-[90%] flex flex-wrap justify-center gap-[40px] mt-[80px] mx-auto'>
+    <div className='border-2 w-[90%] mt-[30px] mr-[90px] rounded-3xl shadow'>
+      <div className=' w-[90%] flex flex-wrap justify-center gap-[10px] mt-[45px] mx-auto'>
     {List.map((item, index)=>{
           return(
              
-            <div key={index} className='border-2 h-[530px] w-[380px] bg-[#ffff] rounded-3xl  mb-20'>
+            <div key={index} className='border-2 h-[530px] w-[390px] bg-[#FBF6F6] rounded-3xl  mb-24'>
               <div className='h-[250px] w-[100%]'>
               <img  src={item.icon} alt="" className='pic1.png'/>
 
@@ -52,28 +52,28 @@ return (
               <div className='text-[14px] text-[#6D6767] relative mt-[60px] mr-[10px]'><span>لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود </span></div>
                     <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
 
-                    <h1 className='text-center'>مشاهده جزئیات</h1>
-
-             
-              
-
-
-               
-
+                    <h1 className='text-center'>مشاهده جزئیات</h1>  
             </div>
-            </div>
-
-            
-
-          
+            </div>  
         )
-       
-
-
-
 })}
     </div>
-    
+
+    <div className='mr-[510px] mb-[20px]'>
+
+  <div className="join rounded-full">
+  <button className="join-item btn btn-xs bg-[#5BE1B9] w-[80px] h-[70px]">1</button>
+  <button className="join-item btn btn-xs btn-active bg-[#FBF6F6] w-[80px] h-[70px]">2</button>
+  <button className="join-item btn btn-xs bg-[#5BE1B9] w-[80px] h-[70px]">3</button>
+  <button className="join-item btn btn-xs bg-[#FBF6F6] w-[80px] h-[70px]">4</button>
+
+  </div>
+
+    </div>
+
+
+
+
     </div>
 </div>
 )
