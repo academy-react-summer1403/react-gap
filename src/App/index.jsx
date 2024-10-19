@@ -6,6 +6,8 @@ import Landing from "../component/LandingHolder/Landing";
 import Login from "../component/LoginForm/Login";
 import Cours from "../screens/Landing/Courses/LandingCourses";
 import News from "../screens/News/News";
+import UserPanel from "../component/UserPanel";
+
 
 const index = () => {
   const Routers = createBrowserRouter([
@@ -46,6 +48,10 @@ const index = () => {
       path: "/Error",
       element: <Error404 />,
     },
+{
+ path:"/Panel",
+ element:<UserPanel/>,
+}
   ]);
 
   return (

@@ -1,15 +1,16 @@
 import React from "react";
-import { LuFilterX } from "react-icons/lu";
+
 
 const Filter = () => {
   return (
     <div className=" border-2 h-[686px] w-[310px] bg-[#FBF6F6]  rounded-3xl  mr-[40px] mt-20 shadow-md">
-      <div className=" text-center text-xl mt-8">
+         <div className=" text-center text-xl mt-8">
         <h1 className=" ">فیلترها</h1>
       </div>
 
-      <ul className="mt-9 transition list-none">
+      <div className="mt-9 transition list-none">
         <div className="join join-vertical w-full">
+
           <div className="collapse collapse-arrow join-item">
             <input type="radio" name="my-accordion-4" defaultChecked />
             <div className="collapse-title text-xl font-medium ">
@@ -22,7 +23,7 @@ const Filter = () => {
                 <div className="text-right mr-[30px]">
                   <input type="radio" name="ca" />
                   <lable className="text-center text-[14px] indent-1 inline-block">
-                    <span className="mr-[10px] font-normal "> فرانا اند </span>
+                    <span className="mr-[10px] font-normal "> فرانت اند </span>
                   </lable>
                 </div>
 
@@ -105,7 +106,7 @@ const Filter = () => {
           </div>
 
           <div className="collapse collapse-arrow join-item border-base-300 ">
-            <input type="radio" name="my-accordion-4" />
+          <input type="radio" name="my-accordion-4" />
             <div className="collapse-title text-xl font-medium">قیمت</div>
             <div className="collapse-content">
               <input
@@ -115,21 +116,23 @@ const Filter = () => {
                 value="40"
                 className="range range-accent"
               />
-            </div>
           </div>
-        </div>
-
+          </div>
+         
+            
+             
         <div className="border w-[80%] relative mr-[18px] mb-[10px] border-[#5BE1B9]"></div>
+        <button className="h-[30px] w-[100px] rounded-[5px]  bg-[#5BE1B9] relative mr-[80px] mb-[90px]">
+          <spn className="font-sans my-0.5 text-xs font-normal py-px-[20px] ">
+            پاک کردن فیلترها{" "}
+          </spn>
+        </button>
 
-        <button className="">
-          <spn className="font-sans my-0.5 text-xs font-normal py-px-[20px] "></spn>
-        </button>
-        <button className="btn btn-outline btn-accent h-[30px] w-36 relative mr-[80px] mt-[20px] hover:animate-bounce">
-          {" "}
-          پاک کردن فیلترها{" "}
-        </button>
-      </ul>
+      </div>
     </div>
+
+    </div>
+   
   );
 };
 
