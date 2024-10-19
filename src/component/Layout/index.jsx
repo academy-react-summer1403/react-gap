@@ -4,7 +4,7 @@ import Header from "../common/Header/Header";
 import Footer from "../common/Footer/Footer";
 
 
-const Layout = () => {
+const index = () => {
   return (
     <div>
       <Header />
@@ -14,4 +14,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default index;

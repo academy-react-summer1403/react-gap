@@ -4,7 +4,7 @@ import { FaMobileAlt } from "react-icons/fa";
 import { GoKey } from "react-icons/go";
 import { AiOutlineHome } from "react-icons/ai";
 
-const Login = () => {
+const index = () => {
 
 
   return (
@@ -81,4 +81,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default index

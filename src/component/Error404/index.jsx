@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Error404 = () => {
+const index = () => {
   return (
     <div className='flex  justify-center flex-col  h-[680px] mt-6 ml-6'>
 
@@ -17,4 +17,4 @@ const Error404 = () => {
   )
 }
 
-export default Error404
+export default index

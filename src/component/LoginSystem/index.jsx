@@ -1,7 +1,7 @@
 import React from 'react'
 import { HiMiniFingerPrint } from "react-icons/hi2";
 import { AiOutlineHome } from "react-icons/ai";
-const LoginSystem = () => {
+const index = () => {
   return (
     <div className='flex justify-center  w-screen h-[500px] m-10 '>
       <div className=' flex  w-[800px] h-[500px]'>
@@ -65,4 +65,4 @@ const LoginSystem = () => {
   )
 }
 
-export default LoginSystem
+export default index
