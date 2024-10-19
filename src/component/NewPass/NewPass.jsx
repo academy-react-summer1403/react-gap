@@ -35,7 +35,7 @@ const NewPass = () => {
                         <div className='register-link'>
                             <button className='border-2 w-[340px] h-[40px] rounded-lg  bg-[#158B68;] text-white'>تایید</button>
                             <br />
-                            <br />
+                              <br />
 
 
                         </div>

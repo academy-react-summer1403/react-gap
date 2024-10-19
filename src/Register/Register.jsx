@@ -3,8 +3,8 @@ import { AiOutlineHome } from "react-icons/ai";
 import { FaMobileAlt } from "react-icons/fa";
 
 const Register = () => {
-  return (
-    <div className=' flex justify-center  w-screen h-[500px] m-10 '>
+return (
+    <div className=' border-2 border-red-400 flex justify-center  h-[500px] m-10 '>
 
         <div className='flex  w-[800px] h-[500px]'>
             <div className=' w-[400px] h-[500px] bg-[#FBF6F6;] rounded-r-2xl shadow-2xl'>
@@ -17,10 +17,10 @@ const Register = () => {
                         <br />
                         <div className='input-box'>
                             <input className='border-2 relative w-[340px] h-[40px] rounded-lg border-[#158B68] mt-4 px-5' type="text" placeholder='شماره همراه' />
-                               <FaMobileAlt  className=' relative -top-6 fill-[#158B68]'/>
+                    <FaMobileAlt  className=' relative -top-6 fill-[#158B68]'/>
                             
                         </div>
-                               
+                
                                 <br />
                         <div className='register-link'>
                             <button className='border-2 w-[340px] h-[40px] rounded-lg  bg-[#158B68;] text-white'>ادامه</button>
