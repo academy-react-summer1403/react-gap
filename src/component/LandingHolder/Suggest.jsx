@@ -9,7 +9,7 @@ const Suggest = () => {
   });
   return (
     <div className=" h-[800px]">
-      <div className=" h-[100px]  text-center relative top-[30px] ">
+      <div className=" h-[100px] text-center relative top-[30px] ">
         <h1 className="text-[#22445D;] text-4xl"> پیشنهادات و انتقادات </h1>
 
         <p className="text-[#22445D;] text-2xl font-normal mt-4">
@@ -73,13 +73,13 @@ const Suggest = () => {
           </div>
           <button
             type="submit "
-            className="w-[120px] h-[50px] bg-[#5BE1B9;] rounded-lg mt-[70px]"
+            className="w-[120px] h-[50px] bg-[#5BE1B9;] rounded-lg mt-[70px] shadow-xl"
           >
             ارسال
           </button>
         </div>
 
-        <div className="w-[600px] h-[500px]">
+        <div className="hidden xl:block w-[600px] h-[500px]">
           <img className="w-[100%] h-[100%]" src="./img1.png" alt="" />
         </div>
       </div>

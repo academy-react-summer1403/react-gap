@@ -16,7 +16,11 @@ import RegisterStep1 from '../component/RegisterStep1/RegisterStep1';
 import RegisterStep2 from '../component/RegisterStep2/RegisterStep2';
 import NewPass from '../component/NewPass/NewPass';
 import News from "../screens/News/News";
+
 import Courses from '../screens/Courses/Courses';
+
+import UserPanel from "../component/UserPanel";
+
 
 const index = () => {
 
@@ -60,12 +64,6 @@ const index = () => {
       element: <Error404 />,
     },
     {
-      path:'/Login',
-      element:<Login/>,
-    
-    },
-
-    {
       path:'/LoginSystem',
       element:<LoginSystem/>,
     
@@ -98,9 +96,16 @@ const index = () => {
       element:<NewPass/>,
     
     },
+{
+  path:"/Panel",
+  element:<UserPanel/>,
+  }
+  
+    ])
+    ;
 
-  ])
-  ;
+
+
 
   return (
     <div>
