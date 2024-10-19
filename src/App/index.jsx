@@ -17,6 +17,9 @@ import RegisterStep2 from '../component/RegisterStep2/RegisterStep2';
 import NewPass from '../component/NewPass/NewPass';
 import News from "../screens/News/News";
 import Courses from '../screens/Courses/Courses';
+import Article1 from '../component/Article0/Article1/Article1';
+import Article2 from '../component/Article0/Article2/Article2';
+
 
 const index = () => {
 
@@ -46,7 +49,17 @@ const index = () => {
           path: "/News",
           element: <News />,
         },
-      ],
+
+        {
+          path:"/Article1",
+          element:<Article1/>
+
+        },
+
+      ]
+      
+      ,
+
     },
 
     {
@@ -98,6 +111,7 @@ const index = () => {
       element:<NewPass/>,
     
     },
+
 
   ])
   ;

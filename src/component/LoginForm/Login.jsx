@@ -8,13 +8,13 @@ const Login = () => {
 
 
   return (
-    <div className=' flex justify-center  w-screen h-[500px] m-10 '>
-    <div className='flex  w-[800px] h-[500px] '> 
+    <div className='  border-2 border-red-400 flex justify-center  w-screen h-screen m-10 '>
+    <div className=' border-2 border-red-400 flex  w-[800px] h-[500px] '> 
       
-        <div className='  w-[400px] h-[500px] bg-[#FBF6F6;] rounded-r-2xl shadow-2xl'>
+        <div className=' border-2 border-red-400  w-[400px] h-[500px] bg-[#FBF6F6;] rounded-r-2xl shadow-2xl'>
 
 
-          <div className='flex justify-center relative  top-[100px] w-[400px] h-[400px]'>
+          <div className=' border-2 border-red-400  flex justify-center relative  top-[100px] w-[400px] h-[400px]'>
 
   <form action="">
 
