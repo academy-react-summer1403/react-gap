@@ -48,17 +48,17 @@ export const Routers = createBrowserRouter([
     element: <Register />,
   },
   {
-    path: "/RegisterStep",
+    path: "/Step",
     element: <RegisterStep />,
   },
 
   {
-    path: "/RegisterStep1",
+    path: "/Step1",
     element: <RegisterStep1 />,
   },
 
   {
-    path: "/RegisterStep2",
+    path: "/Step2",
     element: <RegisterStep2 />,
   },
   {
