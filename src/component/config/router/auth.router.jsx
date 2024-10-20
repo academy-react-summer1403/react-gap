@@ -11,6 +11,7 @@ import RegisterStep1 from "../../RegisterStep1/RegisterStep1";
 import RegisterStep2 from "../../RegisterStep2/RegisterStep2";
 import NewPass from "../../NewPass/NewPass";
 import UserPanel from "../../UserPanel";
+import Article1 from "../../../component/Article/Article1"
 import { createBrowserRouter } from "react-router-dom";
 export const Routers = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ export const Routers = createBrowserRouter([
         element: <News />,
       },
       {
-        path:"/Article1",
+        path:"/Article",
         element:<Article1/>
 
       },
