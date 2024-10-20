@@ -29,6 +29,11 @@ export const Routers = createBrowserRouter([
         path: "/News",
         element: <News />,
       },
+      {
+        path:"/Article1",
+        element:<Article1/>
+
+      },
     ],
   },
 
