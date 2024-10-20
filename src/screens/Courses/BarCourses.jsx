@@ -1,12 +1,12 @@
-import React from "react";
+
+import React from 'react'
 import { SlArrowDown } from "react-icons/sl";
-import { BsSearchHeart } from "react-icons/bs";
 import { GoSearch } from "react-icons/go";
 
-const NewsBar = () => {
+const BarCourses = () => {
   return (
     <div className="flex  justify-center flex-wrap ">
-      <h1 className=" relative mt-[100px] md:text-5xl text-black sm:text-2xl animate-bounce "> لیست اخبار و مقالات </h1>
+      <h1 className=" relative mt-[100px] md:text-5xl text-black sm:text-2xl animate-bounce  "> لیست اخبار و مقالات </h1>
 
       <div className=" sm:w-11/12 h-36  bg-[#FBF6F6] rounded-3xl relative -mr-[0px] mt-[60px] shadow-xl ">
 
@@ -34,9 +34,9 @@ const NewsBar = () => {
         <div className=" mr-10 -mt-20 ">
         <div className="dropdown dropdown-bottom ">
         <div tabIndex={0} role="button" className="btn m-1 border-[#158B68]  h-20 w-56 rounded-full bg-[#ffff] hover:bg-[#5BE1B9] ">  دسته بندی </div>
-        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] p-2 shadow ">
+        <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] p-2 shadow">
           <li className="hover:bg-[#5BE1B9] hover:animate-bounce"><a> مرتب سازی </a></li>
-          <li className="hover:bg-[#5BE1B9] hover:animate-bounce" ><a> فرانت اند</a></li>
+          <li className="hover:bg-[#5BE1B9] hover:animate-bounce"><a> فرانت اند</a></li>
           <li className="hover:bg-[#5BE1B9] hover:animate-bounce"><a>   بک اند </a></li>
           <li className="hover:bg-[#5BE1B9] hover:animate-bounce"><a>   next-js </a></li>
         </ul>
@@ -60,7 +60,7 @@ const NewsBar = () => {
              placeholder:text-[#807A7A]
              placeholder:uppercase"
              />
-             <div className=" border-2 w-24  bg-[#A4F6DE] h-20 relative -mt-[80px] mr-[403px]  rounded-l-full">
+             <div className=" border-2 border-[#158B68] w-24  bg-[#A4F6DE] h-20 relative -mt-[80px] mr-[403px]  rounded-l-full">
              {/* <BsSearchHeart /> */}
              <GoSearch className=" w-10 h-10 relative mt-4 mr-5" />
              </div>
@@ -69,7 +69,8 @@ const NewsBar = () => {
 
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NewsBar;
+export default BarCourses
+

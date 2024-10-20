@@ -10,9 +10,18 @@ import Suggest from '../../component/LandingHolder/Suggest';
 
 
 const Landing = () => {
-  return (
-    <div>
+    return (
+      <div>
 
+<<<<<<< HEAD
+      <Header/>
+
+      <HeroSection/>
+
+      <Footer/>
+      
+    
+=======
     
      
 
@@ -26,10 +35,11 @@ const Landing = () => {
      <Suggest/>
     
    
+>>>>>>> develope
 
-     
-    </div>
-  )
+      
+      </div>
+    )
 }
 
 export default Landing;

@@ -1,5 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import React from "react";
+import { Routers } from "../component/config/router/auth.router";
 
+<<<<<<< HEAD
 import Error404 from "../component/Error404/Error404";
 import Layout from "../component/Layout/Layout";
 import Landing from "../component/LandingHolder/Landing";
@@ -57,7 +60,10 @@ const index = () => {
  element:<UserPanel/>
 }
   ]);
+=======
+>>>>>>> develop
 
+const App = () => {
   return (
     <div>
       <RouterProvider router={Routers} />
@@ -65,4 +71,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default App;
