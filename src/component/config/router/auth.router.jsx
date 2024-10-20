@@ -13,6 +13,9 @@ import NewPass from "../../NewPass/NewPass";
 import UserPanel from "../../UserPanel";
 import Article1 from "../../../component/Article/Article1"
 import { createBrowserRouter } from "react-router-dom";
+import HolderConnect from "../../HolderConnect/HolderConnecting";
+import UserMyCourse from "../../UserPanel/UserMyCourse";
+import PanelLayout from "../../../App/PanelLayout"
 export const Routers = createBrowserRouter([
   {
     path: "/",
@@ -35,6 +38,11 @@ export const Routers = createBrowserRouter([
         element:<Article1/>
 
       },
+      {
+        path:"/Connect",
+        element: <HolderConnect />,
+      },
+    
     ],
   },
 
@@ -76,9 +84,22 @@ export const Routers = createBrowserRouter([
     path: "*",
     element: <Error404 />,
   },
-
+    
   {
-    path: "/Panel",
-    element: <UserPanel />,
-  },
+    path:'/',
+    element:<PanelLayout/>,
+    children:[
+      {
+        path: "/Panel",
+        element: <UserPanel />,
+    
+      },
+      {
+        path:"/UserMyCourse",
+        element:<UserMyCourse/>
+      },
+
+    ]
+  }
+
 ]);

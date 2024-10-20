@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const index = () => {
   return (
@@ -8,8 +8,13 @@ const index = () => {
       <div className='w-[1100px] h-[520px] mr-[190px]'>
         <img src='./Mask Group.png' />
       </div>
+      <NavLink to={"/"}>
+      <button className='w-[190px] h-[60px] 
+      rounded-[10px]  bg-[#158B68;] mr-[690px]
+       text-[#ffffff] text-lg '>
+         بازگشت به خانه </button>
 
-      <button className='w-[190px] h-[60px] rounded-[10px]  bg-[#158B68;] mr-[690px] text-[#ffffff] text-lg '> بازگشت به خانه </button>
+      </NavLink>
 
 
 

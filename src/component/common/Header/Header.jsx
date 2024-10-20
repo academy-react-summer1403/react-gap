@@ -40,7 +40,7 @@ const Header = () => {
               {" "}
               مقالات{" "}
             </NavLink>
-            <NavLink className="text-xl hover:text-[#158B68;]">
+            <NavLink to={'/Connect'} className="text-xl hover:text-[#158B68;]">
               {" "}
               درباره ما{" "}
             </NavLink>
