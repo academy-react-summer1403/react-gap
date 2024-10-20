@@ -1,54 +1,64 @@
-import React from 'react'
-import { AiOutlineHome } from "react-icons/ai";
-import { HiMiniFingerPrint } from "react-icons/hi2";
-const RegisterStep = () => {
-  return (
-    <div className=' flex justify-center  w-screen h-[500px] m-10 '>
-
-        <div className='flex  w-[800px] h-[500px]'>
-            <div className=' w-[400px] h-[500px] bg-[#FBF6F6;] rounded-r-2xl shadow-2xl'>
-                <div className=' flex justify-center relative top-[100px] w-[400px] h-[400px]'>
-
-                    <form action=''>
-
-                        <h1 className='  relative top-[20px] font-Inter  text-[#22445D]'>ثبت نام</h1>
-                        <br />
-                        <br />
-                        <div className='input-box'>
-                            <input className='border-2 relative w-[340px] h-[40px] rounded-lg border-[#158B68] mt-4 px-5 right-2' type="text" placeholder='کد تایید' />
-                               <HiMiniFingerPrint   className=' relative -top-6 fill-[#158B68] right-3'/>
-                            
-                        </div>
-                               
-                                <br />
-                        <div className='register-link'>
-                            <button className='border-2 w-[340px] h-[40px] rounded-lg  bg-[#158B68;] text-white'>ادامه</button>
-                            <br />
-                            <br />
-                            <button className='border-2 w-[340px] h-[40px] rounded-lg  bg-[#FFFFFF;] text-[#22445D] border-[#158B68]'>بازگشت به صفحه قبل</button>
-                            <br />
+import { Field, Form, Formik } from "formik";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { IoHome } from "react-icons/io5";
 
 
-                        </div>
 
-                        <div><AiOutlineHome className=' relative right-80 bottom-[350px] size-6 fill-[#158B68]' /></div>
+const index = () => { 
+return (
+    <div className=" flex justify-center w-[90%] h-[600px] mx-auto mt-10">
+    <div className="flex w-[90%] h-[100%] ">
+        <NavLink to={'/'}>
+        <div className="relative top-5 right-[580px]">
+            <IoHome  className="size-7 fill-[#158B68]"/>
+            </div> 
+        </NavLink>
 
+        <div className="w-[50%] h-[100%] bg-[#FBF6F6;] rounded-r-2xl shadow-2xl">
+        <h1 className=" relative right-14 top-32 text-2xl">
+                ثبت نام
+            </h1>
+        <div className="flex flex-wrap justify-center mr-6 w-[90%] h-[75%] mt-40">
+        
+            <Formik 
+            initialValues={{Mobile:"", PassWord:""}}
+            onSubmit={(values) => onsubmit(values)}
+            >
+            <Form>
+                <Field name='Mobile' placeholder='کد تایید' 
+                className='w-[100%] h-[60px] mt-10 px-36 border-2 rounded-xl border-[#158B68]'/>
+            
+                
 
-                    </form>
+                
+                <button className=" w-[100%] h-[50px] bg-[#158B68;] text-white rounded-lg relative top-10">
+                ادامه{" "}
+                </button>
 
-                </div>
-            </div>
-            <div className='flex justify-center  w-[400px] h-[500px] bg-[#A4F6DE;] rounded-l-2xl '> 
-                <div className='w-[300px] h-[300px] mt-20'>
-                <img src="./registerVerfy.png" alt="" />
+                <br />
 
-                </div>
-            </div>
+                <button className=" w-[100%] h-[50px] border-2 border-[#158B68]  text-[#158B68] rounded-lg relative top-14">
+                بازگشت به صفحه قبل{" "}
+                </button>
+            
 
+    
+            
+    
+            </Form>
+            </Formik>
         </div>
-      
-    </div>
-  )
-}
+        </div>
 
-export default RegisterStep
+        <div className="flex justify-center w-[50%] h-[100%] bg-[#A4F6DE;] rounded-l-2xl">
+        <div className="w-[60%] h-[60%] mt-28  ">
+            <img src="./stap1.png" alt="" />
+        </div>
+        </div>
+    </div>
+    </div>
+);
+};
+
+export default index;
