@@ -36,7 +36,7 @@ const Footer = () => {
         <input
           type="text"
           placeholder=" ... Email"
-          className="input input-bordered join-item" />
+          className="input input-bordered join-item outline-none" />
         <button className="btn btn-primary join-item">ثبت</button>
       </div>
     </fieldset>
