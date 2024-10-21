@@ -1,30 +1,7 @@
-import React from 'react'
-import HeaderPanel from '../common/HeaderPanel'
-import SaitBar from '../common/SaitBarPanel/SaitBar'
-import PanelContent from './PanelContent/PanelContent'
-
-
-
-
+import React from "react";
 
 const UserPanel = () => {
-  return (
-    <div>
+  return <div></div>;
+};
 
-      <HeaderPanel/>
-      <SaitBar/>
-      <PanelContent/>
-      
-
-      
-     
-    
-    
-
-
-      
-    </div>
-  )
-}
-
-export default UserPanel
+export default UserPanel;
