@@ -256,7 +256,14 @@
                                 </div>
                             </div>
                             </div>
+                            <div>
+
+                            </div>
                             <h2 className="  border-2 border-yellow-400 card-title text-2xl">آشنایی با برنامه نویسی با وردپرس</h2>
+ 
+
+
+
                             <p className="text-right"> لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود </p>
 
                             <div className=" flex flex-wrap justify-between gap- border-t-2 border-green-900 w-[90%]">
