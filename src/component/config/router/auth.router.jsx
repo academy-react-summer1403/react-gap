@@ -72,7 +72,7 @@ export const Routers = createBrowserRouter([
   },
 
   {
-    path: "/Panel",
+    path: "/Panel",   
     element: <UserPanel />,
   },
 ]);
