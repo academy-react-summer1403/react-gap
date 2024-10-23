@@ -1,11 +1,24 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink, useNavigation } from "react-router-dom";
 import { IoHome } from "react-icons/io5";
 
 
 
 const index = () => { 
+  // const navigate = useNavigation()
+  // const onsubmit = async(values)=>{
+  //   const obj = {phoneOrGmail:values.Mobile , password:values.PassWord , rememberMe:false}
+  //   const res = await LoginApi(obj)
+  //   if(res.success){
+  //     setData("Login", res.token) alert('')
+  //     navigate("/")
+  //   }
+  //   else(alert(''))
+  //    console.log(res)
+
+  // }
+ 
   return (
     <div className=" flex justify-center w-[90%] h-[600px] mx-auto mt-10">
       <div className="flex w-[90%] h-[100%] ">
