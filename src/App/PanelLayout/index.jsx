@@ -1,14 +1,17 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
-import SaitBar from '../../component/common/SaitBarPanel/SaitBar'
 import HeaderPanel from '../../component/common/HeaderPanel'
+import UserPanel from "../../component/UserPanel"
+
 
 const index = () => {
   return (
     <div>
       <HeaderPanel/>
       <Outlet/>
-      <SaitBar/>
+      <UserPanel/>
+      
+      
       
     </div>
   )

@@ -3,13 +3,16 @@ import React from 'react'
 const HeaderPanel = () => {
   return (
     <div className='flex-col-reverse'>
-      <div className="navbar w-[80%] mr-[338px] bg-[#A4F6DE;]">
-  <div className="flex-1 w-[10px] h-7">
-    <img className='' src="./h11.png" alt="" />
+      <div className="navbar w-[85%] h-[120px] mr-[252px] bg-[#A4F6DE;]">
+  <div className="flex-1">
+    <div className='w-8 h-10 mr-7 mb-3'>
+       <img className='' src="./h11.png" alt="" />
+   
+    </div>
     <a className="btn btn-ghost text-xl">آکادمی اچ وان</a>
   </div>
   
-  <div className="flex-none">
+  <div className="flex-none ml-7 w-36">
     <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
         <div className="indicator">
@@ -64,7 +67,7 @@ const HeaderPanel = () => {
   </div>
 
 <div className=''>
-   <label className="swap swap-rotate relative left-36">
+   <label className="swap swap-rotate relative left-16">
   {/* this hidden checkbox controls the state */}
   <input type="checkbox" />
 
@@ -96,6 +99,7 @@ const HeaderPanel = () => {
 </div>
       
     </div>
+
   )
 }
 
