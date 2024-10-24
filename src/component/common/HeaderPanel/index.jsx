@@ -3,7 +3,7 @@ import React from 'react'
 const HeaderPanel = () => {
   return (
     <div className='flex-col-reverse'>
-      <div className="navbar w-[85%] h-[120px] mr-[252px] bg-[#A4F6DE;]">
+      <div className="navbar w-[100%] h-[110px]  bg-[#A4F6DE;]">
   <div className="flex-1">
     <div className='w-8 h-10 mr-7 mb-3'>
        <img className='' src="./h11.png" alt="" />
