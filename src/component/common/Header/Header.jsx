@@ -3,16 +3,13 @@ import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
-
-
-
   const handelDark = () => {
-    document.documentElement.classList.toggle('dark')
+    document.documentElement.classList.toggle("dark");
   };
 
   return (
     <Fragment>
-      <div className="flex justify-between   h-24 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF] dark:from-[#22445D] dark:to-[#FFFFFF] ">
+      <div className="flex justify-between h-24 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF] dark:bg-slate-800  ">
         <Link to="/" className="flex  gap-2  w-60 h-20 m-6">
           <div className=" w-[50px] h-[50px]">
             <img src="./h11.png" className="" />
@@ -25,10 +22,13 @@ const Header = () => {
 
         <div className="flex gap-6 justify-center h-[70px] m-6 mb-3">
           <div className="flex gap-6 justify-center relative top-2 w-[400px]">
-            <NavLink to={"/"} className=" text-xl hover:text-[#158B68;]   focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+            <NavLink
+              to={"/"}
+              className=" text-xl hover:text-[#158B68;]   focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
       disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
       invalid:border-pink-500 invalid:text-pink-600
-      focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+            >
               {" "}
               صفحه اصلی{" "}
             </NavLink>
@@ -40,38 +40,17 @@ const Header = () => {
               {" "}
               مقالات{" "}
             </NavLink>
-            <NavLink to={'/Connect'} className="text-xl hover:text-[#158B68;]">
+            <NavLink to={"/Connect"} className="text-xl hover:text-[#158B68;]">
               {" "}
               درباره ما{" "}
             </NavLink>
           </div>
         </div>
 
-
-
-        <div className="h-9 m-10 relative right-48">
-          <img src="./search.png" alt="" />
-
-    <label class="relative block">
-  <span class="sr-only">Search</span>
-  <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-    <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20">  </svg>
-    </span>
-    <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full
-    border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none
-      focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-  placeholder="Search for anything..." type="text" name="search"/>
-  </label>
-
-          </div>
-
-
-
-        <div className="w-10 h-10 relative top-8 right-10 cursor-pointer" >
-
-            <label htmlFor="DarkId" className="swap swap-rotate">
+        <div className="w-10 h-10 relative top-8 right-10 cursor-pointer">
+          <label htmlFor="DarkId" className="swap swap-rotate">
             {/* this hidden checkbox controls the state */}
-            <input type="checkbox" id="DarkId"/>
+            <input type="checkbox" id="DarkId" />
 
             {/* sun icon */}
             <svg
@@ -89,26 +68,21 @@ const Header = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               onClick={handelDark}
-              >
-                <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
-              </svg>
-            </label>
-          
-            
-          </div>
-
-          <div className="m-6"><NavLink to={"/Login"}>
-            <button className="hover:text-[#158B68;] w-[150px] h-[57px] bg-[#00DF9D;] rounded-lg text-[#22445D;] font-inter relative left-6  hover:scale-75 duration-75">
-              {" "}
-              ورود / ثبت نام
-              
-            </button>    
-              
-              </NavLink>
-            
-          </div>
+            >
+              <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+            </svg>
+          </label>
         </div>
-      </Fragment>
-    );
-  };
-  export default Header;
+
+        <div className="m-6">
+          <NavLink to={"/Login"}>
+            <button className="btn w-[150px] h-[57px] bg-[#00DF9D;] rounded-lg text-[#22445D;] font-inter relative left-6">
+              ورود / ثبت نام
+            </button>
+          </NavLink>
+        </div>
+      </div>
+    </Fragment>
+  );
+};
+export default Header;

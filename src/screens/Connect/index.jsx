@@ -1,6 +1,6 @@
 import React from "react";
 import HolderConnect from "../../component/HolderConnect/HolderConnecting";
-
+import FormConnect from "../../component/HolderConnect/FormConnect"
 
 
 const index = () => {
@@ -8,6 +8,8 @@ const index = () => {
     <div>
 
       <HolderConnect/>
+      <FormConnect/>
+
     
 
       
