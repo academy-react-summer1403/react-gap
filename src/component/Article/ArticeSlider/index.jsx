@@ -49,9 +49,9 @@
             <div className=" w-[98%] mx-auto m-10">
             {ListSlider.map((item) => {
                 return (
-                <div className=" h-[900px]">
+                <div className=" h-[700px]">
                     <Swiper
-                    className="h-[700px] relative top-20 "
+                    className=" h-[600px] relative top-32 "
                     // install Swiper modules
                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                     spaceBetween={50}
@@ -62,178 +62,14 @@
                     onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log("slide change")}
                     >
-                    <SwiperSlide className="w-[98%]">
-                    <div className="card bg-base-100 w-[100%] h-[100%] shadow-xl">
-                        <figure className="px-10 pt-10">
+
+                    <SwiperSlide className=" w-[50%] h-[50%] rounded-xl shadow-2xl">
+                    <div className=" card bg-base-100  bg-[#FBF6F6;] ">
+                        <figure className="px-10 pt-10 ">
                             <img
                             src="./tes1.png"
                             alt="Shoes"
-                            className="rounded-xl"
-                            />
-                        </figure>
-
-                        <div className="card-body items-center text-center">
-                            <div className="card-actions ml-52">
-                            <button className="btn btn-primary bg-[#12926C;] mr-7">
-                                {" "}
-                                وضعیت دوره{" "}
-                            </button>
-
-                            <div className="card-actions relative right-52 -top-14">
-                                <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <AiOutlineLike />
-                                </div>
-                                <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <AiOutlineDislike />
-                                </div>
-                                <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <FaRegStar />
-                                </div>
-                            </div>
-                            </div>
-                            <h2 className="card-title text-2xl">آشنایی با برنامه نویسی با وردپرس</h2>
-                            <p className="text-right"> لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود </p>
-                            <div>
-                            <div className="rating ml-72">
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" defaultChecked />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    </div>
-                            </div>
-                            <div className="flex flex-wrap justify-between gap- border-t-2 border-green-900 w-[90%]">
-                            <h1 className="text-[green]">هزینه تمام دوره</h1>
-                            <h2 className="text-[red]">3000000 هزار تومان</h2>
-
-                            </div>
-                            <div className="card-actions">
-                            <button className="btn btn-primary bg-[#12926C;] w-60 p-7 leading-4">
-                                الان ثبت نام کن{" "}
-                            </button>
-                            </div>
-                        </div>
-                        </div>
-
-
-                                
-                    </SwiperSlide>
-                    <SwiperSlide className="w-[98%]">
-
-                    <div className="card bg-base-100 w-[100%] h-[100%] shadow-xl">
-                        <figure className="px-10 pt-10">
-                            <img
-                            src="./tes1.png"
-                            alt="Shoes"
-                            className="rounded-xl"
-                            />
-                        </figure>
-
-                        <div className="card-body items-center text-center">
-                            <div className="card-actions ml-52">
-                            <button className="btn btn-primary bg-[#12926C;] mr-7">
-                                {" "}
-                                وضعیت دوره{" "}
-                            </button>
-
-                            <div className="card-actions relative right-52 -top-14">
-                                <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <AiOutlineLike />
-                                </div>
-                                <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <AiOutlineDislike />
-                                </div>
-                                <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <FaRegStar />
-                                </div>
-                            </div>
-                            </div>
-                            <h2 className="card-title text-2xl">آشنایی با برنامه نویسی با وردپرس</h2>
-                            <p className="text-right"> لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود </p>
-                            <div>
-                            <div className="rating ml-72">
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" defaultChecked />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    </div>
-                            </div>
-                            <div className="flex flex-wrap justify-between gap- border-t-2 border-green-900 w-[90%]">
-                            <h1 className="text-[green]">هزینه تمام دوره</h1>
-                            <h2 className="text-[red]">3000000 هزار تومان</h2>
-
-                            </div>
-                            <div className="card-actions">
-                            <button className="btn btn-primary bg-[#12926C;] w-60 p-7 leading-4">
-                                الان ثبت نام کن{" "}
-                            </button>
-                            </div>
-                        </div>
-                        </div>
-                        
-                    </SwiperSlide>
-                    <SwiperSlide className="w-[98%]">
-                    <div className="card bg-base-100 w-[100%] h-[100%] shadow-xl">
-                        <figure className="px-10 pt-10">
-                            <img
-                            src="./tes1.png"
-                            alt="Shoes"
-                            className="rounded-xl"
-                            />
-                        </figure>
-
-                        <div className="card-body items-center text-center">
-                            <div className="card-actions ml-52">
-                            <button className="btn btn-primary bg-[#12926C;] mr-7">
-                                {" "}
-                                وضعیت دوره{" "}
-                            </button>
-
-                            <div className="card-actions relative right-52 -top-14">
-                                <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <AiOutlineLike />
-                                </div>
-                                <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <AiOutlineDislike />
-                                </div>
-                                <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <FaRegStar />
-                                </div>
-                            </div>
-                            </div>
-                            <h2 className="card-title text-2xl">آشنایی با برنامه نویسی با وردپرس</h2>
-                            <p className="text-right"> لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود </p>
-                            <div>
-                            <div className="rating ml-72">
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" defaultChecked />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    <input type="radio" name="rating-4" className="mask mask-star-2 bg-green-500" />
-    </div>
-                            </div>
-                            <div className="flex flex-wrap justify-between gap- border-t-2 border-green-900 w-[90%]">
-                            <h1 className="text-[green]">هزینه تمام دوره</h1>
-                            <h2 className="text-[red]">3000000 هزار تومان</h2>
-
-                            </div>
-                            <div className="card-actions">
-                            <button className="btn btn-primary bg-[#12926C;] w-60 p-7 leading-4">
-                                الان ثبت نام کن{" "}
-                            </button>
-                            </div>
-                        </div>
-                        </div>
-                        
-                    </SwiperSlide>
-                    <SwiperSlide className="w-[98%]">
-                    <div className="card bg-base-100 w-[100%] h-[100%] shadow-xl">
-                        <figure className="px-10 pt-10">
-                            <img
-                            src="./tes1.png"
-                            alt="Shoes"
-                            className="rounded-xl"
+                            className="rounded-2xl"
                             />
                         </figure>
 
@@ -244,7 +80,7 @@
                                 وضعیت دوره{" "}
                             </button>
 
-                            <div className=" border-2 border-red-400 card-actions relative right-52 -top-14">
+                            <div className=" w-56 border-2 border-red-400 card-actions relative right-52 -top-14">
                                 <div className="  border-2 border-green-400 badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
                                 <AiOutlineLike />
                                 </div>

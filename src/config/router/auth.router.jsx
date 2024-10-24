@@ -9,6 +9,7 @@ import Register from "../../screens/Register";
 import RegisterStep from "../../component/RegisterStep";
 import RegisterStep1 from "../../component/RegisterStep1";
 import RegisterStep2 from "../../component/RegisterStep2";
+import RegisterForm from "../../component/RegisterForm"
 import ResetPass from "../../screens/ResetPass";
 import UserPanel from "../../component/UserPanel";
 import DetailNews from "../../screens/DetailNews";
@@ -53,6 +54,10 @@ export const Routers = createBrowserRouter([
   {
     path: "/LoginSystem",
     element: <LoginSystem />,
+  },
+  {
+    path: "/RegisterForm",
+    element: <RegisterForm />,
   },
 
   {

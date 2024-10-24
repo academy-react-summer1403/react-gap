@@ -11,7 +11,7 @@ import RegisterStep1 from "../../RegisterStep1/RegisterStep1";
 import RegisterStep2 from "../../RegisterStep2/RegisterStep2";
 import NewPass from "../../NewPass/NewPass";
 import UserPanel from "../../UserPanel";
-import Article1 from "../../../component/Article/Article1";
+import DetailNews from "../../../screens/DetailNews";
 import { createBrowserRouter } from "react-router-dom";
 import HolderConnect from "../../HolderConnect/HolderConnecting";
 import UserMyCourse from "../../UserPanel/UserMyCourse";
@@ -34,8 +34,8 @@ export const Routers = createBrowserRouter([
         element: <News />,
       },
       {
-        path: "/Article",
-        element: <Article1 />,
+        path: "/DetailNews",
+        element: <DetailNews />,
       },
       {
         path: "/Connect",
