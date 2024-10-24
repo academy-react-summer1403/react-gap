@@ -93,7 +93,7 @@ export const Routers = createBrowserRouter([
     element: <PanelLayout />,
     children: [
       {
-        path: "/Panel",
+        path: "/P",
         element: <UserPanel />,
       },
     ],
