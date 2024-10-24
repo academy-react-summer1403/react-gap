@@ -16,6 +16,11 @@ import { createBrowserRouter } from "react-router-dom";
 import Connect from "../../screens/Connect";
 import UserMyCourse from "../../component/UserPanel/UserMyCourse";
 import PanelLayout from "../../App/PanelLayout";
+import UserEditPro from "../../component/UserPanel/UserEditPro";
+import UserReserv from "../../component/UserPanel/UserReserv";
+import UserFavorit from "../../component/UserPanel/UserFavorit";
+import UserComments from "../../component/UserPanel/UserComments";
+import UserCounter from "../../component/UserPanel/UserCounter";
 export const Routers = createBrowserRouter([
   {
     path: "/",
@@ -39,7 +44,7 @@ export const Routers = createBrowserRouter([
       },
       {
         path: "/Connect",
-        element: <Connect/>,
+        element: <Connect />,
       },
     ],
   },
@@ -91,10 +96,31 @@ export const Routers = createBrowserRouter([
         path: "/Panel",
         element: <UserPanel />,
       },
-      {
-        path: "/UserMyCourse",
-        element: <UserMyCourse />,
-      },
     ],
+  },
+  {
+    path: "/EditPro",
+    element: <UserEditPro />,
+  },
+  {
+    path: "/UserMyCourse",
+    element: <UserMyCourse />,
+  },
+  {
+    path: "/UserReserv",
+    element: <UserReserv />,
+  },
+  {
+    path: "/UserFavorit",
+    element: <UserFavorit />,
+  },
+
+  {
+    path: "/UserComments",
+    element: <UserComments />,
+  },
+  {
+    path: "/UserCounter",
+    element: <UserCounter />,
   },
 ]);
