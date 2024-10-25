@@ -3,11 +3,8 @@ import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
-
-
-
   const handelDark = () => {
-    document.documentElement.classList.toggle('dark')
+    document.documentElement.classList.toggle("dark");
   };
 
   return (
@@ -18,17 +15,18 @@ const Header = () => {
             <img src="./logoheader.png" className="" />
           </div>
 
-          <h1 className="text-[#22445D;] font-inter text-[14px] m-3">
-           
-          </h1>
+          <h1 className="text-[#22445D;] font-inter text-[14px] m-3"></h1>
         </Link>
 
         <div className="flex gap-6 justify-center h-[70px] m-6 mb-3">
           <div className="flex gap-6 justify-center relative top-2 w-[400px]">
-            <NavLink to={"/"} className=" text-xl hover:text-[#158B68;]   focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
+            <NavLink
+              to={"/"}
+              className=" text-xl hover:text-[#158B68;]   focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500
       disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
       invalid:border-pink-500 invalid:text-pink-600
-      focus:invalid:border-pink-500 focus:invalid:ring-pink-500">
+      focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+            >
               {" "}
               صفحه اصلی{" "}
             </NavLink>
@@ -40,18 +38,16 @@ const Header = () => {
               {" "}
               مقالات{" "}
             </NavLink>
-            <NavLink to={'/Connect'} className="text-xl hover:text-[#158B68;]">
+            <NavLink to={"/Connect"} className="text-xl hover:text-[#158B68;]">
               {" "}
               درباره ما{" "}
             </NavLink>
           </div>
         </div>
 
-
-
         <div className="h-9 m-10 relative right-48">
           {/* <img src="./search.png" alt="" /> */}
-{/* 
+          {/* 
     <label class="relative block">
   <span class="sr-only">Search</span>
   <span class="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -63,68 +59,74 @@ const Header = () => {
   placeholder="هرچی میخوای جستجو کن..." type="text" name="search"/>
   </label> */}
 
-
-<label className="input input-bordered flex items-center gap-2 relative left-20 bottom-4">
-  <input type="text" className="grow" placeholder="هرچی می‌خوای اینجا جستجو کن" />
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 16 16"
-    fill="currentColor"
-    className="h-4 w-4 opacity-70">
-    <path
-      fillRule="evenodd"
-      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-      clipRule="evenodd" />
-  </svg>
-</label>
-
-          </div>
-
-
-
-
-        <div className="w-10 h-10 relative top-8 right-10 cursor-pointer" >
-
-            <label htmlFor="DarkId" className="swap swap-rotate">
-            {/* this hidden checkbox controls the state */}
-            <input type="checkbox" id="DarkId"/>
-
-            {/* sun icon */}
+          <label className="input input-bordered flex items-center gap-2 relative left-20 bottom-4">
+            <input
+              type="text"
+              className="grow"
+              placeholder="هرچی می‌خوای اینجا جستجو کن"
+            />
             <svg
-              className="swap-on h-10 w-10 fill-current"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              onClick={handelDark}
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              className="h-4 w-4 opacity-70"
             >
-              <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+              <path
+                fillRule="evenodd"
+                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                clipRule="evenodd"
+              />
             </svg>
+          </label>
+        </div>
 
-            {/* moon icon */}
+        <div className="w-40 h-10 relative top-8 right-10 cursor-pointer">
+          <label htmlFor="DarkId" className="flex cursor-pointer gap-2">
             <svg
-              className="swap-off h-10 w-10 fill-current"
               xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
-              onClick={handelDark}
-              >
-                <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
-              </svg>
-            </label>
-          
-            
-          </div>
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+            </svg>
+            <input
+              type="checkbox"
+              value="synthwave"
+              className="toggle theme-controller"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </label>
+        </div>
 
-          <div className="m-6"><NavLink to={"/Login"}>
+        <div className="m-6">
+          <NavLink to={"/Login"}>
             <button className="hover:text-[#5c7158] w-[120px] h-[47px] bg-[#dfe3de] rounded-lg text-[#22445D;] font-inter relative left-6  hover:scale-75 duration-75">
               {" "}
               ورود / ثبت نام
-              
-            </button>    
-              
-              </NavLink>
-            
-          </div>
+            </button>
+          </NavLink>
         </div>
-      </Fragment>
-    );
-  };
-  export default Header;
+      </div>
+    </Fragment>
+  );
+};
+export default Header;

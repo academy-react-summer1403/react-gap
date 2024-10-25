@@ -27,7 +27,7 @@ const index = () => {
             >
               <Form>
                 <Field
-                  className="w-[600px] h-[60px] border-2 border-[#158B68] mt-2 rounded-lg bg-[#FBF6F6;] outline-none 
+                  className="w-[600px] h-[60px] border-2 border-[#007aff] mt-2 rounded-lg bg-[#FBF6F6;] outline-none 
                   placeholder: text-xl
                    placeholder:text-[#22445D;]
                     placeholder:p-6
@@ -41,7 +41,7 @@ const index = () => {
                   className="text-[#12926C]"
                 />
                 <Field
-                  className="w-[600px] h-[60px] border-2 border-[#158B68]  mt-3 rounded-xl bg-[#FBF6F6;] outline-none
+                  className="w-[600px] h-[60px] border-2 border-[#007aff]  mt-3 rounded-xl bg-[#FBF6F6;] outline-none
                     placeholder: text-xl
                    placeholder:text-[#22445D;]
                     placeholder:p-6 
@@ -55,7 +55,7 @@ const index = () => {
                   className="text-[#12926C]"
                 />
                 <Field
-                  className="w-[600px] h-[140px] border-2 border-[#158B68] mt-3 rounded-lg bg-[#FBF6F6;] outline-none
+                  className="w-[600px] h-[140px] border-2 border-[#007aff] mt-3 rounded-lg bg-[#FBF6F6;] outline-none
                     placeholder: text-xl
                    placeholder:text-[#22445D;]
                     placeholder:p-6
@@ -73,7 +73,7 @@ const index = () => {
           </div>
           <button
             type="submit "
-            className="w-[120px] h-[50px] bg-[#5BE1B9;] rounded-lg mt-[70px] shadow-xl"
+            className="w-[120px] h-[50px] bg-[#007aff;] text-white rounded-lg mt-[70px] shadow-xl"
           >
             ارسال
           </button>
