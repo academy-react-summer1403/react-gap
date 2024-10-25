@@ -38,6 +38,7 @@ const index = () => {
 
 
   const [ListSlider, setListSlider] = useState([
+    
     {
       id: 1,
       pic: "iconslider.png",
@@ -52,6 +53,18 @@ const index = () => {
     },
   ]);
 
+  const [TopCoursesList, setTopCoursesList] = useState(null);
+
+  const getTopCourses = async () =>{
+    const res = await axios.get('https://classapi.sepehracademy.ir/api/Home/GetCoursesTop?Count=5')
+    setTopCoursesList(res.data)
+  }
+
+
+  useEffect(() => {
+    getTopCourses()
+  }, []);
+
   return (
     <div className="h-[1100px]">
       <div className=" h-[150px]  text-center m-20">
@@ -63,8 +76,7 @@ const index = () => {
         </p>
 
         <div className=" w-[98%] mx-auto m-10">
-          {ListSlider.map((item) => {
-            return (
+
               <div className=" h-[900px]">
                 <Swiper
                   className="h-[700px] relative top-20 "
@@ -94,18 +106,12 @@ const index = () => {
                         <div className="card-actions ml-52">
                           <button className="btn btn-primary bg-[#12926C;] mr-7">
                             {" "}
-                            وضعیت دوره{" "}
-                          </button>
-
-                          <div className="card-actions relative right-52 -top-14">
-                            <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                              <AiOutlineLike />
-                            </div>
-                            <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                              <AiOutlineDislike />
-                            </div>
-                            <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                              <FaRegStar />
+                              {item.describe}
+                          </p>
+                          <div>
+                            <div className="">
+ 
+                            <Rate allowHalf defaultValue={item.courseRate} />
                             </div>
                           </div>
                         </div>
@@ -170,12 +176,6 @@ const index = () => {
                         />
                       </figure>
 
-                      <div className="card-body items-center text-center">
-                        <div className="card-actions ml-52">
-                          <button className="btn btn-primary bg-[#12926C;] mr-7">
-                            {" "}
-                            وضعیت دوره{" "}
-                          </button>
 
                           <div className="card-actions relative right-52 -top-14">
                             <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">

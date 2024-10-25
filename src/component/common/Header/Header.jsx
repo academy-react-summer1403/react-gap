@@ -11,12 +11,12 @@ const Header = () => {
     <Fragment>
       <div className="flex justify-between h-24 bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF] dark:bg-slate-800  ">
         <Link to="/" className="flex  gap-2  w-60 h-20 m-6">
-          <div className=" w-[50px] h-[50px]">
-            <img src="./h11.png" className="" />
+          <div className=" w-[150px] h-[100px] relative bottom-5 right-9">
+            <img src="./logoheader.png" className="" />
           </div>
 
-          <h1 className="text-[#22445D;] font-inter text-2xl m-3">
-            آکادمی اچ وان
+          <h1 className="text-[#22445D;] font-inter text-[14px] m-3">
+           
           </h1>
         </Link>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import NavBar from "../../common/NavBarHero/NavBar";
+import { HiArrowLeft } from "react-icons/hi2";
 
 const index = () => {
   return (
@@ -19,16 +20,22 @@ const index = () => {
 
         <div>
           <NavLink to={"/courses"}>
-            <button className="w-[210px] h-[75px] rounded-[50px] text-[#22445D;] text-2xl font-inter bg-[#12926C;] text-[#ffffff] mx-16 animate-pulse ">
-              {" "}
-              شروع یادگیری{" "}
-            </button>
+            
+              
+        <button className="btn btn-outline btn-success text-xl font-inter w-44 text-black mx-16  mt-16 dark:from-[#ffff]">
+        بزن بریم 
+        <HiArrowLeft className="mr-36 "/>
+        </button>
+               
+              
+         
           </NavLink>
+          
         </div>
       </div>
 
-      <div className=" hidden w-[650px] h-[500px] m-16 lg:block">
-        <img src="./ImgHero.png" alt="Img" />
+      <div className=" hidden w-[37650px] h-[500px] m-16 lg:block ">
+        <img src="./newherosection.png" alt="Img" />
       </div>
 
       <NavBar />
