@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // Import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import swiper styles
@@ -78,8 +78,7 @@ const index = () => {
                   <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
 
                   {item.button}
-                  </button>
-                 
+                  </button> 
 
                   <div className='flex flex-wrap'>
                   <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
@@ -88,7 +87,7 @@ const index = () => {
                   </div>
 
 
-                   
+                  
                   <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
                     {item.title}
 
