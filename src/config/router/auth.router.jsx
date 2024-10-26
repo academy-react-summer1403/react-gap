@@ -13,6 +13,7 @@ import RegisterForm from "../../component/RegisterForm"
 import ResetPass from "../../screens/ResetPass";
 import UserPanel from "../../component/UserPanel";
 import DetailNews from "../../screens/DetailNews";
+import TitleCourse from "../../screens/TitleCourse"
 import { createBrowserRouter } from "react-router-dom";
 import Connect from "../../screens/Connect";
 import UserMyCourse from "../../component/UserPanel/UserMyCourse";
@@ -42,6 +43,10 @@ export const Routers = createBrowserRouter([
       {
         path: "/DetailNews",
         element: <DetailNews />,
+      },
+      {
+        path:"/TitleCourse",
+        element:<TitleCourse/>
       },
       {
         path: "/Connect",

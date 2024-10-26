@@ -2,7 +2,7 @@ import React from "react";
 
 const index = () => {
   return (
-    <div className="bg-gradient-to-r from-[#A4F6DE] to-[#ffffff] ">
+    <div className="bg-gradient-to-r from-[#4c8dd2]  to-[#ffffff] ">
       <div className=" h-[100px]  text-center relative top-[30px] ">
         <h1 className="text-[#22445D;] text-4xl"> حرفه ای های ما</h1>
 
