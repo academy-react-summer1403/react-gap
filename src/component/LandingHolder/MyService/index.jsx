@@ -17,7 +17,7 @@ const index = () => {
       <div className="flex flex-wrap gap-[20px] justify-center md:justify-around w-[90%] mx-auto mt-10">
         <div className="flex gap-2 w-[400px] h-[120px] hover:shadow-2xl">
           <div className="w-[130px] h-[120px]">
-            <img className="w-[100%] h-[100%]" src="./pic.png" alt="" />
+            <img className="w-[100%] h-[100%]" src="./picture1.png" alt="" />
           </div>
 
           <div className="w-[370px] h-[130px]">
@@ -34,7 +34,7 @@ const index = () => {
           <div className="w-[130px] h-[120px]">
             <img
               className="w-[100%] h-[100%]"
-              src="./iconServise6.png"
+              src="./picture2.png"
               alt=""
             />
           </div>
@@ -53,7 +53,7 @@ const index = () => {
           <div className="w-[130px] h-[120px]">
             <img
               className="w-[100%] h-[100%]"
-              src="./iconServise3.png"
+              src="./picture3.png"
               alt=""
             />
           </div>
@@ -72,7 +72,7 @@ const index = () => {
           <div className="w-[130px] h-[120px]">
             <img
               className="w-[100%] h-[100%]"
-              src="./iconServise4.png"
+              src="./picture4.png"
               alt=""
             />
           </div>
@@ -91,7 +91,7 @@ const index = () => {
           <div className="w-[130px] h-[120px]">
             <img
               className="w-[100%] h-[100%]"
-              src="./iconServise5.png"
+              src="./picture5.png"
               alt=""
             />
           </div>
@@ -110,7 +110,7 @@ const index = () => {
           <div className="w-[130px] h-[120px]">
             <img
               className="w-[100%] h-[100%]"
-              src="./iconServise6.png"
+              src="./picture6.png"
               alt=""
             />
           </div>

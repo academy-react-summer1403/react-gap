@@ -13,12 +13,13 @@ import { div } from "framer-motion/client";
 
 import { NavLink } from "react-router-dom";
 const { Sider } = Layout;
-function getItem(label, key, icon, NavLink) {
+function getItem(label, key, icon, NavLink,DarkMode) {
   return {
     key,
     icon,
     label,
     NavLink,
+    DarkMode,
   };
 }
 const items = [

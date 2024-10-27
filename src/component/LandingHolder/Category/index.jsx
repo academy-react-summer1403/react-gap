@@ -1,89 +1,30 @@
-import React from "react";
+import React from 'react'
 
 const index = () => {
   return (
-    <div className="">
-      <div>
-        <div className="h-[100px]  text-center m-20">
-          <h1 className="text-[#22445D;] text-4xl"> دسته بندی </h1>
+    <div className=' border-2 flex flex-wrap W-[100%] h-[200px] mt-[85px]'> 
 
-          <p className="text-[#22445D;] text-2xl font-normal mt-3">
-            {" "}
-            ما فرصت آماده شدن برای زندگی را فراهم می کنیم{" "}
-          </p>
-        </div>
+    <div className="border-2 w-[89%] h-[150px] bg-gradient-to-r from-[#4f83c4]  to-[rgb(209,218,232)] relative top-6 right-[82px] rounded-2xl">
+
+      <div className='hidden  h-[500px] mr-8 -mt-16  lg:block'>
+        <img src='./phone.png'/>
+      </div>
+      <div className='relative bottom-96 right-[25%]'>
+        <h1 className='text-xl'>ما هر روز کلی مطالب آموزشی جالب در اینستاگراممون منتشر می‌کنیم!</h1>
       </div>
 
-      <div className="flex flex-wrap justify-center w-[90%] mx-auto gap-[40px]">
+      <button className="btn btn-wide bg-[#ffff] relative bottom-[410px] right-[75%]">مشاهده پست های اینستاگرام </button>
+
+      
 
 
-        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-2xl hover:scale-75 duration-75">
-          <div className=" w-[20%] mt-10">
-            <img src="./cat1.png" alt="" />
-          </div>
-          <div className="w-full my-10">
-            <h1 className="text-[#22445D;] text-center">
-              {" "}
-              دوره های طراحی UI/UX{" "}
-            </h1>
-          </div>
-          <div className="w-[90%] text-center mb-10">
-            <h2 className="text-[#22445D;]"> 25 جلسه </h2>
-          </div>
-        </div>
+      
 
-        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-2xl hover:scale-75 duration-75 ">
-          <div className=" w-[20%] mt-10">
-            <img src="./cat1.png" alt="" />
-          </div>
-          <div className="w-full my-10">
-            <h1 className="text-[#22445D;] text-center">
-              {" "}
-              دوره های طراحی UI/UX{" "}
-            </h1>
-          </div>
-          <div className="w-[90%] text-center mb-10">
-            <h2 className="text-[#22445D;]"> 25 جلسه </h2>
-          </div>
-        </div>
-
-        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-xl hover:scale-75 duration-75">
-          <div className=" w-[20%] mt-10">
-            <img src="./cat1.png" alt="" />
-          </div>
-          <div className="w-full my-10">
-            <h1 className="text-[#22445D;] text-center">
-              {" "}
-              دوره های طراحی UI/UX{" "}
-            </h1>
-          </div>
-          <div className="w-[90%] text-center mb-10">
-            <h2 className="text-[#22445D;]"> 25 جلسه </h2>
-          </div>
-        </div>
-
-        <div className=" flex flex-col items-center w-full sm:w-[40%] lg:w-[20%] rounded-xl bg-[#FBF6F6;] shadow-xl hover:scale-75 duration-75">
-          <div className=" w-[20%] mt-10">
-            <img src="./cat1.png" alt="" />
-          </div>
-          <div className="w-full my-10">
-            <h1 className="text-[#22445D;] text-center">
-              {" "}
-              دوره های طراحی UI/UX{" "}
-            </h1>
-          </div>
-          <div className="w-[90%] text-center mb-10">
-            <h2 className="text-[#22445D;]"> 25 جلسه </h2>
-          </div>
-        </div>
-        
-        
-
-      </div>
-
-     
     </div>
-  );
-};
 
-export default index;
+      
+    </div>
+  )
+}
+
+export default index

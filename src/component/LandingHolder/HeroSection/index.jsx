@@ -4,31 +4,27 @@ import NavBar from "../../common/NavBarHero/NavBar";
 
 const index = () => {
   return (
-    <div className="flex justify-start h-[700px] bg-gradient-to-r from-[#A4F6DE] to-[#FFFFFF] dark:from-[#22445D] dark:to-[#FFFFFF] ">
-      <div className="  w-[800px] h-[400px] relative top-32 left-1 text-center lg:text-right ">
-        <h1 className="font-inter xl:text-6xl text-[#21394B] mx-16 md:text-4xl text-4xl sm:text-4xl">
-          آموزشگاه اچ وان{" "}
-        </h1>
-        <h3 className="m-14 text-[#22445D;] text-xl font-normal">
-          لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه
-          دهندگان وب، تایپوگراف ها و طراحان استفاده می شود. تکه های لاتین متن
-          نشان میدهد که یک پروژه در حال توسعه است. لورم اپسوم فقط برای توسعه
-          دهندگان وب نیست. طراحان گرافیک نیز از آن با نرم افزارهای مختلفی مانند
-          فوتوشاپ استفاده می کنند.
-        </h3>
+    <div className="flex justify-start h-[600px] bg-gradient-to-r from-[#eef3f9]  to-[ rgb(238,242,248)]  dark:from-[#000000]  ">
+      <div className="  w-[800px] h-[400px] relative top-32 left-1 text-center lg:text-right">
+        <p className="mr-48 text-orange-600 text-4xl leading-10  font-thin ">
+          {" "}
+        دوره مورد علاقه خودت شروع کن
+        </p>
+        <br />
+        <h1 className="mr-48 text-black text-2xl  font-thin dark:text-white"> هر کسی باید یاد بگیره </h1>
+        <h1 className="mr-48 text-blue-800 text-xl  font-thin dark:text-white"> که چطور کد بزنه </h1>
 
         <div>
           <NavLink to={"/courses"}>
-            <button className="w-[210px] h-[75px] rounded-[50px] text-[#22445D;] text-2xl font-inter bg-[#12926C;] text-[#ffffff] mx-16 animate-pulse ">
-              {" "}
-              شروع یادگیری{" "}
+            <button className="btn btn-outline btn-info text-xl font-inter w-44 text-black mx-16 mr-44 font-thin mt-16 dark:text-white">
+              بزن بریم
             </button>
           </NavLink>
         </div>
       </div>
 
-      <div className=" hidden w-[650px] h-[500px] m-16 lg:block">
-        <img src="./ImgHero.png" alt="Img" />
+      <div className=" hidden h-[500px] mt-10 lg:block ">
+        <img src="./bghero.png" alt="Img" />
       </div>
 
       <NavBar />
