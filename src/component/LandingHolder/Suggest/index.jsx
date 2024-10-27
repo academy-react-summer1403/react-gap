@@ -27,7 +27,7 @@ const index = () => {
             >
               <Form>
                 <Field
-                  className="w-[600px] h-[60px] border-2 border-[#158B68] mt-2 rounded-lg bg-[#FBF6F6;] outline-none 
+                  className="w-[600px] h-[60px] border-2 border-[#1b426b] mt-2 rounded-lg bg-[#FBF6F6;] outline-none 
                   placeholder: text-xl
                    placeholder:text-[#22445D;]
                     placeholder:p-6
@@ -38,10 +38,10 @@ const index = () => {
                 <ErrorMessage
                   name="lastName"
                   component={"p"}
-                  className="text-[#12926C]"
+                  className="text-[#16153f]"
                 />
                 <Field
-                  className="w-[600px] h-[60px] border-2 border-[#158B68]  mt-3 rounded-xl bg-[#FBF6F6;] outline-none
+                  className="w-[600px] h-[60px] border-2 border-[#1b426b]  mt-3 rounded-xl bg-[#FBF6F6;] outline-none
                     placeholder: text-xl
                    placeholder:text-[#22445D;]
                     placeholder:p-6 
@@ -52,10 +52,10 @@ const index = () => {
                 <ErrorMessage
                   name="email"
                   component={"p"}
-                  className="text-[#12926C]"
+                  className="text-[#16153f]"
                 />
                 <Field
-                  className="w-[600px] h-[140px] border-2 border-[#158B68] mt-3 rounded-lg bg-[#FBF6F6;] outline-none
+                  className="w-[600px] h-[140px] border-2 border-[#1b426b] mt-3 rounded-lg bg-[#FBF6F6;] outline-none
                     placeholder: text-xl
                    placeholder:text-[#22445D;]
                     placeholder:p-6
@@ -66,17 +66,20 @@ const index = () => {
                 <ErrorMessage
                   name="txt"
                   component={"p"}
-                  className="text-[#12926C]"
+                  className="text-[#16153f]"
                 />
               </Form>
             </Formik>
           </div>
           <button
-            type="submit "
-            className="w-[120px] h-[50px] bg-[#5BE1B9;] rounded-lg mt-[70px] shadow-xl"
+           
+            className=""
           >
-            ارسال
+           
           </button>
+
+
+          <button type="submit " className="btn btn-active btn-primary w-[120px] h-[50px] text-white rounded-lg mt-[70px] shadow-xl"> ارسال</button>
         </div>
 
         <div className="hidden xl:block w-[600px] h-[500px]">
