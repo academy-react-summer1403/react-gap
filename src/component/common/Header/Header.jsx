@@ -45,7 +45,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="h-9 m-10 relative right-48">
+        <div className="h-9 m-10 relative right-40">
           {/* <img src="./search.png" alt="" /> */}
           {/* 
     <label class="relative block">

@@ -5,6 +5,9 @@ import NavBar from "../../common/NavBarHero/NavBar";
 const index = () => {
   return (
     <div className="flex justify-start h-[600px] bg-gradient-to-r from-[#eef3f9]  to-[ rgb(238,242,248)]  dark:from-[#000000]  ">
+      <div className="w-44 h-44 relative right-[700px] top-[400px]">
+        <img src="./flash2.png"/>
+      </div>
       <div className="  w-[800px] h-[400px] relative top-32 left-1 text-center lg:text-right">
         <p className="mr-48 text-orange-600 text-4xl leading-10  font-thin ">
           {" "}
@@ -24,7 +27,7 @@ const index = () => {
       </div>
 
       <div className=" hidden h-[500px] mt-10 lg:block ">
-        <img src="./bghero.png" alt="Img" />
+        <img src="./bghero2.png" alt="Img" />
       </div>
 
       <NavBar />

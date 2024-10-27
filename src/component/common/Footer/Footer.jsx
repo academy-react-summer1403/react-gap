@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer bg-[#007aff] p-24 dark:bg-[#22445D;]">
+      <footer className="footer bg-[#333] p-24 dark:bg-[#22445D;]">
         <nav>
           <h6 className=" text-3xl text-white">خدمات</h6>
           <a className="link link-hover text-xl text-white">آموزش حرفه ای</a>
@@ -44,7 +44,7 @@ const Footer = () => {
         </form>
       </footer>
 
-      <footer className="footer  bg-[#007aff] text-neutral-content items-center p-4">
+      <footer className="footer  bg-[#bc7732] text-neutral-content items-center p-4">
         <aside className="grid-flow-col items-center">
           <svg
             width="36"
