@@ -40,8 +40,8 @@ const Article = () => {
   ]);
 
   return (
-    <div className="h-[1100px]">
-      <div className=" h-[150px]  text-center m-20">
+    <div className="  h-[1100px] ">
+      <div className="   h-[150px]  text-center m-20 ">
         <h1 className="text-[#22445D;] text-4xl"> دوره های ما </h1>
 
         <p className="text-[#22445D;] text-2xl font-normal mt-2">
@@ -73,7 +73,7 @@ const Article = () => {
                         </figure>
                       </div>
 
-                      <div className="card-body" shadow-xl>
+                      <div className="  card-body" shadow-xl>
                         <h2 className="card-title mb-14">
                           آشنایی با برنامه نویسی با وردپرس
                           <div className="badge badge-secondary">NEW</div>

@@ -3,14 +3,20 @@ import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
-
-
-
   const handelDark = () => {
     document.documentElement.classList.toggle('dark')
   };
 
   return (
+
+
+
+
+
+
+
+
+
     <Fragment>
       <div className="flex justify-between  border-2 h-24 bg-gradient-to-r from-[#f2f8f2]  to-[rgb(242,248,242)] dark:from-[#020506] dark:to-[#FFFFFF] ">
         <Link to="/" className="flex  gap-2  w-60 h-20 m-6">

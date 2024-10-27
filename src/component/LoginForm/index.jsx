@@ -11,7 +11,7 @@ const index = () => {
     <div className="   justify-center w-[90%] h-[600px] mx-auto mt-10  ">
       <div className="  flex w-[90%] h-[100%]     ">
         <NavLink to={'/'}>
-          <div className=" relative top-5 lg:right-[550px] sm:right-[450px] xl:right-[450px] ">
+          <div className=" relative top-5 lg:right-[550px] sm:right-[450px] xl:right-[550px] ">
               <IoHome  className="size-7 fill-[#158B68]   "/>
               </div> 
         </NavLink>

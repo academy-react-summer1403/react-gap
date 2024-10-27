@@ -49,7 +49,7 @@ const index = () => {
         </button> */}
         </div>
 
-        <div className="relative mr-[980px] -mt-[90px] hidden md:block ">
+        <div className=" relative mr-[980px] -mt-[90px] hidden md:block ">
         <input type='text' 
           placeholder='جستجو...' 
            className=" border-2 border-[#158B68]  h-20 w-[500px] border-color:[#158B68] bg-[#ffff] 

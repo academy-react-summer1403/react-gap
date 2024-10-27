@@ -66,7 +66,7 @@ const index = () => {
   }, []);
 
   return (
-    <div className="h-[1100px]">
+    <div className="  h-[1100px]">
       <div className=" h-[150px]  text-center m-20">
         <h1 className="text-[#22445D;] text-4xl"> دوره های ما </h1>
 

@@ -138,9 +138,9 @@ const App = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            <div className="flex gap-3 w-[90%]">
-              <div className="w-[50%]">
-                <div className="mockup-window  border-2 border-blue-500">
+            <div className="flex gap-3 w-[90%] sm:w-[50%] sm:flex-wrap lg:flex-nowrap ">
+              <div className=" w-[50%] sm:w-[100%] ">
+                <div className="  mockup-window  border-2 border-blue-500 sm:w-[350px] sm:h-[100%]">
                   <div className="border-t-2 border-blue-500 flex justify-center px-4 py-16">
                     <h1 className="text-xl">
                       کاربر عزیز اطلاعات پروفایل خود را تکمیل کنید
@@ -154,9 +154,9 @@ const App = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex w-[50%]">
-                <div className="mockup-window bg-base-300 border w-[100%]">
-                  <div className="bg-base-200 flex justify-center px-4 py-16">
+              <div className="flex w-[50%] sm:w-[100%]  ">
+                <div className="mockup-window bg-base-300 border-2 border-blue-500 sm:flex-row ">
+                  <div className="bg-base-200 flex justify-center px-4 py-16 ">
                     <h1 className="text-xl">مشاهده دوره های خریداری شده </h1>
                     <NavLink to={"/UserReserv"}>
                       <button className="btn btn-primary relative top-9 right-16">

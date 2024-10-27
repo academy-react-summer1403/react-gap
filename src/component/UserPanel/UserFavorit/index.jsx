@@ -121,7 +121,7 @@ const App = () => {
             }}
           >
             <Breadcrumb.Item>
-              <div className="avatar online">
+              <div className=" avatar online">
                 <div className="w-24 rounded-full">
                   <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                 </div>
@@ -138,8 +138,8 @@ const App = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-                        <div>
-              <div className="overflow-x-auto">
+                        <div >
+              <div className=" overflow-x-auto">
                 <table className="table">
                   {/* head */}
                   <thead>
@@ -158,8 +158,8 @@ const App = () => {
                   <tbody>
                     {/* row 1 */}
                     <tr>
-                      <th>
-                        <label>
+                      <th >
+                        <label >
                           <input type="checkbox" className="checkbox" />
                         </label>
                       </th>
@@ -197,16 +197,16 @@ const App = () => {
                     </tr>
                     {/* row 2 */}
                     <tr>
-                      <th>
-                        <label>
+                      <th >
+                        <label className="">
                           <input type="checkbox" className="checkbox" />
                         </label>
                       </th>
                       <td>
-                        <div className="flex items-center gap-3">
+                        <div className=" flex items-center gap-3">
                           <div className="avatar">
                             <div className="mask mask-squircle h-12 w-12">
-                              <img
+                              <img className=""
                                 src="https://img.daisyui.com/images/profile/demo/3@94.webp"
                                 alt="Avatar Tailwind CSS Component"
                               />

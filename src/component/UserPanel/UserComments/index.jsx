@@ -278,7 +278,7 @@ const App = () => {
                         </label>
                       </th>
                       <td>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 ">
                           <div className="avatar">
                             <div className="mask mask-squircle h-12 w-12">
                               <img
@@ -322,7 +322,7 @@ const App = () => {
     name="options"
     aria-label="1"
     defaultChecked />
-  <input className="join-item btn btn-square" type="radio" name="options" aria-label="2" />
+  <input className="join-item btn btn-square " type="radio" name="options" aria-label="2" />
   <input className="join-item btn btn-square" type="radio" name="options" aria-label="3" />
   <input className="join-item btn btn-square" type="radio" name="options" aria-label="4" />
 </div>
