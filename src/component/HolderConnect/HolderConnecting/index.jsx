@@ -1,103 +1,88 @@
-import { Field, Form, Formik } from "formik";
-import React from "react";
-import { BiHome } from "react-icons/bi";
-const HolderConnect = () => {
+// import React from 'react';
+import { Breadcrumb, Layout, Menu, theme } from "antd";
+import FormConnect from "../../../component/HolderConnect/FormConnect";
+const { Content } = Layout;
+const items = new Array(15).fill(null).map((_, index) => ({
+  key: index + 1,
+  label: `nav ${index + 1}`,
+}));
+const App = () => {
+  const {
+    token: { colorBgContainer, borderRadiusLG },
+  } = theme.useToken();
   return (
-    <div className="flex w-full h-[850px] mt-20">
-      <div className="w-[45%] h-[90%]">
-        <div className="w-[90%] mr-20">
-          <h1 className="text-4xl">با ما در ارتباط باشید</h1>
-          <h2 className="text-2xl mt-3">
-            لورم ایپسوم بسیار فراگیر است زیرا بسیار همه کاره است. تعداد
-            پاراگراف‌هایی را که می‌خواهید انتخاب کنید، کپی کنید
-          </h2>
-        </div>
-        <div className="flex gap-4 flex-wrap w-[80%] h-[70%] mt-28 mr-20 ">
-          <div className="w-[100%] h-36">
-            <div className=" w-[140px] h-[100%] rounded-2xl shadow-2xl">
-              <BiHome className=" fill-[#158B68] size-28 mx-auto" />
-
+    <Layout>
+      <Content
+        style={{
+          padding: "0 48px",
+          background: "orange",
+        }}
+      >
+        <Breadcrumb
+          style={{
+            margin: "16px 0",
+          }}
+        >
+          <Breadcrumb.Item className="text-white">خانه</Breadcrumb.Item>
+          <Breadcrumb.Item className="text-white">ارتباط با ما</Breadcrumb.Item>
+          <Breadcrumb.Item className="text-white">تماس با ما</Breadcrumb.Item>
+        </Breadcrumb>
+        <div
+          style={{
+            background: colorBgContainer,
+            minHeight: 280,
+            padding: 24,
+            borderRadius: borderRadiusLG,
+          }}
+        >
+          <div className="w-[40%] flex gap-10 relative top-20 right-16">
+            <div className="stack">
+              <div className="border-base-content card bg-base-100 w-36 border text-center">
+                <div className="card-body">
+                  تماس با ما
+                  <h2>0907654345</h2>
+                </div>
+              </div>
+              <div className="border-base-content card bg-base-100 w-36 border text-center">
+                <div className="card-body"></div>
+              </div>
+              <div className="border-base-content card bg-base-100 w-36 border text-center">
+                <div className="card-body">C</div>
+              </div>
             </div>
-            
-          </div>
-          <div className="w-[100%] h-36">
-            <div className="w-[140px] h-[100%] rounded-2xl shadow-2xl">
-              <BiHome className=" fill-[#158B68] size-28 mx-auto" />
+            <div className="stack">
+              <div className="border-base-content card bg-base-100 w-36 border text-center">
+                <div className="card-body">
+                  ایمیل کددات
+                  <h2 className="text-center">kode.@gmail.com</h2>
+                </div>
+              </div>
+              <div className="border-base-content card bg-base-100 w-36 border text-center">
+                <div className="card-body">B</div>
+              </div>
+              <div className="border-base-content card bg-base-100 w-36 border text-center">
+                <div className="card-body">C</div>
+              </div>
+            </div>
+            <div className="stack">
+              <div className="border-base-content card bg-base-100 w-36 border text-center">
+                <div className="card-body">آدرس
+                  <h2>ساری میدان</h2>
+                </div>
+              </div>
+              <div className="border-base-content card bg-base-100 w-36 border text-center">
+                <div className="card-body">B</div>
+              </div>
+              <div className="border-base-content card bg-base-100 w-36 border text-center">
+                <div className="card-body">C</div>
+              </div>
             </div>
           </div>
 
-          <div className="w-[100%] h-36">
-            <div className="w-[140px] h-[100%] rounded-2xl shadow-2xl">
-              <BiHome className=" fill-[#158B68] size-28 mx-auto" />
-            </div>
-          </div>
+          <FormConnect />
         </div>
-      </div>
-      <div className="w-[50%] h-[90%]">
-        <div className="border-2 w-[85%] h-[100%] mx-auto rounded-[30px] bg-[#FBF6F6;] shadow-2xl">
-          <div className="flex justify-center w-[80%] mt-20 mr-16">
-            <Formik
-              initialValues={{
-                Lastname: "",
-                Email: "",
-                Phone: "",
-                TextMessage: "",
-              }}
-              onSubmit={(values) => onsubmit(values)}
-            >
-              <Form>
-                <Field
-                  name="Lastname"
-                  placeholder="نام و نام خانوادگی"
-                  className="border-2 border-[#158B68] w-[100%] h-[70px]
-               rounded-xl placeholder:text-[#807A7A;]
-                placeholder:text-2xl 
-                placeholder:relative 
-                placeholder:right-6"
-                />
-                <Field
-                  name="Email"
-                  placeholder="ایمیل"
-                  className="border-2 border-[#158B68] w-[100%] h-[70px]
-                            rounded-xl placeholder:text-[#807A7A;]
-                             placeholder:text-2xl 
-                             placeholder:relative 
-                             placeholder:right-6 mt-7"
-                />
-                <Field
-                  name="Phone"
-                  placeholder="شماره تماس"
-                  className="border-2 border-[#158B68] w-[100%] h-[70px]
-               rounded-xl placeholder:text-[#807A7A;]
-                placeholder:text-2xl 
-                placeholder:relative 
-                placeholder:right-6 mt-7"
-                />
-                <Field
-                  name="TextMessage"
-                  placeholder="متن پیام"
-                  className="border-2 border-[#158B68] w-[100%] h-[270px]
-               rounded-xl placeholder:text-[#807A7A;]
-                placeholder:text-2xl 
-                placeholder:relative 
-                placeholder:right-6
-                placeholder:bottom-24 mt-7"
-                />
-
-<button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg w-40 h-16 bg-[#5BE1B9;] rounded-2xl text-[#ffffff] text-xl mt-8">ارسال</button>
-                {/* <button
-                  type="submit"
-                  className="w-40 h-16 bg-[#5BE1B9;] rounded-2xl text-[#ffffff] text-xl mt-8"
-                >
-                  ارسال
-                </button> */}
-              </Form>
-            </Formik>
-          </div>
-        </div>
-      </div>
-    </div>
+      </Content>
+    </Layout>
   );
 };
-
-export default HolderConnect;
+export default App;

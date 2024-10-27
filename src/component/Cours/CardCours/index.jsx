@@ -4,7 +4,7 @@ import { AiOutlineLike } from "react-icons/ai";
 import { BiDislike } from "react-icons/bi";
 import { IoStarOutline } from "react-icons/io5";
 import { TbNumber5 } from "react-icons/tb";
-
+import Examples from "../../../component/Cours/CardCours/Examples"
 const index = () => {
   const [List, setList] = useState(null);
 
@@ -19,13 +19,13 @@ const index = () => {
   }, []);
 
   return (
-    <div className="flex  justify-center flex-wrap  w-[1260px] mr-[370px] -mt-[42%] rounded-3xl shadow-xl ">
-      <div className=" w-[100%] flex flex-wrap-reverse justify-center gap-[50px] mt-[80px]">
+    <div className="mr-[370px] -mt-[42%] rounded-3xl shadow-xl ">
+      <div className=" w-[100%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px]">
         {List?.map((item, index) => {
           return (
             <div
               key={index}
-              className=" h-[510px] w-[345px] bg-[#FBF6F6] rounded-3xl  mb-20 "
+              className=" h-[510px] w-[30%] bg-[#ffff] mb-20 "
             >
               <div className="w-[100px] h-[100px]  mr-[120px] animate-pulse">
                 <img src={item.tumbImageAddress} alt="" className="icons8.png" />
@@ -84,22 +84,9 @@ const index = () => {
         })}
       </div>
 
-      <div className="mr-[420px] mb-[100px]">
-        <div className="join">
-          <button className="join-item btn btn-xs bg-[#5BE1B9] w-[70px] h-[70px]">
-            1
-          </button>
-          <button className="join-item btn btn-xs btn-active bg-[#FBF6F6] w-[70px] h-[70px]">
-            2
-          </button>
-          <button className="join-item btn btn-xs bg-[#5BE1B9] w-[70px] h-[70px]">
-            3
-          </button>
-          <button className="join-item btn btn-xs bg-[#FBF6F6] w-[70px] h-[70px]">
-            4
-          </button>
-        </div>
-      </div>
+      <Examples/>
+
+     
     </div>
   );
 };
