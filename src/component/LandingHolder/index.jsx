@@ -1,5 +1,6 @@
 import React from "react";
 import HeroSection from "./HeroSection";
+import MiniSlider from "./MiniSlider"
 import MyService from "./MyService";
 import BoxItem from "./BoxItem";
 import Category from "./Category";
@@ -12,6 +13,7 @@ const index = () => {
   return (
     <div>
       <HeroSection />
+      <MiniSlider/>
       <MyService />
       <BoxItem />
       <Category />
