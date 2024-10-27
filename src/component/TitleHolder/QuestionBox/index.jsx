@@ -43,11 +43,14 @@ const App = () => {
 
   return (
     <div>
-      <div className="mt-10 w-[70%]">
-        {" "}
+      <div className="flex mt-10 w-[70%]">
+        {" "}  <div>
+        <img src="qus.png" alt="" />
+      </div>
         <h1 className="text-xl h-12">سوالات متداول</h1>
         <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
       </div>
+    
     </div>
   );
 };
