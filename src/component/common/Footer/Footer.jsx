@@ -5,7 +5,7 @@ const Footer = () => {
     <div>
       <footer className="footer bg-[#333] p-24 dark:bg-[#22445D;]">
         <nav>
-          <h6 className=" text-3xl text-white">خدمات</h6>
+          <h6 className="text-3xl text-white">خدمات</h6>
           <a className="link link-hover text-xl text-white">آموزش حرفه ای</a>
           <a className="link link-hover text-xl text-white">مشاوره رایگان</a>
           <a className="link link-hover text-xl text-white">فرصت های شغلی</a>

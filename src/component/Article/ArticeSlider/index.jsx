@@ -108,11 +108,7 @@ const Slider = () => {
           </div>
         </div>
       </div>
-      <NavLink to={"/News"}>
-        <button className="bg-[#12926C;] w-[350px] h-[90px] relative top-[720px] right-[700px] rounded-full  hover:scale-75 duration-75">
-          <h1 className="text-2xl text-[#fff]">مشاهده مقالات بیشتر</h1>
-        </button>
-      </NavLink>
+      
     </div>
   );
 };
