@@ -55,7 +55,7 @@ const App = () => (
     </div>
     <div className="w-[90%] h-[200px] mt-10 mx-auto shadow-md">
       <div className="w-[90%] mx-auto">
-        <h1 className=" text-xl font-bold">نوع دوره</h1>
+        <h1 className="text-xl font-bold">نوع دوره</h1>
         <br />
         <Checkbox.Group
           options={plainOptions}

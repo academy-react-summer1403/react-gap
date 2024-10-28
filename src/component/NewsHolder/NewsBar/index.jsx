@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const index = () => {
   return (
-    <div className="flex  justify-center flex-wrap">
+    <div className="flex justify-center flex-wrap">
       <div>
         <div className="breadcrumbs text-sm mt-10">
           <ul>
