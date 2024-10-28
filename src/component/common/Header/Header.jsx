@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
-import Button from "./Button/Button";
+import Nav from "./Nav/Nav";
 
 const Header = () => {
   const handelDark = () => {
@@ -21,50 +21,11 @@ const Header = () => {
 
         <div className="flex gap-6 justify-center h-[70px] m-6 mb-3">
           <div className="flex gap-6 justify-center relative top-2 w-[400px]">
-
-
-
-
-            <div>
-
-                        <div className="drawer drawer-end shadow-md w-full fixed top-0 left-0">
-              <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
-              <div className="drawer-content md:flex items-center justify-between bg-white py-4 md:px-10 px-7">
-                {/* Page content here */}
-                <label htmlFor="my-drawer-4" className="drawer-button btn btn-primary">Open drawer</label>
-              </div>
-              <div className="font-bold text-2xl cursor-pointer flex items-center font-[Poppins] text-gray-800 ">
-                <span>
-                  
-                </span>
-              </div>
-              <div className="drawer-side md:hidden cursor-pointer top-6 right-8 text-3xl">
-                <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu text-base-content min-h-full w-80 p-4 md:flex md:items-center md:pb-0 pd-12 absolute md:static bg-white md:z-auto z-[-1]">
-                  {/* Sidebar content here */}
-                  <li><a>صفحه اصلی</a></li>
-                  <li><a>دوره ها</a></li>
-                  <li><a> مقالات</a></li>
-                  <li><a> درباره ما</a></li>
-                  <Button>
-                    Get start
-                  </Button>
-                </ul>
-              </div>
-            </div>
-
-            </div>
-
-
-
-
-
-
-
             <NavLink
               to={"/"}
               className=" text-xl font-bold text-blue-900 dark:text-white "
             >
+              <Nav/>
               {" "}
               صفحه اصلی{" "}
             </NavLink>
