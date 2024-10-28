@@ -8,7 +8,7 @@ const index = () => {
     <div>
 
       <HolderConnect/>
-      <FormConnect/>
+    
 
     
 

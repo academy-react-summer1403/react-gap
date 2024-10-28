@@ -1,29 +1,45 @@
+
 import React from "react";
-import { SlArrowDown } from "react-icons/sl";
-import { GoSearch } from "react-icons/go";
-
-const index = () => {
+import FilterCours from "../../../component/Cours/FilterCours";
+import CardCours from "../../../component/Cours/CardCours";
+import { Breadcrumb, Layout, Menu, theme } from "antd";
+const { Header, Content, Footer } = Layout;
+const items = new Array(15).fill(null).map((_, index) => ({
+  key: index + 1,
+  label: `nav ${index + 1}`,
+}));
+const App = () => {
+  const {
+    token: { colorBgContainer, borderRadiusLG },
+  } = theme.useToken();
   return (
-    <div className="flex  justify-center flex-wrap ">
-      <h1 className="relative mt-[100px] md:text-5xl text-black sm:text-2xl">
-        لیست اخبار و مقالات
-      </h1>
-
-      <div className=" sm:w-11/12 h-36  bg-[#FBF6F6] rounded-3xl relative  mt-[60px] shadow-xl ">
-      <div className="border-2 w-60 m-10">
-         <select className="select select-info w-[200px] max-w-xs">
-          <option disabled selected>
-            دسته بندی
-          </option>
-          <option>فرانت اند</option>
-          <option>بک اند</option>
-          <option>وردپرس</option>
-        </select>
-      </div>
-       
-      </div>
-    </div>
+    <Layout>
+      <Content
+        style={{
+          padding: "0 48px",
+          background: "#f3f4f6",
+        }}
+      >
+        <Breadcrumb
+          style={{
+            margin: "16px 0",
+          }}
+        >
+          <h1 className="mr-10 text-3xl font-bold text-orange-700">دوره های آموزشی</h1>
+        
+        </Breadcrumb>
+        <div
+          style={{
+            minHeight: 280,
+            padding: 24,
+            borderRadius: borderRadiusLG,
+          }}
+        >
+          <FilterCours />
+          <CardCours />
+        </div>
+      </Content>
+    </Layout>
   );
 };
-
-export default index;
+export default App;

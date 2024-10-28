@@ -107,13 +107,13 @@ const index = () => {
 
   return (
     <div>
-      <div className=" w-11/12 mt-8 mr-16 rounded-3xl shadow-2xl">
-        <div className="   w-12/12 flex flex-wrap justify-center gap-9 mt-11 mx-auto">
+      <div className="w-11/12 mt-8 mr-16  shadow-2xl">
+        <div className="w-12/12 flex flex-wrap justify-center gap-9 mt-11 mx-auto">
           {newsList?.map((item, index) => {
             return (
               <div
                 key={index}
-                className="h-[41%] w-[29%] bg-[#FBF6F6] rounded-3xl  mb-24"
+                className="h-[41%] w-[20%] bg-[#FBF6F6] rounded-3xl  mb-24"
               >
                 <div className="w-[100%] h-64   ">
                   <img src={item.addUserProfileImage} alt="" />
@@ -156,20 +156,33 @@ const index = () => {
           })}
         </div>
 
-        <div className=" mr-[620px] mb-16 ">
-          <div className="join rounded-full relative mb-[60px]">
-            <button className="join-item btn btn-xs bg-[#5BE1B9] w-[80px] h-[70px]">
-              1
-            </button>
-            <button className="join-item btn btn-xs btn-active bg-[#FBF6F6] w-[80px] h-[70px]">
-              2
-            </button>
-            <button className="join-item btn btn-xs bg-[#5BE1B9] w-[80px] h-[70px]">
-              3
-            </button>
-            <button className="join-item btn btn-xs bg-[#FBF6F6] w-[80px] h-[70px]">
-              4
-            </button>
+        <div className=" mr-[620px]">
+          <div className="join">
+            <input
+              className="join-item btn btn-square"
+              type="radio"
+              name="options"
+              aria-label="1"
+              defaultChecked
+            />
+            <input
+              className="join-item btn btn-square"
+              type="radio"
+              name="options"
+              aria-label="2"
+            />
+            <input
+              className="join-item btn btn-square"
+              type="radio"
+              name="options"
+              aria-label="3"
+            />
+            <input
+              className="join-item btn btn-square"
+              type="radio"
+              name="options"
+              aria-label="4"
+            />
           </div>
         </div>
       </div>

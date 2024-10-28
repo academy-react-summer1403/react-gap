@@ -27,6 +27,7 @@ const Header = () => {
               {" "}
               صفحه اصلی{" "}
             </NavLink>
+            
             <NavLink
               to={"/courses"}
               className=" text-xl font-bold text-blue-900 dark:text-white"
