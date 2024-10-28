@@ -9,8 +9,8 @@ const Header = () => {
 
   return (
     <Fragment>
-      <div className="flex justify-between h-24 bg-gradient-to-r from-[#eef3f9]  to-[ rgb(238,242,248)] dark:from-[#000000]">
-        <Link to="/" className="flex  gap-2  w-60 h-20 m-6">
+      <div className=" border-2 border-red-500  flex justify-between h-24 bg-gradient-to-r from-[#eef3f9]  to-[ rgb(238,242,248)] dark:from-[#000000]">
+        <Link to="/" className=" flex  gap-2  w-60 h-20 m-6">
           <div className=" w-[150px] h-[100px] relative bottom-5 right-9">
             <img src="./logoabi.png" className="" />
           </div>
@@ -20,6 +20,38 @@ const Header = () => {
 
         <div className="flex gap-6 justify-center h-[70px] m-6 mb-3">
           <div className="flex gap-6 justify-center relative top-2 w-[400px]">
+
+
+
+
+            <div>
+
+                        <div className="drawer drawer-end">
+              <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+              <div className="drawer-content">
+                {/* Page content here */}
+                <label htmlFor="my-drawer-4" className="drawer-button btn btn-primary">Open drawer</label>
+              </div>
+              <div className="drawer-side">
+                <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
+                <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                  {/* Sidebar content here */}
+                  <li><a>صفحه اصلی</a></li>
+                  <li><a>دوره ها</a></li>
+                  <li><a> مقالات</a></li>
+                  <li><a> درباره ما</a></li>
+                </ul>
+              </div>
+            </div>
+
+            </div>
+
+
+
+
+
+
+
             <NavLink
               to={"/"}
               className=" text-xl font-bold text-blue-900 dark:text-white "
