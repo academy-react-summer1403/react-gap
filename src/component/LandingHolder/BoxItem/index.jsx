@@ -2,7 +2,7 @@ import React from 'react'
 
 const index = () => {
   return (
-    <div className='border-2 h-[600px] bg-white '>
+    <div className='h-[600px] bg-white '>
       <div className="border-transparent  w-[70%] h-[380px] flex justify-center flex-wrap mt-16 mr-[15%] gap-4">
         <div className="w-[35%] h-[300px] mt-28">
           <img src="./about us.png" alt="Img"/>
