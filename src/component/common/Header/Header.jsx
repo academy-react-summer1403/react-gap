@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <Fragment>
-      <div className=" border-2 border-red-500  flex justify-between h-24 bg-gradient-to-r from-[#eef3f9]  to-[ rgb(238,242,248)] dark:from-[#000000]">
+      <div className="  flex justify-between h-24 bg-gradient-to-r from-[#eef3f9]  to-[ rgb(238,242,248)] dark:from-[#000000]">
         <Link to="/" className=" flex  gap-2  w-60 h-20 m-6">
           <div className=" w-[150px] h-[100px] relative bottom-5 right-9">
             <img src="./logoabi.png" className="" />
@@ -25,7 +25,7 @@ const Header = () => {
               to={"/"}
               className=" text-xl font-bold text-blue-900 dark:text-white "
             >
-              <Nav/>
+             
               {" "}
               صفحه اصلی{" "}
             </NavLink>
@@ -127,6 +127,7 @@ const Header = () => {
               ورود / ثبت نام
             </button>
           </NavLink>
+          <Nav/>
         </div>
       </div>
     </Fragment>
