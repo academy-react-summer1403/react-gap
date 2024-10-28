@@ -4,8 +4,18 @@ import { Link, NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
+
+  const links =[
+    {name:'دفتر',link:'/'},
+    {name:'مشق',link:'/'},
+    {name:'ساداشت',link:'/'},
+    {name:'جعفر',link:'/'},
+    {name:'جمال',link:'/'},
+
+]
   const handelDark = () => {
     document.documentElement.classList.toggle("dark");
+    const [open,setOpen]=useState(false)
   };
 
   return (
@@ -128,9 +138,27 @@ const Header = () => {
 
       <div>
 
+      </div>
 
+      <div>
+            <div onClick={() =>setOpen(!open)} className='text-3xl  right-8 top-6 cursor-pointer  '>
+            
+            </div>
           
+            <ul className=' ${open ? "top-20 opacity-100" : "top-[-490px]"} '>
+      
+      {
+          links.map((link)=>(
+              <li key={link} className='md:ml-8 text-xl md:my-0 my-7 '>
+                  <a href={link.open} className='text-gray-800 hover:text-gray-400 duration-500'>{link.name}</a>
+              </li>
+          ))
+      }
 
+
+    
+
+  </ul>
 
         </div>
 
