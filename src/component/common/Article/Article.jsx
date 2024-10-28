@@ -30,10 +30,10 @@ const Article = () => {
       pic: "iconslider.png",
       button: "وضعیت دوره",
       Like: "./Like.png",
-      title: "آشنایی با برنامه نویسی با وردپرس",
+      title: " با برنامه نویسی با ",
       jun: "./Group .png",
       mit: "50 سخنرانی (190 ساعت)",
-      Desc: "لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود",
+      Desc: "   آموزش پیشرفته React دوره‌ای است که در آن شما به صورت عمیق‌تر و حرفه‌ای‌تر با ویژگی React آشنا می‌شوید و از آن‌ها به صورت عملی در پروژه‌های خود استفاده... ",
       Price: "3000 هزار تومان",
       Sign: "الان ثبت نام کن",
     },
@@ -305,7 +305,7 @@ const Article = () => {
         </div>
       </div>
       <NavLink to={"/News"}>
-        <button className="bg-[#12926C;] w-[350px] h-[90px] relative top-[720px] right-[700px] rounded-full  hover:scale-75 duration-75">
+        <button className="bg-[#12926C] w-[350px] h-[90px] relative top-[720px] right-[700px] rounded-full  hover:scale-75 duration-75">
           <h1 className="text-2xl text-[#fff]">مشاهده مقالات بیشتر</h1>
         </button>
       </NavLink>
