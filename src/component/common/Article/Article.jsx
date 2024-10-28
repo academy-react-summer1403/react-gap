@@ -145,7 +145,7 @@ const Article = () => {
                           </div>  
                         </NavLink>
                          
-                          <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
+                          <div className="badge badge-outline p-5 hover:bg-[#d38f41]  hover:border-none">
                             <AiOutlineLike />
                           </div>
                           <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
