@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Header = () => {
   const handelDark = () => {
@@ -20,6 +21,10 @@ const Header = () => {
 
         <div className="flex gap-6 justify-center h-[70px] m-6 mb-3">
           <div className="flex gap-6 justify-center relative top-2 w-[400px]">
+
+
+
+
             <NavLink
               to={"/"}
               className=" text-xl font-bold text-blue-900 dark:text-white "
@@ -52,8 +57,8 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="h-9 m-10 relative right-40">
-          <label className="input input-bordered flex items-center gap-2 relative left-20 bottom-4">
+        <div className="h-9 m-10 relative right-40 ">
+          <label className="input input-bordered flex items-center gap-2 relative left-20 bottom-4 sm:flex sm:left-[250px]">
             <input
               type="text"
               className="grow"
@@ -63,7 +68,7 @@ const Header = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              className="h-4 w-4 opacity-70"
+              className="h-4 w-4 opacity-70 "
             >
               <path
                 fillRule="evenodd"
@@ -75,7 +80,7 @@ const Header = () => {
         </div>
 
         <div className="w-40 h-10 relative top-8 right-10 cursor-pointer">
-          <label htmlFor="DarkId" className="flex cursor-pointer gap-2">
+          <label htmlFor="DarkId" className="flex cursor-pointer gap-2 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -111,7 +116,7 @@ const Header = () => {
           </label>
         </div>
 
-        <div className="m-6">
+        <div className="m-6 ">
           <NavLink to={"/Login"}>
             <button class="btn  ml-10 hover:text-[#5c7158]">
               {" "}
@@ -120,7 +125,22 @@ const Header = () => {
           </NavLink>
         </div>
       </div>
+
+      <div>
+
+
+
+
+
+        </div>
+
+
+
+
     </Fragment>
+
+
+
   );
 };
 export default Header;
