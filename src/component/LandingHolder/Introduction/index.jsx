@@ -2,43 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const index = () => {
-  // const [Introduction, setIntroduction] = useState([
-  //   {id:1, name:' اولیا میا',
-  //     picture:"./user1.png" ,
-  //     title:'طراحی وب سایت ' ,
-  //     iconinstagram:'./instagram.png',
-  //     iconwhatsup:'./whatsup.png',
-  //     icontwitter:'./twitter.png',
-  //     iconfacebook:'./facebook.png',
-  //     },
 
-  //     {id:2, name:' اولیا میا',
-  //       picture:"./user1.png" ,
-  //       title:'طراحی وب سایت ' ,
-  //       iconinstagram:'./instagram.png',
-  //       iconwhatsup:'./whatsup.png',
-  //       icontwitter:'./twitter.png',
-  //       iconfacebook:'./facebook.png',
-  //       },
-
-  //       {id:3, name:' اولیا میا',
-  //         picture:"./user1.png" ,
-  //         title:'طراحی وب سایت ' ,
-  //         iconinstagram:'./instagram.png',
-  //         iconwhatsup:'./whatsup.png',
-  //         icontwitter:'./twitter.png',
-  //         iconfacebook:'./facebook.png',
-  //         },
-
-  //         {id:4, name:' اولیا میا',
-  //           picture:"./user1.png" ,
-  //           title:'طراحی وب سایت ' ,
-  //           iconinstagram:'./instagram.png',
-  //           iconwhatsup:'./whatsup.png',
-  //           icontwitter:'./twitter.png',
-  //           iconfacebook:'./facebook.png',
-  //           },
-  // ]);
 
   const [TopTeacher, setTTopTeacher] = useState(null);
 

@@ -4,14 +4,14 @@ const index = () => {
   return (
     <div className='h-[600px] bg-white '>
       <div className="border-transparent  w-[70%] h-[380px] flex justify-center flex-wrap mt-16 mr-[15%] gap-4">
-        <div className="w-[35%] h-[300px] mt-28">
+        <div className="hidden lg:block w-[35%] h-[300px] mt-28">
           <img src="./about us.png" alt="Img"/>
         <div className="w-[25%] h-[120px] relative bottom-[380px] right-[220px]">
         <img src="./live.png" alt="Img"/>
         </div>
           
         </div>
-        <div className="w-[40%] h-[400px]">
+        <div className="w-[40%] h-[400px] sm:w-80 sm:mt-44">
           <button className=' shadow w-[160px] h-[28px] relative top-3 right-8 rounded-lg bg-[#EFEEFE]'> درباره ما بیشتر بدانید</button>
           <div className="div">
           <h1 className=' text-2xl font-bold relative top-8 right-8'>هزاران</h1>

@@ -4,7 +4,7 @@ const index = () => {
   return (
     <div className="flex flex-wrap justify-center ">
       <div>
-        <div className="text-center m-20 mr-[300px]">
+        <div className="text-center m-20 mr-[300px] relative sm:left-24">
           <h1 className="text-[#22445D;] text-4xl "> 
           چیزی که ما ارائه میدیم   </h1>
           <p className="text-[#22445D;] text-2xl font-normal mt-2">
