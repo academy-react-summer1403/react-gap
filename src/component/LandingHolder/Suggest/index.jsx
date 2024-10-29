@@ -20,7 +20,7 @@ const index = () => {
 
       <div className="flex justify-center gap-5 w-[90%] h-[500px] mx-auto relative top-[60px] left-[150px]">
       <div className="w-44 h-8 relative right-[350px] bottom-[100px] ">
-        <img src="./flash.png"/>
+        <img src="./flash4.png"/>
       </div>
         <div className=" w-[600px] h-[500px]">
           <div className="w-[600px] h-[300px] mx-auto mt-20">

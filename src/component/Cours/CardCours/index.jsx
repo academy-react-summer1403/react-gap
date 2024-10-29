@@ -19,7 +19,7 @@ const index = () => {
   }, []);
 
   return (
-    <div className=" border-2 h-auto w-auto border-black mr-[370px] -mt-[36%] rounded-3xl shadow-xl ">
+    <div className=" border-2 h-auto w-auto mr-[370px] -mt-[36%] rounded-3xl shadow-xl ">
       <div className=" w-[100%] flex flex-wrap justify-center gap-[20px] mb-[10px]">
         {List?.map((item, index) => {
           return (
@@ -27,15 +27,15 @@ const index = () => {
               key={index}
               className=" w-[30%] bg-[#ffff] mb-20 "
             >
-              <div className=" border-2 w-[250px] h-[180px] mt-[20px]  mr-[25px]">
-                <img src={item.tumbImageAddress} alt="" className="" />
+              <div className="w-[250px] mt-[20px]  mr-[25px]">
+                <img src="./cat12.jpg" alt="" className="" />
               </div>
 
               {/* <button className="h-11 w-32 bg-[#da7528] rounded-[8px] relative mr-4 mt-14 ">
                 {item.statusName}
               </button> */}
 
-              <div className="border-2 w-[60%] h-6 text-[rgb(59,130,246)] rounded-[8px] relative mr-7 mt-2 ">{item.statusName}</div>
+              <div className="w-[60%] h-6 text-[rgb(59,130,246)] rounded-[8px] relative mr-7 mt-2 ">{item.statusName}</div>
 
 
               {/* <div className="flex flex-wrap">
@@ -44,7 +44,7 @@ const index = () => {
                 <IoStarOutline className=" w-9 h-9 -mt-[40px] mr-[210px] " />
               </div> */}
 
-              <div className=" border-2 h-10 w-[80%] text-start text-2xl text-[rgb(59,130,246)] font-sans font-normal mt-[10px] mr-7 animate-pulse">
+              <div className="  h-10 w-[80%] text-start text-2xl text-[rgb(59,130,246)] font-sans font-normal mt-[10px] mr-7 animate-pulse">
                 {item.title}
               </div>
 
@@ -54,7 +54,7 @@ const index = () => {
                 <img src={item.teacherName} alt="" className="./star1.png" />
               </div> */}
 
-              <div className=" border-2 w-[60%] h- text-[16px] text-[#6D6767] relative mt-[18px] mr-7">
+              <div className=" w-[60%] h- text-[16px] text-[#6D6767] relative mt-[18px] mr-7">
                 {item.describe}
               </div>
                 
@@ -89,11 +89,11 @@ const index = () => {
               </div> */}
 
 
-              <div className=" border-2 w-[30%] h-6 text-[14px] text-[#E11818] relative -mt-[17px] mr-52">
+              <div className=" w-[30%] h-6 text-[14px] text-[#E11818] relative -mt-[17px] mr-52">
                 {item.cost}
               </div>
 
-              <button className="border-2 border-[#dd813e] h-[40px] w-[100px] bg-[#dd813e] rounded-[8px] relative mr-[60px] mt-[20px]">
+              <button className=" border-[#dd813e] h-[40px] w-[100px] bg-[#dd813e] rounded-[8px] relative mr-[60px] mt-[20px]">
                 {item.statusName }
               </button>
               {/* <button className="border-2 border-[#df9a40] h-[40px] w-[100px] bg-[#dd813e] rounded-[8px] relative mr-[10px] mt-[20px]">

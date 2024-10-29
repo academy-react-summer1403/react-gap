@@ -28,32 +28,32 @@ const optionsWithDisabled = [
   },
 ];
 const App = () => (
-  <div className="w-[25%] h-[500px]">
+  <div className="w-[25%] h-[500px] ">
     <div>
       <div className="join">
         <div className="">
           <div>
             <input
-              className="input input-bordered join-item w-32"
+              className="input input-bordered join-item w-32 border-2 border-[#c0470a] shadow-2xl shadow-[#7e5d52]"
               placeholder="Search"
             />
           </div>
         </div>
-        <select className="select select-bordered join-item">
-          <option disabled selected>
+        <select className="select select-bordered join-item border-[#c0470a] shadow-2xl shadow-[#7e5d52]">
+          <option disabled selected className="relative right-3">
             فیلتر
           </option>
           <option>بک اند</option>
           <option>فرانت اند</option>
           <option>وردپرسرس</option>
         </select>
-        <div className="indicator">
-          <span className="indicator-item badge badge-secondary">new</span>
+        <div className="indicator border-2 border-[#c0470a] hover:bg-[#c0470a] shadow-2xl shadow-[#7e5d52]">
+          <span className="indicator-item badge badge-secondary bg-[#c0470a]  ">new</span>
           <button className="btn join-item">Search</button>
         </div>
       </div>
     </div>
-    <div className="w-[90%] h-[200px] mt-10 mx-auto shadow-md">
+    <div className="w-[90%] h-[200px] mt-10 mx-auto shadow-2xl shadow-[#7e5d52] ">
       <div className="w-[90%] mx-auto">
         <h1 className=" text-xl font-bold">نوع دوره</h1>
         <br />

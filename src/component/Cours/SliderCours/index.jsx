@@ -41,10 +41,13 @@ const index = () => {
 
   return (
     <div className='h-[1100px] ' >
-        <div className=" w-[60%] h-[105px] text-center mr-80 mt-12 ">
-          <h1 className="text-[#22445D;] text-4xl"> دوره های ما </h1>
+        <div className=" w-[60%] h-[105px] mr-32 mt-12 ">
+          <div className=''>
+            <img className=" w-[60px] h-[60px] -mr-14" src="./hobab2.png" alt="img"/>
+          </div>
+          <h1 className="text-[#22445D] text-4xl"> دوره های ما </h1>
 
-        <p className="text-[#22445D;] text-2xl font-normal mt-2">
+        <p className="text-[#22445D] text-2xl font-normal mt-2">
           {" "}
           ساختن دنیایی بهتر، یک دوره در یک زمان{" "}
         </p>
@@ -72,20 +75,20 @@ const index = () => {
 
                     
                   <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
+                    <img className='rounded-2xl bg-cover ' src="cat12.jpg" alt="./picturecourse.png" />
                   </div>
 
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
+                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#c0470a] rounded-[8px] relative mr-4 mt-4">
 
                   {item.button}
                   </button>
                  
 
-                  <div className='flex flex-wrap'>
+                  {/* <div className='flex flex-wrap'>
                   <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
                   <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
                   <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
+                  </div> */}
 
 
                    
@@ -94,217 +97,28 @@ const index = () => {
 
                   </div>
 
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
+                  <div className="rating relative mr-[260px] mt-4 ">
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
                     <input
                       type="radio"
                       name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
+                      className="mask mask-star-2 bg-[#c0470a]"
                       defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
                     </div>  
 
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
+                    <div className='text-xl text-[#c0470a] relative mr-[15px] -mb-[0px]'>
                     {item.speech}
                        </div>
 
                   <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
                         {item.desc}
                         </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
+                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#c0470a]'></div>
                     
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-
-
-
-                    
-                </SwiperSlide> 
-
-                <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] h-[660px] bg-[#FBF6F6] mr-16 rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
-                        </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-
-
-
-                    
-                </SwiperSlide>  
-
-                <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] h-[660px] mr-16 bg-[#FBF6F6] rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
-                        </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-
-
-
-                    
-                </SwiperSlide>   
-
-                <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] h-[660px] bg-[#FBF6F6] mr-16 rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
-                        </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
+                    <div className='text-lg text-[#c0470a] relative mt-[10px] mr-[20px]'>
                       {item.text}
                     </div>
                     <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
@@ -321,24 +135,24 @@ const index = () => {
 
 
                 <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] h-[660px] bg-[#FBF6F6] mr-16 rounded-3xl gap-2'>
+                  <div className='shadow-2xl w-[85%] h-[660px] mr-16 bg-[bg-[#FBF6F6]] rounded-3xl gap-2'>
 
                     
                   <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
+                    <img className='rounded-2xl bg-cover ' src="./cat12.jpg" alt="./picturecourse.png" />
                   </div>
 
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
+                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#c0470a] rounded-[8px] relative mr-4 mt-4">
 
                   {item.button}
                   </button>
                  
 
-                  <div className='flex flex-wrap'>
+                  {/* <div className='flex flex-wrap'>
                   <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
                   <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
                   <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
+                  </div> */}
 
 
                    
@@ -347,28 +161,28 @@ const index = () => {
 
                   </div>
 
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
+                  <div className="rating relative mr-[260px] mt-4 ">
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
                     <input
                       type="radio"
                       name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
+                      className="mask mask-star-2 bg-[#c0470a]"
                       defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
                     </div>  
 
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
+                    <div className='text-xl text-[#c0470a] relative mr-[15px] -mb-[0px]'>
                     {item.speech}
                        </div>
 
                   <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
                         {item.desc}
                         </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
+                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#c0470a]'></div>
                     
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
+                    <div className='text-lg text-[#c0470a] relative mt-[10px] mr-[20px]'>
                       {item.text}
                     </div>
                     <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
@@ -381,90 +195,29 @@ const index = () => {
 
 
                     
-                </SwiperSlide>
-
-                 <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] bg-[#FBF6F6] h-[660px] mr-16 rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
+                </SwiperSlide> 
 
 
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
-                        </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-
-
-
-                    
-                </SwiperSlide>
 
                 <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] h-[660px] bg-[#FBF6F6] mr-16 rounded-3xl gap-2'>
+                  <div className='shadow-2xl w-[85%] h-[660px] mr-16 bg-[bg-[#FBF6F6]] rounded-3xl gap-2'>
 
                     
                   <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
+                    <img className='rounded-2xl bg-cover ' src="./cat12.jpg" alt="./picturecourse.png" />
                   </div>
 
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
+                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#c0470a] rounded-[8px] relative mr-4 mt-4">
 
                   {item.button}
                   </button>
                  
 
-                  <div className='flex flex-wrap'>
+                  {/* <div className='flex flex-wrap'>
                   <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
                   <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
                   <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
+                  </div> */}
 
 
                    
@@ -473,28 +226,28 @@ const index = () => {
 
                   </div>
 
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
+                  <div className="rating relative mr-[260px] mt-4 ">
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
                     <input
                       type="radio"
                       name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
+                      className="mask mask-star-2 bg-[#c0470a]"
                       defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
                     </div>  
 
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
+                    <div className='text-xl text-[#c0470a] relative mr-[15px] -mb-[0px]'>
                     {item.speech}
                        </div>
 
                   <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
                         {item.desc}
                         </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
+                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#c0470a]'></div>
                     
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
+                    <div className='text-lg text-[#c0470a] relative mt-[10px] mr-[20px]'>
                       {item.text}
                     </div>
                     <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
@@ -507,27 +260,28 @@ const index = () => {
 
 
                     
-                </SwiperSlide>
+                </SwiperSlide> 
+
 
                 <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] bg-[#FBF6F6] h-[660px] mr-16 rounded-3xl gap-2'>
+                  <div className='shadow-2xl w-[85%] h-[660px] mr-16 bg-[bg-[#FBF6F6]] rounded-3xl gap-2'>
 
                     
                   <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
+                    <img className='rounded-2xl bg-cover ' src="./cat12.jpg" alt="./picturecourse.png" />
                   </div>
 
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
+                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#c0470a] rounded-[8px] relative mr-4 mt-4">
 
                   {item.button}
                   </button>
                  
 
-                  <div className='flex flex-wrap'>
+                  {/* <div className='flex flex-wrap'>
                   <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
                   <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
                   <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
+                  </div> */}
 
 
                    
@@ -536,28 +290,28 @@ const index = () => {
 
                   </div>
 
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
+                  <div className="rating relative mr-[260px] mt-4 ">
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
                     <input
                       type="radio"
                       name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
+                      className="mask mask-star-2 bg-[#c0470a]"
                       defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
                     </div>  
 
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
+                    <div className='text-xl text-[#c0470a] relative mr-[15px] -mb-[0px]'>
                     {item.speech}
                        </div>
 
                   <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
                         {item.desc}
                         </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
+                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#c0470a]'></div>
                     
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
+                    <div className='text-lg text-[#c0470a] relative mt-[10px] mr-[20px]'>
                       {item.text}
                     </div>
                     <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
@@ -570,27 +324,27 @@ const index = () => {
 
 
                     
-                </SwiperSlide>
+                </SwiperSlide> 
 
                 <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] bg-[#FBF6F6] h-[660px] mr-16 rounded-3xl gap-2'>
+                  <div className='shadow-2xl w-[85%] h-[660px] mr-16 bg-[bg-[#FBF6F6]] rounded-3xl gap-2'>
 
                     
                   <div className="rounded-3xl  w-[100%] h-[250px]   ">
                     <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
                   </div>
 
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
+                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#c0470a] rounded-[8px] relative mr-4 mt-4">
 
                   {item.button}
                   </button>
                  
 
-                  <div className='flex flex-wrap'>
+                  {/* <div className='flex flex-wrap'>
                   <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
                   <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
                   <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
+                  </div> */}
 
 
                    
@@ -599,28 +353,28 @@ const index = () => {
 
                   </div>
 
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
+                  <div className="rating relative mr-[260px] mt-4 ">
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
                     <input
                       type="radio"
                       name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
+                      className="mask mask-star-2 bg-[#c0470a]"
                       defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
                     </div>  
 
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
+                    <div className='text-xl text-[#c0470a] relative mr-[15px] -mb-[0px]'>
                     {item.speech}
                        </div>
 
                   <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
                         {item.desc}
                         </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
+                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#c0470a]'></div>
                     
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
+                    <div className='text-lg text-[#c0470a] relative mt-[10px] mr-[20px]'>
                       {item.text}
                     </div>
                     <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
@@ -629,8 +383,76 @@ const index = () => {
                 
 
                   </div>
-                </SwiperSlide>  
 
+
+
+                    
+                </SwiperSlide> 
+
+                <SwiperSlide className=''>
+                  <div className='shadow-2xl w-[85%] h-[660px] mr-16 bg-[bg-[#FBF6F6]] rounded-3xl gap-2'>
+
+                    
+                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
+                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
+                  </div>
+
+                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#c0470a] rounded-[8px] relative mr-4 mt-4">
+
+                  {item.button}
+                  </button>
+                 
+
+                  {/* <div className='flex flex-wrap'>
+                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
+                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
+                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
+                  </div> */}
+
+
+                   
+                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
+                    {item.title}
+
+                  </div>
+
+                  <div className="rating relative mr-[260px] mt-4 ">
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input
+                      type="radio"
+                      name="rating-2"
+                      className="mask mask-star-2 bg-[#c0470a]"
+                      defaultChecked />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#c0470a]" />
+                    </div>  
+
+                    <div className='text-xl text-[#c0470a] relative mr-[15px] -mb-[0px]'>
+                    {item.speech}
+                       </div>
+
+                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
+                        {item.desc}
+                        </div>
+                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#c0470a]'></div>
+                    
+                    <div className='text-lg text-[#c0470a] relative mt-[10px] mr-[20px]'>
+                      {item.text}
+                    </div>
+                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
+                      {item.price}
+                    </div>
+                
+
+                  </div>
+
+
+
+                    
+                </SwiperSlide> 
+
+ 
 
                 
 
@@ -658,7 +480,7 @@ const index = () => {
 
       </div>
         
-      <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg relative bottom-24 right-[700px] bg-[#12926C] hover:bg-[#5BE1B9] ">مشاهده مقالات بیشتر </button>
+      <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg relative bottom-24 right-[700px] bg-[#c0470a] ">مشاهده مقالات بیشتر </button>
       
     </div>
   )

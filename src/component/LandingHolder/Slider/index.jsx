@@ -17,7 +17,7 @@ const index = () => {
 
         <div className="border-transparent flex flex-wrap justify-center w-[90%] h-[500px] mr-10 mt-4">
         <div className="div">
-            <img className='relative right-14 top-9' src="./hobab.png"/>
+            <img className='w-[60px] h-[60px] mt-6' src="./hobab2.png"/>
             </div>
 
           <div className="border-2 w-[90%] h-[400px] relative mt-24 rounded-2xl bg-[rgb(232,234,238)]">
