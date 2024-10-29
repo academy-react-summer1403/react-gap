@@ -28,13 +28,13 @@ const optionsWithDisabled = [
   },
 ];
 const App = () => (
-  <div className="w-[25%] h-[500px] ">
+  <div className="w-[25%] h-[500px] -mr-12 ">
     <div>
       <div className="join">
         <div className="">
           <div>
             <input
-              className="input input-bordered join-item w-32 border-2 border-[#c0470a] shadow-2xl shadow-[#7e5d52]"
+              className="input input-bordered join-item w-32 border-2  border-[#c0470a] shadow-2xl shadow-[#7e5d52]"
               placeholder="Search"
             />
           </div>
@@ -53,7 +53,7 @@ const App = () => (
         </div>
       </div>
     </div>
-    <div className="w-[90%] h-[200px] mt-10 mx-auto shadow-2xl shadow-[#7e5d52] ">
+    <div className="w-[90%] h-[200px] mt-10  mx-auto shadow-2xl shadow-[#7e5d52] ">
       <div className="w-[90%] mx-auto">
         <h1 className="text-xl font-bold">نوع دوره</h1>
         <br />

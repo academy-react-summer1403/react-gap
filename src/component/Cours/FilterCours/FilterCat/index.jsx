@@ -4,7 +4,7 @@ const onChange = (checkedValues) => {
   console.log("checked = ", checkedValues);
 };
 const App = () => (
-  <div className="w-[90%] h-[200px] mt-10 mx-auto shadow-2xl shadow-[#7e5d52]">
+  <div className="w-[90%] h-[200px] mt-10  mx-auto shadow-2xl shadow-[#7e5d52]">
     <div className="w-[90%] mx-auto">
       {" "}
       <h1 className=" text-xl font-bold "> مرتب سازی بر اساس</h1>
