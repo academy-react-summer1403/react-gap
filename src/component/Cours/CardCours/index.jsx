@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { AiOutlineLike } from "react-icons/ai";
-import { BiDislike } from "react-icons/bi";
-import { IoStarOutline } from "react-icons/io5";
-import { TbNumber5 } from "react-icons/tb";
+import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
+
 import Examples from "../../../component/Cours/CardCours/Examples"
+import { FaRegStar } from "react-icons/fa";
+
 const index = () => {
   const [List, setList] = useState(null);
 
@@ -19,66 +19,86 @@ const index = () => {
   }, []);
 
   return (
-    <div className="mr-[370px] -mt-[42%] rounded-3xl shadow-xl  dark:bg-[#22445D;]">
-      <div className=" w-[100%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px]  dark:bg-[#22445D;]">
+    <div className=" mr-[370px] -mt-[42%] shadow-xl  dark:bg-[#22445D;]">
+      <div className=" w-[100%] h-[70%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px]   rounded-lg ">
         {List?.map((item, index) => {
           return (
             <div
               key={index}
-              className=" h-[510px] w-[30%] bg-[#ffff] mb-20  dark:bg-[#1f3c54]"
+              className=" w-[30%] bg-[#fff] mb-20 dark:bg-[#080f54;]"
             >
-              <div className="w-[100px] h-[100px]  mr-[120px] animate-pulse">
-                <img src={item.tumbImageAddress} alt="" className="icons8.png" />
+              <div className="w-[250px] mt-[20px]  mr-[25px]">
+                <img src="./cat12.jpg" alt="" className="" />
               </div>
 
-              <button className="h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-14">
+              {/* <button className="h-11 w-32 bg-[#da7528] rounded-[8px] relative mr-4 mt-14 ">
                 {item.statusName}
-              </button>
+              </button> */}
+
+              <div className="w-[60%] h-6  dark:text-white  text-[rgb(59,130,246)] rounded-[8px] relative mr-7 mt-2 ">{item.statusName}</div>
 
 
-              <div className="flex flex-wrap">
+              {/* <div className="flex flex-wrap">
                 <AiOutlineLike className=" w-9 h-9  relative mr-[290px] -mt-[40px]" />
                 <BiDislike className="w-9 h-9  relative mr-[255px] -mt-[40px]" />
                 <IoStarOutline className=" w-9 h-9 -mt-[40px] mr-[210px] " />
-              </div>
+              </div> */}
 
-              <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[10px] animate-pulse">
+              <div className=" dark:text-white h-10 w-[80%] text-start text-2xl text-[rgb(59,130,246)] font-sans font-normal mt-[10px] mr-7 animate-pulse">
                 {item.title}
               </div>
-              <div>{item.technologyList}</div>
-              <div className=" w-[380px] h-[40px] relative mt-[20px] mr-[10px] ">
+
+              {/* <div className="relative mt-[10px] mr-7">{item.technologyList}</div> */}
+
+              {/* <div className=" border-2 w-[380px] h-[40px] relative mt-[20px] mr-[10px] ">
                 <img src={item.teacherName} alt="" className="./star1.png" />
-              </div>
+              </div> */}
 
-              <div>
-                {/* <TbNumber5 className="w-8 h-8 mr-[260px] -mt-[30px]" /> */}
-                <div>{item.likeCount}</div>
-
-                <IoStarOutline className="w-8 h-8  mr-[300px] -mt-[36px]" />
-              </div>
-
-              <div className="text-xs text-[#41A789] relative mr-[10px] mt-[20px]">
-                {item.speech}
-              </div>
-
-              <div className="text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]">
+              <div className=" w-[60%] dark:text-white text-[16px] text-[#6D6767] relative mt-[18px] mr-7">
                 {item.describe}
               </div>
-              <div className="border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]"></div>
+                
+                <div className="relative mt-[5px] mr-7">
+                <div className="badge badge-outline p-5 hover:bg-[#dd813e] dark:bg-white hover:border-none">
+                 <AiOutlineLike />
+                </div>
+
+                <div className="badge badge-outline p-5 hover:bg-[#dd813e] dark:bg-white hover:border-none">
+                  <AiOutlineDislike />
+                </div>
+                <div className="badge badge-outline p-5 hover:bg-[#dd813e] dark:bg-white  hover:border-none">
+                  <FaRegStar />
+                </div>
+                </div>
+
+                
+
+
+              {/* <div>{item.likeCount}</div> */}
+                
+              
+
+              {/* <div className="text-xs text-[#41A789] relative mr-[10px] mt-[20px]">
+                {item.speech}
+              </div> */}
+
+              {/* <div className="border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]"></div>
 
               <div className="text-[14px] text-[#12926C] relative mt-[10px] mr-[10px]">
                 {item.text}
-              </div>
-              <div className="text-[14px] text-[#E11818] relative -mt-[17px] mr-[225px]">
-                {item.price}
+              </div> */}
+
+
+              <div className=" w-[30%] h-6 text-[14px] text-[#E11818] dark:text-white relative -mt-[17px] mr-52">
+                {item.cost}
               </div>
 
-              <button className="border-2 border-[#5BE1B9] h-[40px] w-[100px] bg-[#ffff] rounded-[8px] relative mr-[60px] mt-[20px]">
-                {item.detail}
+              <button className=" border-[#dd813e] h-[40px] w-[100px] bg-orange-700 text-white rounded-[8px] relative mr-[60px] mt-[15px]">
+                {item.statusName }
               </button>
-              <button className="border-2 border-[#5BE1B9] h-[40px] w-[100px] bg-[#5BE1B9] rounded-[8px] relative mr-[10px] mt-[20px]">
+              {/* <button className="border-2 border-[#df9a40] h-[40px] w-[100px] bg-[#dd813e] rounded-[8px] relative mr-[10px] mt-[20px]">
                 {item.reservation}
-              </button>
+              </button> */}
             </div>
           );
         })}

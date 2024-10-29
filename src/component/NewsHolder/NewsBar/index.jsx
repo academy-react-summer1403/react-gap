@@ -22,7 +22,7 @@ const index = () => {
         {" "}
       </h1>
 
-      <div className="navbar bg-base-100 w-[90%]">
+      <div className="navbar bg-base-100 w-[90%] dark:bg-orange-500">
         <div className="flex-1"></div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
@@ -32,12 +32,12 @@ const index = () => {
             <li>
               <details>
                 <summary>دسته بندی</summary>
-                <ul className="bg-base-100 rounded-t-none p-2">
+                <ul className="bg-base-100 rounded-t-none p-7  dark:bg-orange-500">
                   <li>
-                    <a>Link 1</a>
+                    <a>جدید</a>
                   </li>
                   <li>
-                    <a>Link 2</a>
+                    <a>قدیمی</a>
                   </li>
                 </ul>
               </details>

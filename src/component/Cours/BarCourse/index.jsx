@@ -15,10 +15,8 @@ const App = () => {
   return (
     <Layout>
       <Content
-        style={{
-          padding: "0 48px",
-          background: "#f3f4f6",
-        }}
+       
+        className="p-10 dark:dark:bg-[#22445D;]"
       >
         <Breadcrumb
           style={{
