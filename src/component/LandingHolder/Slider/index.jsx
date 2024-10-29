@@ -8,12 +8,7 @@ const index = () => {
  '
       <div className="h-[700px]">
       <div className=" h-[150px]  text-center m-20">
-        {/* <h1 className="text-[#22445D;] text-4xl"> دوره های ما </h1>
-
-        <p className="text-[#22445D;] text-2xl font-normal mt-2">
-          {" "}
-          ساختن دنیایی بهتر، یک دوره در یک زمان{" "}
-        </p> */}
+      
 
         <div className="border-transparent flex flex-wrap justify-center w-[90%] h-[500px] mr-10 mt-4">
         <div className="div">

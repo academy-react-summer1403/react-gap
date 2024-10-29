@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import NavBar from "../../common/NavBarHero/NavBar";
+
 
 const index = () => {
   return (
@@ -30,7 +30,6 @@ const index = () => {
         <img src="./bg2.png" alt="Img" />
       </div>
 
-      <NavBar />
     </div>
   );
 };

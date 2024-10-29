@@ -34,8 +34,8 @@ const index = () => {
   ]);
 
   return (
-    <div className="h-[1100px]">
-      <div className="w-[90%] h-[120px] mt-[110px] mr-[310px] animate-bounce ">
+    <div>
+      <div className=" h-[120px] mt-[110px] mr-[310px]">
         <div className="text-5xl text-center sm:w-3/4 ">
           <h1>اخبار و مقالات مشابه</h1>
         </div>
