@@ -12,29 +12,18 @@ const App = () => {
   } = theme.useToken();
   return (
     <Layout>
-      <Content
-        style={{
-          padding: "0 48px",
-          background: "orange",
-        }}
-      >
+      <Content className="p-0 bg-orange-500">
         <Breadcrumb
           style={{
             margin: "16px 0",
+            marginRight:"25px"
           }}
         >
-          <Breadcrumb.Item className="text-white">خانه</Breadcrumb.Item>
+          <Breadcrumb.Item className="text-white ">خانه</Breadcrumb.Item>
           <Breadcrumb.Item className="text-white">ارتباط با ما</Breadcrumb.Item>
           <Breadcrumb.Item className="text-white">تماس با ما</Breadcrumb.Item>
         </Breadcrumb>
-        <div
-          style={{
-            background: colorBgContainer,
-            minHeight: 280,
-            padding: 24,
-            borderRadius: borderRadiusLG,
-          }}
-        >
+        <div className="dark:bg-[#22445D;] bg-[#ffff]  min-h-24 p-4">
           <div className="w-[40%] flex gap-10 relative top-20 right-16">
             <div className="stack">
               <div className="border-base-content card bg-base-100 w-36 border text-center">
@@ -66,7 +55,8 @@ const App = () => {
             </div>
             <div className="stack">
               <div className="border-base-content card bg-base-100 w-36 border text-center">
-                <div className="card-body">آدرس
+                <div className="card-body">
+                  آدرس
                   <h2>ساری میدان</h2>
                 </div>
               </div>

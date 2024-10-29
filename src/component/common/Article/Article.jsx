@@ -57,7 +57,7 @@ const Article = () => {
               {TopSliderList?.map((item) => {
                 return (
                   <SwiperSlide className="w-[98%] h-[100%]">
-                    <div className="card bg-base-100 w-[100%] h-[100%] shadow-xl">
+                    <div className="card bg-base-100 w-[100%] h-[100%] shadow-xl dark:bg-[#1f3c54]">
                       <div className="w-[100%] h-[100%]">
                         <figure>
                           <img
@@ -69,7 +69,7 @@ const Article = () => {
                       </div>
 
                       <div className="card-body" shadow-xl>
-                        <h2 className="card-title mb-14">
+                        <h2 className="card-title mb-14 dark:text-white">
                           آشنایی با    
                         {item.title}
                           <div className="badge badge-secondary">NEW</div>
@@ -77,16 +77,16 @@ const Article = () => {
 
                         <div className="card-actions justify-end ">
                           <NavLink to={"/courses"}>
-                            <div className="badge badge-outline p-5 ml-14 hover:bg-[#41d3a7] hover:border-none ">
+                            <div className="badge badge-outline p-5 ml-14 hover:bg-[#41d3a7] hover:border-none   dark:text-white ">
                               {item.statusName}
                             </div>
                           </NavLink>
 
-                          <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
+                          <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none   dark:text-white">
                             {item.likeCount}
                             <AiOutlineLike />
                           </div>
-                          <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
+                          <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none  dark:text-white">
                             {item.dissLikeCount}
                             <AiOutlineDislike />
                           </div>
@@ -94,21 +94,21 @@ const Article = () => {
 
                         <div className="mt-10">
                           <div className="avatar  flex">
-                            <div className="ring-primary ring-offset-base-100 w-14 rounded-full ring ring-offset-2">
+                            <div className="ring-primary ring-offset-base-100 w-14 rounded-full ring ring-offset-2  dark:text-white">
                               <img src="" />
                             </div>
-                            <h1 className="mr-11 leading-10 text-[#809A7A;]">
+                            <h1 className="mr-11 leading-10 text-[#809A7A;]   dark:text-white">
                               {item.teacherName}
                             </h1>
                           </div>
                         </div>
                         <div>
-                          <p className="mt-30 text-right text-[#908A7A;]">
+                          <p className="mt-30 text-right text-[#908A7A;]   dark:text-white">
                             {item.describe}
                           </p>
                         </div>
                         <div className="border-t-2 border-[#158B68]">
-                          <h1 className="text-xl text-[#807A7A;] leading-10 hover:text-[#296c58] ">
+                          <h1 className="text-xl text-[#807A7A;] leading-10 hover:text-[#296c58]   dark:text-white">
                             مشاهده جزییات
                           </h1>
                         </div>

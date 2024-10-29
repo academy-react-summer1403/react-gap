@@ -53,12 +53,12 @@ const index = () => {
     getTopTeacher();
   }, []);
   return (
-    <div className="border-2 w-auto h-[450px] flex flex-wrap justify-center gap-1 bg-[#FFFF] mt-8">
+    <div className="w-auto h-[450px] flex flex-wrap justify-center gap-1 bg-[#FFFF] mt-8 dark:bg-[#22445D;]">
       <div className=" w-[25%] h-[450px] relative left-28 mt-10">
         <button className="btn no-animation bg-[#EFEEFE] text-[#5751E1] relative top-6 right-6 rounded-3xl hover:bg-[#5751E1] hover:text-[#ffff]">
           اساتید حرفه ای کد دات{" "}
         </button>
-        <h1 className="relative top-10 right-6 font-bold text-2xl">
+        <h1 className="relative top-10 right-6 font-bold text-2xl ">
           کلاس برتر ما{" "}
         </h1>
         <h1 className="relative top-10 right-6 font-bold text-2xl">

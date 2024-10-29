@@ -19,19 +19,19 @@ const index = () => {
   }, []);
 
   return (
-    <div className="mr-[370px] -mt-[42%] rounded-3xl shadow-xl ">
-      <div className=" w-[100%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px]">
+    <div className="mr-[370px] -mt-[42%] rounded-3xl shadow-xl  dark:bg-[#22445D;]">
+      <div className=" w-[100%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px]  dark:bg-[#22445D;]">
         {List?.map((item, index) => {
           return (
             <div
               key={index}
-              className=" h-[510px] w-[30%] bg-[#ffff] mb-20 "
+              className=" h-[510px] w-[30%] bg-[#ffff] mb-20  dark:bg-[#1f3c54]"
             >
               <div className="w-[100px] h-[100px]  mr-[120px] animate-pulse">
                 <img src={item.tumbImageAddress} alt="" className="icons8.png" />
               </div>
 
-              <button className="h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-14 ">
+              <button className="h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-14">
                 {item.statusName}
               </button>
 
