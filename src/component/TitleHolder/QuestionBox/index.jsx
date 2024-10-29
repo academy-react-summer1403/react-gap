@@ -42,13 +42,13 @@ const App = () => {
   const onChange = (key) => {};
 
   return (
-    <div>
+    <div className="">
       <div className="flex mt-10 w-[70%]">
-        {" "}  <div>
+        {" "}  <div >
         <img src="qus.png" alt="" />
       </div>
-        <h1 className="text-xl h-12">سوالات متداول</h1>
-        <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
+        <h1 className="text-xl h-12 dark:text-white">سوالات متداول</h1>
+        <Collapse className=" dark:text-white" items={items} defaultActiveKey={["1"]} onChange={onChange} />
       </div>
     
     </div>
