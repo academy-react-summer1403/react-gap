@@ -75,7 +75,7 @@ const Header = () => {
         </div>
 
         <div className="w-40 h-10 relative top-8 right-10 cursor-pointer">
-          <label htmlFor="DarkId" className="flex cursor-pointer gap-2">
+          <label htmlFor="DarkId" onClick={handelDark} className="flex cursor-pointer gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"

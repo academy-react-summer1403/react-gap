@@ -114,15 +114,15 @@ const index = () => {
             return (
               <div
                 key={index}
-                className="h-[41%] w-[20%] bg-[#FBF6F6] rounded-3xl  mb-24"
+                className="h-[41%] w-[20%] bg-[#FBF6F6] rounded-3xl mb-24 dark:bg-[#080f54;]"
               >
-             <div className="w-[250px] mt-[20px]  mr-[25px]">
+             <div className="w-[250px] mt-[20px]  mr-[15px]">
                 <img src="./cat12.jpg" alt="" className="" />
               </div>
 
               {/* <button className="h-11 w-32 bg-[#da7528] rounded-[8px] relative mr-4 mt-14 ">
                 {item.statusName}
-              </button> */}
+              </button>
 
               <div className="w-[60%] h-6 text-[rgb(59,130,246)] rounded-[8px] relative mr-7 mt-2 ">{item.statusName}</div>
 
@@ -182,7 +182,8 @@ const index = () => {
                 {item.cost}
               </div>
 
-              <button className=" border-[#dd813e] h-[40px] w-[100px] bg-[#dd813e] rounded-[8px] relative mr-[60px] mt-[20px]">
+              <button className="  bg-orange-700 text-white h-[40px] w-[100px] rounded-[8px] relative mr-[60px] mt-[20px]">
+                مشاهده
                 {item.statusName }
               </button>
               {/* <button className="border-2 border-[#df9a40] h-[40px] w-[100px] bg-[#dd813e] rounded-[8px] relative mr-[10px] mt-[20px]">

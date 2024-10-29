@@ -4,10 +4,10 @@ const onChange = (checkedValues) => {
   console.log("checked = ", checkedValues);
 };
 const App = () => (
-  <div className="w-[90%] h-[200px] mt-10  mx-auto shadow-2xl shadow-[#7e5d52]">
+  <div className="w-[90%] h-[200px] mt-10  mx-auto  bg-slate-200 rounded-md">
     <div className="w-[90%] mx-auto">
       {" "}
-      <h1 className=" text-xl font-bold "> مرتب سازی بر اساس</h1>
+      <h1 className=" text-xl font-bold dark:text-orange-600"> مرتب سازی بر اساس</h1>
       <br />
       <Checkbox.Group
         style={{

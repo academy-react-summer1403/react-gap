@@ -10,9 +10,9 @@ const index = () => {
   return (
     <div className=" h-[800px]">
       <div className=" h-[100px] text-center relative top-[30px] ">
-        <h1 className="text-[#22445D] text-4xl"> پیشنهادات و انتقادات </h1>
+        <h1 className="text-[#22445D] text-4xl dark:text-white"> پیشنهادات و انتقادات </h1>
 
-        <p className="text-[#22445D] text-2xl font-normal mt-4">
+        <p className="text-[#22445D] text-2xl font-normal mt-4  dark:text-white">
           {" "}
           نظرات خود را با ما درمیان بگذارید{" "}
         </p>
