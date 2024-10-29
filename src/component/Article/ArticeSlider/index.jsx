@@ -34,6 +34,7 @@ const Slider = () => {
       Price: "3000 هزار تومان",
       Sign: "الان ثبت نام کن",
     },
+    
   ]);
 
   return (
@@ -105,6 +106,8 @@ const Slider = () => {
               </SwiperSlide>
               ...
             </Swiper>
+
+            
           </div>
         </div>
       </div>

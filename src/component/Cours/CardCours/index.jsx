@@ -19,13 +19,13 @@ const index = () => {
   }, []);
 
   return (
-    <div className="mr-80 -mt-[42%] rounded-3xl shadow-xl ">
-      <div className=" w-[100%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px]">
+    <div className=" mr-80 -mt-[42%] rounded-3xl shadow-xl ">
+      <div className=" w-[100%] mt-5 flex flex-wrap-reverse justify-center gap-[50px] mb-[10px]">
         {List?.map((item, index) => {
           return (
             <div
               key={index}
-              className=" w-[30%] bg-[#ffff] mb-20 "
+              className="  w-[30%] bg-[#ffff] mb-20 "
             >
               <div className="w-[250px] mt-[20px]  mr-[25px]">
                 <img src="./cat12.jpg" alt="" className="" />
