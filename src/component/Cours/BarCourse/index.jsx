@@ -23,7 +23,18 @@ const App = () => {
             margin: "16px 0",
           }}
         >
-          <h1 className="mr-10 text-3xl font-bold text-orange-700">دوره های آموزشی</h1>
+          <div className="mr-8 w-[40%] h-24 flex flex-wrap ">
+            <div className=" text-2xl font-bold text-[rgb(51,65,85)]">
+            <h1> دوره های آموزشی  </h1>
+            </div>
+           
+            <div className="mt-10 -mr-[30%] text-lg text-[rgb(149,160,177)]">
+            <p> دوره ببین، تمرین کن، برنامه نویس شو</p>
+            </div>
+
+          </div>
+         
+
         
         </Breadcrumb>
         <div
@@ -35,6 +46,7 @@ const App = () => {
         >
           <FilterCours />
           <CardCours />
+          
         </div>
       </Content>
     </Layout>

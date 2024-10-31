@@ -1,36 +1,62 @@
 import React from "react";
-import { Checkbox, Col, Row } from "antd";
-const onChange = (checkedValues) => {
-  console.log("checked = ", checkedValues);
-};
+
 const App = () => (
-  <div className="w-[90%] h-[200px] mt-10  mx-auto  bg-slate-200 rounded-md">
-    <div className="w-[90%] mx-auto">
-      {" "}
-      <h1 className=" text-xl font-bold dark:text-orange-600"> مرتب سازی بر اساس</h1>
-      <br />
-      <Checkbox.Group
-        style={{
-          width: "100%",
-        }}
-        onChange={onChange}
-      >
-        <Row className="flex flex-wrap gap-9">
-          <Col span={8}>
-            <Checkbox  value="A">جدید  </Checkbox>
-          </Col>
-          <Col span={8}>
-            <Checkbox value="B">قدیمی </Checkbox>
-          </Col>
-          
-          <Col span={8}>
-            <Checkbox value="C">رزروشده</Checkbox>
-          </Col>
-          <Col span={8}>
-            <Checkbox value="d">همه</Checkbox>
-          </Col>
-        </Row>
-      </Checkbox.Group>
+  <div className=" -mr-3 w-[100%]  h-[200px] mx-auto">
+    <div className=" flex flex-wrap justify-center border-2 bg-[#fff]  w-[90%] h-24 mr-5 ">
+      <h1 className=" mt-7 ml-6 font-bold"> دوره‌های جاری </h1>
+      <input type="checkbox" className="toggle mt-7" defaultChecked />
+      <h2 className="mt-7 mr-6 font-bold text-[#ccc]">آرشیو شده </h2>
+    </div>
+
+    <div className=" border-2 w-[90%] h-[300px] flex flex-wrap  mr-5 mt-5 bg-[#fff]">
+      <h1 className=" mt-7 mr-8 font-bold text-xl "> نوع دوره </h1>
+
+      <div className="block ml-72">
+        <div className="form-control">
+          <label className="label cursor-pointer">
+            <span className="label-text">جاوا </span>
+            <input
+              type="radio"
+              name="radio-10"
+              className="radio checked:bg-blue-600"
+              defaultChecked
+            />
+          </label>
+        </div>
+        <div className="form-control">
+          <label className="label cursor-pointer">
+            <span className="label-text"> ریکت</span>
+            <input
+              type="radio"
+              name="radio-10"
+              className="radio checked:bg-blue-500"
+              defaultChecked
+            />
+          </label>
+        </div>
+        <div className="form-control">
+          <label className="label cursor-pointer">
+            <span className="label-text">ویو </span>
+            <input
+              type="radio"
+              name="radio-10"
+              className="radio checked:bg-blue-600"
+              defaultChecked
+            />
+          </label>
+        </div>
+        <div className="form-control">
+          <label className="label cursor-pointer">
+            <span className="label-text">جاوااسکریپت </span>
+            <input
+              type="radio"
+              name="radio-10"
+              className="radio checked:bg-blue-600"
+              defaultChecked
+            />
+          </label>
+        </div>
+      </div>
     </div>
   </div>
 );

@@ -19,7 +19,7 @@ const index = () => {
   }, []);
 
   return (
-    <div className=" mr-[370px] -mt-[42%] shadow-xl  dark:bg-[#22445D;]">
+    <div className=" border-2 border-red-600 mr-[370px] -mt-[36%] shadow-xl  dark:bg-[#22445D;]">
       <div className=" w-[100%] h-[70%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px]   rounded-lg ">
         {List?.map((item, index) => {
           return (
