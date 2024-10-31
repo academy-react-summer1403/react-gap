@@ -36,7 +36,7 @@ const index = () => {
                     className=" w-[100%] h-[50px] mt-4 relative px-5 border-2 rounded-xl border-[#158B68]"
                   />
 
-                  <label className="font-inter text-[#22445D] text-sm relative top-5 text-white">
+                  <label className="font-inter text-[#22445D] text-sm relative top-5">
                     <input type="checkbox" />
                     مرا به خاطر بسپار
                   </label>

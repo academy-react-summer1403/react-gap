@@ -52,8 +52,8 @@ export const Routers = createBrowserRouter([
         path: "/Connect",
         element: <Connect />,
       },
-    ],
-  },
+   
+  
 
   {
     path: "/Login",
@@ -92,6 +92,8 @@ export const Routers = createBrowserRouter([
     path: "/NewPass",
     element: <ResetPass />,
   },
+],
+},
 
   {
     path: "*",
