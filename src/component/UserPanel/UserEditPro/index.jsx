@@ -23,6 +23,9 @@ function getItem(label, key, icon, NavLink) {
     NavLink,
   };
 }
+const handelDark = () => {
+  document.documentElement.classList.toggle("dark");
+};
 const items = [
   getItem(
     "پیشخوان",
@@ -109,12 +112,49 @@ const App = () => {
             mode="inline"
             items={items}
           />
+          <div>
+          <div className="w-40 h-10 relative top-8 right-10 cursor-pointer">
+          <label htmlFor="DarkId" onClick={handelDark} className="flex cursor-pointer gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+            </svg>
+            <input
+              type="checkbox"
+              value="synthwave"
+              className="toggle theme-controller"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </label>
+        </div>
+          </div>
         </Sider>
 
         <Content
-          style={{
-            margin: "0 16px",
-          }}
+        
+          className="dark:bg-[#22445D;] m-8"
         >
           <Breadcrumb
             style={{
@@ -122,9 +162,9 @@ const App = () => {
             }}
           >
             <Breadcrumb.Item>
-              <div className="avatar online">
+              <div className="avatar online ">
                 <div className="w-24 rounded-full">
-                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                <img src="./user2.png" />
                 </div>
               </div>
               کاربر
@@ -133,20 +173,16 @@ const App = () => {
             <Breadcrumb.Item>کاربر</Breadcrumb.Item>
           </Breadcrumb>
           <div
-            style={{
-              padding: 24,
-              minHeight: 360,
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
-            }}
+            
+            className="dark:bg-[#22445D;] p-24"
           >
-            <div className="border-b-2 h-[40px] w-[95%] mx-auto mt-4 font-sans text-xl">
-              <h1>ویرایش اطلاعات</h1>
+            <div className="border-b-2 h-[40px] w-[95%] mx-auto mt-4 font-sans text-xl dark:bg-[#22445D;]">
+              <h1 className=" dark:text-white">ویرایش اطلاعات</h1>
             </div>
             <div className=" flex flex-wrap gap-9 h-[500px] w-[70%] mx-auto mt-9">
               <label className="form-control w-full max-w-xs">
                 <div className="label">
-                  <span className="label-text"> اسمت چیه؟</span>
+                  <span className="label-text dark:text-white"> نام</span>
                 </div>
                 <input
                   type="text"
@@ -158,7 +194,7 @@ const App = () => {
 
               <label className="form-control w-full max-w-xs">
                 <div className="label">
-                  <span className="label-text"> فامیلیت چیه؟</span>
+                  <span className="label-text  dark:text-white"> نام خانوادگی </span>
                 </div>
                 <input
                   type="text"
@@ -170,7 +206,7 @@ const App = () => {
 
               <label className="form-control w-full max-w-xs">
                 <div className="label">
-                  <span className="label-text"> شمارت چنده؟</span>
+                  <span className="label-text  dark:text-white"> شماره </span>
                 </div>
                 <input
                   type="text"
@@ -182,7 +218,7 @@ const App = () => {
 
               <label className="form-control w-full max-w-xs mb-80">
                 <div className="label">
-                  <span className="label-text"> شمارت چنده؟</span>
+                  <span className="label-text  dark:text-white"> ایمیل </span>
                 </div>
                 <input
                   type="text"

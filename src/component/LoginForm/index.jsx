@@ -7,7 +7,7 @@ const index = () => {
   return (
     <section>
       <div >
-         <div className="justify-center w-[90%] h-[800px] mx-auto">
+         <div className="justify-center w-[90%] h-[600px] mx-auto">
         <div className="  flex w-[90%] h-[100%]">
           <NavLink to={"/"}>
             <div className=" relative top-5 lg:right-[550px] sm:right-[450px] xl:right-[450px]">
@@ -15,7 +15,7 @@ const index = () => {
             </div>
           </NavLink>
 
-          <div className=" w-[50%] h-[100%] bg-[#FBF6F6;] rounded-r-2xl shadow-2xl  sm:w-[100%] xl:w-[50%] dark:bg-[#22445D;]">
+          <div className=" w-[50%] h-[100%] bg-[#FBF6F6;] rounded-r-2xl shadow-2xl  sm:w-[100%] xl:w-[50%] ">
             <h1 className=" relative right-14 top-12 text-2xl">
               ورود به سیستم
             </h1>
