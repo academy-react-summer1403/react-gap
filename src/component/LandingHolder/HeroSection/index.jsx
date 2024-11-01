@@ -9,8 +9,8 @@ const index = () => {
       </div>
       <div className="  w-[800px] h-[400px] relative top-32 left-1 text-center lg:text-right">
         <br />
-        <h1 className="text-5xl text-gray-700 font-medium">داستان برنامه‌نویس </h1>
-        <h1 className="text-5xl text-gray-700 font-medium">شدنت از اینجا شروع میشه!</h1>
+        <h1 className="text-5xl text-gray-700 font-medium dark:text-white">داستان برنامه‌نویس </h1>
+        <h1 className="text-5xl text-gray-700 font-medium dark:text-white">شدنت از اینجا شروع میشه!</h1>
         <h1 className="text-black text-4xl mt-10  font-thin dark:text-white">
           {" "}
           هر کسی باید یاد بگیره{" "}
