@@ -1,9 +1,10 @@
 import React from 'react'
-import UserMyCourse from "../../../component/UserPanel/UserMyCourse"
+import UserCounter from "../../../component/UserPanel/UserCounter"
 const index = () => {
   return (
     <div>
-      <UserMyCourse/>
+        <UserCounter />
+      
     </div>
   )
 }

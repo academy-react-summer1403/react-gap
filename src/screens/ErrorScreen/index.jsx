@@ -1,9 +1,9 @@
 import React from 'react'
-import UserMyCourse from "../../../component/UserPanel/UserMyCourse"
+import Error404 from "../../component/Error404"
 const index = () => {
   return (
     <div>
-      <UserMyCourse/>
+      <Error404/>
     </div>
   )
 }
