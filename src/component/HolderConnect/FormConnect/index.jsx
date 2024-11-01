@@ -1,40 +1,31 @@
-import React, { useState } from "react";
+import { Field, Form, Formik } from "formik";
+import React from "react";
+import { IoMdCall } from "react-icons/io";
 
-import { Button, DatePicker, Form, Input, Rate } from "antd";
-const { RangePicker } = DatePicker;
-const { TextArea } = Input;
-const normFile = (e) => {
-  if (Array.isArray(e)) {
-    return e;
-  }
-  return e?.fileList;
-};
-const FormDisabledDemo = () => {
-  const [componentDisabled, setComponentDisabled] = useState(true);
+const index = () => {
   return (
-    <div className="w-[40%] h-[70%] mr-[50%] dark:text-white">
-    
-       <div className="w-[70%]">
+    <div className="w-[90%] h-[400px] border-2 mx-auto">
+      <div className="w-96 flex">
+        <div className=" w- h-[100%]">
+          <IoMdCall size={40} fill="gray" />
+        </div>
+        <div>
+          <h1 className="text-3xl text-gray-600 mr w-72">فرم تماس با ما</h1>
+        </div>
+      </div>
 
-       
-        <Form.Item label= "پیام" className="dark:text-white">
-          <TextArea rows={4} />
-        </Form.Item>
-
-        <Form.Item label="ایمیل" className="dark:text-white">
-          <Input />
-        </Form.Item>
-
-        <Form.Item label="امتیاز" className="dark:text-white">
-          <Rate />
-        </Form.Item>
-
-        
-   
-      <Form.Item label="">
-        <Button className="bg-blue-400 text-white mr-16">ارسال</Button>
-      </Form.Item></div>
+<div className="w-[30%] h-[300px] mx-auto flex flex-wrap gap-9 justify-center">
+ <Formik initialValues={{ LastName: "", email: "", txt: "" }}>
+        <Form>
+          <Field name="LastName" placeholder="نام خود را وارد کنید" className="w-96 h-10 bg-base-300 rounded-xl mt-6" />
+          <Field name="email" placeholder="ایمیل خود را وارد کنید" className="w-96 h-10 bg-base-300 rounded-xl mt-8" />
+          <Field name="text" placeholder="پیام خودتون رو برامون ارسال کنید" className="w-96 h-32 bg-base-300 rounded-xl mt-8 placeholder:" />
+        </Form>
+      </Formik> 
+</div>
+      
     </div>
   );
 };
-export default () => <FormDisabledDemo />;
+
+export default index;
