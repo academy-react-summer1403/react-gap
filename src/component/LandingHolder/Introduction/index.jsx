@@ -59,7 +59,7 @@ const index = () => {
                 />
               </div>
 
-              <div className=" shadow border-2 w-8 h-8 rounded-full relative bottom-28 right-[210px] ">
+              <div className=" shadow border-2 w-8 h-8 rounded-full relative bottom-28 right-[210px]sm:w-[20px] sm:flex-wrap ">
                 <img
                   className="relative top-1 right-[5px]"
                   src="./whatsup.png"
