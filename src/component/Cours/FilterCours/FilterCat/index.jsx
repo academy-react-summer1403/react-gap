@@ -1,4 +1,6 @@
 import React from "react";
+import SourtBy from "./Sortby/SourtBy";
+import CatCourses from "./CatCourses/CatCourses";
 
 const App = () => (
   <div className=" -mr-3 w-[100%]  h-[200px] mx-auto">
@@ -8,56 +10,55 @@ const App = () => (
       <h2 className="mt-7 mr-6 font-bold text-[#ccc]">آرشیو شده </h2>
     </div>
 
-    <div className=" border-2 w-[90%] h-[300px] flex flex-wrap  mr-5 mt-5 bg-[#fff]">
+    <div className="w-[90%] h-[200px] flex flex-wrap  mr-5 mt-5 bg-[#fff]">
       <h1 className=" mt-7 mr-8 font-bold text-xl "> نوع دوره </h1>
+      {/* <div className="border w-[80%] relative mr-[18px] mb-[10px] border-[#5BE1B9]"></div> */}
 
-      <div className="block ml-72">
-        <div className="form-control">
-          <label className="label cursor-pointer">
-            <span className="label-text">جاوا </span>
-            <input
-              type="radio"
-              name="radio-10"
-              className="radio checked:bg-blue-600"
-              defaultChecked
-            />
-          </label>
-        </div>
-        <div className="form-control">
-          <label className="label cursor-pointer">
-            <span className="label-text"> ریکت</span>
-            <input
-              type="radio"
-              name="radio-10"
-              className="radio checked:bg-blue-500"
-              defaultChecked
-            />
-          </label>
-        </div>
-        <div className="form-control">
-          <label className="label cursor-pointer">
-            <span className="label-text">ویو </span>
-            <input
-              type="radio"
-              name="radio-10"
-              className="radio checked:bg-blue-600"
-              defaultChecked
-            />
-          </label>
-        </div>
-        <div className="form-control">
-          <label className="label cursor-pointer">
-            <span className="label-text">جاوااسکریپت </span>
-            <input
-              type="radio"
-              name="radio-10"
-              className="radio checked:bg-blue-600"
-              defaultChecked
-            />
-          </label>
-        </div>
-      </div>
+      <div className=" join join-vertical w-full -mt-2">
+          <div className=" collapse collapse-arrow join-item">
+            <input className="-mt-24"  type="radio" name="my-accordion-4" defaultChecked />
+            
+            <div className="collapse-content ">
+              
+                <div className="text-right mr-[30px]">
+                  <input type="radio" name="ca" />
+                  <lable className="text-center text-[14px] indent-1 inline-block">
+                    <span className="mr-[10px] font-normal ">  رایگان </span>
+                  </lable>
+                </div>
+
+                <div className="text-right mr-[30px]">
+                  <input type="radio" name="ca" />
+                  <lable className="text-center text-[14px] inline-block ">
+                    <span className="mr-[10px] font-normal "> فقط نقدی  </span>
+                  </lable>
+                </div>
+
+                <div className="text-right mr-[30px]">
+                  <input type="radio" name="ca" />
+                  <lable className="text-center text-[14px] inline-block ">
+                    <span className="mr-[10px] font-normal ">
+                      {" "}
+                      نقدی و اعضای ویژه {" "}
+                    </span>
+                  </lable>
+                </div>
+            </div>
+          </div>
+          </div>      
     </div>
+    <SourtBy/>
+    <CatCourses/>
+
+
+
+
+
+    
+
+
+
+
   </div>
 );
 export default App;
