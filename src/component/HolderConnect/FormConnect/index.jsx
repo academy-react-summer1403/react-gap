@@ -4,7 +4,7 @@ import { IoMdCall } from "react-icons/io";
 
 const index = () => {
   return (
-    <div className="w-[90%] h-[400px] border-2 mx-auto">
+    <div className="w-[90%] h-[800px] mx-auto">
       <div className="w-96 flex">
         <div className=" w- h-[100%]">
           <IoMdCall size={40} fill="gray" />
@@ -14,16 +14,71 @@ const index = () => {
         </div>
       </div>
 
-<div className="w-[30%] h-[300px] mx-auto flex flex-wrap gap-9 justify-center">
- <Formik initialValues={{ LastName: "", email: "", txt: "" }}>
-        <Form>
-          <Field name="LastName" placeholder="نام خود را وارد کنید" className="w-96 h-10 bg-base-300 rounded-xl mt-6" />
-          <Field name="email" placeholder="ایمیل خود را وارد کنید" className="w-96 h-10 bg-base-300 rounded-xl mt-8" />
-          <Field name="text" placeholder="پیام خودتون رو برامون ارسال کنید" className="w-96 h-32 bg-base-300 rounded-xl mt-8 placeholder:" />
-        </Form>
-      </Formik> 
-</div>
-      
+      <div className="w-[50%] dark:bg-[#22445D;] mx-auto ">
+        <div className="h-[80px] w-[85%] border-b-2 mx-auto mt-4 font-sans text-xl text-gray-500 dark:bg-[#22445D;]">
+          <h1 className=" dark:text-white">
+            {" "}
+            در کنار روش‌های که در برای ارتباط در نظر گرفته‌ایم،شما
+            همچنین می‌توانید از طریق فرم زیر پیام خود را برای ما ارسال کنید.{" "}
+          </h1>
+        </div>
+        <div className=" flex flex-wrap gap-9 h-[500px] w-[70%] mx-auto mt-9">
+          <label className="form-control w-full max-w-xs">
+            <div className="label">
+              <span className="label-text dark:text-white"> نام</span>
+            </div>
+            <input
+              type="text"
+              placeholder=" اینجا بنویس"
+              className="input input-bordered w-full max-w-xs"
+            />
+            <div className="label"></div>
+          </label>
+
+          <label className="form-control w-full max-w-xs">
+            <div className="label">
+              <span className="label-text  dark:text-white">
+                {" "}
+                نام خانوادگی{" "}
+              </span>
+            </div>
+            <input
+              type="text"
+              placeholder=" اینجا بنویس"
+              className="input input-bordered w-full max-w-xs"
+            />
+            <div className="label"></div>
+          </label>
+
+          <label className="form-control w-full max-w-xs">
+            <div className="label">
+              <span className="label-text  dark:text-white"> شماره </span>
+            </div>
+            <input
+              type="text"
+              placeholder=" اینجا بنویس"
+              className="input input-bordered w-full max-w-xs"
+            />
+            <div className="label"></div>
+          </label>
+
+          <label className="form-control w-full max-w-xs mb-80">
+            <div className="label">
+              <span className="label-text  dark:text-white"> پیام </span>
+            </div>
+            <input
+              type="text"
+              placeholder=" اینجا بنویس"
+              className="input input-bordered w-full max-w-xs"
+            />
+            <div className="label"></div>
+          </label>
+        </div>
+
+        <button className="btn btn-info text-white  relative top-10 right-80 ">
+          ثبت اطلاعات
+        </button>
+      </div>
     </div>
   );
 };

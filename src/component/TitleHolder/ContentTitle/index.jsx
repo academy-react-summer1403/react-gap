@@ -29,16 +29,14 @@ const App = () => {
             margin: "24px 16px 0",
           }}
         >
-          <div
-           
-            className="dark:bg-[#22445D;] p-2 dark:bg-[#22445D;]"
-          
-          >
+          <div className="dark:bg-[#22445D;] p-2 ">
             <div className="hero bg-base-200 min-h-screen dark:bg-[#22445D;]">
               <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="border-2 w-[100%] h-[300px] ml-9"></div>
                 <div>
-                  <h1 className="text-5xl font-bold dark:text-white">عنوان دوره</h1>
+                  <h1 className="text-5xl font-bold dark:text-white">
+                    عنوان دوره
+                  </h1>
                   <p className="py-6 dark:text-white">
                     لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که
                     توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود.
@@ -62,7 +60,6 @@ const App = () => {
                     استفاده می کنند.
                   </h2>
 
-                
                   <button className="btn btn-primary mt-10">رزرو دوره </button>
                 </div>
               </div>
