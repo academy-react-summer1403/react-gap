@@ -1,8 +1,8 @@
+import { Button } from "@material-tailwind/react";
 import React from "react";
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
-import HeaderTop from "../../../component/common/Header/HeaderTop";
-import { Button } from "@mui/material";
+import HeaderTop from "../Header/HeaderTop"
 
 const Header = () => {
   const handelDark = () => {
