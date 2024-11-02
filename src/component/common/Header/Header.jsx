@@ -25,11 +25,11 @@ const Header = () => {
             <div className="flex gap-6 justify-center relative top-2 w-[400px]"></div>
           </div>
 
-          <div className="h-9 m-10">
-            <label className="input input-bordered flex items-center gap-2 relative left-96 bottom-1">
+          <div className=" m-10">
+            <label className=" input input-bordered flex items-center gap-2 relative left-96 bottom-1">
               <input
                 type="text"
-                className="grow"
+                className="grow "
                 placeholder="هرچی می‌خوای اینجا جستجو کن"
               />
               <svg
