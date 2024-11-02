@@ -1,9 +1,9 @@
 import React from 'react'
-import ContentTitle from "../../component/TitleHolder/ContentTitle"
+import DetailCourseHolder from "../../component/DetailCourseHolder"
 const index = () => {
   return (
     <div>
-   <ContentTitle/>
+     <DetailCourseHolder/>
     </div>
   )
 }

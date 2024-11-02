@@ -11,9 +11,8 @@ import RegisterStep1 from "../../component/RegisterStep1";
 import RegisterStep2 from "../../component/RegisterStep2";
 import RegisterForm from "../../component/RegisterForm";
 import ResetPass from "../../screens/ResetPass";
-import UserPanel from "../../component/UserPanel";
 import DetailNews from "../../screens/DetailNews";
-import TitleCourse from "../../screens/TitleCourse";
+import DetailCourse from "../../screens/DetailCourse"
 import { createBrowserRouter } from "react-router-dom";
 import Connect from "../../screens/Connect";
 import MyCourses from "../../screens/Panel/MyCourses";
@@ -45,9 +44,10 @@ export const Routers = createBrowserRouter([
         element: <DetailNews />,
       },
       {
-        path: "/TitleCourse",
-        element: <TitleCourse />,
+        path: "/DetailCourse",
+        element: <DetailCourse/>,
       },
+
       {
         path: "/Connect",
         element: <Connect />,
