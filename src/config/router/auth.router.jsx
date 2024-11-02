@@ -22,6 +22,10 @@ import Reservation from "../../screens/Panel/Reservation";
 import Favorite from "../../screens/Panel/Favorite";
 import Comments from "../../screens/Panel/Comments";
 import Counter from "../../screens/Panel/Counter";
+
+
+import Dash2 from "../../component/UserPanel/LeftPanel/Dash2";
+import Hom2 from "../../component/UserPanel/LeftPanel/Homep"
 export const Routers = createBrowserRouter([
   {
     path: "/",
@@ -98,10 +102,20 @@ export const Routers = createBrowserRouter([
     element: <Error404 />,
   },
 
+
+  
   {
     path: "/",
     element: <PanelLayout />,
     children: [
+      {
+        path: "/Panel",
+        element: <Dash2 />,
+      },
+      {
+        path: "/Panel/dashbord",
+        element: <Hom2 />,
+      },
       {
         path: "/EditPro",
         element: <EditProfile />,

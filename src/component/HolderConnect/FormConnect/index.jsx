@@ -62,17 +62,7 @@ const index = () => {
             <div className="label"></div>
           </label>
 
-          <label className="form-control w-full max-w-xs mb-80">
-            <div className="label">
-              <span className="label-text  dark:text-white"> پیام </span>
-            </div>
-            <input
-              type="text"
-              placeholder=" اینجا بنویس"
-              className="input input-bordered w-full max-w-xs"
-            />
-            <div className="label"></div>
-          </label>
+          <textarea className="textarea textarea-bordered  w-[320px]" placeholder="پیام"></textarea>
         </div>
 
         <button className="btn btn-info text-white  relative top-10 right-80 ">

@@ -3,7 +3,7 @@ import React from "react";
 
 const index = () => {
   return (
-    <div className="border-2 w-[100%] h-[900px]">
+    <div className="w-[100%]">
       <div className="w-[80%] h-[400px] mx-auto mt-10 bg-white rounded-lg shadow-xl">
         <div className="w-[100%] h-[340px] rounded-lg flex">
           <div className=" w-[60%] h-[95%]">
@@ -21,21 +21,31 @@ const index = () => {
                 استفاده کنید.
               </p>
             </div>
-            <div className="w-[100%] h-[30%] border-2 flex">
-            <button className="btn btn-info"></button>
-            <button className="btn btn-info">Info</button>
+            <div className="w-[100%] h-[30%] ">
+            <h1 className="text-blue-600 mr-6">قیمت دوره:</h1>
+            <h1 className="text-blue-600 mr-6">نوع دوره:</h1>
+       
+
             </div>
           </div>
-          <div className="w-[40%] h-[95%] border-r-2">
+          <div className="w-[40%] h-[90%] mt-4 border-r-2">
             <img
               src=""
               alt=""
-              className="w-[80%] h-[80%] border-2 mx-auto mt-6"
+              className="w-[80%] h-[80%]  mx-auto mt-6"
             />
           </div>
         </div>
-        <div className="w-[100%] h-[60px] border-2"></div>
+        <div className="w-[100%] h-[60px]">
+        <button className="btn btn-info text-white w-[100%] h-[100%]">شروع ثبت نام در دوره</button>
+        </div>
       </div>
+
+
+
+
+
+
     </div>
   );
 };
