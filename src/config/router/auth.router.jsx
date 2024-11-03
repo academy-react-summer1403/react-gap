@@ -1,3 +1,4 @@
+import { createBrowserRouter } from "react-router-dom";
 import Layout from "../../App/Layout";
 import Landing from "../../screens/Landing";
 import Error404 from "../../component/Error404";
@@ -12,8 +13,7 @@ import RegisterStep2 from "../../component/RegisterStep2";
 import RegisterForm from "../../component/RegisterForm";
 import ResetPass from "../../screens/ResetPass";
 import DetailNews from "../../screens/DetailNews";
-import DetailCourse from "../../screens/DetailCourse"
-import { createBrowserRouter } from "react-router-dom";
+import DetailCourse from "../../screens/DetailCourse";
 import Connect from "../../screens/Connect";
 import MyCourses from "../../screens/Panel/MyCourses";
 import PanelLayout from "../../App/PanelLayout";
@@ -22,10 +22,8 @@ import Reservation from "../../screens/Panel/Reservation";
 import Favorite from "../../screens/Panel/Favorite";
 import Comments from "../../screens/Panel/Comments";
 import Counter from "../../screens/Panel/Counter";
-
-
-import Dash2 from "../../component/UserPanel/LeftPanel/Dash2";
-import Hom2 from "../../component/UserPanel/LeftPanel/Homep"
+import Dash2 from "../../screens/Panel/Panel2/Dash2";
+import Hom2 from "../../screens/Panel/Panel2/Hom2";
 export const Routers = createBrowserRouter([
   {
     path: "/",
@@ -49,7 +47,7 @@ export const Routers = createBrowserRouter([
       },
       {
         path: "/DetailCourse",
-        element: <DetailCourse/>,
+        element: <DetailCourse />,
       },
 
       {
@@ -102,8 +100,6 @@ export const Routers = createBrowserRouter([
     element: <Error404 />,
   },
 
-
-  
   {
     path: "/",
     element: <PanelLayout />,

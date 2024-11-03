@@ -1,5 +1,5 @@
 import React from 'react'
-import Homep from "../../../components/PanelHolder/LeftPanel/Homep"
+import Homep from "../../../../component/UserPanel/LeftPanel/Homep"
 
 const index = () => {
   return (

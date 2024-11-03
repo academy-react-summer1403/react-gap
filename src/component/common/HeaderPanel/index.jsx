@@ -60,7 +60,7 @@ const HeaderPanel = () => {
               </label>
             </div>
             <div className="w-16 h-10 mt-10">
-              <SlHandbag fill="" size={30} />
+              <SlHandbag fill="blue" size={30} />
             </div>{" "}
             <div className="m-6">
               <NavLink to={"/"}>

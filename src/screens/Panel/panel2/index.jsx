@@ -1,9 +1,9 @@
 import React from 'react'
-import PanelHolder from "../../components/PanelHolder"
+import UserPanel from "../../../component/UserPanel/"
 const index = () => {
   return (
     <>
-      <PanelHolder/>
+      <UserPanel/>
     </>
   )
 }

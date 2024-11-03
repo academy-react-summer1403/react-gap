@@ -1,11 +1,11 @@
 import React from "react";
-import SidBare from "./SidBare";
+import SidBare from "../../component/UserPanel/LeftPanel/SidBare";
 import { Outlet } from "react-router-dom";
 
 const index = () => {
   return (
     <div
-      className=" w-full h-auto min-h-[100vh]"
+      className=" w-full h-auto min-h-[100vh] border-2 border-blue-900"
     >
       <div
         className="flex flex-row justify-center w-[93%] h-auto"
