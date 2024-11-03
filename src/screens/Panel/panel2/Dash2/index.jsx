@@ -1,10 +1,7 @@
-import React from 'react'
-import Dash2 from "../../../../component/UserPanel/LeftPanel/Dash2"
+import React from "react";
 
 const index = () => {
-  return (
-    <Dash2/>
-  )
-}
+  return <></>;
+};
 
-export default index
+export default index;

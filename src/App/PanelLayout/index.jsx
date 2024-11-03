@@ -9,7 +9,7 @@ const index = () => {
   return (
     <div>
       <HeaderPanel/>
-      <Outlet/>
+     
       <Panel2/>
      
     
