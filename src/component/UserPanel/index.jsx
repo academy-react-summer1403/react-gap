@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 const index = () => {
   return (
     <div
-      className=" w-full h-auto min-h-[100vh] border-2 border-blue-900"
+      className=" w-full h-auto min-h-[100vh]"
     >
       <div
         className="flex flex-row justify-center w-[93%] h-auto"

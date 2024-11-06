@@ -1,11 +1,7 @@
-import React from 'react'
-import UserEditPro from "../../../component/UserPanel/UserEditPro"
-const index = () => {
-  return (
-    <div>
-      <UserEditPro />
-    </div>
-  )
-}
+import React from "react";
 
-export default index
+const index = () => {
+  return <div></div>;
+};
+
+export default index;

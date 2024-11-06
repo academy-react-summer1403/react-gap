@@ -21,10 +21,10 @@ const index = () => {
           <h3 className="text-gray-500 font-sans">راه های ارتباطی</h3>
           <div className="w-48 flex gap-7 h-16 mt-16 ml-24 ">
             <button className="btn btn-info">
-              <BsSend size={20} />
+              <BsSend size={20} fill="white" />
             </button>
             <button className="btn btn-info">
-              <BiMessageRounded size={20} />
+              <BiMessageRounded size={20} fill="white" />
             </button>
           </div>
         </div>
@@ -32,16 +32,16 @@ const index = () => {
           <h3 className=" text-gray-500 font-sans mr-2">شبکه های اجتماعی</h3>{" "}
           <div className="w-48 flex gap-7 h-16 mt-10 mr-36 ">
             <button className="btn btn-info">
-              <CiYoutube size={20} />
+              <CiYoutube size={20} fill="white" />
             </button>
             <button className="btn btn-info">
-              <CiFacebook size={20} />
+              <CiFacebook size={20} fill="white"/>
             </button>
             <button className="btn btn-info">
-              <CiTwitter size={20} />
+              <CiTwitter size={20} fill="white"/>
             </button>
             <button className="btn btn-info">
-              <FaInstagram size={20} />
+              <FaInstagram size={20} fill="white"/>
             </button>
           </div>
         </div>
