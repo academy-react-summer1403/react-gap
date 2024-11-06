@@ -3,7 +3,7 @@ import React from "react";
 import { RiUserFill } from "react-icons/ri";
 const index = () => {
   return (
-    <div className="bg-white w-[100%] h-[800px] rounded-xl mt-10">
+    <div className="bg-white w-[100%] h-[800px] rounded-xl mt-10 dark:bg-slate-900">
       <div className="border-b-2 w-[95%] h-20 mx-auto">
         <h1 className="relative top-8 text-lg font-sans font-bold">
           ویرایش اطلاعات
@@ -19,7 +19,7 @@ const index = () => {
             </div>
           </div>
           <div className="w-[90%] rounded-3xl h-[80%] bg-slate-200">
-            <input type="file" className="mt-5 mr-5" />
+            <input type="file" className="mt-5 mr-5 dark:bg-slate-900" />
           </div>
         </div>
         <div className="w-[90%] rounded-3xl h-[10%] mx-auto">
@@ -30,24 +30,24 @@ const index = () => {
             <Formik>
               <Form>
                 <Field
-                  className="border-2 w-[40%] h-[50px] rounded-xl  border-slate-300"
+                  className="border-2 w-[40%] h-[50px] rounded-xl  border-slate-300 dark:bg-slate-600"
                   placeholder="نام"
                 />
                 <Field
-                  className="border-2 w-[40%] h-[50px] rounded-xl mr-5  border-slate-300"
+                  className="border-2 w-[40%] h-[50px] rounded-xl mr-5  border-slate-300 dark:bg-slate-600"
                   placeholder="نام خانوادگی"
                 />
                 <Field
-                  className="border-2 w-[40%] h-[50px] rounded-xl mt-10  border-slate-300"
+                  className="border-2 w-[40%] h-[50px] rounded-xl mt-10  border-slate-300 dark:bg-slate-600"
                   placeholder="شماره تلفن"
                 />
                 <Field
                 
-                  className="border-2 w-[40%] h-[50px] rounded-xl mt-10 mr-5   border-slate-300"
+                  className="border-2 w-[40%] h-[50px] rounded-xl mt-10 mr-5   border-slate-300 dark:bg-slate-600"
                   placeholder="ایمیل"
                 />
               </Form>
-            </Formik> <button className="btn btn-active  btn-accent text-white mt-14 mr-[80%] w-28">ثبت</button>
+            </Formik> <button className="btn btn-active  btn-accent text-white mt-14 mr-[80%] w-28">تایید</button>
           </div>
          
 

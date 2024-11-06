@@ -40,7 +40,7 @@ const items = [
   getItem(
     "دوره های من",
     "3",
-    <NavLink to={"/UserMyCourse"}>
+    <NavLink to={"/Panel/MyCourse"}>
       {" "}
       <PieChartOutlined />
     </NavLink>
@@ -48,7 +48,7 @@ const items = [
   getItem(
     "دوره های رزرو",
     "4",
-    <NavLink to={"/UserReserv"}>
+    <NavLink to={"/Panel/ReservPanel"}>
       {" "}
       <DesktopOutlined />
     </NavLink>

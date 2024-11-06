@@ -3,7 +3,7 @@ import { RiUserFill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 const index = () => {
   return (
-    <div className=" bg-white w-[90%] h-[500px] rounded-3xl mt-10">
+    <div className=" bg-white w-[90%] h-[500px] rounded-3xl mt-10 dark:bg-slate-900">
       <div className="w-[60%] h-[120px] border-2 mt-4 rounded-3xl flex mr-10">
         <div className="w-[200px]">
           <img src="./introImg.png" className="w-[100%] h-[100%] mr-4" alt="" />
@@ -15,7 +15,7 @@ const index = () => {
 
       <div className="flex">
         <div className="border-2 w-[40%] mt-10 h-[220px] mr-10 rounded-3xl ">
-          <h1 className="text-xl relative text-center bg-slate-100 rounded-t-3xl ">
+          <h1 className="text-xl relative text-center bg-slate-100 rounded-t-3xl dark:bg-slate-800 ">
             اطلاعات کاربر
           </h1>
 
