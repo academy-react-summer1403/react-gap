@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineLike } from "react-icons/ai";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { AiOutlineDislike } from "react-icons/ai";
+
 const index = () => {
   const [CoursList, setCoursList] = useState(null);
 
@@ -23,33 +24,36 @@ const index = () => {
     <div>
       <div className="">
         <img
-          className="w-[40px] h-[40px] relative bottom-8 right-20"
+          className="w-[40px] h-[40px] relative bottom-8 right-20 max-sm:size-10 max-sm:hidden"
           src="./hobab2.png"
         />
       </div>
-      <div className="relative bottom-10 right-24">
-        <h1 className="text-4xl font-sans font-medium mr-12 -mt-12">
+      <div className="relative  bottom-14 right-24 max-sm:mt-11 max-sm:right-10">
+        <h1 className="text-4xl font-sans font-medium mr-12 mt-20 max-sm:text-lg ">
           آخرین دوره ها
         </h1>
       </div>
+      <div className="relative  bottom-14">
 
       <NavLink to={"/courses"}>
-        <h1 className="text-xl font-sans font-medium mr-[84%] -mt-6 relative bottom-8 left-28 hover:text-blue-800">
+        <h1 className="text-2xl font-sans font-medium mr-[84%] -mt-6 relative bottom-1 left-28 hover:text-blue-800 max-sm:text-sm">
           مشاهده همه دوره ها
         </h1>
       </NavLink>
+      </div>
+
 
       <div className="w-[80%] h-[100%] flex  flex-wrap gap-9 mx-auto">
         {CoursList?.map((item, index) => {
           return (
             <div
               key={index}
-              className="shadow-2xl w-[22%] h-[530px] mx-auto bg-white rounded-2xl"
+              className="shadow-2xl w-[22%] h-[530px] mx-auto bg-white rounded-2xl border-2 border-red-500 max-sm:w-[400px] md:w-[500px]"
             >
-              <div className="">
+              <div>
                 <img
                   src="./Lastimg.jpg"
-                  className="w-[90%] h-[100%] mx-3 relative bottom-5 rounded-2xl"
+                  className="w-[90%] h-[100%] mx-3 relative bottom-5 rounded-2xl "
                   alt=""
                 />
               </div>

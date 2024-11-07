@@ -17,9 +17,8 @@ import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { FaRegStar } from "react-icons/fa";
 
-const Article = () => {
+const Article = () => {  
   const [TopSliderList, setTopSliderList] = useState(null);
-
   const getTopSliderList = async () => {
     const res = await axios.get(
       "https://classapi.sepehracademy.ir/api/Home/GetCoursesTop?Count=5"
@@ -42,13 +41,14 @@ const Article = () => {
         </p>
 
         <div className=" w-[98%] mx-auto m-10">
-          <div className=" h-[900px]">
+          <div className="  h-[900px] ">
             <Swiper
               className="h-[700px] relative top-20 "
               // install Swiper modules
               modules={[Navigation, Pagination, Scrollbar, A11y]}
               spaceBetween={50}
               slidesPerView={3}
+              
               navigation
               pagination={{ clickable: true }}
               onSwiper={(swiper) => console.log(swiper)}
@@ -56,9 +56,9 @@ const Article = () => {
             >
               {TopSliderList?.map((item) => {
                 return (
-                  <SwiperSlide className="w-[98%] h-[100%]">
-                    <div className="card bg-base-100 w-[100%] h-[100%] shadow-xl dark:bg-[#1f3c54]">
-                      <div className="w-[100%] h-[100%]">
+                  <SwiperSlide >
+                    <div className="card bg-base-100 w-full h-full shadow-xl dark:bg-[#1f3c54] sm:w-[400px] sm:flex-none ">
+                      <div className="w-[100%] h-[100%] ">
                         <figure>
                           <img
                             src={item.tumbImageAddress}
@@ -68,16 +68,16 @@ const Article = () => {
                         </figure>
                       </div>
 
-                      <div className="card-body" shadow-xl>
-                        <h2 className="card-title mb-14 dark:text-white">
+                      <div className="card-body " shadow-xl >
+                        <h2 className="card-title mb-14 dark:text-white ">
                           آشنایی با    
                         {item.title}
                           <div className="badge badge-secondary">NEW</div>
                         </h2>
 
-                        <div className="card-actions justify-end ">
+                        <div className="card-actions justify-end  ">
                           <NavLink to={"/courses"}>
-                            <div className="badge badge-outline p-5 ml-14 hover:bg-[#41d3a7] hover:border-none   dark:text-white ">
+                            <div className="badge badge-outline p-5 ml-14 hover:bg-[#41d3a7] hover:border-none   dark:text-white border-2 border-red-500 ">
                               {item.statusName}
                             </div>
                           </NavLink>

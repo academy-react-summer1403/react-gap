@@ -2,28 +2,28 @@ import React from "react";
 
 const index = () => {
   return (
-    <div className="flex flex-wrap justify-center ">
+    <div className="flex flex-wrap justify-center">
       <div>
-        <div className="text-center m-20 mr-[300px]">
-          <h1 className="text-[#22445D;] text-4xl dark:text-white"> 
+        <div className="text-center m-20 mr-[300px] max-sm:mr-10 max-md:mr-20">
+          <h1 className="text-[#22445D;] text-4xl dark:text-white max-sm:text-xl "> 
           چیزی که ما ارائه میدیم   </h1>
-          <p className="text-[#22445D;] text-2xl font-normal mt-2  dark:text-white">
+          <p className="text-[#22445D;] text-2xl font-normal mt-2  dark:text-white max-sm:text-xl">
             {" "}
               یادگیری مهارت های جدید {" "}
           </p>
-          <p className="text-[#22445D;] text-2xl font-normal mt-2 dark:text-white">
+          <p className="text-[#22445D;] text-2xl font-normal mt-2 dark:text-white max-sm:text-xl">
             {" "}
             در زمان و مکانی که تو دوست داری  {" "}
           </p>
 
-          <p className="text-2xl "> داستان برنامه نویس شدنت از اینجا شروع میشه </p>
+          <p className="text-[#22445D;] max-sm:text-xl "> داستان برنامه نویس شدنت از اینجا شروع میشه </p>
         </div>
       </div>
       <div className="w-44 h-8 relative left-[800px] top-[200px]">
         <img src="./flash4.png"/>
       </div>
 
-      <div className="flex flex-wrap gap-1 w-[75%] h-[250px] justify-center md:justify-around mx-auto mb-10">
+      <div className="flex flex-wrap gap-1 w-[75%]  justify-center md:justify-around mx-auto mb-10  ">
      
 
         <div className="border-2 w-[350px] h-[170px] rounded-2xl bg-[#C9E4E9]">
