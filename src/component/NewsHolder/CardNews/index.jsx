@@ -8,95 +8,13 @@ import { IoStarOutline } from "react-icons/io5";
 import { TbNumber5 } from "react-icons/tb";
 
 const index = () => {
-  const [List, setList] = useState([
-    {
-      id: 1,
-      pic: "pic1.png",
-      button: "وضعیت دوره",
-      title: "اشنایی با برنامه نویسی با وردپرس",
-      star: "./star1.png",
-      desc: "لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود ",
-      detail: "مشاهده جزئیات",
-    },
-    {
-      id: 2,
-      pic: "pic1.png",
-      button: "وضعیت دوره",
-      title: "اشنایی با برنامه نویسی با وردپرس",
-      star: "./star1.png",
-      desc: "لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود ",
-      detail: "مشاهده جزئیات",
-    },
-    {
-      id: 3,
-      pic: "pic1.png",
-      button: "وضعیت دوره",
-      title: "اشنایی با برنامه نویسی با وردپرس",
-      star: "./star1.png",
-      desc: "لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود ",
-      detail: "مشاهده جزئیات",
-    },
-    {
-      id: 4,
-      pic: "pic1.png",
-      button: "وضعیت دوره",
-      title: "اشنایی با برنامه نویسی با وردپرس",
-      star: "./star1.png",
-      desc: "لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود ",
-      detail: "مشاهده جزئیات",
-    },
-    {
-      id: 5,
-      pic: "pic1.png",
-      button: "وضعیت دوره",
-      title: "اشنایی با برنامه نویسی با وردپرس",
-      star: "./star1.png",
-      desc: "لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود ",
-      detail: "مشاهده جزئیات",
-    },
-    {
-      id: 6,
-      pic: "pic1.png",
-      button: "وضعیت دوره",
-      title: "اشنایی با برنامه نویسی با وردپرس",
-      star: "./star1.png",
-      desc: "لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود ",
-      detail: "مشاهده جزئیات",
-    },
-    {
-      id: 7,
-      pic: "pic1.png",
-      button: "وضعیت دوره",
-      title: "اشنایی با برنامه نویسی با وردپرس",
-      star: "./star1.png",
-      desc: "لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود ",
-      detail: "مشاهده جزئیات",
-    },
-    {
-      id: 8,
-      pic: "pic1.png",
-      button: "وضعیت دوره",
-      title: "اشنایی با برنامه نویسی با وردپرس",
-      star: "./star1.png",
-      desc: "لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود ",
-      detail: "مشاهده جزئیات",
-    },
-    {
-      id: 9,
-      pic: "pic1.png",
-      button: "وضعیت دوره",
-      title: "اشنایی با برنامه نویسی با وردپرس",
-      star: "./star1.png",
-      desc: "لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود ",
-      detail: "مشاهده جزئیات",
-    },
-  ]);
+  const [List, setList] = useState([null]);
 
   const [newsList, setnewsList] = useState(null);
 
   const getnewsList = async () => {
     const res = await axios.get(
-      "https://classapi.sepehracademy.ir/api/News?PageNumber=1&RowsOfPage=10&SortingCol=InsertDate&SortType=DESC"
+      "https://classapi.sepehracademy.ir/api/Home/GetCoursesTop?Count=4"
     );
     console.log(res.data.news);
     setnewsList(res.data.news);
@@ -104,7 +22,7 @@ const index = () => {
 
   useEffect(() => {
     getnewsList();
-  }, []);
+  }, []); 
 
   return (
     <div>
@@ -113,82 +31,51 @@ const index = () => {
           {newsList?.map((item, index) => {
             return (
               <div
-                key={index}
-                className="h-[41%] w-[20%] bg-[#FBF6F6] rounded-3xl mb-24 dark:bg-[#080f54;]"
-              >
-             <div className="w-[250px] mt-[20px]  mr-[15px]">
-                <img src="./cat12.jpg" alt="" className="" />
+              key={index}
+              className=" shadow-2xl w-[25%] h-[480px] mx-auto bg-white rounded-2xl"
+            >
+                        <div className="">
+                <img
+                  src="./Lastimg.jpg"
+                  className="w-[90%] h-[100%] mx-3 relative bottom-5 rounded-2xl"
+                  alt=""
+                />
               </div>
-
-              {/* <button className="h-11 w-32 bg-[#da7528] rounded-[8px] relative mr-4 mt-14 ">
-                {item.statusName}
-              </button>
-
-              <div className="w-[60%] h-6 text-[rgb(59,130,246)] rounded-[8px] relative mr-7 mt-2 ">{item.statusName}</div>
-
-
-              {/* <div className="flex flex-wrap">
-                <AiOutlineLike className=" w-9 h-9  relative mr-[290px] -mt-[40px]" />
-                <BiDislike className="w-9 h-9  relative mr-[255px] -mt-[40px]" />
-                <IoStarOutline className=" w-9 h-9 -mt-[40px] mr-[210px] " />
-              </div> */}
-
-              <div className="  h-10 w-[80%] text-start text-2xl text-[rgb(59,130,246)] font-sans font-normal mt-[10px] mr-7 animate-pulse">
-                {item.title}
-              </div>
-
-              {/* <div className="relative mt-[10px] mr-7">{item.technologyList}</div> */}
-
-              {/* <div className=" border-2 w-[380px] h-[40px] relative mt-[20px] mr-[10px] ">
-                <img src={item.teacherName} alt="" className="./star1.png" />
-              </div> */}
-
-              <div className=" w-[60%] h- text-[16px] text-[#6D6767] relative mt-[18px] mr-7">
-                {item.describe}
-              </div>
-                
-                <div className="relative mt-[5px] mr-7">
-                <div className="badge badge-outline p-5 hover:bg-[#dd813e]  hover:border-none">
-                 <AiOutlineLike />
-                </div>
-
-                <div className="badge badge-outline p-5 hover:bg-[#dd813e]  hover:border-none">
-                  <AiOutlineDislike />
-                </div>
-                <div className="badge badge-outline p-5 hover:bg-[#dd813e]  hover:border-none">
-                  <FaRegStar />
-                </div>
-                </div>
-
-                
-
-
-              {/* <div>{item.likeCount}</div> */}
-                
               
-
-              {/* <div className="text-xs text-[#41A789] relative mr-[10px] mt-[20px]">
-                {item.speech}
-              </div> */}
-
-              {/* <div className="border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]"></div>
-
-              <div className="text-[14px] text-[#12926C] relative mt-[10px] mr-[10px]">
-                {item.text}
-              </div> */}
-
-
-              <div className=" w-[30%] h-6 text-[14px] text-[#E11818] relative -mt-[17px] mr-52">
-                {item.cost}
+              <div className="w-[90%] mx-auto">
+                {" "}
+                <h1 className="text-red-500 -mt-2">{item.statusName}</h1>
+                <h1>{item.title}</h1>
+                <h1 className="text-blue-700 text-sm">
+                  نام مدرس:
+                  {item.teacherName}
+                </h1>
+                <h2 className="text-gray-600">
+                  نوع دوره:
+                  {item.levelName}
+                </h2>
+                <h3 className="text-sm text-gray-600 mt-2">توضیحات دوره:</h3>
+                <p className="text-sm text-gray-500 mt-2">
+                  {item.describe}
+                  آموزش کامل CSS به صورت کامل و البته رایگان هدفی‌ست که ما در
+                  این دوره آموزشی دنبال می‌کنیم. شما با مشاهده کامل این دوره یاد
+                  خواهید گرفت که در صفحات وبس...
+                </p>
+                <h1>قیمت دوره:</h1>
+                <h3 className="text-red-500 -mt-5 mr-32">{item.cost}</h3>
+                <button className="btn btn-outline btn-primary h-3 mt-3 mr-9 ">
+                  مشاهده اطلاعات دوره
+                </button>
               </div>
 
-              <button className="  bg-orange-700 text-white h-[40px] w-[100px] rounded-[8px] relative mr-[60px] mt-[20px]">
-                مشاهده
-                {item.statusName }
-              </button>
-              {/* <button className="border-2 border-[#df9a40] h-[40px] w-[100px] bg-[#dd813e] rounded-[8px] relative mr-[10px] mt-[20px]">
-                {item.reservation}
-              </button> */}
+      
+
+             
+
+
+
+
+
             </div>
             );
           })}

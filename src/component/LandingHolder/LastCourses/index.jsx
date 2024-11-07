@@ -1,9 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { AiOutlineLike } from "react-icons/ai";
-import { IoIosHeartEmpty } from "react-icons/io";
-import { AiOutlineDislike } from "react-icons/ai";
+import Like from "./Like.jsx/Like";
+
+
+
 const index = () => {
   const [CoursList, setCoursList] = useState(null);
 
@@ -75,17 +76,7 @@ const index = () => {
                 </p>
                 <h1>قیمت دوره:</h1>
                 <h3 className="text-red-500 -mt-5 mr-32">{item.cost}</h3>
-                <div className="w-[100%] h-10 flex justify-between mt-3">
-                  <div className="w-10 mr-24">
-                    <IoIosHeartEmpty size={25} fill="red" />
-                  </div>
-                  <div className="w-10 ">
-                    <AiOutlineLike size={25} fill="blue" />
-                  </div>
-                  <div className="w-10">
-                    <AiOutlineDislike size={25} fill="blue" />
-                  </div>
-                </div>
+                <Like/>
                 <button className="btn btn-outline btn-primary h-3 mt-3 mr-9 ">
                   مشاهده اطلاعات دوره
                 </button>

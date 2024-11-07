@@ -2,6 +2,9 @@ import React from "react";
 import { LuFilterX } from "react-icons/lu";
 
 const Filter = () => {
+
+  
+
   return (
     <div className=" border-2 h-[686px] w-[310px] bg-[#FBF6F6]  rounded-3xl  mr-[40px] mt-20 shadow-md">
       <div className=" text-center text-xl mt-8">
