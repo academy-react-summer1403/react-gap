@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import HeaderPanel from '../../component/common/HeaderPanel'
-import SaidePanel from '../../component/UserPanel/SaidePanel'
+import Panel2 from "../../screens/Panel/Panel2"
 
 
 
@@ -9,8 +9,10 @@ const index = () => {
   return (
     <div>
       <HeaderPanel/>
-      <Outlet/>
-      <SaidePanel/>
+     
+      <Panel2/>
+     
+    
       
       
       

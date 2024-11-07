@@ -1,119 +1,179 @@
-import React from "react";
+import { Button } from "@material-tailwind/react";
+import React, { useEffect, useState } from "react";
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import HeaderTop from "../Header/HeaderTop";
+import axios from "axios";
 const Header = () => {
   const handelDark = () => {
     document.documentElement.classList.toggle("dark");
   };
 
+  const [CourseList, setCourseList] = useState(null);
+  const [SearchQuery, setSearchQuery] = useState("");
+  const getList = async () => {
+    const res = await axios.get(
+      `https://classapi.sepehracademy.ir/api/Home/GetCoursesWithPagination?PageNumber=1&RowsOfPage=10&SortingCol=Active&SortType=DESC&TechCount=0${SearchQuery}`
+    );
+    console.log(res.data.courseFilterDtos);
+    setCourseList(res.data);
+  };
+
+  useEffect(() => {
+    getList();
+  }, [SearchQuery]);
+
+  const handleSearch = (e) => {
+    if (e.target.value) {
+      setSearchQuery(`&Query=${e.target.value}`);
+    } else {
+      setSearchQuery("");
+    }
+  };
+
   return (
     <Fragment>
-      <div className="flex justify-between h-24 bg-gradient-to-r from-[#eef3f9]  to-[ rgb(238,242,248)] dark:from-[#000000]">
-        <Link to="/" className="flex  gap-2  w-60 h-20 m-6">
-          <div className=" w-[150px] h-[100px] relative bottom-5 right-9">
-            <img src="./logoabi.png" className="" />
+      <div className="border-2 border-transparent dark:bg-[#22445D;]">
+        <div className=" bg-white rounded-2xl w-[85%] mt-9 mx-auto flex justify-between h-32 dark:bg-blue-950">
+          <Link to="/" className="flex  gap-2  w-60 h-20 m-6">
+            <div className=" w-[150px] h-[100px] relative bottom-5 right-9">
+              <img src="./logoabi.png" className="" />
+            </div>
+
+            <h1 className="text-[#22445D;] font-inter text-[14px] m-3"></h1>
+          </Link>
+
+          <div className="flex gap-6 justify-center h-[70px] m-6 mb-3">
+            <div className="flex gap-6 justify-center relative top-2 w-[400px]"></div>
           </div>
 
-          <h1 className="text-[#22445D;] font-inter text-[14px] m-3"></h1>
-        </Link>
-
-        <div className="flex gap-6 justify-center h-[70px] m-6 mb-3">
-          <div className="flex gap-6 justify-center relative top-2 w-[400px]">
-            <NavLink
-              to={"/"}
-              className="font-bold text-blue-900 text-xl dark:text-white"
-            >
-              {" "}
-              صفحه اصلی{" "}
-            </NavLink>
-            <NavLink
-              to={"/courses"}
-              className=" text-xl font-bold text-blue-900 dark:text-white"
-            >
-              {" "}
-              دوره ها{" "}
-            </NavLink>
-            <NavLink to={"/News"} className="text-xl  font-bold text-blue-900 dark:text-white">
-              {" "}
-              مقالات{" "}
-            </NavLink>
-            <NavLink to={"/Connect"} className="text-xl font-bold text-blue-900 dark:text-white">
-              {" "}
-              درباره ما{" "}
-            </NavLink>
-          </div>
-        </div>
-
-        <div className="h-9 m-10 relative right-48">
-          {/* <img src="./search.png" alt="" /> */}
-          {/* 
-    <label class="relative block">
-  <span class="sr-only">Search</span>
-  <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-    <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20">  </svg>
-    </span>
-    <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full
-    border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none
-      focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-  placeholder="هرچی میخوای جستجو کن..." type="text" name="search"/>
-  </label> */}
-
-          <label className="input input-bordered flex items-center gap-2 relative left-20 bottom-4">
-            <input
-              type="text"
-              className="grow"
-              placeholder="هرچی می‌خوای اینجا جستجو کن"
-            />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              className="h-4 w-4 opacity-70"
-            >
-              <path
-                fillRule="evenodd"
-                d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                clipRule="evenodd"
+          <div className=" m-10">
+            <label className=" input input-bordered flex items-center gap-2 relative left-96 bottom-1">
+              <input
+                type="text"
+                className="grow "
+                placeholder="هرچی می‌خوای اینجا جستجو کن"
+                onChange={handleSearch}
               />
-            </svg>
-          </label>
-        </div>
+              <div>
+                {CourseList?.courseFilterDtos.map((item) => {
+                  return (
+                    <div>
+                      <h1></h1>
+                    </div>
+                  );
+                })}
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                className="h-4 w-4 opacity-70"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </label>
+          </div>
 
-        <div className="w-10 h-10 relative top-8 right-10 cursor-pointer">
-          <label htmlFor="DarkId" className="swap swap-rotate">
-            {/* this hidden checkbox controls the state */}
-            <input type="checkbox" id="DarkId" />
-
-            {/* sun icon */}
-            <svg
-              className="swap-on h-10 w-10 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
+          <div className="w-40 h-10 relative top-12 cursor-pointer">
+            <label
+              htmlFor="DarkId"
               onClick={handelDark}
+              className="flex cursor-pointer gap-2"
             >
-              <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="5" />
+                <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+              </svg>
+              <input
+                type="checkbox"
+                value="synthwave"
+                className="toggle theme-controller"
+              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+            </label>
+          </div>
 
-            {/* moon icon */}
-            <svg
-              className="swap-off h-10 w-10 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              onClick={handelDark}
-            >
-              <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
-            </svg>
-          </label>
+          <div className="m-6">
+            <NavLink to={"/Login"}>
+              <Button
+                className="btn font-sans ml-10 hover:text-[#5c7158] relative top-3 bg-[#5c7158] w-36"
+                variant="contained"
+              >
+                ورود / ثبت نام
+              </Button>
+            </NavLink>
+          </div>
         </div>
-
-        <div className="m-6">
-          <NavLink to={"/Login"}>
-            <button className=" w-[120px] h-[47px] bg-[#b4d1d9]  rounded-lg text-[#ffff] font-inter relative left-6  hover:scale-75 duration-75">
-              {" "}
-              ورود / ثبت نام
-            </button>
+      </div>
+      <div className="w-[75%] mx-auto h-16 bg-base-300 rounded-b-2xl flex justify-center gap-6 dark:bg-slate-900">
+        <div className="w-[75%] mx-auto flex justify-center gap-6 mt-3">
+          <NavLink
+            to={"/"}
+            className={({ isActive }) =>
+              `${
+                isActive &&
+                "text-gray-600 border-2 bg-slate-300 h-14 relative bottom-2 leading-9 rounded-md "
+              } whitespace-normal hover:text-blue-600 text-xl font-sans text-black dark:text-white`
+            }
+          >
+            {" "}
+            صفحه اصلی{" "}
           </NavLink>
+          <NavLink
+            to={"/courses"}
+            className={({ isActive }) =>
+              `${
+                isActive &&
+                "text-gray-600 border-2 bg-slate-300 h-14 relative bottom-2 leading-9 rounded-md "
+              } whitespace-normal hover:text-blue-600 text-xl font-sans text-black dark:text-white`
+            }
+          >
+            {" "}
+            دوره های آموزشی{" "}
+          </NavLink>
+          <NavLink
+            to={"/News"}
+            className={({ isActive }) =>
+              `${
+                isActive &&
+                "text-gray-600 border-2 bg-slate-300 h-14 relative bottom-2 leading-9 rounded-md "
+              } whitespace-normal hover:text-blue-600 text-xl font-sans text-black dark:text-white`
+            }
+          >
+            {" "}
+            مقالات{" "}
+          </NavLink>
+
+          <div>
+            <HeaderTop />
+          </div>
         </div>
       </div>
     </Fragment>

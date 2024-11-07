@@ -38,7 +38,7 @@ const App = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            Bill is a cat.
+          
           </div>
         </Content>
  

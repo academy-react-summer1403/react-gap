@@ -1,8 +1,10 @@
 import React from 'react'
-import Article1 from '../../component/Article/Article1'
+import DetailNews from "../../component/DetailNews"
 const index = () => {
   return (
-   <Article1/>
+ <>
+ <DetailNews/>
+ </>
   )
 }
 
