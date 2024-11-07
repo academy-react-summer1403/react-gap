@@ -3,10 +3,16 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const index = () => {
+
+
   return (
+
+  
+       
     <section>
       <div className="bg-[#eef3f9] dark:bg-[#22445D;]">
         <div className="flex justify-center w-[90%] h-[700px] mx-auto">
+
           <div className="bg-[#FBF6F6;] shadow-2xl sm:w-[100%] xl:w-[50%] mt-20 rounded-2xl  dark:bg-slate-900">
             <h1 className=" relative right-14 top-12 text-2xl">
               ورود به سیستم
