@@ -1,15 +1,43 @@
 import { Button } from "@material-tailwind/react";
+<<<<<<< HEAD
+=======
+import React, { useEffect, useState } from "react";
+>>>>>>> develop
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
-import HeaderTop from "../Header/HeaderTop"
-
+import HeaderTop from "../Header/HeaderTop";
+import axios from "axios";
 const Header = () => {
   const handelDark = () => {
     document.documentElement.classList.toggle("dark");
   };
 
+<<<<<<< HEAD
 
 
+=======
+  const [CourseList, setCourseList] = useState(null);
+  const [SearchQuery, setSearchQuery] = useState("");
+  const getList = async () => {
+    const res = await axios.get(
+      `https://classapi.sepehracademy.ir/api/Home/GetCoursesWithPagination?PageNumber=1&RowsOfPage=10&SortingCol=Active&SortType=DESC&TechCount=0${SearchQuery}`
+    );
+    console.log(res.data.courseFilterDtos);
+    setCourseList(res.data);
+  };
+
+  useEffect(() => {
+    getList();
+  }, [SearchQuery]);
+
+  const handleSearch = (e) => {
+    if (e.target.value) {
+      setSearchQuery(`&Query=${e.target.value}`);
+    } else {
+      setSearchQuery("");
+    }
+  };
+>>>>>>> develop
 
   return (
     <Fragment>
@@ -33,7 +61,17 @@ const Header = () => {
                 type="text"
                 className="grow"
                 placeholder="هرچی می‌خوای اینجا جستجو کن"
+                onChange={handleSearch}
               />
+              <div>
+                {CourseList?.courseFilterDtos.map((item) => {
+                  return (
+                    <div>
+                      <h1></h1>
+                    </div>
+                  );
+                })}
+              </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -92,8 +130,10 @@ const Header = () => {
 
           <div className="m-6">
             <NavLink to={"/Login"}>
-              
-              <Button className="btn font-sans ml-10 hover:text-[#5c7158] relative top-3 bg-[#5c7158] w-36" variant="contained">
+              <Button
+                className="btn font-sans ml-10 hover:text-[#5c7158] relative top-3 bg-[#5c7158] w-36"
+                variant="contained"
+              >
                 ورود / ثبت نام
               </Button>
             </NavLink>
@@ -104,21 +144,36 @@ const Header = () => {
         <div className="w-[75%] mx-auto flex justify-center gap-6 mt-3">
           <NavLink
             to={"/"}
-            className=" text-xl font-sans text-black dark:text-white "
+            className={({ isActive }) =>
+              `${
+                isActive &&
+                "text-gray-600 border-2 bg-slate-300 h-14 relative bottom-2 leading-9 rounded-md "
+              } whitespace-normal hover:text-blue-600 text-xl font-sans text-black dark:text-white`
+            }
           >
             {" "}
             صفحه اصلی{" "}
           </NavLink>
           <NavLink
             to={"/courses"}
-            className=" text-xl font-sans text-black dark:text-white"
+            className={({ isActive }) =>
+              `${
+                isActive &&
+                "text-gray-600 border-2 bg-slate-300 h-14 relative bottom-2 leading-9 rounded-md "
+              } whitespace-normal hover:text-blue-600 text-xl font-sans text-black dark:text-white`
+            }
           >
             {" "}
             دوره های آموزشی{" "}
           </NavLink>
           <NavLink
             to={"/News"}
-            className="text-xl  font-sans text-black dark:text-white"
+            className={({ isActive }) =>
+              `${
+                isActive &&
+                "text-gray-600 border-2 bg-slate-300 h-14 relative bottom-2 leading-9 rounded-md "
+              } whitespace-normal hover:text-blue-600 text-xl font-sans text-black dark:text-white`
+            }
           >
             {" "}
             مقالات{" "}

@@ -1,9 +1,9 @@
 import React from 'react'
-import ContentTitle from "../../component/TitleHolder/ContentTitle"
+import Error404 from "../../component/Error404"
 const index = () => {
   return (
     <div>
-   <ContentTitle/>
+      <Error404/>
     </div>
   )
 }

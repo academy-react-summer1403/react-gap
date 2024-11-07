@@ -1,10 +1,9 @@
 import React from 'react'
-import DetailNews from "../../component/DetailNews"
+import Homep from "../../../../component/UserPanel/LeftPanel/Homep"
+
 const index = () => {
   return (
- <>
- <DetailNews/>
- </>
+    <Homep/>
   )
 }
 

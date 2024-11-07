@@ -1,9 +1,10 @@
 import React from 'react'
-import TitleHolder from "../../component/TitleHolder"
+import UserCounter from "../../../component/UserPanel/UserCounter"
 const index = () => {
   return (
     <div>
-      <TitleHolder/>
+        <UserCounter />
+      
     </div>
   )
 }

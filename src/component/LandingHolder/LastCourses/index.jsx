@@ -28,9 +28,15 @@ const index = () => {
           src="./hobab2.png"
         />
       </div>
+<<<<<<< HEAD
       <div className="relative  bottom-14 right-24 max-sm:mt-11 max-sm:right-10">
         <h1 className="text-4xl font-sans font-medium mr-12 mt-20 max-sm:text-lg ">
           آخرین دوره ها
+=======
+      <div className="relative bottom-10 right-24">
+        <h1 className="text-4xl font-sans font-medium mr-12 -mt-12">
+          دوره های مورد علاقه  
+>>>>>>> develop
         </h1>
       </div>
       <div className="relative  bottom-14">
@@ -94,8 +100,6 @@ const index = () => {
                   مشاهده اطلاعات دوره
                 </button>
               </div>
-
-              <div></div>
             </div>
           );
         })}
