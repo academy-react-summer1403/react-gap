@@ -4,19 +4,10 @@ import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
 
 import Examples from "../../../component/Cours/CardCours/Examples"
 import { FaRegStar } from "react-icons/fa";
+import http from '../../../core/Servises/interceptor'
 
-const index = () => {
-  const [List, setList] = useState(null);
+const index = ({List}) => {
 
-  const getCourseList =async () => {
-    const res =await axios.get("https://classapi.sepehracademy.ir/api/Home/GetCoursesWithPagination?PageNumber=1&RowsOfPage=9&SortingCol=Active&SortType=DESC&TechCount=0");
-    console.log('res' , res.data.courseFilterDtos);
-    setList(res.data.courseFilterDtos)
-  };
-
-  useEffect(() => {
-    getCourseList();
-  }, []);
 
   return (
     <div className=" mr-[370px] -mt-[72%] shadow-xl  dark:bg-[#22445D;]">
