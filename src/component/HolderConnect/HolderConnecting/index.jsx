@@ -54,7 +54,7 @@ const index = () => {
           09046423872
         </h2>
         <h1 className="font-sans text-xl text-gray-500 mr-7 mt-5">
-          آدرس کددات
+          آدرس :
         </h1>
         <h2 className="font-sans text-xl text-gray-500 mr-7 mt-5">
           ساری میدان خزر آکادمی سپهر

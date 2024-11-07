@@ -30,7 +30,7 @@ const index = () => {
       </div>
       <div className="relative bottom-10 right-24">
         <h1 className="text-4xl font-sans font-medium mr-12 -mt-12">
-          آخرین دوره ها
+          دوره های مورد علاقه  
         </h1>
       </div>
 
@@ -81,9 +81,6 @@ const index = () => {
                   مشاهده اطلاعات دوره
                 </button>
               </div>
-             
-
-              <div></div>
             </div>
           );
         })}

@@ -1,3 +1,4 @@
+import { createBrowserRouter } from "react-router-dom";
 import Layout from "../../App/Layout";
 import Landing from "../../screens/Landing";
 import Error404 from "../../component/Error404";
@@ -9,20 +10,20 @@ import Register from "../../screens/Register";
 import RegisterStep from "../../component/RegisterStep";
 import RegisterStep1 from "../../component/RegisterStep1";
 import RegisterStep2 from "../../component/RegisterStep2";
-import RegisterForm from "../../component/RegisterForm"
+import RegisterForm from "../../component/RegisterForm";
 import ResetPass from "../../screens/ResetPass";
-import UserPanel from "../../component/UserPanel";
 import DetailNews from "../../screens/DetailNews";
-import TitleCourse from "../../screens/TitleCourse"
-import { createBrowserRouter } from "react-router-dom";
+import DetailCourse from "../../screens/DetailCourse";
 import Connect from "../../screens/Connect";
-import UserMyCourse from "../../component/UserPanel/UserMyCourse";
+import MyCourses from "../../screens/Panel/MyCourses";
 import PanelLayout from "../../App/PanelLayout";
-import UserEditPro from "../../component/UserPanel/UserEditPro";
-import UserReserv from "../../component/UserPanel/UserReserv";
-import UserFavorit from "../../component/UserPanel/UserFavorit";
-import UserComments from "../../component/UserPanel/UserComments";
-import UserCounter from "../../component/UserPanel/UserCounter";
+import EditProfile from "../../screens/Panel/EditProfile";
+import Reservation from "../../screens/Panel/Reservation";
+import Favorite from "../../screens/Panel/Favorite";
+import Comments from "../../screens/Panel/Comments";
+import Counter from "../../screens/Panel/Counter";
+import Dash2 from "../../screens/Panel/Panel2/Dash2";
+import Hom2 from "../../screens/Panel/Panel2/Hom2";
 export const Routers = createBrowserRouter([
   {
     path: "/",
@@ -45,55 +46,54 @@ export const Routers = createBrowserRouter([
         element: <DetailNews />,
       },
       {
-        path:"/TitleCourse",
-        element:<TitleCourse/>
+        path: "/DetailCourse",
+        element: <DetailCourse />,
       },
+
       {
         path: "/Connect",
         element: <Connect />,
       },
-   
-  
 
-  {
-    path: "/Login",
-    element: <Login />,
-    errorElement: <Error404 />,
-  },
+      {
+        path: "/Login",
+        element: <Login />,
+        errorElement: <Error404 />,
+      },
 
-  {
-    path: "/LoginSystem",
-    element: <LoginSystem />,
-  },
-  {
-    path: "/RegisterForm",
-    element: <RegisterForm />,
-  },
+      {
+        path: "/LoginSystem",
+        element: <LoginSystem />,
+      },
+      {
+        path: "/RegisterForm",
+        element: <RegisterForm />,
+      },
 
-  {
-    path: "/Register",
-    element: <Register />,
-  },
-  {
-    path: "/Step",
-    element: <RegisterStep />,
-  },
+      {
+        path: "/Register",
+        element: <Register />,
+      },
+      {
+        path: "/Step",
+        element: <RegisterStep />,
+      },
 
-  {
-    path: "/Step1",
-    element: <RegisterStep1 />,
-  },
+      {
+        path: "/Step1",
+        element: <RegisterStep1 />,
+      },
 
-  {
-    path: "/Step2",
-    element: <RegisterStep2 />,
+      {
+        path: "/Step2",
+        element: <RegisterStep2 />,
+      },
+      {
+        path: "/NewPass",
+        element: <ResetPass />,
+      },
+    ],
   },
-  {
-    path: "/NewPass",
-    element: <ResetPass />,
-  },
-],
-},
 
   {
     path: "*",
@@ -105,34 +105,37 @@ export const Routers = createBrowserRouter([
     element: <PanelLayout />,
     children: [
       {
-        path: "/P",
-        element: <UserPanel />,
+        path: "/Panel",
+        element: <Dash2 />,
+      },
+      {
+        path: "/Panel/dashbord",
+        element: <Hom2 />,
+      },
+      {
+        path: "/EditPro",
+        element: <EditProfile />,
+      },
+      {
+        path: "/UserMyCourse",
+        element: <MyCourses />,
+      },
+      {
+        path: "/UserReserv",
+        element: <Reservation />,
+      },
+      {
+        path: "/UserFavorit",
+        element: <Favorite />,
+      },
+      {
+        path: "/UserComments",
+        element: <Comments />,
+      },
+      {
+        path: "/UserCounter",
+        element: <Counter />,
       },
     ],
-  },
-  {
-    path: "/EditPro",
-    element: <UserEditPro />,
-  },
-  {
-    path: "/UserMyCourse",
-    element: <UserMyCourse />,
-  },
-  {
-    path: "/UserReserv",
-    element: <UserReserv />,
-  },
-  {
-    path: "/UserFavorit",
-    element: <UserFavorit />,
-  },
-
-  {
-    path: "/UserComments",
-    element: <UserComments />,
-  },
-  {
-    path: "/UserCounter",
-    element: <UserCounter />,
   },
 ]);

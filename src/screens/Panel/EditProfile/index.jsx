@@ -1,9 +1,9 @@
 import React from 'react'
-import UserMyCourse from "../../../component/UserPanel/UserMyCourse"
+import UserEditPro from "../../../component/UserPanel/UserEditPro"
 const index = () => {
   return (
     <div>
-      <UserMyCourse/>
+      <UserEditPro />
     </div>
   )
 }
