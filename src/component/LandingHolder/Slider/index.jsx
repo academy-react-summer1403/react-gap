@@ -5,7 +5,7 @@ import { MdOutlineContactPhone } from "react-icons/md";
 const index = () => {
   return (
     <div className="">
- '
+ 
       <div className="h-[700px]">
       <div className=" h-[150px]  text-center m-20">
       
