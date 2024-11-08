@@ -20,7 +20,7 @@ const index = () => {
 
   return (
     <div>
-      <div className=" flex flex-wrap justify-center mt-14  mr-2 w-[98%] h-[100px] gap-7 dark:bg-slate-60000 ">
+      <div className=" flex flex-wrap justify-center mt-14  mr-2 w-[98%] h-[100px] gap-7 ">
         <div className=" mt-3 w-[100%] h-[70px]">
           {SliderCourses.map((item) => {
             return (
@@ -29,10 +29,11 @@ const index = () => {
                   className=" w-[95%] h-[70px]"
                   //install swiper modules
                   modules={[Navigation, A11y]}
-                  spaceBetween={1}
-                  slidesPerView={6}
+                  spaceBetween={6}
+                  slidesPerView={1}
                   navigation
                 >
+                  
                   <SwiperSlide>
                     <div className="border-2 w-[90%] h-[60px] mr-16  bg-[#ffff] shadow-md rounded-md">
                       <h1 className="text-center mt-4 dark:text-black">دوره توسعه وب</h1>

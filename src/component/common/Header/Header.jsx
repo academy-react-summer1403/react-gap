@@ -33,22 +33,20 @@ const Header = () => {
 
   return (
     <Fragment>
-      <div className="border-2 border-transparent dark:bg-[#22445D;]">
-        <div className=" bg-white rounded-2xl w-[85%] mt-9 mx-auto flex justify-between h-32 dark:bg-blue-950">
-          <Link to="/" className="flex  gap-2  w-60 h-20 m-6">
-            <div className=" w-[150px] h-[100px] relative bottom-5 right-9">
-              <img src="./logoabi.png" className="" />
+      <div className="border-2 border-transparent dark:bg-[#22445D]">
+        <div className=" bg-white rounded-2xl w-[85%] mt-9 mx-auto flex justify-between h-32 dark:bg-blue-950 max-md:w-[95%]">
+          <Link to="/" className="flex  gap-2  w-60 h-20 m-6 ">
+            <div className=" w-[150px] h-[100px] relative bottom-5 right-9 max-sm:mr-16 max-sm:mt-[10%]">
+              <img src="./logoabi.png " className=" max-sm:w-[80%]" />
             </div>
 
             <h1 className="text-[#22445D;] font-inter text-[14px] m-3"></h1>
           </Link>
 
-          <div className="flex gap-6 justify-center h-[70px] m-6 mb-3">
-            <div className="flex gap-6 justify-center relative top-2 w-[400px]"></div>
-          </div>
+         
 
           <div className=" m-10">
-            <label className=" input input-bordered flex items-center gap-2 relative left-96 bottom-1">
+            <label className=" input input-bordered flex items-center w-96 gap-2  bottom-1 max-sm:w-[150px] ">
               <input
                 type="text"
                 className="grow "
@@ -132,7 +130,8 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="w-[75%] mx-auto h-16 bg-base-300 rounded-b-2xl flex justify-center gap-6 dark:bg-slate-900">
+
+      <div className="w-[75%] mx-auto h-16 bg-base-300 rounded-b-2xl flex justify-center gap-6 dark:bg-slate-900 max-sm:hidden max-md:hidden">
         <div className="w-[75%] mx-auto flex justify-center gap-6 mt-3">
           <NavLink
             to={"/"}
@@ -143,7 +142,7 @@ const Header = () => {
               } whitespace-normal hover:text-blue-600 text-xl font-sans text-black dark:text-white`
             }
           >
-            {" "}
+         
             صفحه اصلی{" "}
           </NavLink>
           <NavLink
@@ -155,7 +154,7 @@ const Header = () => {
               } whitespace-normal hover:text-blue-600 text-xl font-sans text-black dark:text-white`
             }
           >
-            {" "}
+           
             دوره های آموزشی{" "}
           </NavLink>
           <NavLink
@@ -167,7 +166,7 @@ const Header = () => {
               } whitespace-normal hover:text-blue-600 text-xl font-sans text-black dark:text-white`
             }
           >
-            {" "}
+           
             مقالات{" "}
           </NavLink>
 

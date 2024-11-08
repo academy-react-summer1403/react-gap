@@ -6,19 +6,19 @@ const Footer = () => {
       <footer className="footer bg-[#333] p-24 dark:bg-[#22445D;]">
         <nav>
           <h6 className="text-3xl text-white">خدمات</h6>
-          <a className="link link-hover text-xl text-white">آموزش حرفه ای</a>
-          <a className="link link-hover text-xl text-white">مشاوره رایگان</a>
-          <a className="link link-hover text-xl text-white">فرصت های شغلی</a>
+          <a className="link link-hover text-xl text-white max-sm:text-lg">آموزش حرفه ای</a>
+          <a className="link link-hover text-xl text-white max-sm:text-lg">مشاوره رایگان</a>
+          <a className="link link-hover text-xl text-white max-sm:text-lg">فرصت های شغلی</a>
         </nav>
         <nav>
           <h6 className="text-3xl text-white">آموزشگاه</h6>
-          <a className="link link-hover text-xl text-white"> درباره ما</a>
-          <a className="link link-hover text-xl text-white">ارتباط با ما</a>
-          <a className="link link-hover text-xl text-white">قوانین آموزشگاه</a>
+          <a className="link link-hover text-xl text-white max-sm:text-lg"> درباره ما</a>
+          <a className="link link-hover text-xl text-white max-sm:text-lg">ارتباط با ما</a>
+          <a className="link link-hover text-xl text-white max-sm:text-lg">قوانین آموزشگاه</a>
         </nav>
         <nav>
           <h6 className="text-3xl text-white">اخبار آموزشگاه</h6>
-          <a className="link link-hover text-xl text-white">
+          <a className="link link-hover text-xl text-white max-sm:text-sm max-sm:ml-11">
             {" "}
             برای دریافت اخبار بروز آموزشگاه ایمیل خود را وارد کنید.{" "}
           </a>
@@ -27,16 +27,16 @@ const Footer = () => {
           
           <fieldset className="form-control w-80 text-white">
             <label className="label">
-              <span className="label-text text-lg text-white">
+              <span className="label-text text-lg text-white max-sm:ml-14">
                 {" "}
                 آدرس ایمیل خود را وارد کنید
               </span>
             </label>
-            <div className="join">
+            <div className="join max-sm:-mr-10">
               <input
                 type="text"
                 placeholder=" ... Email"
-                className="input input-bordered join-item outline-none"
+                className="input input-bordered join-item outline-none "
               />
               <button className="btn btn-primary join-item">ثبت</button>
             </div>

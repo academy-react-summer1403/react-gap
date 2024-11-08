@@ -2,44 +2,6 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const index = () => {
-  // const [Introduction, setIntroduction] = useState([
-  //   {id:1, name:' اولیا میا',
-  //     picture:"./user1.png" ,
-  //     title:'طراحی وب سایت ' ,
-  //     iconinstagram:'./instagram.png',
-  //     iconwhatsup:'./whatsup.png',
-  //     icontwitter:'./twitter.png',
-  //     iconfacebook:'./facebook.png',
-  //     },
-
-  //     {id:2, name:' اولیا میا',
-  //       picture:"./user1.png" ,
-  //       title:'طراحی وب سایت ' ,
-  //       iconinstagram:'./instagram.png',
-  //       iconwhatsup:'./whatsup.png',
-  //       icontwitter:'./twitter.png',
-  //       iconfacebook:'./facebook.png',
-  //       },
-
-  //       {id:3, name:' اولیا میا',
-  //         picture:"./user1.png" ,
-  //         title:'طراحی وب سایت ' ,
-  //         iconinstagram:'./instagram.png',
-  //         iconwhatsup:'./whatsup.png',
-  //         icontwitter:'./twitter.png',
-  //         iconfacebook:'./facebook.png',
-  //         },
-
-  //         {id:4, name:' اولیا میا',
-  //           picture:"./user1.png" ,
-  //           title:'طراحی وب سایت ' ,
-  //           iconinstagram:'./instagram.png',
-  //           iconwhatsup:'./whatsup.png',
-  //           icontwitter:'./twitter.png',
-  //           iconfacebook:'./facebook.png',
-  //           },
-  // ]);
-
   const [TopTeacher, setTTopTeacher] = useState(null);
 
   const getTopTeacher = async () => {
@@ -53,8 +15,8 @@ const index = () => {
     getTopTeacher();
   }, []);
   return (
-    <div className="w-auto h-[450px] flex flex-wrap justify-center gap-1 bg-[#FFFF] mt-8 dark:bg-[#22445D;]">
-      <div className=" w-[25%] h-[450px] relative left-28 mt-10">
+    <div className="w-auto  flex flex-wrap justify-center gap-1 bg-[#FFFF] mt-8 dark:bg-[#22445D] max-sm:bg-slate-100">
+      <div className=" w-[25%] h-[450px] ml-56  max-sm:w-[100%] max-sm:mb-14 max-sm:mr-64">
         <button className="btn no-animation bg-[#EFEEFE] text-[#5751E1] relative top-6 right-6 rounded-3xl hover:bg-[#5751E1] hover:text-[#ffff]">
           اساتید حرفه ای کد دات{" "}
         </button>
@@ -79,15 +41,22 @@ const index = () => {
       <div className="border- flex flex-wrap justify-center w-[45%] h-[450px] relative left-10 mt-5">
         {TopTeacher?.map((item) => {
           return (
-            <div className="  w-1/2 h-1/2">
-              <div className=" w-1/2 h-40 rounded-full bg-[#F7F7F9] ">
-                <img className="rounded-full" src={item.pictureAddress}  alt="img" />
+            <div className="w-1/2 h-1/2 max-sm:w-96">
+              <div className="w-1/2 rounded-full bg-[#F7F7F9] max-sm:w-[90%] ">
+                <img
+                  className="rounded-full"
+                  src={item.pictureAddress}
+                  alt="img"
+                />
               </div>
-              <h1 className=" text-xs font-bold relative bottom-24 right-48">{item.fullName}</h1>
+              <h1 className=" text-xs font-bold relative bottom-24 right-48">
+                {item.fullName}
+              </h1>
 
-              <h1 className=" text-xs relative bottom-24 right-48 text-[#5751E1]">{item.linkdinProfileLink}</h1>
-              <div className=" shadow border-2 w-8 h-8 rounded-full relative bottom-20 right-44 ">
-               
+              <h1 className=" text-xs relative bottom-24 right-48 text-[#5751E1]">
+                {item.linkdinProfileLink}
+              </h1>
+              <div className=" shadow border-2 w-8 h-8 rounded-full relative bottom-20 right-44 max-sm:ml-8">
                 <img
                   className="relative top-1 right-[5px]"
                   src="./instagram.png"
