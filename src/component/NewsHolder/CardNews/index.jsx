@@ -1,38 +1,20 @@
 import axios from "axios";
 import { use } from "framer-motion/client";
 import React, { useEffect, useState } from "react";
-import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
-import { BiDislike } from "react-icons/bi";
-import { FaRegStar } from "react-icons/fa";
-import { IoStarOutline } from "react-icons/io5";
-import { TbNumber5 } from "react-icons/tb";
 
-const index = () => {
-  const [List, setList] = useState([null]);
 
-  const [newsList, setnewsList] = useState(null);
+const index = (NewsList) => {
 
-  const getnewsList = async () => {
-    const res = await axios.get(
-      "https://classapi.sepehracademy.ir/api/Home/GetCoursesTop?Count=4"
-    );
-    console.log(res.data.news);
-    setnewsList(res.data.news);
-  };
-
-  useEffect(() => {
-    getnewsList();
-  }, []); 
 
   return (
     <div>
-      <div className="w-11/12 mt-8 mr-16  shadow-2xl">
+      <div className=" border-2 border-red-600 w-11/12 h-[900px] mt-8 mr-16  shadow-2xl">
         <div className="w-12/12 flex flex-wrap justify-center gap-9 mt-11 mx-auto">
-          {newsList?.map((item, index) => {
-            return (
-              <div
+                 {/* {NewsList?.map((item, index) => {
+          return (
+            <div
               key={index}
-              className=" shadow-2xl w-[25%] h-[480px] mx-auto bg-white rounded-2xl"
+              className=" shadow-2xl w-[30%] h-[480px] mx-auto bg-white rounded-2xl"
             >
                         <div className="">
                 <img
@@ -77,11 +59,11 @@ const index = () => {
 
 
             </div>
-            );
-          })}
+          );
+        })} */}
         </div>
 
-        <div className=" mr-[620px]">
+        {/* <div className=" mr-[620px]">
           <div className="join">
             <input
               className="join-item btn btn-square"
@@ -109,7 +91,7 @@ const index = () => {
               aria-label="4"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

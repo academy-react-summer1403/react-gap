@@ -1,109 +1,53 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
+const arr = [
+  {
+    id: 1,
+    typeName: "حضوری",
+    insertDate: "2024-05-13T11:03:15.087",
+  },
+  {
+    id: 2,
+    typeName: "آنلاین",
+    insertDate: "2024-05-13T11:03:20.957",
+  },
+  {
+    id: 3,
+    typeName: "حضوری آنلاین",
+    insertDate: "2024-05-13T11:03:29.137",
+  },
+];
 
 const SourtBy = () => {
+  const [SourtList, setSourtList] = useState([]);
 
- 
+  useEffect(() => {
+    axios
+      .get(
+        "https://classapi.sepehracademy.ir/api/CourseType/GetCourseTypes"
+      )
+      .then((res) => setSourtList(res.SourtList))
+      .catch((err) => console.log(err));
+      console.log(SourtList)
+  }, []);
 
-
-      
-      return (
-        <div>
-        <div className=" w-[90%] h-[390px] flex flex-wrap  mr-5 mt-5 bg-[#fff]">
-
-        <h1 className=" mt-7 mr-8 font-bold text-xl ">  حضوری یا غیر حضوری </h1>
-
-
-        <div className='w-28 h-[210px] flex flex-wrap justify-start -mr-44 mt-16 '>
-        <div className="form-control ">
-      <label className="label cursor-pointer">
-        <input type="radio"
-         
-        name="radio-10" className="radio checked:bg-black" defaultChecked />
-        <span className="label-text mr-2"> حضوری </span>
-      </label>
-    </div>
-
-    <div className="form-control">
-      <label className="label cursor-pointer">
-        <input type="radio" name="radio-10" className="radio checked:bg-black" defaultChecked />
-        <span className="label-text mr-2"> آنلاین  </span>
-      </label>
-    </div>
-
-    <div className="form-control">
-      <label className="label cursor-pointer">
-        <input type="radio" name="radio-10" className="radio checked:bg-black" defaultChecked />
-        <span className="label-text mr-2 ">  حضوری - آنلاین</span>
-      </label>
-    </div>
-
-    {/* <div className="form-control">
-      <label className="label cursor-pointer">
-        <input type="radio" name="radio-10" className="radio checked:bg-black" defaultChecked />
-        <span className="label-text mr-2">   مخصوص ناشنوایان </span>
-      </label>
-    </div> */}
-
-        </div>
-
-          {/* <div className="div">
-          <h1 className=" mt-80 -mr-28 font-bold text-xl ">  سطح دوره </h1>
-          <div className='w-28 h-[210px] flex flex-wrap justify-start -mr-28 mt-5 '>
-        <div className="form-control ">
-      <label className="label cursor-pointer">
-        <input type="radio"
-         
-        name="radio-10" className="radio checked:bg-black" defaultChecked />
-        <span className="label-text mr-2"> مبتدی </span>
-      </label>
-    </div>
-
-    <div className="form-control">
-      <label className="label cursor-pointer">
-        <input type="radio" name="radio-10" className="radio checked:bg-black" defaultChecked />
-        <span className="label-text mr-2"> متوسط </span>
-      </label>
-    </div>
-
-    <div className="form-control">
-      <label className="label cursor-pointer">
-        <input type="radio" name="radio-10" className="radio checked:bg-black" defaultChecked />
-        <span className="label-text mr-2 ">   پیشرفته </span>
-      </label>
-    </div>
-
-    <div className="form-control">
-      <label className="label cursor-pointer">
-        <input type="radio" name="radio-10" className="radio checked:bg-black" defaultChecked />
-        <span className="label-text mr-2">   مخصوص ناشنوایان </span>
-      </label>
-    </div>
-
-        </div>
-
-          </div> */}
-
-          
-          
-
-       
-
-
-
-
-
-
-
-
-        
-
-        
-
-        </div>
-          
+  return (
+   
+      <div className=" border-2 w-[90%] h-[390px] mr-5 mt-5 bg-[#fff] max-sm:hidden">
+        <h1 className=" mt-7 mr-8 font-bold text-xl "> حضوری یا غیر حضوری </h1>
+     {SourtList?.map((item, index)=>{
+      return(
+        <div key={index}>
+          nnnnnnnnnnnnnnnn
         </div>
       )
-    }
 
-    export default SourtBy
+     })}
+
+      </div>
+    
+  );
+};
+
+export default SourtBy;

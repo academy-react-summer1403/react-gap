@@ -37,20 +37,20 @@ const index = ({ setSearchQuery, setLevelId }) => {
   };
 
   return (
-    <div className=" -mr-3 w-[100%]  h-[200px] mx-auto">
+    <div className=" -mr-3 w-[100%]  h-[200px] mx-auto ">
       <input
         type="text"
-        className="form-control border-2 w-[90%] h-10 mr-5 "
+        className="form-control border-2 w-[90%] h-10 mr-5 max-sm:hidden"
         placeholder="search"
         onChange={handleSearch}
       />
-      <div className=" flex flex-wrap justify-center border-2 bg-[#fff]  w-[90%] h-24 mr-5 ">
-        <h1 className=" mt-7 ml-6 font-bold"> دوره‌های جاری </h1>
+      <div className=" flex flex-wrap justify-center border-2 bg-[#fff]  w-[90%] h-24 mr-5  max-sm:hidden ">
+        <h1 className=" mt-7 ml-6 font-bold "> دوره‌های جاری </h1>
         <input type="checkbox" className="toggle mt-7" defaultChecked />
         <h2 className="mt-7 mr-6 font-bold text-[#ccc]">آرشیو شده </h2>
       </div>
 
-      <div className="w-[90%] h-[200px]   mr-5 mt-5 bg-[#fff]">
+      <div className="w-[90%] h-[200px]   mr-5 mt-5 bg-[#fff] max-sm:hidden">
         <h1 className=" mt-7 mr-8 font-bold text-xl "> نوع دوره </h1>
         {/* <div className="border w-[80%] relative mr-[18px] mb-[10px] border-[#5BE1B9]"></div> */}
 
@@ -58,6 +58,7 @@ const index = ({ setSearchQuery, setLevelId }) => {
           return (
             <div>
               <input
+              className="mr-8 mt-4"
                 type="radio"
                 name="level"
                 value={item.id}
@@ -70,6 +71,7 @@ const index = ({ setSearchQuery, setLevelId }) => {
         })}
         <div>
           <input
+            className="mr-8 mt-4"
             type="radio"
             name="level"
             value=''
