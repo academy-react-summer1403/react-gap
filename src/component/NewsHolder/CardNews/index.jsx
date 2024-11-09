@@ -6,18 +6,17 @@ import { BiDislike } from "react-icons/bi";
 import { FaRegStar } from "react-icons/fa";
 import { IoStarOutline } from "react-icons/io5";
 import { TbNumber5 } from "react-icons/tb";
+import http from "../../../core/Servises/interceptor";
 
 const index = () => {
-  const [List, setList] = useState([null]);
 
-  const [newsList, setnewsList] = useState(null);
+  const [newsList, setnewsList] = useState([]);
 
   const getnewsList = async () => {
-    const res = await axios.get(
-      "https://classapi.sepehracademy.ir/api/Home/GetCoursesTop?Count=4"
-    );
-    console.log(res.data.news);
-    setnewsList(res.data.news);
+    const res = await http.get("/News");
+    console.log("neeeeeeews", res.news);
+    setnewsList(res.news);
+    console.log("IdIdI" , newsList);
   };
 
   useEffect(() => {
@@ -26,15 +25,15 @@ const index = () => {
 
   return (
     <div>
-      <div className="w-11/12 mt-8 mr-16  shadow-2xl">
-        <div className="w-12/12 flex flex-wrap justify-center gap-9 mt-11 mx-auto">
+      <div className=" border-2 border-red-800 w-11/12 mt-20 mr-16  flex flex-wrap justify-center gap-9 shadow-2xl">
+       
           {newsList?.map((item, index) => {
             return (
               <div
               key={index}
               className=" shadow-2xl w-[25%] h-[480px] mx-auto bg-white rounded-2xl"
             >
-                        <div className="">
+              <div className="">
                 <img
                   src="./Lastimg.jpg"
                   className="w-[90%] h-[100%] mx-3 relative bottom-5 rounded-2xl"
@@ -79,7 +78,7 @@ const index = () => {
             </div>
             );
           })}
-        </div>
+      
 
         <div className=" mr-[620px]">
           <div className="join">

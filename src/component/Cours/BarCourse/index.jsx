@@ -17,9 +17,10 @@ const App = () => {
   const [List, setList] = useState(null);
   const [SearchQuery, setSearchQuery] = useState('');
   const [LevelId, setLevelId] = useState('');
+  const [CourseTypeId, setCourseTypeId] = useState('');
 
   const getCourseList =async () => {
-    const res =await axios.get(`https://classapi.sepehracademy.ir/api/Home/GetCoursesWithPagination?PageNumber=1&RowsOfPage=9&SortingCol=Active&SortType=DESC&TechCount=0${SearchQuery}&courseLevelId=${LevelId}`);
+    const res =await axios.get(`https://classapi.sepehracademy.ir/api/Home/GetCoursesWithPagination?PageNumber=1&RowsOfPage=9&SortingCol=Active&SortType=DESC&TechCount=0${SearchQuery}&courseLevelId=${LevelId}&CourseTypeId=${CourseTypeId}`);
     console.log('res' , res.data.courseFilterDtos);
     setList(res.data.courseFilterDtos)
   };
@@ -31,7 +32,7 @@ const App = () => {
 
   useEffect(() => {
     getCourseList();
-  }, [SearchQuery , LevelId]);
+  }, [SearchQuery , LevelId , setCourseTypeId]);
   return (
     <Layout>
       <Content
@@ -55,9 +56,6 @@ const App = () => {
             </div>
 
           </div>
-         
-
-        
         </Breadcrumb>
         <div
           style={{
@@ -66,7 +64,7 @@ const App = () => {
             borderRadius: borderRadiusLG,
           }}
         >
-          <FilterCours setSearchQuery={setSearchQuery} setLevelId={setLevelId}/>
+          <FilterCours setSearchQuery={setSearchQuery} setLevelId={setLevelId} setCourseTypeId={setCourseTypeId}/>
           <CardCours List={List}/>
           
         </div>
