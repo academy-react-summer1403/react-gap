@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const CatCourses = () => {
+    const [CatList, setCatList] = useState([]);
+
+
+
+
   return (
-    <div className="border-2 w-[90%] h-[610px] flex flex-wrap  mr-5 justify-start mt-5 bg-[#fff]">
+    <div className="border-2 w-[90%] h-[610px] flex flex-wrap  mr-5 justify-start mt-5 bg-[#fff] max-sm:hidden">
             <h1 className=" mt-7 mr-8 font-bold text-xl ">  دسته بندی دوره ها </h1>
             <div className='w-28 h-[420px] flex flex-wrap justify-start -mr-40 mt-16 '>
 
@@ -86,7 +91,7 @@ const CatCourses = () => {
 
             </div>
 
-            <button  className="  mt-[510px] -mr-28 btn btn-outline">فیلتر کردن </button>
+            {/* <button  className="  mt-[510px] -mr-28 btn btn-outline">فیلتر کردن </button> */}
             
 
 

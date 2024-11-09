@@ -10,20 +10,21 @@ const index = ({List}) => {
 
 
   return (
-    <div className=" mr-[370px] -mt-[72%] shadow-xl  dark:bg-[#22445D;]">
-      <div className=" w-[100%] h-[90%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px]   rounded-lg ">
+    <div className="mr-[370px] -mt-[72%] shadow-xl dark:bg-[#22445D] max-sm:mr-0 ">
+      <div className=" w-[100%] h-[90%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px] rounded-lg ">
         {List?.map((item, index) => {
           return (
             <div
               key={index}
-              className=" shadow-2xl w-[30%] h-[480px] mx-auto bg-white rounded-2xl"
+              className=" shadow-2xl w-[30%] h-[480px] mx-auto bg-white rounded-2xl "
             >
-                        <div className="">
+              <div className="">
                 <img
                   src="./Lastimg.jpg"
-                  className="w-[90%] h-[100%] mx-3 relative bottom-5 rounded-2xl"
+                  className="w-[90%] h-[100%] mx-3 bottom-5 rounded-2xl"
                   alt=""
                 />
+
               </div>
               
               <div className="w-[90%] mx-auto">
@@ -51,15 +52,6 @@ const index = ({List}) => {
                   مشاهده اطلاعات دوره
                 </button>
               </div>
-
-      
-
-             
-
-
-
-
-
             </div>
           );
         })}

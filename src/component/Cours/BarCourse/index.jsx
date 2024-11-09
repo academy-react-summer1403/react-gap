@@ -4,15 +4,22 @@ import FilterCours from "../../../component/Cours/FilterCours";
 import CardCours from "../../../component/Cours/CardCours";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import axios from "axios";
+
+
+
 const { Header, Content, Footer } = Layout;
 const items = new Array(15).fill(null).map((_, index) => ({
   key: index + 1,
   label: `nav ${index + 1}`,
 }));
+
+
 const App = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+
+  
 
   const [List, setList] = useState(null);
   const [SearchQuery, setSearchQuery] = useState('');
@@ -44,7 +51,7 @@ const App = () => {
             margin: "16px 0",
           }}
         >
-          <div className="mr-8 w-[40%] h-24 flex flex-wrap ">
+          <div className="mr-8 w-[40%] h-24 flex flex-wrap max-sm:hidden ">
             <div className=" text-2xl font-bold text-[rgb(51,65,85)]">
           
           <h1> دوره های آموزشی  </h1>
