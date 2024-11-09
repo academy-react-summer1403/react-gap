@@ -17,7 +17,7 @@ const App = () => {
   const [List, setList] = useState(null);
   const [SearchQuery, setSearchQuery] = useState('');
   const [LevelId, setLevelId] = useState('');
-  const [CourseTypeId, setCourseTypeId] = useState('');
+e  const [CourseTypeId, setCourseTypeId] = useState('');
 
   const getCourseList =async () => {
     const res =await axios.get(`https://classapi.sepehracademy.ir/api/Home/GetCoursesWithPagination?PageNumber=1&RowsOfPage=9&SortingCol=Active&SortType=DESC&TechCount=0${SearchQuery}&courseLevelId=${LevelId}&CourseTypeId=${CourseTypeId}`);
