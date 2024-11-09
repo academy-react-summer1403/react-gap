@@ -18,7 +18,7 @@ const arr =[
   }
 ]
 
-const index = ({ setSearchQuery, setLevelId }) => {
+const index = ({ setSearchQuery, setLevelId ,setCourseTypeId }) => {
   const [data, setdata] = useState([]);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ const index = ({ setSearchQuery, setLevelId }) => {
         </div>
       </div>
 
-      <SourtBy />
+      <SourtBy setCourseTypeId={setCourseTypeId} />
       <CatCourses />
     </div>
   );

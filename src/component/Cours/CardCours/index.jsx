@@ -1,14 +1,8 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
+import Examples from "../../../component/Cours/CardCours/Examples";
+import http from "../../../core/Servises/interceptor";
 
-import Examples from "../../../component/Cours/CardCours/Examples"
-import { FaRegStar } from "react-icons/fa";
-import http from '../../../core/Servises/interceptor'
-
-const index = ({List}) => {
-
-
+const index = ({ List }) => {
   return (
     <div className="mr-[370px] -mt-[72%] shadow-xl dark:bg-[#22445D] max-sm:mr-0 ">
       <div className=" w-[100%] h-[90%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px] rounded-lg ">
@@ -26,7 +20,7 @@ const index = ({List}) => {
                 />
 
               </div>
-              
+
               <div className="w-[90%] mx-auto">
                 {" "}
                 <h1 className="text-red-500 -mt-2">{item.statusName}</h1>
@@ -57,9 +51,7 @@ const index = ({List}) => {
         })}
       </div>
 
-      <Examples/>
-
-     
+      <Examples />
     </div>
   );
 };

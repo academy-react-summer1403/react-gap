@@ -19,8 +19,15 @@ const arr = [
   },
 ];
 
-const SourtBy = () => {
-  const [SourtList, setSourtList] = useState([]);
+
+
+const SourtBy = ({setCourseTypeId}) => {
+  const [data, setSortList] = useState(null);
+  useEffect(() =>{
+    axios.get("https://classapi.sepehracademy.ir/api/CourseType/GetCourseTypes")
+    .then((res) => setSortList(res.data))
+    .catch((err) => console.log(err));
+  }, []);
 
   useEffect(() => {
     axios
@@ -29,23 +36,70 @@ const SourtBy = () => {
       )
       .then((res) => setSourtList(res.SourtList))
       .catch((err) => console.log(err));
-      console.log(SourtList)
   }, []);
 
-  return (
-   
-      <div className=" border-2 w-[90%] h-[390px] mr-5 mt-5 bg-[#fff] max-sm:hidden">
-        <h1 className=" mt-7 mr-8 font-bold text-xl "> حضوری یا غیر حضوری </h1>
-     {SourtList?.map((item, index)=>{
-      return(
-        <div key={index}>
-          nnnnnnnnnnnnnnnn
+      return (
+        <div>
+          
+        <div className=" w-[90%] h-[290px]   mr-5 mt-5 bg-[#fff]">
+        
+        <h1 className=" mt-7 mr-8 font-bold text-xl ">  حضوری یا غیر حضوری </h1>
+
+        {data?.map((item, index) =>{
+          return(
+            <div key={index} className='mr-5 flex flex-wrap '>
+
+
+              <div >
+              <input
+                type="radio"
+                name="type"
+                value={item.id}
+                id={item.id}
+                onChange={(e) => setCourseTypeId(e.target.value)}
+              />
+              <label className="mr-5" htmlFor={item.id}> {item.typeName}</label>
+            </div>
+    
+              
+    
+            </div>
+          )
+
+        })}
+
+          <div>
+          <input
+            type="radio"
+            name="type"
+            value=''
+            id='d1'
+            
+          />
+          <label htmlFor='d1'> هیچ کدام </label>
         </div>
-      )
 
-     })}
 
-      </div>
+          
+          
+
+       
+
+
+
+
+
+
+
+
+        
+
+        
+
+        </div>
+          
+        </div>
+
     
   );
 };

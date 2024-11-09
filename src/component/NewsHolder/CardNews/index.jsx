@@ -1,22 +1,39 @@
 import axios from "axios";
 import { use } from "framer-motion/client";
 import React, { useEffect, useState } from "react";
+import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
+import { BiDislike } from "react-icons/bi";
+import { FaRegStar } from "react-icons/fa";
+import { IoStarOutline } from "react-icons/io5";
+import { TbNumber5 } from "react-icons/tb";
+import http from "../../../core/Servises/interceptor";
 
+const index = () => {
 
-const index = (NewsList) => {
+  const [newsList, setnewsList] = useState([]);
 
+  const getnewsList = async () => {
+    const res = await http.get("/News?PageNumber=1&RowsOfPage=6&SortingCol=InsertDate&SortType=DESC");
+    console.log("neeeeeeews", res.news);
+    setnewsList(res.news);
+    console.log("IdIdI" , newsList);
+  };
+
+  useEffect(() => {
+    getnewsList();
+  }, []); 
 
   return (
     <div>
-      <div className=" border-2 border-red-600 w-11/12 h-[900px] mt-8 mr-16  shadow-2xl">
-        <div className="w-12/12 flex flex-wrap justify-center gap-9 mt-11 mx-auto">
-                 {/* {NewsList?.map((item, index) => {
-          return (
-            <div
+      <div className=" border-2 border-red-800 w-11/12 mt-20 mr-16  flex flex-wrap justify-center gap-9 shadow-2xl">
+       
+          {newsList?.map((item, index) => {
+            return (
+              <div
               key={index}
               className=" shadow-2xl w-[30%] h-[480px] mx-auto bg-white rounded-2xl"
             >
-                        <div className="">
+              <div className="">
                 <img
                   src="./Lastimg.jpg"
                   className="w-[90%] h-[100%] mx-3 relative bottom-5 rounded-2xl"
@@ -59,9 +76,9 @@ const index = (NewsList) => {
 
 
             </div>
-          );
-        })} */}
-        </div>
+            );
+          })}
+      
 
         {/* <div className=" mr-[620px]">
           <div className="join">
