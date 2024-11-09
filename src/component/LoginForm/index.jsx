@@ -1,8 +1,28 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
+import { setData } from "../../core/storage/localStorage.storage";
+import { signInAPI } from "../../core/Servises/api/auth/Login.api";
 
 const index = () => {
+  const navigation = useNavigate();
+  const onSubmit = async (values) => {
+    const obj = {
+      phoneOrGmail: values.phone,
+      password: values.pass,
+      rememberMe: true,
+    };
+    const res = await signInAPI(obj);
+    if (res.success) {
+      setData("login", res.token);
+      alert(res.message);
+      navigation("/");
+    } else {
+      alert(res.message);
+    }
+    console.log(res);
+  };
+
   return (
     <section>
       <div className="bg-[#eef3f9] dark:bg-[#22445D;]">
@@ -11,29 +31,38 @@ const index = () => {
             <h1 className=" relative right-14 top-12 text-2xl">
               ورود به سیستم
             </h1>
-            <div className=" flex flex-wrap justify-center m-16 w-[70%] h-96 mt-12 sm:w-[80%]">
+            <div className="flex flex-wrap justify-center m-16 w-[70%] h-96 mt-12 sm:w-[80%]">
               <Formik
-                initialValues={{ Mobile: "", PassWord: "" }}
-                onSubmit={(values) => onsubmit(values)}
+                initialValues={{ phone: "", pass: "" }}
+                onSubmit={onSubmit}
               >
                 <Form>
                   <Field
-                    name="Mobile"
+                    name="phone"
                     placeholder="شماره همراه"
-                    className=" w-[100%] h-[50px] mt-4 px-5 border-2 rounded-xl border-blue-600 "
+                    className="w-[100%] h-[50px] mt-4 px-5 border-2 rounded-xl border-blue-600 dark:bg-slate-700"
                   />
                   <Field
-                    name="PassWord"
+                    name="pass"
                     placeholder="رمز عبور"
-                    className=" w-[100%] h-[50px] mt-4 relative px-5 border-2 rounded-xl  border-blue-600 "
+                    className="w-[100%] h-[50px] mt-4 relative px-5 border-2 rounded-xl  border-blue-600  dark:bg-slate-700"
                   />
 
-                  <label className="font-inter text-[#22445D] text-sm relative top-5 dark:text-white">
-                    <input type="checkbox"/>
-                    مرا به خاطر بسپار
-                  </label>
+                  <div className=" ml-[90%] flex text-[#22445D] text-sm relative top-5 dark:text-white w-[200px]">
+                    <label className="label cursor-pointer">
+                      <input
+                        type="checkbox"
+                        defaultChecked
+                        className="checkbox checkbox-primary"
+                      />
+                      <span className="label-text w-[150px] relative text-center dark:text-white">
+                        {" "}
+                        مرا به خاطر بسپار
+                      </span>
+                    </label>
+                  </div>
 
-                  <button className="btn btn-primary  w-[100%] h-[50px] bg-blue-600 text-white rounded-lg relative top-10">
+                  <button className="btn btn-primary w-[100%] h-[50px] bg-blue-600 text-white rounded-lg relative top-10">
                     تایید
                   </button>
                   <br />
