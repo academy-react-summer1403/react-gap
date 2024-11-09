@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { RiUserFill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
+import http from '../../../../core/Servises/interceptor'
 const index = () => {
+  const [MyInfo, setMyInfo] = useState(null);
+
+  const getMyProfile = async () =>{
+    const res = await http.get('/SharePanel/GetProfileInfo')
+    setMyInfo(res)
+  }
+
+  useEffect(() => {
+    getMyProfile()
+  }, []);
+
   return (
     <div className=" bg-white w-[90%] h-[500px] rounded-3xl mt-10 dark:bg-slate-900">
       <div className="w-[60%] h-[120px] border-2 mt-4 rounded-3xl flex mr-10">
@@ -9,7 +21,7 @@ const index = () => {
           <img src="./introImg.png" className="w-[100%] h-[100%] mr-4" alt="" />
         </div>
         <h1 className="text-2xl relative mt-10 mr-6">
-          سلام نام کاربری خوش آمدید
+          سلام {MyInfo?.fName} {MyInfo?.lName} خوش آمدید
         </h1>
       </div>
 

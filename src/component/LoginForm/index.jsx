@@ -13,6 +13,7 @@ const index = () => {
       rememberMe: true,
     };
     const res = await signInAPI(obj);
+    console.log(res)
     if (res.success) {
       setData("login", res.token);
       alert(res.message);

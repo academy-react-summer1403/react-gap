@@ -12,10 +12,10 @@ const onSuccess = (response) => {
 }
 const onError = (err) => {
    console.log(err);
-   if(err.name === "AxiosError")alert("مشکلی به وجود آمده لطفا دوباره وارد حساب خود شوید")
-   if(err.response.status >= 400 && err.response.status < 500){
-      alert('client error: ' + err);
-   }
+   // if(err.name === "AxiosError")alert("مشکلی به وجود آمده لطفا دوباره وارد حساب خود شوید")
+   // if(err.response.status >= 400 && err.response.status < 500){
+   //    alert('client error: ' + err);
+   // }
    return Promise.reject(err)
 }
 
