@@ -13,7 +13,7 @@ const index = () => {
   const [newsList, setnewsList] = useState([]);
 
   const getnewsList = async () => {
-    const res = await http.get("/News");
+    const res = await http.get("/News?PageNumber=1&RowsOfPage=6&SortingCol=InsertDate&SortType=DESC");
     console.log("neeeeeeews", res.news);
     setnewsList(res.news);
     console.log("IdIdI" , newsList);

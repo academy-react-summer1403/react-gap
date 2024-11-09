@@ -19,7 +19,7 @@ const arr =[
   }
 ]
 
-const SourtBy = (setCourseTypeId) => {
+const SourtBy = ({setCourseTypeId}) => {
   const [data, setSortList] = useState([]);
   useEffect(() =>{
     axios.get("https://classapi.sepehracademy.ir/api/CourseType/GetCourseTypes")
