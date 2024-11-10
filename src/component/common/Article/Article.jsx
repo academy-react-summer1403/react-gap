@@ -15,7 +15,6 @@ import "swiper/css/scrollbar";
 import { NavLink } from "react-router-dom";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
-import { FaRegStar } from "react-icons/fa";
 
 const Article = () => {  
   const [TopSliderList, setTopSliderList] = useState(null);

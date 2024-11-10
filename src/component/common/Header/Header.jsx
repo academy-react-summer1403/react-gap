@@ -1,8 +1,6 @@
 import { Button } from "@material-tailwind/react";
-<<<<<<< HEAD
-=======
 import React, { useEffect, useState } from "react";
->>>>>>> develop
+
 import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
 import HeaderTop from "../Header/HeaderTop";
@@ -11,11 +9,6 @@ const Header = () => {
   const handelDark = () => {
     document.documentElement.classList.toggle("dark");
   };
-
-<<<<<<< HEAD
-
-
-=======
   const [CourseList, setCourseList] = useState(null);
   const [SearchQuery, setSearchQuery] = useState("");
   const getList = async () => {
@@ -37,7 +30,7 @@ const Header = () => {
       setSearchQuery("");
     }
   };
->>>>>>> develop
+
 
   return (
     <Fragment>
