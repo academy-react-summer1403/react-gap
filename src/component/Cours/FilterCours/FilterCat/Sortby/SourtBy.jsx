@@ -41,9 +41,9 @@ const SourtBy = ({setCourseTypeId}) => {
       return (
         <div>
           
-        <div className=" w-[90%] h-[290px]   mr-5 mt-5 bg-[#fff]">
+        <div className=" w-[90%] h-[150px] rounded-xl  mr-5 mt-5 bg-[#fff]">
         
-        <h1 className=" mt-7 mr-8 font-bold text-xl ">  حضوری یا غیر حضوری </h1>
+        <h1 className=" mt-4 mr-8 font-bold text-xl ">  حضوری یا غیر حضوری </h1>
 
         {data?.map((item, index) =>{
           return(
@@ -71,12 +71,13 @@ const SourtBy = ({setCourseTypeId}) => {
           <div>
           <input
             type="radio"
+            className="ms-5"
             name="type"
             value=''
             id='d1'
-            
+            onChange={(e) => setCourseTypeId(e.target.value)}
           />
-          <label htmlFor='d1'> هیچ کدام </label>
+          <label className="ms-5" htmlFor='d1'> هیچ کدام </label>
         </div>
 
 
