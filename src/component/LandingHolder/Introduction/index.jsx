@@ -16,8 +16,9 @@ const index = () => {
   }, []);
   return (
     <div className="w-auto  flex flex-wrap justify-center gap-1 bg-[#FFFF] mt-8 dark:bg-[#22445D] max-sm:bg-slate-100">
-      <div className=" w-[25%] h-[450px] ml-56  max-sm:w-[100%] max-sm:mb-14 max-sm:mr-64">
-        <button className="btn no-animation bg-[#EFEEFE] text-[#5751E1] relative top-6 right-6 rounded-3xl hover:bg-[#5751E1] hover:text-[#ffff]">
+      <div className=" w-[25%] h-[450px] ml-56  max-sm:w-[100%]  max-sm:mr-64 max-sm:mt-[1200px]">
+        <button className="btn no-animation bg-[#EFEEFE] text-[#5751E1] relative top-6 right-6 rounded-3xl
+         hover:bg-[#5751E1] hover:text-[#ffff]">
           اساتید حرفه ای کد دات{" "}
         </button>
         <h1 className="relative top-10 right-6 font-bold text-2xl ">
@@ -27,7 +28,7 @@ const index = () => {
           و مربیان خبره در یک مکان
         </h1>
         <div className="div">
-          <p className="w-[80%] h-[10%] relative top-16 right-6 text-xs">
+          <p className="w-[80%] h-[10%] relative top-16 right-6 text-xs max-sm:mt-[0pc]">
             نوشتن کار جالبیه که از هزاران سال همراه ما بوده و کمک کرده تا همیشه
             به روز باشیم، ما در راکت فضای رو به شکلی آماده کردیم تا شما بتونید
             ایده‌ها و مطالب جالب حوزه برنامه‌نویسی رو در اختیار هزاران

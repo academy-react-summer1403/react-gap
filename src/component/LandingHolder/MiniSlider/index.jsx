@@ -30,7 +30,7 @@ const index = () => {
                   //install swiper modules
                   modules={[Navigation, A11y]}
                   spaceBetween={6}
-                  slidesPerView={1}
+                  slidesPerView={3}
                   navigation
                 >
                   

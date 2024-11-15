@@ -8,8 +8,8 @@ const index = () => {
   //   txt: yup.string().required("پر کردن این فیلد اجباریست"),
   // });
   return (
-    <div className=" h-[800px] max-sm:mt-96">
-      <div className=" h-[100px] text-center relative top-[30px] ">
+    <div className=" h-[800px] max-sm:mt- ">
+      <div className=" h-[100px] text-center relative top-[30px]   ">
         <h1 className="text-[#22445D] text-4xl dark:text-white">
           {" "}
           پیشنهادات و انتقادات{" "}
