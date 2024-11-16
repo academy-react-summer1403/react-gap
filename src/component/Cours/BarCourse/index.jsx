@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import FilterCours from "../../../component/Cours/FilterCours";
 import CardCours from "../../../component/Cours/CardCours";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
-import axios from "axios";
+import http from '../../../core/Servises/interceptor'
 
 const { Header, Content, Footer } = Layout;
 const items = new Array(15).fill(null).map((_, index) => ({
@@ -21,13 +21,15 @@ const App = () => {
   const [CourseTypeId, setCourseTypeId] = useState("");
   const [CourseTech, setCourseTech] = useState("");
   const [PageNumber, setPageNumber] = useState(1);
+  const [rand, setRand] = useState(1);
+
 
   const getCourseList = async () => {
-    const res = await axios.get(
-      `https://classapi.sepehracademy.ir/api/Home/GetCoursesWithPagination?PageNumber=${PageNumber}&RowsOfPage=9&SortingCol=Active&SortType=DESC${SearchQuery}&courseLevelId=${LevelId}&CourseTypeId=${CourseTypeId}${CourseTech}`
+    const res = await http.get(
+      `/Home/GetCoursesWithPagination?PageNumber=${PageNumber}&RowsOfPage=9&SortingCol=Active&SortType=DESC${SearchQuery}&courseLevelId=${LevelId}&CourseTypeId=${CourseTypeId}${CourseTech}`
     );
-    console.log("res", res.data.courseFilterDtos);
-    setList(res.data);
+    // console.log("res", res.courseFilterDtos);
+    setList(res);
   };
 
   // const age =20
@@ -36,7 +38,7 @@ const App = () => {
 
   useEffect(() => {
     getCourseList();
-  }, [SearchQuery, LevelId, CourseTypeId, CourseTech , PageNumber]);
+  }, [SearchQuery, LevelId, CourseTypeId, CourseTech , PageNumber , rand]);
 
   const handleTech = (id) => {
     if (id === "0") {
@@ -77,7 +79,7 @@ const App = () => {
             setCourseTypeId={setCourseTypeId}
             handleTech={handleTech}
           />
-          <CardCours List={List && List} PageNumber={PageNumber} setPageNumber={setPageNumber} />
+          <CardCours List={List && List} PageNumber={PageNumber} setPageNumber={setPageNumber} setRand={setRand} />
         </div>
       </Content>
     </Layout>
