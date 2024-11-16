@@ -63,16 +63,9 @@ const HeaderPanel = () => {
               <SlHandbag fill="blue" size={30} />
             </div>{" "}
             <div className="m-6">
+
               <NavLink to={"/"}>
-                <div className="avatar">
-                  <div className="ring-slate-500 ring-offset-base-100 w-16 rounded-full ring ml-7 bg-slate-300 ">
-                    <FaUserLarge
-                      size={30}
-                      fill="white"
-                      className="mt-4 mr-4 bg-slate-300"
-                    />
-                  </div>
-                </div>
+              <button className="btn btn-info">Home</button>
               </NavLink>
             </div>
           </div>

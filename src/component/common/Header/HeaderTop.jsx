@@ -28,7 +28,7 @@ const App = () => (
     <a onClick={(e) => e.preventDefault()}>
       <Space   className={({isActive}) => `${
               isActive && "text-gray-600 border-2 bg-slate-300 h-14 relative bottom-2 leading-9 rounded-md "
-            } whitespace-normal hover:text-blue-600 text-xl font-sans text-black dark:text-white`
+            } whitespace-normal hover:text-blue-600 text-xl font-sans text-black dark:text-white `
             }>
         لینک های مفید
         <DownOutlined />

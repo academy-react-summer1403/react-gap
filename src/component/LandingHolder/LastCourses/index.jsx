@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Like from "./Like.jsx/Like";
-
+import { ImArrowLeft } from "react-icons/im";
 const index = () => {
   const [CoursList, setCoursList] = useState(null);
 
@@ -32,9 +32,12 @@ const index = () => {
       </div>
 
       <NavLink to={"/courses"}>
+
         <h1 className="text-xl font-sans font-medium mr-[84%] -mt-6 relative bottom-8 left-28 hover:text-blue-800 max-sm:hidden">
           مشاهده همه دوره ها
+          <ImArrowLeft  fill="orange" size={30} className="mr-36"/>
         </h1>
+        
       </NavLink>
 
       <div className="w-[80%] h-[100%] flex  flex-wrap gap-9 mx-auto">

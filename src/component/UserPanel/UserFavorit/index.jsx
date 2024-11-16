@@ -160,7 +160,7 @@ const App = () => {
             <Breadcrumb.Item>
               <div className="avatar online">
                 <div className="w-24 rounded-full">
-                <img src="./user2.png" />
+                  <img src="./user2.png" />
                 </div>
               </div>
               User
@@ -194,7 +194,7 @@ const App = () => {
                         </label>
                       </th>
                       <td>
-                      <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3">
                           <div className="avatar">
                             <div className="mask mask-squircle h-12 w-12">
                               <img
@@ -204,7 +204,7 @@ const App = () => {
                             </div>
                           </div>
                           <div>
-                            <div className="font-bold">  ریکت</div>
+                            <div className="font-bold"> ریکت</div>
                             <div className="text-sm opacity-50">China</div>
                           </div>
                         </div>
@@ -232,7 +232,7 @@ const App = () => {
                         </label>
                       </th>
                       <td>
-                      <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3">
                           <div className="avatar">
                             <div className="mask mask-squircle h-12 w-12">
                               <img
@@ -242,7 +242,7 @@ const App = () => {
                             </div>
                           </div>
                           <div>
-                            <div className="font-bold">  ریکت</div>
+                            <div className="font-bold"> ریکت</div>
                             <div className="text-sm opacity-50">China</div>
                           </div>
                         </div>
@@ -270,7 +270,7 @@ const App = () => {
                         </label>
                       </th>
                       <td>
-                      <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3">
                           <div className="avatar">
                             <div className="mask mask-squircle h-12 w-12">
                               <img
@@ -280,7 +280,7 @@ const App = () => {
                             </div>
                           </div>
                           <div>
-                            <div className="font-bold">  ریکت</div>
+                            <div className="font-bold"> ریکت</div>
                             <div className="text-sm opacity-50">China</div>
                           </div>
                         </div>
@@ -308,7 +308,7 @@ const App = () => {
                         </label>
                       </th>
                       <td>
-                      <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3">
                           <div className="avatar">
                             <div className="mask mask-squircle h-12 w-12">
                               <img
@@ -318,7 +318,7 @@ const App = () => {
                             </div>
                           </div>
                           <div>
-                            <div className="font-bold">  ریکت</div>
+                            <div className="font-bold"> ریکت</div>
                             <div className="text-sm opacity-50">China</div>
                           </div>
                         </div>

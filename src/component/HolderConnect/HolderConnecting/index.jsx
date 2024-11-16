@@ -5,12 +5,14 @@ import { CiYoutube } from "react-icons/ci";
 import { CiFacebook } from "react-icons/ci";
 import { CiTwitter } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
+import { PiPhoneDisconnect } from "react-icons/pi";
 const index = () => {
   return (
     <div className="h-[600px]">
       <div>
         <h1 className="font-sans text-4xl text-gray-600 font-bold text-center mt-10">
           ارتباط با ما
+          <PiPhoneDisconnect size={40} fill="orange" className="mr-[41%] -mt-9"/>
         </h1>
         <h2 className="font-sans text-xl text-gray-500 text-center mt-5">
           در این صفحه می توانید راه های ارتباطی با ما را مشاهده کنید

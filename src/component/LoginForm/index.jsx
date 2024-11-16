@@ -16,7 +16,6 @@ const index = () => {
     console.log(res)
     if (res.success) {
       setData("login", res.token);
-      alert(res.message);
       navigation("/");
     } else {
       alert(res.message);

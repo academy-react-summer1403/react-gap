@@ -5,19 +5,27 @@ import Error404 from "../../component/Error404";
 import Login from "../../screens/Login";
 import Courses from "../../screens/Courses";
 import News from "../../screens/News";
+
+
+
 import LoginSystem from "../../component/LoginSystem";
+
+
+
 import Register from "../../screens/Register";
-import RegisterStep from "../../component/RegisterStep";
-import RegisterStep1 from "../../component/RegisterStep1";
 import RegisterStep2 from "../../component/RegisterStep2";
-import RegisterForm from "../../component/RegisterForm";
+import RegisterStep3 from "../../component/RegisterStep3";
+
+
 import ResetPass from "../../screens/ResetPass";
+
+
 import DetailNews from "../../screens/DetailNews";
 import DetailCourse from "../../screens/DetailCourse";
 import Connect from "../../screens/Connect";
 import MyCourses from "../../screens/Panel/MyCourses";
 import PanelLayout from "../../App/PanelLayout";
-import EditProfile from "../../screens/Panel/EditProfile";
+import EditProfile from "../../screens/Panel/EditProfile";  
 import Reservation from "../../screens/Panel/Reservation";
 import Favorite from "../../screens/Panel/Favorite";
 import Comments from "../../screens/Panel/Comments";
@@ -70,27 +78,16 @@ export const Routers = createBrowserRouter([
         element: <LoginSystem />,
       },
       {
-        path: "/RegisterForm",
-        element: <RegisterForm />,
-      },
-
-      {
-        path: "/Register",
+        path: "/Step1",
         element: <Register />,
       },
       {
-        path: "/Step",
-        element: <RegisterStep />,
-      },
-
-      {
-        path: "/Step1",
-        element: <RegisterStep1 />,
-      },
-
-      {
         path: "/Step2",
         element: <RegisterStep2 />,
+      },
+      {
+        path: "/Step3",
+        element: <RegisterStep3 />,
       },
       {
         path: "/NewPass",
@@ -98,6 +95,8 @@ export const Routers = createBrowserRouter([
       },
     ],
   },
+
+  
 
   {
     path: "*",
@@ -156,6 +155,7 @@ export const Routers = createBrowserRouter([
         path: "/UserCounter",
         element: <Counter />,
       },
+      
     ],
   },
 ]);
