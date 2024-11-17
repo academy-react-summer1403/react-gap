@@ -8,15 +8,17 @@ const index = () => {
     const res = await axios.get(
       "https://classapi.sepehracademy.ir/api/Home/GetTeachers"
     );
-    setTTopTeacher(res.data);
+    setTTopTeacher(res.data.slice(0,4));
   };
 
   useEffect(() => {
     getTopTeacher();
   }, []);
+
+  
   return (
     <div className="w-auto  flex flex-wrap justify-center gap-1 bg-[#FFFF] mt-8 dark:bg-[#22445D]">
-      <div className=" w-[25%] h-[2000px] ml-56">
+      <div className=" w-[25%] h-[400px] ml-56">
         <button className="btn no-animation bg-[#EFEEFE] text-[#5751E1] relative top-6 right-6 rounded-3xl hover:bg-[#5751E1] hover:text-[#ffff]">
           اساتید حرفه ای کد دات{" "}
         </button>
