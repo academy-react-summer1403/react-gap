@@ -1,7 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const index = () => {
+const index = ({setSearchQuery}) => {
+  const handleSearch = (e) => {
+    if (e.target.value) {
+      setSearchQuery(`&Query=${e.target.value}`);
+    }
+  };
+
   return (
     <div className="  flex justify-center flex-wrap">
       <div>
@@ -23,8 +29,13 @@ const index = () => {
       </h1>
 
       <div className="navbar bg-base-100 w-[90%] dark:bg-orange-500">
-        <label className="input input-bordered flex items-center gap-2 mr-10">
-          <input type="text" className="grow" placeholder="Search" />
+        <label className=" border-2 border-red-600 input input-bordered flex items-center gap-2 mr-10">
+          <input
+            type="text"
+            className="grow"
+            placeholder="Search"
+            onChange={handleSearch}
+          />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
