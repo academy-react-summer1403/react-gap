@@ -5,27 +5,17 @@ import Error404 from "../../component/Error404";
 import Login from "../../screens/Login";
 import Courses from "../../screens/Courses";
 import News from "../../screens/News";
-
-
-
 import LoginSystem from "../../component/LoginSystem";
-
-
-
 import Register from "../../screens/Register";
 import RegisterStep2 from "../../component/RegisterStep2";
 import RegisterStep3 from "../../component/RegisterStep3";
-
-
 import ResetPass from "../../screens/ResetPass";
-
-
 import DetailNews from "../../screens/DetailNews";
 import DetailCourse from "../../screens/DetailCourse";
 import Connect from "../../screens/Connect";
 import MyCourses from "../../screens/Panel/MyCourses";
 import PanelLayout from "../../App/PanelLayout";
-import EditProfile from "../../screens/Panel/EditProfile";  
+import EditProfile from "../../screens/Panel/EditProfile";
 import Reservation from "../../screens/Panel/Reservation";
 import Favorite from "../../screens/Panel/Favorite";
 import Comments from "../../screens/Panel/Comments";
@@ -35,7 +25,8 @@ import Hom2 from "../../screens/Panel/Panel2/Hom2";
 import MyCourse from "../../screens/Panel/Panel2/MyCourse";
 import ReservPanel from "../../screens/Panel/Panel2/ReservPanel";
 import FavoritePanel from "../../screens/Panel/Panel2/FavoritePanel";
-import ChangePas from "../../screens/Panel/Panel2/ChangePas"
+import ChangePas from "../../screens/Panel/Panel2/ChangePas";
+import Basket from "../../component/common/Basket/Basket";
 export const Routers = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +35,10 @@ export const Routers = createBrowserRouter([
       {
         path: "/",
         element: <Landing />,
+      },
+      {
+        path: "/Basket",
+        element: <Basket />,
       },
       {
         path: "/courses",
@@ -95,8 +90,6 @@ export const Routers = createBrowserRouter([
       },
     ],
   },
-
-  
 
   {
     path: "*",
@@ -155,7 +148,6 @@ export const Routers = createBrowserRouter([
         path: "/UserCounter",
         element: <Counter />,
       },
-      
     ],
   },
 ]);

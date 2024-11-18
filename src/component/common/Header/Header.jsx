@@ -6,6 +6,7 @@ import HeaderTop from "../Header/HeaderTop";
 import axios from "axios";
 import { getData } from "../../../core/Storage/LocalStorage.storage";
 import { FaUserLarge } from "react-icons/fa6";
+import { SlHandbag } from "react-icons/sl";
 const Header = () => {
   const handelDark = () => {
     document.documentElement.classList.toggle("dark");
@@ -36,7 +37,7 @@ const Header = () => {
   return (
     <Fragment>
       <div className="border-2 border-transparent dark:bg-[#22445D]">
-        <div className=" bg-white rounded-2xl w-[85%] mt-9 mx-auto flex justify-between h-32 dark:bg-blue-950">
+        <div className=" bg-white rounded-2xl w-[85%] mt-9 mx-auto flex justify-between h-32 dark:bg-blue-950 shadow-lg">
           <Link to="/" className="flex  gap-2  w-60 h-20 m-6 ">
             <div className=" w-[150px] h-[100px] relative bottom-5 right-9 ">
               <img src="./logoabi.png " />
@@ -143,6 +144,16 @@ const Header = () => {
                 </Button>
               </NavLink>
             )}
+
+
+{getData("login") && (
+              <NavLink to="/Basket">
+                  <div className="w-16 h-10 -mt-12 -mr-20">
+              <SlHandbag fill="blue" size={30} />
+            </div>{" "}
+              </NavLink>
+            )}
+
           </div>
         </div>
       </div>
