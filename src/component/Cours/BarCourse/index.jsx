@@ -50,12 +50,13 @@ const App = () => {
 
   return (
     <Layout>
-      <Content className="p-10 dark:dark:bg-[#22445D;]">
+      <Content className=" p-10 dark:dark:bg-[#22445D;]">
         <Breadcrumb
           style={{
             margin: "16px 0",
           }}
         >
+          
           <div className="mr-8 w-[40%] h-24 flex flex-wrap max-sm:hidden ">
             <div className=" text-2xl font-bold text-[rgb(51,65,85)]">
               <h1> دوره های آموزشی </h1>
@@ -65,7 +66,11 @@ const App = () => {
               <p> دوره ببین، تمرین کن، برنامه نویس شو</p>
             </div>
           </div>
+
+          <h1 className="mr-[550px] font-sans text-xl"> بیش از 10 عنوان آموزشی </h1>
         </Breadcrumb>
+
+       
         <div
           style={{
             minHeight: 280,

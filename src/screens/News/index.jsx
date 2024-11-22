@@ -13,6 +13,7 @@ const index = () => {
   const [NewsList, setNewsList] = useState(null);
   const [SearchQuery, setSearchQuery] = useState('');
   const [PageNumber, setPageNumber] = useState();
+  const [rand, setRand] = useState();
 
   const getNewsList = async () => {
     const res = await http.get(
@@ -25,7 +26,7 @@ const index = () => {
 
   useEffect(() => {
     getNewsList();
-  }, [SearchQuery]);
+  }, [SearchQuery , rand]);
 
   // const [NewsList, setNewsList] = useState([]);
   // const [SearchQuery, setSearchQuery] = useState("");
@@ -45,7 +46,7 @@ const index = () => {
   return (
     <div>
       <NewsBar setSearchQuery={setSearchQuery}  />
-      <CardNews NewsList={NewsList} />
+      <CardNews NewsList={NewsList} setRand={setRand}/>
       {/* <Articles /> */}
     </div>
   );

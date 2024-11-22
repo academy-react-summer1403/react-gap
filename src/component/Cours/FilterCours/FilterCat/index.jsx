@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SourtBy from "./Sortby/SourtBy";
 import CatCourses from "./CatCourses/CatCourses";
 import axios from "axios";
+import { CiSearch } from "react-icons/ci";
 
 const arr =[
   {
@@ -41,11 +42,12 @@ const index = ({ setSearchQuery, setLevelId ,setCourseTypeId , handleTech }) => 
       <input
         type="text"
         className="form-control border-2 w-[90%] h-10 mr-5 rounded-full max-sm:hidden text-center"
-        placeholder="اینجا سرچ کن"
+        placeholder="  چیو میخوای یاد بگیری ؟"
         onChange={handleSearch}
       />
+      <CiSearch  className=" w-7  h-7 -mt-8 mr-[290px]"/>
 
-      
+   
       {/* <div className=" flex flex-wrap justify-center border-2 bg-[#fff]  w-[90%] h-24 mr-5  max-sm:hidden ">
         <h1 className=" mt-7 ml-6 font-bold "> دوره‌های جاری </h1>
         <input type="checkbox" className="toggle mt-7" defaultChecked />
