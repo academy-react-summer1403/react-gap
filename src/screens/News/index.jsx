@@ -46,7 +46,7 @@ const index = () => {
     <div>
       <NewsBar setSearchQuery={setSearchQuery}  />
       <CardNews NewsList={NewsList} />
-      <Articles />
+      {/* <Articles /> */}
     </div>
   );
 };

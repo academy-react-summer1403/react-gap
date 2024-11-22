@@ -40,8 +40,8 @@ const index = ({ setSearchQuery, setLevelId ,setCourseTypeId , handleTech }) => 
     <div className=" -mr-3 w-[100%]  h-[200px] mx-auto ">
       <input
         type="text"
-        className="form-control border-2 w-[90%] h-10 mr-5 rounded-xl max-sm:hidden"
-        placeholder="اینجا بنویس"
+        className="form-control border-2 w-[90%] h-10 mr-5 rounded-full max-sm:hidden text-center"
+        placeholder="اینجا سرچ کن"
         onChange={handleSearch}
       />
 
