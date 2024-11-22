@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaHandsClapping } from "react-icons/fa6";
 import { RiUserFill } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 import http from "../../../../core/Servises/interceptor";
@@ -15,17 +16,17 @@ const index = () => {
   }, []);
 
   return (
-    <div className=" bg-white w-[90%] h-[500px] rounded-3xl mt-10 dark:bg-slate-900">
-      <div className=" h-[120px] border-2 mt-4 rounded-3xl flex mr-10">
-        <div className="w-1/4">
-          <img src="./introImg.png" className="w-[80%] mr-4" alt="" />
+    <div className=" bg-white w-[85%] h-[500px] rounded-3xl mt-10 dark:bg-slate-900">
+      <div className=" w-[60%] h-[120px] mt-4 rounded-3xl flex mr-10 shadow-lg">
+      <div className="w-1/4">
+          <img src={MyInfo?.userImage[0].puctureAddress} className="h-24 rounded-full ring-1 mt-3 mr-4"/>
         </div>
-        <h1 className="text-2xl relative mt-10 w-1/2">
+        <h1 className="text-2xl mt-9">
           سلام {MyInfo?.fName} {MyInfo?.lName} خوش آمدید
+
+          
         </h1>
-        <div className="w-1/4">
-          <img src={MyInfo?.userImage[0].puctureAddress} className="h-32 rounded-full"/>
-        </div>
+      
       </div>
 
       <div className="flex">
