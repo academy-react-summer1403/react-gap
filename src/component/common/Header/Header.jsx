@@ -8,6 +8,9 @@ import { getData } from "../../../core/Storage/LocalStorage.storage";
 import { FaUserLarge } from "react-icons/fa6";
 import { SlHandbag } from "react-icons/sl";
 const Header = () => {
+
+
+
   const handelDark = () => {
     document.documentElement.classList.toggle("dark");
   };
