@@ -160,6 +160,8 @@ const index = ({ List, PageNumber, setPageNumber, setRand }) => {
                 <button className="btn btn-outline btn-primary h-3 mt-3 mr-9 ">
                   مشاهده اطلاعات دوره
                 </button>
+
+                
               </div>
             </div>
           );

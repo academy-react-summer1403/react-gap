@@ -40,6 +40,7 @@ const index = ({
           در صفحات وبس...
         </p>
         <h1>قیمت دوره:</h1>
+        
         <h3 className="text-red-500 -mt-5 mr-32">{cost}</h3>
         <div className="w-[100%] h-10 flex justify-between mt-3">
           <div className="w-10 mr-24">

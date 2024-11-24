@@ -1,26 +1,36 @@
-import { Field, Form, Formik } from "formik";
-import React from "react";
-import { getData } from "../../../core/Storage/LocalStorage.storage";
+import React, { useEffect, useState } from "react";
+import { Form, NavLink, useFetcher, useParams } from "react-router-dom";
 import { FaUserLarge } from "react-icons/fa6";
-import { Link, NavLink } from "react-router-dom";
 import { MdOutlineReplyAll } from "react-icons/md";
+import { Field, Formik } from "formik";
+import http from "../../../core/Servises/interceptor";
 
 const index = () => {
+  const {id} = useParams();
+  const [CourseComment, setCourseComment] = useState(null);
+
+  const getComments = async () => {
+    const res = await http.get(`/Course/GetCourseCommnets/${id}`);
+    console.log(res);
+    setCourseComment(res);
+  };
+
+  useEffect(() => {
+    getComments();
+  }, []);
+
   const onSubmit = () => {};
-
-
-
-
   return (
     <div className=" w-[61%] h-[600px] mr-40 bg-white mt-10 rounded-xl">
-      <div role="tablist" className="tabs tabs-bordered">
+      <div role="tablist" className="tabs">
         <input
           type="radio"
           name="my_tabs_1"
           role="tab"
-          className="tab"
+          className="tab text-xl"
           aria-label="نظرات کاربران"
         />
+
         <div role="tabpanel" className="tab-content p-10">
           <div className="border-2 w-[90%] h-96 rounded-2xl">
             {" "}
@@ -54,21 +64,14 @@ const index = () => {
           type="radio"
           name="my_tabs_1"
           role="tab"
-          className="tab"
-          aria-label="Tab 2"
-          defaultChecked
-        />
-        <div role="tabpanel" className="tab-content p-10">
-          tab2
-        </div>
-
-        <input
-          type="radio"
-          name="my_tabs_1"
-          role="tab"
-          className="tab"
+          className="tab text-xl "
           aria-label=" افزودن نظر جدید"
         />
+
+        {CourseComment?.map((item , index) => {
+          return (
+            <div key={index}>
+
         <div role="tabpanel" className="tab-content p-10">
           <NavLink to="/panel">
             <div className="avatar">
@@ -79,10 +82,9 @@ const index = () => {
                   className="mt-4 mr-4 bg-slate-300"
                 />
               </div>{" "}
-              <h1 className="mt-4 font-thin">عاطفه کاویانی</h1>
+              <h1 className="mt-4 font-thin"> ;dhkd</h1>
             </div>
           </NavLink>
-
           <Formik initialValues={{ name: "comment" }} onSubmit={onSubmit}>
             <Form>
               <Field
@@ -97,6 +99,10 @@ const index = () => {
             </Form>
           </Formik>
         </div>
+        </div>
+          )
+          
+        })}
       </div>
     </div>
   );
