@@ -1,7 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const index = () => {
+const index = ({setSearchQuery}) => {
+  const handleSearch = (e) => {
+    if (e.target.value) {
+      setSearchQuery(`&Query=${e.target.value}`);
+    }
+  };
+
   return (
     <div className="  flex justify-center flex-wrap">
       <div>
@@ -24,7 +30,12 @@ const index = () => {
 
       <div className="navbar bg-base-100 w-[90%] dark:bg-orange-500">
         <label className="input input-bordered flex items-center gap-2 mr-10">
-          <input type="text" className="grow" placeholder="Search" />
+          <input
+            type="text"
+            className="grow"
+            placeholder="Search"
+            onChange={handleSearch}
+          />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 16 16"
@@ -43,10 +54,10 @@ const index = () => {
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>دوره ها</a>
+              <a className="text-[24px] font-sans"> آرشیو مقالات کد دات</a>
             </li>
             <li>
-              <details>
+              {/* <details>
                 <summary>دسته بندی</summary>
                 <ul className="bg-base-100 rounded-t-none p-7  dark:bg-orange-500">
                   <li>
@@ -56,7 +67,7 @@ const index = () => {
                     <a>قدیمی</a>
                   </li>
                 </ul>
-              </details>
+              </details> */}
             </li>
           </ul>
         </div>

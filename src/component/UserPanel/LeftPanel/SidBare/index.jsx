@@ -8,8 +8,17 @@ import { GoHeartFill } from "react-icons/go";
 import { IoKey } from "react-icons/io5";
 import { BiSolidExit } from "react-icons/bi";
 import SideBarItem from "./SideBarItem";
+import { clearStorage, removeItem } from "../../../../core/Storage/storage.services";
+import { useNavigate, useNavigation } from "react-router-dom";
 
 const index = () => {
+
+  const navigate = useNavigate()
+
+  const handleExite = () =>{
+    clearStorage()
+    navigate('/')
+  }
   return (
    
       <div className="bg-slate-600 w-[200px] h-[100vh] flex flex-col overflow-hidden">
@@ -49,11 +58,14 @@ const index = () => {
             title="  بازگشت به خانه  "
             icon={<TiHome size={24} />}
           />
-           <SideBarItem
+           {/* <SideBarItem
+           
             url="/"
             title="خروج "
             icon={<BiSolidExit size={24}/>}
-          />
+          /> */}
+
+          <button onClick={handleExite}>exit</button>
           
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React from 'react'
-import RegisterForm  from "../../component/RegisterForm"
+import RegisterStep1  from "../../component/RegisterStep1"
 const index = () => {
   return (
-    <RegisterForm/>
+    <RegisterStep1/>
   )
 }
 

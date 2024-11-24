@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import SourtBy from "./Sortby/SourtBy";
 import CatCourses from "./CatCourses/CatCourses";
 import axios from "axios";
+import { CiSearch } from "react-icons/ci";
 
 const arr =[
   {
@@ -18,7 +19,7 @@ const arr =[
   }
 ]
 
-const index = ({ setSearchQuery, setLevelId ,setCourseTypeId }) => {
+const index = ({ setSearchQuery, setLevelId ,setCourseTypeId , handleTech }) => {
   const [data, setdata] = useState([]);
 
   useEffect(() => {
@@ -40,17 +41,20 @@ const index = ({ setSearchQuery, setLevelId ,setCourseTypeId }) => {
     <div className=" -mr-3 w-[100%]  h-[200px] mx-auto ">
       <input
         type="text"
-        className="form-control border-2 w-[90%] h-10 mr-5 max-sm:hidden"
-        placeholder="search"
+        className="form-control border-2 w-[90%] h-10 mr-5 rounded-full max-sm:hidden text-center"
+        placeholder="  چیو میخوای یاد بگیری ؟"
         onChange={handleSearch}
       />
-      <div className=" flex flex-wrap justify-center border-2 bg-[#fff]  w-[90%] h-24 mr-5  max-sm:hidden ">
+      <CiSearch  className=" w-7  h-7 -mt-8 mr-[290px]"/>
+
+   
+      {/* <div className=" flex flex-wrap justify-center border-2 bg-[#fff]  w-[90%] h-24 mr-5  max-sm:hidden ">
         <h1 className=" mt-7 ml-6 font-bold "> دوره‌های جاری </h1>
         <input type="checkbox" className="toggle mt-7" defaultChecked />
         <h2 className="mt-7 mr-6 font-bold text-[#ccc]">آرشیو شده </h2>
-      </div>
+      </div> */}
 
-      <div className="w-[90%] h-[200px]   mr-5 mt-5 bg-[#fff] max-sm:hidden">
+      <div className="w-[90%] h-[200px] rounded-xl  mr-5 mt-5 bg-[#fff] max-sm:hidden">
         <h1 className=" mt-7 mr-8 font-bold text-xl "> نوع دوره </h1>
         {/* <div className="border w-[80%] relative mr-[18px] mb-[10px] border-[#5BE1B9]"></div> */}
 
@@ -83,7 +87,7 @@ const index = ({ setSearchQuery, setLevelId ,setCourseTypeId }) => {
       </div>
 
       <SourtBy setCourseTypeId={setCourseTypeId} />
-      <CatCourses />
+      <CatCourses handleTech={handleTech} />
     </div>
   );
 };

@@ -11,14 +11,14 @@ const HeaderPanel = () => {
       <div>
         <div className=" bg-white rounded-2xl w-[100%] mx-auto flex h-32 dark:bg-blue-950">
           <Link to="/" className="flex  gap-2  w-60 h-20 m-6">
-            <div className=" w-[150px] h-[100px] relative bottom-5 right-9">
+            <div className=" w-[150px] h-[100px] relative bottom-5 right-6">
               <img src="./logoabi.png" className="" />
             </div>
 
             <h1 className="text-[#22445D;] font-inter text-[14px] m-3"></h1>
           </Link>
 
-          <div className="w-[70%] h-[100%] flex justify-end mr-48">
+          <div className="w-[40%] h-[100%] flex justify-end mr-[50%]">
             <div className="w-40 h-10 relative top-12 cursor-pointer">
               <label
                 htmlFor="DarkId"
@@ -59,20 +59,12 @@ const HeaderPanel = () => {
                 </svg>
               </label>
             </div>
-            <div className="w-16 h-10 mt-10">
-              <SlHandbag fill="blue" size={30} />
-            </div>{" "}
+
             <div className="m-6">
               <NavLink to={"/"}>
-                <div className="avatar">
-                  <div className="ring-slate-500 ring-offset-base-100 w-16 rounded-full ring ml-7 bg-slate-300 ">
-                    <FaUserLarge
-                      size={30}
-                      fill="white"
-                      className="mt-4 mr-4 bg-slate-300"
-                    />
-                  </div>
-                </div>
+                <button className="btn btn-info text-white mt-2 ml-7">
+                  بازگشت به خانه
+                </button>
               </NavLink>
             </div>
           </div>

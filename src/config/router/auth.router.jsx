@@ -7,10 +7,8 @@ import Courses from "../../screens/Courses";
 import News from "../../screens/News";
 import LoginSystem from "../../component/LoginSystem";
 import Register from "../../screens/Register";
-import RegisterStep from "../../component/RegisterStep";
-import RegisterStep1 from "../../component/RegisterStep1";
 import RegisterStep2 from "../../component/RegisterStep2";
-import RegisterForm from "../../component/RegisterForm";
+import RegisterStep3 from "../../component/RegisterStep3";
 import ResetPass from "../../screens/ResetPass";
 import DetailNews from "../../screens/DetailNews";
 import DetailCourse from "../../screens/DetailCourse";
@@ -27,7 +25,8 @@ import Hom2 from "../../screens/Panel/Panel2/Hom2";
 import MyCourse from "../../screens/Panel/Panel2/MyCourse";
 import ReservPanel from "../../screens/Panel/Panel2/ReservPanel";
 import FavoritePanel from "../../screens/Panel/Panel2/FavoritePanel";
-import ChangePas from "../../screens/Panel/Panel2/ChangePas"
+import ChangePas from "../../screens/Panel/Panel2/ChangePas";
+import Basket from "../../component/common/Basket/Basket";
 export const Routers = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +35,10 @@ export const Routers = createBrowserRouter([
       {
         path: "/",
         element: <Landing />,
+      },
+      {
+        path: "/Basket",
+        element: <Basket />,
       },
       {
         path: "/courses",
@@ -70,27 +73,16 @@ export const Routers = createBrowserRouter([
         element: <LoginSystem />,
       },
       {
-        path: "/RegisterForm",
-        element: <RegisterForm />,
-      },
-
-      {
-        path: "/Register",
+        path: "/Step1",
         element: <Register />,
       },
       {
-        path: "/Step",
-        element: <RegisterStep />,
-      },
-
-      {
-        path: "/Step1",
-        element: <RegisterStep1 />,
-      },
-
-      {
         path: "/Step2",
         element: <RegisterStep2 />,
+      },
+      {
+        path: "/Step3",
+        element: <RegisterStep3 />,
       },
       {
         path: "/NewPass",
