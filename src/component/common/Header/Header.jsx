@@ -6,6 +6,9 @@ import HeaderTop from "../Header/HeaderTop";
 import axios from "axios";
 import HambergerMenu from "./HambergerMenu";
 const Header = () => {
+
+
+
   const handelDark = () => {
     document.documentElement.classList.toggle("dark");
   };
@@ -46,7 +49,7 @@ const Header = () => {
           </Link>
 
          
-          <HambergerMenu/>
+          <HambergerMenu />
           <div className=" m-10">
             <label className=" input input-bordered flex items-center w-96 gap-2  bottom-1 max-sm:w-[150px]  ">
               <input
