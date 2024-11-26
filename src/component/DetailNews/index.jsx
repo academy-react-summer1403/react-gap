@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { BsStopwatch } from "react-icons/bs";
 import { SlLike } from "react-icons/sl";
 import { SlDislike } from "react-icons/sl";
@@ -9,10 +9,13 @@ import { CiSaveUp2 } from "react-icons/ci";
 import { BsSuitHeart } from "react-icons/bs";
 import { VscComment } from "react-icons/vsc";
 import { PiTwitterLogoThin } from "react-icons/pi";
+
 const index = () => {
-  const [detail, setDetail] = useState();
+  const { id } = useParams();
+  const [Detail, setDetail] = useState(null);
   const getNewsDetail = async () => {
-    const res = await http.get(`/News/:Id`);
+    const res = await http.get(`/News/${id}`);
+    console.log(res);
     setDetail(res);
   };
 
@@ -54,17 +57,16 @@ const index = () => {
               <BsStopwatch fill="gray" size={20} className="mt-1" />
               <p className="text-gray-500 mr-2">زمان مطالعه 5 دقیقه</p>
             </div>
-            <h1 className="mt-9 mr-10 text-5xl">
-              آموزش کار با توابع در جاوا اسکریپت | راهی برای حرفه ای شدن
-            </h1>
+            <h1 className="mt-9 mr-10 text-5xl">{Detail?.title}</h1>
             <div className="w-[90%] mx-auto">
               <h2 className="mt-9">
-                توابع (Functions) در زبان برنامه‌نویسی جاوا اسکریپت یکی از
+                {Detail?.describe}
+                {/* توابع (Functions) در زبان برنامه‌نویسی جاوا اسکریپت یکی از
                 اصلی‌ترین ساختارها برای سازماندهی و مدیریت کد هستند. با استفاده
                 از توابع، می‌توانیم کدهای تکراری را کاهش دهیم و منطق برنامه را
                 به بخش‌های کوچکتر تقسیم کنیم. در این مقاله در وب سایت آموزش
                 برنامه نویسی راکت، به بررسی جامع توابع در جاوا اسکریپت، نحوه
-                استفاده از آن‌ها، نکات و تکنیک‌های مفید خواهیم پرداخت.
+                استفاده از آن‌ها، نکات و تکنیک‌های مفید خواهیم پرداخت. */}
               </h2>
               <div className=" w-[130px] h-[60px] mr-[85%] mt-16 flex gap-6">
                 <div className="w-[30px] h-10">

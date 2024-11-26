@@ -9,10 +9,9 @@ import {
   disLiked,
   liked,
 } from "../../../core/Servises/api/Like/Like.api";
+import { Link } from "react-router-dom";
 
 const index = ({ List, PageNumber, setPageNumber, setRand }) => {
-
-
   const likee = async (id, userIsLiked) => {
     try {
       if (!userIsLiked) {
@@ -22,7 +21,9 @@ const index = ({ List, PageNumber, setPageNumber, setRand }) => {
       } else {
         const data = new FormData();
         data.append("CourseLikeId", id);
-        const result = await http.delete(`/Course/DeleteCourseLike`, {data: data,});
+        const result = await http.delete(`/Course/DeleteCourseLike`, {
+          data: data,
+        });
         console.log(result);
         setRand(Math.random());
       }
@@ -31,40 +32,38 @@ const index = ({ List, PageNumber, setPageNumber, setRand }) => {
     }
   };
 
-  const disLikee = async (id , currentUserDissLike) => {
+  const disLikee = async (id, currentUserDissLike) => {
     try {
       if (!currentUserDissLike) {
         const res = await http.post(`/Course/AddCourseDissLike?CourseId=${id}`);
         console.log(res);
         setRand(Math.random());
-      } 
+      }
     } catch (error) {
       throw new Error("ERROR:", error);
     }
   };
 
-  const handleFavorite =async (id , userFavorite)=>{
-
-    try{
-      if(!userFavorite){
-        const res = await http.post(`/Course/AddCourseFavorite` , {courseId:id})
+  const handleFavorite = async (id, userFavorite) => {
+    try {
+      if (!userFavorite) {
+        const res = await http.post(`/Course/AddCourseFavorite`, {
+          courseId: id,
+        });
         console.log(res);
         setRand(Math.random());
+      } else {
+        const data = new FormData();
+        data.append("CourseFavoriteId", id);
+        const result = await http.delete("/Course/DeleteCourseFavorite", {
+          data: data,
+        });
+        setRand(Math.random());
       }
-      else{
-      const data = new FormData();
-        data.append('CourseFavoriteId' , id)
-       const result = await http.delete('/Course/DeleteCourseFavorite' , {data:data} )
-       setRand(Math.random());
-
-      }
-
-    }catch{
+    } catch {
       throw new Error("ERROR:", error);
-
     }
-    
-  }
+  };
 
   return (
     <div className="mr-[370px] -mt-[72%] shadow-xl dark:bg-[#22445D] max-sm:mr-0 ">
@@ -101,17 +100,26 @@ const index = ({ List, PageNumber, setPageNumber, setRand }) => {
 
                   <div className="card-actions justify-end ">
                     {!item.userFavorite ? (
-                    <div className="badge badge-outline p-5 cursor-pointer " onClick={()=>handleFavorite(item.courseId , item.userFavorite)}>
-                    <MdOutlineFavoriteBorder className="" />
-                  </div>
-                    ):(
-                      <div className="badge badge-outline p-5 bg-blue-300 cursor-pointer "  onClick={()=>handleFavorite(item.userFavoriteId , item.userFavorite)}>
-                      <MdOutlineFavoriteBorder className="" />
-                    </div>
+                      <div
+                        className="badge badge-outline p-5 cursor-pointer "
+                        onClick={() =>
+                          handleFavorite(item.courseId, item.userFavorite)
+                        }
+                      >
+                        <MdOutlineFavoriteBorder className="" />
+                      </div>
+                    ) : (
+                      <div
+                        className="badge badge-outline p-5 bg-blue-300 cursor-pointer "
+                        onClick={() =>
+                          handleFavorite(item.userFavoriteId, item.userFavorite)
+                        }
+                      >
+                        <MdOutlineFavoriteBorder className="" />
+                      </div>
                     )}
 
-                    {2>3 ? console.log(1) : console.log(2)}
-
+                    {2 > 3 ? console.log(1) : console.log(2)}
 
                     {item.userIsLiked === false ? (
                       <div className="badge badge-outline p-5   hover:border-none   dark:text-white">
@@ -148,20 +156,18 @@ const index = ({ List, PageNumber, setPageNumber, setRand }) => {
                     ) : (
                       <div className="badge badge-outline p-5 bg-red-400  hover:border-none  dark:text-white">
                         {item.dissLikeCount}
-                        <AiOutlineDislike
-  
-                        />
+                        <AiOutlineDislike />
                       </div>
                     )}
                   </div>
                 </p>
                 <h1 className="mt-2">قیمت دوره:</h1>
                 <h3 className="text-red-500 -mt-5 mr-32">{item.cost}</h3>
-                <button className="btn btn-outline btn-primary h-3 mt-3 mr-9 ">
-                  مشاهده اطلاعات دوره
-                </button>
-
-                
+                <Link to={`/DetailCourse/${item.courseId}`}>
+                  <button className="btn btn-outline btn-primary h-3 mt-3 mr-9 ">
+                    مشاهده اطلاعات دوره
+                  </button>
+                </Link>
               </div>
             </div>
           );

@@ -7,7 +7,7 @@ const index = () => {
   return (
     <div>
      <DetailCourseHolder/>
-     <Detail/>
+     {/* <Detail /> */}
      <QuestionCourse/>
      
     </div>

@@ -11,6 +11,7 @@ import {
   disLiked,
   liked,
 } from "../../../core/Servises/api/Like/Like.api";
+import { Link } from "react-router-dom";
 
 const index = ({ NewsList, setRand }) => {
   const likee = async (id, currentUserIsLike) => {
@@ -44,7 +45,7 @@ const index = ({ NewsList, setRand }) => {
       throw new Error("ERROR:", error);
     }
   };
-
+ 
   return (
     <div>
       <div className="w-11/12 mt-28 mr-16  flex flex-wrap justify-center gap-9 shadow-2xl">
@@ -79,8 +80,6 @@ const index = ({ NewsList, setRand }) => {
                   {item.miniDescribe}
                 </p>
                 <MdOutlineFavoriteBorder className="mt-3 mr-80 w-5 h-5" />
-
-                
                 {item.currentUserIsLike === false ? (
                   <div className="badge badge-outline p-5   hover:border-none   dark:text-white">
                     {item.currentLikeCount}
@@ -120,9 +119,11 @@ const index = ({ NewsList, setRand }) => {
                 )}
                 <AiOutlineDislike className="-mt-5 mr-64 w-5 h-5 " />
                 {/* <h3 className="text-red-500 -mt-5 mr-32">{item.cost}</h3> */}
-                <button className="btn btn-outline btn-primary h-3 mt-3 mr-9 ">
-                  مشاهده دوره
-                </button>
+                <Link to={`/DetailNews/${item.id}`}>
+                  <button className="btn btn-outline btn-primary h-3 mt-3 mr-9 ">
+                    مشاهده دوره
+                  </button>
+                </Link>
               </div>
             </div>
           );

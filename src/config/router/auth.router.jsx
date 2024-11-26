@@ -49,11 +49,11 @@ export const Routers = createBrowserRouter([
         element: <News />,
       },
       {
-        path: "/DetailNews",
+        path: "/DetailNews/:id/",
         element: <DetailNews />,
       },
       {
-        path: "/DetailCourse",
+        path: "/DetailCourse/:id/",
         element: <DetailCourse />,
       },
 
