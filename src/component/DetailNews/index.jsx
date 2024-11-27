@@ -50,17 +50,24 @@ const index = () => {
       <div className="w-[100%] h-[] mt-10 mx-auto rounded-xl flex gap-6">
         <div className="w-[70%] bg-white">
           <div key={index} className="border-2 ">
-            <div className="border-2 w-[90%] h-[500px] mx-auto mt-4 rounded-2xl">
-              <img src="" alt="" />
+            <div className="border-2 w-[90%] h-[480px] mx-auto mt-4 rounded-2xl">
+              <img
+                src="../articlepho.png"
+                className="w-[100%] h-[100%] rounded-2xl"
+                alt="img"
+              />
+             
             </div>
             <div className="w-[200px] h-[50px] flex mt-8 mr-10">
               <BsStopwatch fill="gray" size={20} className="mt-1" />
               <p className="text-gray-500 mr-2">زمان مطالعه 5 دقیقه</p>
             </div>
-            <h1 className="mt-9 mr-10 text-5xl">{Detail?.title}</h1>
+            <h1 className="mt-9 mr-10 text-5xl">
+              {Detail?.detailsNewsDto.title}
+            </h1>
             <div className="w-[90%] mx-auto">
               <h2 className="mt-9">
-                {Detail?.describe}
+                {Detail?.detailsNewsDto.describe}
                 {/* توابع (Functions) در زبان برنامه‌نویسی جاوا اسکریپت یکی از
                 اصلی‌ترین ساختارها برای سازماندهی و مدیریت کد هستند. با استفاده
                 از توابع، می‌توانیم کدهای تکراری را کاهش دهیم و منطق برنامه را
@@ -71,9 +78,11 @@ const index = () => {
               <div className=" w-[130px] h-[60px] mr-[85%] mt-16 flex gap-6">
                 <div className="w-[30px] h-10">
                   <SlLike size={25} />
+                  {Detail?.detailsNewsDto.currentLikeCount}
                 </div>
                 <div className=" w-[30px] h-10">
                   <SlDislike size={25} />
+                  {Detail?.detailsNewsDto.currentUserIsDissLike}
                 </div>
                 <div className="w-[30px] h-10">
                   <MdFavoriteBorder size={25} />

@@ -43,7 +43,7 @@ const index = () => {
 
   // const onSubmit = () => {};
   return (
-    <div className=" border-2  w-[81%] mr-14 bg-white mt-14 rounded-xl">
+    <div className=" border-2  w-[100%] bg-white mt-14">
       <div className="border-2 w-[95%] h-[90%] mt-5 mr-5">
         <h1 className="text-xl text-[#8c8888] font-sans mr-4 mt-3">
           {" "}
@@ -51,26 +51,27 @@ const index = () => {
         </h1>
         {comment?.map((item) => {
           return (
-            <div className="border-2w-[97%] h-[90%] mr-2 mt-3 rounded-lg overflow-y-scroll">
+            <div className="border-2 w-[97%] h-[90%] mr-2 mt-3 rounded-lg overflow-y-scroll">
               <img
                 src={item.pictureAddress}
                 className="border-2 w-20 h-20 rounded-full mr-3 mt-3"
               />
               <div className="text-xs mt-3">{item.insertDate}</div>
               <h1 className="text-sm mr-[105px] -mt-16"> {item.author}</h1>
-              <div className="mr-[800px] -mt-6 flex flex-wrap gap-3">
+              <div className="mr-[950px] -mt-6 flex flex-wrap gap-3">
                 <FcLike  onClick={()=>handleLikeComment(item.id)}  className=" cursor-pointer w-[20px] h-[20px] " />
                 {item.likeCount}
                 <FcDislike onClick={()=>handleDisLike(item.id)} className=" cursor-pointer w-[20px] h-[20px] " />
                 {item.disslikeCount}
               </div>
-              <div className=" border-2 mt-[85px] w-[100%] h-[80px] ">
-                {item.title}
-                {item.describe}
-                <div className=" mr-[700px] mt-10 flex flex-wrap gap-4">
-                  <button onClick={()=>setCount(item.id)} className="text-xs"> مشاهده پاسخ </button>
+              <div className=" mr-[820px] -mt-6 flex flex-wrap gap-4 ">
+                  <button onClick={()=>setCount(item.id)} className="text-xs border-2 w-24 h-8"> مشاهده پاسخ </button>
                   {/* <button className="text-xs"> پاسخ دادن </button> */}
                 </div>
+              <div className="  border-2 mt-[85px] w-[100%] h-[360px] overflow-y-scroll ">
+                {item.title}
+                {item.describe}
+            
                 {Count === item.id && <CommentReply commentId={item.id}/>}
               </div>
             </div>
