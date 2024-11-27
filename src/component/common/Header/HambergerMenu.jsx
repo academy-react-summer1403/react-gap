@@ -6,8 +6,8 @@ import { IoVideocam } from "react-icons/io5";
 import { HiOutlineNewspaper } from "react-icons/hi2";
 import { IoIosLink } from "react-icons/io";
 import { list } from "@material-tailwind/react";
-import DarkTheme from "../DarkTheme";
-import SearchLanding from "../SearchLanding";
+// import DarkTheme from "../DarkTheme";
+// import SearchLanding from "../SearchLanding";
 
 const HambergerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,15 +16,15 @@ const HambergerMenu = () => {
   };
 
   return (
-    <div className="z-50  max-sm:-mr-[500px] max-sm:mt-12 md:hidden max-md:-mr-[550px] max-md:mt-12 ">
-      <button>
+    <div className="z-50  max-sm:mr-[40px] md:hidden max-md:-mr-[550px] max-md:mt-12 ">
+      <button className="">
         <IoMenu
-          size={35}
+          size={45}
           className="text-5xl cursor-pointer"
           onClick={toggleMenu}
         />
         {isOpen && (
-          <div className="-mt-32 absolute right-0  w-auto h-[100vh] bg-white shadow-lg rounded-md  dark:bg-slate-900">
+          <div className=" absolute right-0  w-auto h-[100vh] bg-white shadow-lg rounded-md  dark:bg-slate-900">
             <IoMdClose
               size={35}
               className=" text-5xl cursor-pointer mr-48 mt-5"
@@ -49,10 +49,10 @@ const HambergerMenu = () => {
                 لینک های مفید
               </li>
               <div className="">
-                <SearchLanding />
+                {/* <SearchLanding /> */}
               </div>
               <li className="px-4">
-                <DarkTheme />
+                {/* <DarkTheme /> */}
               </li>
             </ul>
           </div>

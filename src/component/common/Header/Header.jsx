@@ -7,6 +7,7 @@ import axios from "axios";
 import { getData } from "../../../core/Storage/LocalStorage.storage";
 import { FaUserLarge } from "react-icons/fa6";
 import { SlHandbag } from "react-icons/sl";
+import HambergerMenu from "./HambergerMenu"
 const Header = () => {
 
 
@@ -41,6 +42,7 @@ const Header = () => {
     <Fragment>
       <div className="border-2 border-transparent dark:bg-[#22445D]">
         <div className=" bg-white rounded-2xl w-[85%] mt-9 mx-auto flex justify-between h-32 dark:bg-blue-950 shadow-lg">
+        <HambergerMenu/>
           <Link to="/" className="flex  gap-2  w-60 h-20 m-6 ">
             <div className=" w-[150px] h-[100px] relative bottom-5 right-9 ">
               <img src="./logoabi.png " />
