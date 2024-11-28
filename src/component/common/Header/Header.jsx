@@ -75,11 +75,11 @@ const Header = () => {
             {getData("login") && (
               <NavLink to="/panel">
                 <div className="avatar">
-                  <div className="ring-slate-500 ring-offset-base-100 w-16 rounded-full ring ml-7 bg-slate-300 ">
+                  <div className="ring-slate-500 ring-offset-base-100 w-16 rounded-full ring ml-7 bg-slate-300 max-sm:w-14 max-sm:mt-3 max-sm:mr-4">
                     <FaUserLarge
                       size={30}
                       fill="white"
-                      className="mt-4 mr-4 bg-slate-300"
+                      className="mt-4 max-sm:mr-3 mr-4 bg-slate-300"
                     />
                   </div>
                 </div>
