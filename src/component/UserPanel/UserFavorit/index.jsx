@@ -93,7 +93,7 @@ const App = () => {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
   return (
-    <div className="border-2 border-redw-full h-[300px]">
+    <div className="border-2 border-redw-full h-[300px] ">
       <Layout
         style={{
           minHeight: "100vh",
@@ -194,9 +194,9 @@ const App = () => {
                         </label>
                       </th>
                       <td>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-3 ">
                           <div className="avatar">
-                            <div className="mask mask-squircle h-12 w-12">
+                            <div className="mask mask-squircle h-12 w-12 ">
                               <img
                                 src="./panel2.png"
                                 alt="Avatar Tailwind CSS Component"
