@@ -5,7 +5,7 @@ import "leaflet/dist/leaflet.css";
 const Map = () => {
   const position = [36.5659, 53.0586];
   return (
-    <div className="w-[80%] h-[500px] mx-auto">
+    <div className="w-[80%] h-[500px] mx-auto max-sm:relative max-sm:top-32 max-sm:mt-5">
        <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ width:" 100%",
     height:" 60vh"}}>
       <TileLayer
