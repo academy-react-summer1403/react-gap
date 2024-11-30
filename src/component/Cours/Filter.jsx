@@ -8,7 +8,7 @@ const Filter = () => {
   return (
     <div className=" border-2 h-[686px] w-[310px] bg-[#FBF6F6]  rounded-3xl  mr-[40px] mt-20 shadow-md">
       <div className=" text-center text-xl mt-8">
-        <h1 className=" ">فیلترها</h1>
+        <h1 className="border-2 border-red-800 ">فیلترها</h1>
       </div>
 
       <ul className="mt-9 transition list-none">

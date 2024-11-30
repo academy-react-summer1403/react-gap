@@ -66,13 +66,13 @@ const index = ({ List, PageNumber, setPageNumber, setRand }) => {
   };
 
   return (
-    <div className="mr-[370px] -mt-[72%] shadow-xl dark:bg-[#22445D] max-sm:mr-0 ">
-      <div className=" w-[100%] h-[90%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px] rounded-lg ">
+    <div className="mr-[370px] -mt-[72%] shadow-xl dark:bg-[#22445D] max-sm:mr-0">
+      <div className=" w-[100%] h-[90%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px] rounded-lg max-sm:mt-60">
         {List?.courseFilterDtos.map((item, index) => {
           return (
             <div
               key={index}
-              className=" shadow-2xl w-[30%] h-[480px] mx-auto bg-white rounded-2xl "
+              className="shadow-2xl w-[30%] h-[480px] mx-auto bg-white rounded-2xl max-sm:w-[90%]"
             >
               <div className="">
                 <img
@@ -122,7 +122,7 @@ const index = ({ List, PageNumber, setPageNumber, setRand }) => {
                     {2 > 3 ? console.log(1) : console.log(2)}
 
                     {item.userIsLiked === false ? (
-                      <div className="badge badge-outline p-5   hover:border-none   dark:text-white">
+                      <div className="badge badge-outline p-5  hover:border-none dark:text-white">
                         {item.likeCount}
                         <AiOutlineLike
                           onClick={() => {
@@ -132,7 +132,7 @@ const index = ({ List, PageNumber, setPageNumber, setRand }) => {
                         />
                       </div>
                     ) : (
-                      <div className="badge badge-outline p-5  bg-[#41d3a7]   hover:border-none   dark:text-white">
+                      <div className="badge badge-outline p-5  bg-[#41d3a7]  hover:border-none dark:text-white">
                         {item.likeCount}
                         <AiOutlineLike
                           onClick={() => {
@@ -144,7 +144,7 @@ const index = ({ List, PageNumber, setPageNumber, setRand }) => {
                     )}
 
                     {item.currentUserDissLike === false ? (
-                      <div className="badge badge-outline p-5   hover:border-none  dark:text-white">
+                      <div className="badge badge-outline p-5 hover:border-none dark:text-white">
                         {item.dissLikeCount}
                         <AiOutlineDislike
                           onClick={() => {

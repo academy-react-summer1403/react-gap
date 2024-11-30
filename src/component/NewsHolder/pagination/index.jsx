@@ -7,9 +7,9 @@ const index = () => {
     <button
       className="join-item btn"
     >
-      last
+      قبلی
     </button>
- 
+
       return (
         <button className="join-item btn">
           {item}
@@ -20,7 +20,7 @@ const index = () => {
 
       className="join-item btn"
     >
-      next
+      بعدی
     </button>
   </div>
   )

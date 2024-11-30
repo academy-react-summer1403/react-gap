@@ -57,20 +57,18 @@ const App = () => {
           }}
         >
           
-          <div className="mr-8 w-[40%] h-24 flex flex-wrap max-sm:hidden ">
+          <div className="mr-8 w-[40%] h-24 flex flex-wrap max-sm:w-[80%] max-sm:text-wrap max-sm:mr-10">
             <div className=" text-2xl font-bold text-[rgb(51,65,85)]">
               <h1> دوره های آموزشی </h1>
             </div>
 
-            <div className="mt-10 -mr-[30%] text-lg text-[rgb(149,160,177)]">
+            <div className="mt-10 -mr-[30%] text-lg text-[rgb(149,160,177)]  max-sm:text-wrap max-sm:relative max-sm:right-8">
               <p> دوره ببین، تمرین کن، برنامه نویس شو</p>
             </div>
           </div>
 
-          <h1 className="mr-[550px] font-sans text-xl"> بیش از 10 عنوان آموزشی </h1>
+          <h1 className="mr-[550px] font-sans text-xl max-sm:hidden"> بیش از 10 عنوان آموزشی </h1>
         </Breadcrumb>
-
-       
         <div
           style={{
             minHeight: 280,
