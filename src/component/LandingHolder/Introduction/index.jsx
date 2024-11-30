@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 const index = () => {
   const [TopTeacher, setTTopTeacher] = useState(null);
 
+
   const getTopTeacher = async () => {
     const res = await axios.get(
       "https://classapi.sepehracademy.ir/api/Home/GetTeachers"
@@ -28,7 +29,7 @@ const index = () => {
         <h1 className="relative top-10 right-6 font-bold text-2xl">
           و مربیان خبره در یک مکان
         </h1>
-        <div className="div">
+        <div className="">
           <p className="w-[80%] h-[10%] relative top-16 right-6 text-xs">
             نوشتن کار جالبیه که از هزاران سال همراه ما بوده و کمک کرده تا همیشه
             به روز باشیم، ما در راکت فضای رو به شکلی آماده کردیم تا شما بتونید

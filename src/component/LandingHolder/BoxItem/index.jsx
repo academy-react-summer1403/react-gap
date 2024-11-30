@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const index = () => {
   return (
     <div className=" bg-white dark:bg-[#22445D] ">
-      <div className="border-transparent  w-[70%] h-[380px] flex justify-center flex-wrap mt-16 mr-[15%] gap-4">
+      <div className="border-transparent  w-[70%] h-[400px] flex justify-center flex-wrap mt-16 mr-[15%] gap-4">
         <div className="w-[35%] h-[300px] mt-28">
           <img src="./about us.png" alt="Img" className="max-sm:hidden" />
           <div className="w-[25%] h-[120px] relative bottom-[380px] right-[220px]">

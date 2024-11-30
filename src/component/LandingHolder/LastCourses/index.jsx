@@ -76,7 +76,6 @@ const index = () => {
                 </p>
                 <h1>قیمت دوره:</h1>
                 <h3 className="text-red-500 -mt-5 mr-32">{item.cost}</h3>
-                <Like />
                 <button className="btn btn-outline btn-primary h-3 mt-3 mr-9">
                   مشاهده اطلاعات دوره
                 </button>
