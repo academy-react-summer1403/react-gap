@@ -14,7 +14,7 @@ const index = ({ title, icon, url }) => {
         navigate(url);
       }}
       className={`h-[40px] min-w-[120px]  ${
-        value === currurl ? "text-blue-300" : "text-textColorBlack"
+        value === currurl ? "text-green-500" : "text-textColorBlack"
       } flex gap-4 
         cursor-pointer
                         max-2lg:pr-0 max-2lg:gap-5

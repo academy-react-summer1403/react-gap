@@ -9,9 +9,9 @@ const HeaderPanel = () => {
   return (
     <div>
       <div>
-        <div className=" bg-white rounded-2xl w-[100%] mx-auto flex h-32 dark:bg-blue-950">
+        <div className="rounded-2xl w-[100%] mx-auto flex h-32 dark:bg-[#22445D]">
           <Link to="/" className="flex  gap-2  w-60 h-20 m-6">
-            <div className=" w-[150px] h-[100px] relative bottom-5 right-6">
+            <div className=" w-[180px] relative top-2 right-6">
               <img src="./logoabi.png" className="" />
             </div>
 

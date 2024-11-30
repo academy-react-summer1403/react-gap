@@ -25,7 +25,7 @@ const index = () => {
 
   return (
     <div className=" flex justify-center w-[90%] h-[600px] mx-auto mt-10">
-      {/* <div className="w-[50%] h-[100%] bg-[#FBF6F6;] rounded-2xl shadow-2xl sm:w-[100%] xl:w-[50%]">
+      <div className="w-[50%] h-[100%] bg-[#FBF6F6;] rounded-2xl shadow-2xl sm:w-[100%] xl:w-[50%]">
         <h1 className=" relative right-14 top-10 text-2xl">ثبت نام</h1>
         <div className="flex flex-wrap justify-center mr-16 w-[90%] h-[75%] mt-14  sm:w-[80%]">
           <Formik
@@ -56,7 +56,7 @@ const index = () => {
             <Link to="/Step1">بازگشت به صفحه قبل </Link>
           </button>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

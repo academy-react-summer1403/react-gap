@@ -9,7 +9,7 @@ const index = () => {
       </div>
       <div className=" w-[90%] h-[400px] relative top-32 left-1 text-right">
         <br />
-        <h1 className="text-5xl text-gray-700 font-medium dark:text-white ">
+        <h1 className="text-5xl text-gray-700 font-medium dark:text-white  font-family:[Dana ExtraBlack]">
           داستان برنامه‌نویس{" "}
         </h1>
         <h1 className="text-5xl text-gray-700 font-medium dark:text-white ">

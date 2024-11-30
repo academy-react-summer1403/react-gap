@@ -46,28 +46,13 @@ const Header = () => {
             <h1 className="text-[#22445D;] font-inter text-[14px] m-3"></h1>
           </Link>
 
-          <div className=" m-10">
-            <label className=" input input-bordered flex items-center w-96 gap-2  bottom-1">
-              <input
-                type="text"
-                className="grow "
-                placeholder="هرچی می‌خوای اینجا جستجو کن"
-                onChange={handleSearch}
-              />
-              <div>
-                {CourseList?.courseFilterDtos.map((item) => {
-                  return (
-                    <div>
-                      <h1></h1>
-                    </div>
-                  );
-                })}
-              </div>
+          <div className=" m-10 w-[50%] -mr-14">
+            <label className=" input input-bordered flex items-center w-[100%] gap-2  bottom-1 bg-slate-100 border-none font-sans">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
                 fill="currentColor"
-                className="h-4 w-4 opacity-70"
+                className="h-6 w-6 opacity-70"
               >
                 <path
                   fillRule="evenodd"
@@ -75,10 +60,16 @@ const Header = () => {
                   clipRule="evenodd"
                 />
               </svg>
+              <input
+                type="text"
+                className="grow outline-none"
+                placeholder="دنبال چی میگردی؟"
+                onChange={handleSearch}
+              />
             </label>
           </div>
 
-          <div className="w-40 h-10 relative top-12 cursor-pointer">
+          <div className="w- h-10 relative top-12 cursor-pointer -mr-16">
             <label
               htmlFor="DarkId"
               onClick={handelDark}
@@ -122,13 +113,9 @@ const Header = () => {
           <div className="m-6">
             {getData("login") && (
               <NavLink to="/panel">
-                <div className="avatar">
-                  <div className="ring-slate-500 ring-offset-base-100 w-16 rounded-full ring ml-7 bg-slate-300 ">
-                    <FaUserLarge
-                      size={30}
-                      fill="white"
-                      className="mt-4 mr-4 bg-slate-300"
-                    />
+                <div className="avatar online ">
+                  <div className="w-20 ring-1 rounded-full">
+                    <img src="./panel3.png" />
                   </div>
                 </div>
               </NavLink>
@@ -145,15 +132,13 @@ const Header = () => {
               </NavLink>
             )}
 
-
-{getData("login") && (
+            {getData("login") && (
               <NavLink to="/Basket">
-                  <div className="w-16 h-10 -mt-12 -mr-20">
-              <SlHandbag fill="blue" size={30} />
-            </div>{" "}
+                <div className="w-16 h-10 -mt-16 -mr-14">
+                  <SlHandbag fill="orange" size={30} />
+                </div>{" "}
               </NavLink>
             )}
-
           </div>
         </div>
       </div>
