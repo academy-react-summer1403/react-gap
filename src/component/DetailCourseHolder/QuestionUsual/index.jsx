@@ -1,5 +1,8 @@
 import React from "react";
 import { FaQuestionCircle } from "react-icons/fa";
+import DetailComment from '../DetailComment'
+
+
 const index = () => {
   return (
     <div>
@@ -76,6 +79,7 @@ const index = () => {
           </div>
         </div>
       </div>
+      <DetailComment/>
     </div>
   );
 };

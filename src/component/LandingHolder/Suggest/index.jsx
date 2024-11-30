@@ -1,7 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import React from "react";
 import * as yup from "yup";
-import { AiFillMessage } from "react-icons/ai";
 const index = () => {
   // const validation = yup.object().shape({
   //   lastName: yup.string().required("پر کردن این فیلد اجباریست"),
@@ -9,9 +8,8 @@ const index = () => {
   //   txt: yup.string().required("پر کردن این فیلد اجباریست"),
   // });
   return (
-    <div className=" h-[800px] ">
-      <div className=" h-[100px] text-center relative top-[30px] ">
-        <AiFillMessage className="mr-[34%] -mb-14" size={60} fill="orange" />
+    <div className=" h-[800px] max-sm:mt-96 ">
+      <div className=" h-[100px] text-center relative top-[30px]   ">
         <h1 className="text-[#22445D] text-4xl dark:text-white">
           {" "}
           پیشنهادات و انتقادات{" "}
@@ -25,16 +23,19 @@ const index = () => {
 
       <div className="flex justify-center gap-5 w-[90%] h-[500px] mx-auto relative top-[60px] left-[150px]">
         <div className="w-44 h-8 relative right-[350px] bottom-[100px] ">
-          <img src="./flash4.png" className="" />
+          <img src="./flash4.png" className="max-sm:hidden" />
         </div>
         <div>
           <div className="w-[100%] h-[300px] mx-auto mt-20">
-            <Formik initialValues={{ lastName: "", email: "", txt: "" }}>
+            <Formik
+              initialValues={{ lastName: "", email: "", txt: "" }}
+            
+            >
               <Form>
                 <Field
                   className="w-[100%] h-[60px] border-2 border-[#1b426b] mt-2 rounded-lg bg-[#fff] outline-none 
-                
-                  
+                  max-sm:w-[100%]
+                   max-sm:mr-32
                   placeholder: text-xl
                    placeholder:text-[#22445D]
                     placeholder:p-6
@@ -49,7 +50,8 @@ const index = () => {
                 />
                 <Field
                   className="w-[100%] h-[60px] border-2 border-[#1b426b]  mt-3 rounded-xl bg-[#fff] outline-none
-              
+                  max-sm:w-[100%]
+                   max-sm:mr-32
                     placeholder: text-xl
                    placeholder:text-[#22445D;]
                     placeholder:p-6 
@@ -64,6 +66,8 @@ const index = () => {
                 />
                 <Field
                   className="w-[100%] h-[140px] border-2 border-[#1b426b] mt-3 rounded-lg bg-[#fff] outline-none
+                   max-sm:w-[100%]
+                   max-sm:mr-32
                     placeholder: text-xl
                    placeholder:text-[#22445D;]
                     placeholder:p-6

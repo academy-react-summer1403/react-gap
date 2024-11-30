@@ -16,7 +16,7 @@ const App = ({ totalCount, PageNumber, setPageNumber }) => {
         onClick={() => setPageNumber(PageNumber - 1)}
         className="join-item btn"
       >
-        last
+        قبلی
       </button>
       {pagenArr?.map((item) => {
         return (
@@ -29,7 +29,7 @@ const App = ({ totalCount, PageNumber, setPageNumber }) => {
         onClick={() => setPageNumber(PageNumber + 1)}
         className="join-item btn"
       >
-        next
+        بعدی
       </button>
     </div>
   );

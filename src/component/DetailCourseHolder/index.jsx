@@ -1,9 +1,19 @@
-import { div } from "framer-motion/client";
-import React from "react";
+
+import React, { useEffect, useState } from "react";
 
 const index = () => {
+  const [DetailCourses, setDetailCourses] = useState();
+  const getCoursesDetail = async () => {
+    const res = await http.get(`/Home/GetCourseDetails?CourseId=6c0a12ea-6a73-ee11-b6c7-ca6d3e095898`);
+    setDetail(res);
+  };
+
+  useEffect(() => {
+    getCoursesDetail();
+  }, []);
+
   return (
-    <div className="w-[100%]">
+    <div className="w-[100%] ">
       <div className="w-[80%] h-[400px] mx-auto mt-10 bg-white rounded-lg shadow-xl">
         <div className="w-[100%] h-[340px] rounded-lg flex">
           <div className=" w-[60%] h-[95%]">
@@ -37,7 +47,7 @@ const index = () => {
           </div>
         </div>
         <div className="w-[100%] h-[60px]">
-        <button className="btn btn-info text-white w-[100%] h-[100%]">شروع ثبت نام در دوره</button>
+        <button className="btn btn-info text-white w-[100%] h-[100%]">خرید دوره</button>
         </div>
       </div>
 

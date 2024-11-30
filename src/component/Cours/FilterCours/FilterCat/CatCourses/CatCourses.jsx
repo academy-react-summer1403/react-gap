@@ -13,7 +13,7 @@ const CatCourses = ({ handleTech }) => {
   }, []);
 
   return (
-    <div className="border-2 w-[90%] h-[300px] flex flex-wrap  mr-5 justify-start mt-5 rounded-xl bg-[#fff] max-sm:hidden">
+    <div className=" w-[90%] h-[500px] flex flex-wrap  mr-5 justify-start mt-5 rounded-xl bg-[#fff]">
       <h1 className=" mt-7 mr-8 font-bold text-xl "> دسته بندی دوره ها </h1>
       <div className="w-28 h-32 flex flex-wrap justify-start -mr-40 mt-16 ">
         {CourseTech?.map((item, index) => {

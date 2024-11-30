@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import {
   DesktopOutlined,
   FileOutlined,
@@ -12,6 +11,7 @@ import { Content } from "antd/es/layout/layout";
 import { div } from "framer-motion/client";
 
 import { NavLink } from "react-router-dom";
+import HambergerMenu from "../../common/Header/HambergerMenu";
 const { Sider } = Layout;
 function getItem(label, key, icon, NavLink) {
   return {
@@ -92,7 +92,7 @@ const App = () => {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
   return (
-    <div className=" w-full h-[300px]">
+    <div className=" w-full h-[300px] ">
       <Layout
         style={{
           minHeight: "100vh",
