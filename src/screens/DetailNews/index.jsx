@@ -7,8 +7,8 @@ const index = () => {
   return (
  <>
  <DetailNews/>
- <CommentsDetail/>
- <BoxComment/>
+ {/* <CommentsDetail/>
+ <BoxComment/> */}
  </>
   )
 }
