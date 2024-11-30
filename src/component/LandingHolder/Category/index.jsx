@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const index = () => {
   return (
     <div className=" h-[230px] mt-[85px]">
       <div className="border-2 w-[70%] h-[170px] bg-[#5751E1] relative top-6 rounded-2xl mx-auto ">
         <div className=" w-[200px] h-[410px] mr-[1000px] mt-  lg:block">
-          <img src="./line.png" className=""/>
+          <img src="./line.png" className="" />
         </div>
 
         <div className=" w-[250px] h-[410px] mr-20 -mt-[325px] ">
@@ -21,12 +22,15 @@ const index = () => {
             ما هر روز کلی مطالب آموزشی جالب در اینستاگراممون منتشر می‌کنیم!
           </h1>
         </div>
-        <button className="btn btn-primary text-black bg-[#FFC224]
+        <Link to={`http://localhost:5176/Connect`}>
+          <button
+            className="btn btn-primary text-black bg-[#FFC224]
          hover:bg-[#FFC224] relative bottom-[305px] right-[70%]
-        ">
-          مشاهده پست های اینستاگرام{" "}
-        </button>
-      
+        "
+          >
+            مشاهده پست های اینستاگرام{" "}
+          </button>
+        </Link>
       </div>
     </div>
   );

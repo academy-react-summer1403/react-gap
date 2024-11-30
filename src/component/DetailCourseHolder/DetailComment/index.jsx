@@ -4,106 +4,82 @@ import { FaUserLarge } from "react-icons/fa6";
 import { MdOutlineReplyAll } from "react-icons/md";
 import { Field, Formik } from "formik";
 import http from "../../../core/Servises/interceptor";
+import { FcLike } from "react-icons/fc";
+import { FcDislike } from "react-icons/fc";
+import AddCourseComment from "./AddCourseComment";
+import CommentReply from "./CommentReply";
 
 const index = () => {
-  const {id} = useParams();
-  const [CourseComment, setCourseComment] = useState(null);
+  const { id } = useParams();
+  const [comment, setComment] = useState(null);
+  const [Count, setCount] = useState(null);
+  const [rand, setRand] = useState(0);
+  const [dIsLike, setDIsLike] = useState();
 
-  const getComments = async () => {
+  const getCommment = async () => {
     const res = await http.get(`/Course/GetCourseCommnets/${id}`);
-    console.log(res);
-    setCourseComment(res);
+    console.log(`comments , res`);
+    setComment(res);
   };
 
   useEffect(() => {
-    getComments();
-  }, []);
+    getCommment();
+  }, [rand , dIsLike]);
 
-  const onSubmit = () => {};
+  const handleLikeComment = async (commentId) =>{
+    const res = await http.post(`/Course/AddCourseCommentLike?CourseCommandId=${commentId}`)
+    setRand(Math.random())
+    console.log(res)
+  }
+
+
+  const handleDisLike = async (commentId) =>{
+    const res = await http.post(`/Course/AddCourseCommentDissLike?CourseCommandId=${commentId}`)
+    setDIsLike(Math.random())
+    console.log(res)
+  }
+
+
+
+  // const onSubmit = () => {};
   return (
-    <div className=" w-[61%] h-[600px] mr-40 bg-white mt-10 rounded-xl">
-      <div role="tablist" className="tabs">
-        <input
-          type="radio"
-          name="my_tabs_1"
-          role="tab"
-          className="tab text-xl"
-          aria-label="نظرات کاربران"
-        />
-
-        <div role="tabpanel" className="tab-content p-10">
-          <div className="border-2 w-[90%] h-96 rounded-2xl">
-            {" "}
-            <div className="border-b-2 w-[95%] h-20 mx-auto flex justify-around">
-              <NavLink to="/panel">
-                <div className="avatar mt-1">
-                  <div className="ring-green-500 ring-offset-base-100 w-16 rounded-full ring ml-7 bg-slate-300">
-                    <FaUserLarge
-                      size={30}
-                      fill="white"
-                      className="mt-4 mr-4 bg-slate-300"
-                    />
-                  </div>{" "}
-                  <h1 className="mt-4 font-thin">عاطفه کاویانی</h1>
-                </div>
-              </NavLink>
-
-              <button className="border-2 w-20 h-8 mt-4 bg-slate-200 rounded-lg">
-                پاسخ
-                <MdOutlineReplyAll className="-mt-4" />
-              </button>
-            </div>{" "}
-            <h1 className=" w-[90%] mx-auto mt-4">
-              سلام ت بهم پیشنهاد بدین و اگر نیست بنویسید دمتون گرم بابت بابت
-              انرژی ای که برامون میزارین❤️
-            </h1>
-          </div>
-        </div>
-
-        <input
-          type="radio"
-          name="my_tabs_1"
-          role="tab"
-          className="tab text-xl "
-          aria-label=" افزودن نظر جدید"
-        />
-
-        {CourseComment?.map((item , index) => {
+    <div className=" border-2  w-[100%] bg-white mt-14">
+      <div className="border-2 w-[95%] h-[90%] mt-5 mr-5">
+        <h1 className="text-xl text-[#8c8888] font-sans mr-4 mt-3">
+          {" "}
+          نظرات شما{" "}
+        </h1>
+        {comment?.map((item) => {
           return (
-            <div key={index}>
-
-        <div role="tabpanel" className="tab-content p-10">
-          <NavLink to="/panel">
-            <div className="avatar">
-              <div className="ring-green-500 ring-offset-base-100 w-16 rounded-full ring ml-7 bg-slate-300 ">
-                <FaUserLarge
-                  size={30}
-                  fill="white"
-                  className="mt-4 mr-4 bg-slate-300"
-                />
-              </div>{" "}
-              <h1 className="mt-4 font-thin"> ;dhkd</h1>
-            </div>
-          </NavLink>
-          <Formik initialValues={{ name: "comment" }} onSubmit={onSubmit}>
-            <Form>
-              <Field
-                name="comment"
-                placeholder="متن مورد نظر خود را وارد کنید ..."
-                className="border-2 w-[90%] h-72 mt-7"
+            <div className="border-2 w-[97%] h-[90%] mr-2 mt-3 rounded-lg overflow-y-scroll">
+              <img
+                src={item.pictureAddress}
+                className="border-2 w-20 h-20 rounded-full mr-3 mt-3"
               />
-              <button className="btn btn-primary mt-8">ثبت دیدگاه</button>
-              <button className="btn btn-outline btn-primary mr-3">
-                انصراف
-              </button>
-            </Form>
-          </Formik>
-        </div>
-        </div>
-          )
-          
+              <div className="text-xs mt-3">{item.insertDate}</div>
+              <h1 className="text-sm mr-[105px] -mt-16"> {item.author}</h1>
+              <div className="mr-[950px] -mt-6 flex flex-wrap gap-3">
+                <FcLike  onClick={()=>handleLikeComment(item.id)}  className=" cursor-pointer w-[20px] h-[20px] " />
+                {item.likeCount}
+                <FcDislike onClick={()=>handleDisLike(item.id)} className=" cursor-pointer w-[20px] h-[20px] " />
+                {item.disslikeCount}
+              </div>
+              <div className=" mr-[820px] -mt-6 flex flex-wrap gap-4 ">
+                  <button onClick={()=>setCount(item.id)} className="text-xs border-2 w-24 h-8"> مشاهده پاسخ </button>
+                  {/* <button className="text-xs"> پاسخ دادن </button> */}
+                </div>
+              <div className="  border-2 mt-[85px] w-[100%] h-[360px] overflow-y-scroll ">
+                {item.title}
+                {item.describe}
+            
+                {Count === item.id && <CommentReply commentId={item.id}/>}
+              </div>
+            </div>
+          );
         })}
+        <AddCourseComment />
       </div>
+
     </div>
   );
 };

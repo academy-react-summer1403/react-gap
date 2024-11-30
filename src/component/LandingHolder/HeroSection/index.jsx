@@ -36,9 +36,11 @@ const index = () => {
 
         <div>
           <NavLink to={"/courses"}>
-            <button className="btn btn-info  text-xl font-inter w-48 h-8 relative right-11
-              text-black mx-16 mr-44 font-thin mt-16 dark:text-white max-sm:w-[50%] 
-              max-sm:relative max-sm:-right-[65px] max-sm:-top-10 ">
+            <button
+              className="btn btn-info bg-[#3595f6 w-[200px] h-[60px] text-xl font-inter 
+             text-black mx-16 mr-44 font-thin mt-16 dark:text-white 
+             "
+            >
               بزن بریم
             </button>
           </NavLink>
