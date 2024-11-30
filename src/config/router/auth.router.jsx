@@ -31,7 +31,7 @@ export const Routers = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children: [
+    children: [        
       {
         path: "/",
         element: <Landing />,
@@ -62,35 +62,36 @@ export const Routers = createBrowserRouter([
         element: <Connect />,
       },
 
-      {
-        path: "/Login",
-        element: <Login />,
-        errorElement: <Error404 />,
-      },
-
-      {
-        path: "/LoginSystem",
-        element: <LoginSystem />,
-      },
-      {
-        path: "/Step1",
-        element: <Register />,
-      },
-      {
-        path: "/Step2",
-        element: <RegisterStep2 />,
-      },
-      {
-        path: "/Step3",
-        element: <RegisterStep3 />,
-      },
-      {
-        path: "/NewPass",
-        element: <ResetPass />,
-      },
+     
     ],
   },
 
+  {
+    path: "/Login",
+    element: <Login />,
+    errorElement: <Error404 />,
+  },
+
+  {
+    path: "/LoginSystem",
+    element: <LoginSystem />,
+  },
+  {
+    path: "/Step1",
+    element: <Register />,
+  },
+  {
+    path: "/Step2",
+    element: <RegisterStep2 />,
+  },
+  {
+    path: "/Step3",
+    element: <RegisterStep3 />,
+  },
+  {
+    path: "/NewPass",
+    element: <ResetPass />,
+  },
   {
     path: "*",
     element: <Error404 />,

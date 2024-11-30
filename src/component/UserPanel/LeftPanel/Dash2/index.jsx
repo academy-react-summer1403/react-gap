@@ -20,7 +20,7 @@ const index = () => {
     <div className=" bg-white w-[85%] h-[500px] rounded-3xl mt-10 dark:bg-slate-900 shadow-lg">
       <div className=" w-[60%] h-[120px] mt-4 rounded-3xl flex mr-10 ">
       <div className="w-1/4">
-          <img src={MyInfo?.userImage[0].puctureAddress} className="h-24 rounded-full ring-1 mt-3 mr-4"/>
+          {/* <img src={MyInfo?.userImage[0].puctureAddress} className="h-24 rounded-full ring-1 mt-3 mr-4"/> */}
         </div>
         <h1 className="text-2xl mt-9 dark:shadow-xl">
           سلام {MyInfo?.fName} {MyInfo?.lName} عزیز خوش آمدید 
