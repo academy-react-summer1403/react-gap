@@ -1,667 +1,160 @@
-import React, { useState } from 'react'
-// Import swiper react components
+import React, { useEffect, useState } from "react";
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import swiper styles
+// Import Swiper styles
 import "swiper/css";
-
-//Import swiper core and required modules
+import axios from "axios";
+// import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-//some-inner-component.jsx
-import { useSwiper } from "swiper/react";
-//Import Swiper styles
-import { AiOutlineLike } from "react-icons/ai";
-import { BiDislike } from "react-icons/bi";
-import { IoStarOutline } from "react-icons/io5";
-import { TbNumber5 } from "react-icons/tb";
-
+// some-inner-component.jsx
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { NavLink } from "react-router-dom";
+import { AiOutlineLike } from "react-icons/ai";
+import { AiOutlineDislike } from "react-icons/ai";
+import { FaRegStar } from "react-icons/fa";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 const index = () => {
-  const [SliderCourses, setSliderCourses] = useState([
-    {id:1, name:'item 1', 
-    picture:"./picturecourse.png" ,
-    button:'وضعیت دوره ',
-    title:'آشنایی با برنامه نویسی با وردپرس' ,
-    speech:'50 سخنرانی (190 ساعته )',
-    text:'هزینه تمام دوره :' ,
-    price:'300000 تومان',
-     desc:" در این صفحه آموزشهای برنامه نویسی زبانهای رایج را به صورت کاملا اصولی و پایه ای آموزش می دهیم که با کمک آن می توانید، اپلیکیشن بسازید، وب دیزاین انجام دهید و … به استعداد و علاقه شما بستگی دارد." ,
-    detail:'جزئیات دوره' ,
-    reservation:"رزرو دوره ",
-    pic:'./icons8.png' ,
-    icon:'./icons9.png'  } , 
+  const [TopSliderList, setTopSliderList] = useState(null);
 
-  ]);
+  const getTopSliderList = async () => {
+    const res = await axios.get(
+      "https://classapi.sepehracademy.ir/api/Home/GetCoursesTop?Count=5"
+    );
+    setTopSliderList(res.data);
+  };
 
-
+  useEffect(() => {
+    getTopSliderList();
+  }, []);
 
   return (
-    <div className='h-[1100px] ' >
-        <div className=" w-[60%] h-[105px] text-center mr-80 mt-12 ">
-          <h1 className="text-[#22445D;] text-4xl"> دوره های ما </h1>
+    <div className="w-[100%] h-[800px] mb-4 bg-[#f6f8f9] to-[rgb(246,248,249)]">
+      <h1 className="text-center text-xl text-[rgb(93,134,210)] -mb-5">
+        با آموزش‌های برنامه نویسی کد دات، برنامه‌نویسی را یک بار و برای همیشه
+        یاد بگیر.
+      </h1>
+      <p className="text-center text-sm text-[rgb(4,10,10)] mt-6">
+        همون طور که تا حالا هزاران نفر از مخاطبین کد دات تونستن این کارو انجام
+        بدن.
+      </p>
 
-        <p className="text-[#22445D;] text-2xl font-normal mt-2">
-          {" "}
-          ساختن دنیایی بهتر، یک دوره در یک زمان{" "}
-        </p>
+      <div className=" w-20 h-72 mt-36">
+        <img src="./sidphoto2.png" alt="img" />
       </div>
-      <div className='w-[98%] mx-auto m-10 '>
 
-        {SliderCourses.map((item) =>{
-          return(
-            <div className="h-[900px]">
-              <Swiper className=' w-[95%] h-[700px] relative top-20'
+      <div className=" w- h-72 mr-[95%] -mt-[450px]">
+        <img src="./sidphoto.png" alt="img" />
+      </div>
 
-              //install swiper modules
-              modules={[Navigation, A11y]}
-              spaceBetween={5}
-              slidesPerView={3}
-              navigation
-              // pagination={{ clickable: true }}
-              // scrollbar={{ draggable: true }}
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log("slide change")}
+      <div className="h-[1100px]">
+        <div className=" h-[150px]  text-center m-20">
+          <div className=" w-[100%] -mt-96 ">
+            <div className=" h-[700px]">
+              <Swiper
+                className="h-[480px] relative top-20 "
+                // install Swiper modules
+                modules={[Navigation, Pagination]}
+                spaceBetween={50}
+                slidesPerView={4}
+                navigation
+                onSwiper={(swiper) => console.log(swiper)}
+                onSlideChange={() => console.log("slide change")}
               >
-
-                <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] h-[660px] mr-16 bg-[bg-[#FBF6F6]] rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
+                {TopSliderList?.map((item) => {
+                  return (
+                    <SwiperSlide className="w-[98%] h-[100%]">
+                      <div className="card bg-base-100 w-[100%] h-[100%] shadow-xl dark:bg-[#080d12]">
+                        <div className="w-[100%] h-[100%]">
+                          <div className=" w-[100%] ">
+                            <img
+                              src="./Lastimg.jpg"
+                              className="w-[90%] h-[100%] mx-3 relative bottom-5 rounded-2xl"
+                              alt=""
+                            />
+                          </div>
+                          <figure>
+                            {/* <img
+                            src={item.tumbImageAddress}
+                            className="rounded-2xl"
+                            alt="Shoes"
+                          /> */}
+                          </figure>
                         </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
 
-                  </div>
+                        <div className="card-body  mb-16 ">
+                          <h2 className="card-title text-xs text-pink-600  dark:text-white">
+                            {item.statusName}
+                            <div className="badge badge-secondary">جدید</div>
+                          </h2>
+                          <div className="text-start text-sm"> نام استاد :
+                            {item.teacherName}
+                          </div>
 
+                          <div className="card-actions justify-end mt-4">
+                            {/* <NavLink to={"/courses"}>
+                              <div className="badge badge-outline p-5 ml-14 hover:bg-[#41d3a7] hover:border-none   dark:text-white ">
+                                {item.statusName}
+                              </div>
+                            </NavLink> */}
 
+                            <div className="badge badge-outline p-5 hover:bg-pink-600  hover:border-none   dark:text-white">
+                              {item.likeCount}
+                              <AiOutlineLike />
+                            </div>
+                            <div className="badge badge-outline p-5 hover:bg-pink-600  hover:border-none  dark:text-white">
+                              {item.dissLikeCount}
+                              <AiOutlineDislike />
+                              
+                            </div>
+                            <div className="badge badge-outline p-5 hover:bg-pink-600  hover:border-none  dark:text-white">
+                              {/* {item.userFavoriteId} */}
+                            <MdOutlineFavoriteBorder className="" />
+                            </div>
+                            
+                            
+                          </div>
 
-                    
-                </SwiperSlide> 
+                          <div className="">
+                            <div className="avatar  flex">
+                              {/* <div className="ring-primary ring-offset-base-100 w-14 rounded-full ring ring-offset-2  dark:text-white">
+                                <img src="" />
+                              </div> */}
+                              <h1 className=" leading-10 text-start text-[#ac3d85]   dark:text-white">
+                                {item.typeName}
+                              </h1>
+                            </div>
+                          </div>
 
-                <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] h-[660px] bg-[#FBF6F6] mr-16 rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
+                          
+                          <div>
+                            <p className="mt-30 text-right text-[#908A7A;]   dark:text-white">
+                              
+                            </p>
+                          </div>
+                          <div className="border-t-2 border-[#158B68]">
+                            <h1 className="text-xl text-[#807A7A;] leading-10 hover:text-[#296c58]   dark:text-white">
+                              مشاهده جزییات
+                            </h1>
+                          </div>
                         </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-
-
-
-                    
-                </SwiperSlide>  
-
-                <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] h-[660px] mr-16 bg-[#FBF6F6] rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
-                        </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-
-
-
-                    
-                </SwiperSlide>   
-
-                <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] h-[660px] bg-[#FBF6F6] mr-16 rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
-                        </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-
-
-
-                    
-                </SwiperSlide> 
-
-
-                <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] h-[660px] bg-[#FBF6F6] mr-16 rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
-                        </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-
-
-
-                    
-                </SwiperSlide>
-
-                 <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] bg-[#FBF6F6] h-[660px] mr-16 rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
-                        </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-
-
-
-                    
-                </SwiperSlide>
-
-                <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] h-[660px] bg-[#FBF6F6] mr-16 rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
-                        </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-
-
-
-                    
-                </SwiperSlide>
-
-                <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] bg-[#FBF6F6] h-[660px] mr-16 rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
-                        </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-
-
-
-                    
-                </SwiperSlide>
-
-                <SwiperSlide className=''>
-                  <div className='shadow-2xl w-[85%] bg-[#FBF6F6] h-[660px] mr-16 rounded-3xl gap-2'>
-
-                    
-                  <div className="rounded-3xl  w-[100%] h-[250px]   ">
-                    <img className='rounded-2xl bg-cover ' src={item.picture} alt="./picturecourse.png" />
-                  </div>
-
-                  <button className="btn btn-outline btn-accent h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-4">
-
-                  {item.button}
-                  </button>
-                 
-
-                  <div className='flex flex-wrap'>
-                  <AiOutlineLike  className=' w-9 h-9  relative mr-[360px] -mt-[40px]'/>
-                  <BiDislike   className='w-9 h-9  relative mr-[320px] -mt-[40px]' />
-                  <IoStarOutline  className=' w-9 h-9 -mt-[40px] mr-[270px] '/>
-                  </div>
-
-
-                   
-                  <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[15px] animate-pulse">
-                    {item.title}
-
-                  </div>
-
-                  <div className="rating relative mr-[290px] mt-4 ">
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input
-                      type="radio"
-                      name="rating-2"
-                      className="mask mask-star-2 bg-[#5BE1B9]"
-                      defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#5BE1B9]" />
-                    </div>  
-
-                    <div className='text-xl text-[#41A789] relative mr-[15px] -mb-[0px]'>
-                    {item.speech}
-                       </div>
-
-                  <div className='text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]'>
-                        {item.desc}
-                        </div>
-                  <div className='border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]'></div>
-                    
-                    <div className='text-lg text-[#12926C] relative mt-[10px] mr-[20px]'>
-                      {item.text}
-                    </div>
-                    <div className='text-lg text-[#E11818] relative -mt-[25px] mr-[285px]'>
-                      {item.price}
-                    </div>
-                
-
-                  </div>
-                </SwiperSlide>  
-
-
-                
-
-
-  
-               
-              
-
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+                ...
               </Swiper>
-
-             
-
             </div>
-          )
-        })}
-
-     
-      
-      
-
-     
-          
-         
-
-
+          </div>
+        </div>
+        <NavLink to={"/News"}></NavLink>
       </div>
-        
-      <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg relative bottom-24 right-[700px] bg-[#12926C] hover:bg-[#5BE1B9] ">مشاهده مقالات بیشتر </button>
-      
     </div>
-  )
-}
+  );
+};
 
-export default index
+export default index;

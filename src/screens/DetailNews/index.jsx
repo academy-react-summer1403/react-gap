@@ -1,8 +1,15 @@
-import React from 'react'
-import Article1 from '../../component/Article/Article1'
+import React from 'react';
+import DetailNews from "../../component/DetailNews";
+import CommentsDetail from "../../component/DetailNews/CommentsDetail";
+import BoxComment from "../../component/DetailNews/BoxComment"
+
 const index = () => {
   return (
-   <Article1/>
+ <>
+ <DetailNews/>
+ <CommentsDetail/>
+ <BoxComment/>
+ </>
   )
 }
 

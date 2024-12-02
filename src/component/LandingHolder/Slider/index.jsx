@@ -1,159 +1,117 @@
-import React, { useEffect, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-// some-inner-component.jsx
-
-import { useSwiper } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import { NavLink } from "react-router-dom";
-import { AiOutlineLike } from "react-icons/ai";
-import { AiOutlineDislike } from "react-icons/ai";
-import { FaRegStar } from "react-icons/fa";
-import axios from "axios";
-import { Rate } from 'antd';
-
-
-
-
+import React from "react";
+import { MdOutlineContactPhone } from "react-icons/md";
 
 const index = () => {
-  const [ListSlider, setListSlider] = useState([
-    
-    {
-      id: 1,
-      pic: "iconslider.png",
-      button: "وضعیت دوره",
-      Like: "./Like.png",
-      title: "آشنایی با برنامه نویسی با وردپرس",
-      jun: "./Group .png",
-      mit: "50 سخنرانی (190 ساعت)",
-      Desc: "لورم ایپسوم محبوب ترین و استانداردترین متن ساختگی است که توسط توسعه دهندگان وب، تایپوگراف ها و طراحان استفاده می شود",
-      Price: "3000 هزار تومان",
-      Sign: "الان ثبت نام کن",
-    },
-  ]);
-
-  const [TopCoursesList, setTopCoursesList] = useState(null);
-
-  const getTopCourses = async () =>{
-    const res = await axios.get('https://classapi.sepehracademy.ir/api/Home/GetCoursesTop?Count=5')
-    setTopCoursesList(res.data)
-  }
-
-
-  useEffect(() => {
-    getTopCourses()
-  }, []);
-
   return (
-    <div className="h-[1100px]">
-      <div className=" h-[150px]  text-center m-20">
-        <h1 className="text-[#22445D;] text-4xl"> دوره های ما </h1>
+    <div>
+      
+      <div className="h-[700px]">
+        <div className=" h-[150px] text-center m-20">
+          <div className="border-transparent flex flex-wrap justify-center w-[90%] h-[500px] mr-10 mt-4">
+            <div className="div">
+              <img className="w-[60px] h-[60px] mt-6 =" src="./hobab2.png" />
+            </div>
 
-        <p className="text-[#22445D;] text-2xl font-normal mt-2">
-          {" "}
-          ساختن دنیایی بهتر، یک دوره در یک زمان{" "}
-        </p>
+            <div className="border-2 h-[400px] mt-24 rounded-2xl bg-[rgb(232,234,238)]">
+             
+                <h1 className="text-start relative top-6 font-bold text-3xl left-[40%] dark:text-black w-[200px]
+                 =">
+                 
+                  از گوشه و اطراف دنیای برنامه‌نویسی
+                </h1>
+                <p className="text-start relative text-xl top-10 text-[rgb(149,160,177)] right-6
+                 dark:text-gray-900 =">
+                  نوشتن کار جالبیه که از هزاران سال همراه ما بوده و کمک کرده تا
+                  همیشه به روز باشیم، ما در راکت فضای رو به شکلی آماده کردیم تا
+                  شما بتونید ایده‌ها و مطالب جالب حوزه برنامه‌نویسی رو در اختیار
+                  هزاران برنامه‌نویس عضو  قرار بدید.{" "}
+                </p>
+                <button className="btn btn-primary  relative top-16 left-40 right-9 bg-[#c3ad20] text-[#000] hover:text-white">
+                  مشاهده همه مطالب
+                </button>
+            
+            </div>
 
-        <div className=" w-[98%] mx-auto m-10">
-
-              <div className=" h-[900px]">
-                <Swiper
-                  className="h-[700px] relative top-20 "
-                  // install Swiper modules
-                  modules={[Navigation, Pagination, Scrollbar, A11y]}
-                  spaceBetween={50}
-                  slidesPerView={3}
-                  navigation
-                  pagination={{ clickable: true }}
-                  scrollbar={{ draggable: true }}
-                  onSwiper={(swiper) => console.log(swiper)}
-                  onSlideChange={() => console.log("slide change")}
-                >
-
-                  {TopCoursesList?.map(item=>{
-                    return(
-                      <SwiperSlide className="w-[98%]">
-                      <div className="card bg-base-100 w-[100%] h-[100%] shadow-xl">
-                        <figure className="px-10 pt-10">
-                          <img
-                            src={item.tumbImageAddress}
-                            alt="Shoes"
-                            className="rounded-xl"
-                          />
-                        </figure>
-  
-                        <div className="card-body items-center text-center">
-                          <div className="card-actions ml-52">
-                            <button className="btn btn-primary bg-[#12926C;] mr-7">
-                              {" "}
-                              وضعیت دوره{" "}
-                            </button>
-  
-                            <div className="card-actions relative right-52 -top-14">
-                              <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <AiOutlineLike />
-                              </div>
-                              <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <AiOutlineDislike />
-                              </div>
-                              <div className="badge badge-outline p-5 hover:bg-[#41d3a7]  hover:border-none">
-                                <FaRegStar />
-                              </div>
-                            </div>
-                          </div>
-                          <h2 className="card-title text-2xl">
-                              {item.title}
-                          </h2>
-                          <p className="text-right">
-                            {" "}
-                              {item.describe}
-                          </p>
-                          <div>
-                            <div className="">
- 
-                            <Rate allowHalf defaultValue={item.courseRate} />
-                            </div>
-                          </div>
-                          <div className="flex flex-wrap justify-between gap- border-t-2 border-green-900 w-[90%]">
-                            <h1 className="text-[green]">هزینه تمام دوره</h1>
-                            <h2 className="text-[red]">3000000 هزار تومان</h2>
-                          </div>
-                          <div className="card-actions">
-                            <button className="btn btn-primary bg-[#12926C;] w-60 p-7 leading-4">
-                              الان ثبت نام کن{" "}
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-  
-                      
-                    </SwiperSlide>
-                    )
-                  })}
-
-
-                </Swiper>
+            <div className=" flex flex-wrap justify-center w-[50%] h-[700px] relative bottom-[500px] right-[200px] gap-2">
+              <div className="border-2 w-[280px] h-[282px] relative bottom-10 bg-[#ffffffc3]">
+                <div className=" w-[90%] h-[50%] mr-4 mt-2">
+                  <img src="./photo1.png" />
+                  <MdOutlineContactPhone className="relative top-12 w-6 h-6" />
+                  <h1 className="text-[10px] relative top-7 left-14 dark:text-black">
+                    {" "}
+                    پشتیبانی کد دات{" "}
+                  </h1>
+                  <p className="text-end text-[10px] relative top-[50px] text-[rgb(128,146,176)] dark:text-slate-900">
+                    {" "}
+                    زمان مطالعه: 5 دقیقه{" "}
+                  </p>
+                </div>
+                <h1 className="relative top-3 text-start text-xl right-4 font-bold dark:text-black">
+                  {" "}
+                  آموزش کار با جاوا اسکریپت
+                </h1>
               </div>
 
+              <div className="border-2  w-[280px] h-[282px]  bg-[#ffffffc3] ">
+                <div className=" w-[90%] h-[50%] mr-4 mt-2">
+                  <img src="./photo2.png" />
+                  <MdOutlineContactPhone className="relative top-12 w-6 h-6" />
+                  <h1 className="text-[10px] relative top-7 left-14 dark:text-black">
+                    {" "}
+                    پشتیبانی کد دات{" "}
+                  </h1>
+                  <p className="text-end text-[10px] relative top-[50px] text-[rgb(128,146,176)] dark:text-black">
+                    {" "}
+                    زمان مطالعه: 5 دقیقه{" "}
+                  </p>
+                </div>
+                <h1 className="relative top-3 text-start text-xl right-4 font-bold dark:text-black">
+                  {" "}
+                  آموزش کار با جاوا اسکریپت
+                </h1>
+              </div>
+
+              <div className="border-2  w-[280px] h-[282px] relative bottom-11 bg-[#ffffffc3]">
+                <div className=" w-[90%] h-[50%] mr-4 mt-2">
+                  <img src="./photo2.png" />
+                  <MdOutlineContactPhone className="relative top-12 w-6 h-6" />
+                  <h1 className="text-[10px] relative top-7 left-14 dark:text-black">
+                    {" "}
+                    پشتیبانی کد دات{" "}
+                  </h1>
+                  <p className="text-end text-[10px] relative top-[50px] text-[rgb(128,146,176)] dark:text-black">
+                    {" "}
+                    زمان مطالعه: 5 دقیقه{" "}
+                  </p>
+                </div>
+                <h1 className="relative top-3 text-start text-xl right-4 font-bold dark:text-black">
+                  {" "}
+                  آموزش کار با جاوا اسکریپت
+                </h1>
+              </div>
+
+              <div className="shadow w-[280px] h-[282px] bg-[#ffffffc3] ">
+                <div className=" w-[90%] h-[50%] mr-4 mt-2">
+                  <img src="./photo1.png" />
+                  <MdOutlineContactPhone className="relative top-12 w-6 h-6" />
+                  <h1 className="text-[10px] relative top-7 left-14 dark:text-black">
+                    {" "}
+                    پشتیبانی کد دات{" "}
+                  </h1>
+                  <p className="text-end text-[10px] relative top-[50px] text-[rgb(128,146,176)] dark:text-black">
+                    {" "}
+                    زمان مطالعه: 5 دقیقه{" "}
+                  </p>
+                </div>
+                <h1 className="relative top-3 text-start text-xl right-4 font-bold dark:text-black">
+                  {" "}
+                  آموزش کار با جاوا اسکریپت
+                </h1>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <NavLink to={"/News"}>
-        <button className="bg-[#12926C;] w-[350px] h-[90px] relative top-[720px] right-[700px] rounded-full  hover:scale-75 duration-75">
-          <h1 className="text-2xl text-[#fff]">مشاهده مقالات بیشتر</h1>
-        </button>
-      </NavLink>
     </div>
   );
 };

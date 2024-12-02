@@ -1,85 +1,106 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { IoHome } from "react-icons/io5";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
+import { setData } from "../../core/storage/localStorage.storage";
+import { signInAPI } from "../../core/Servises/api/auth/Login.api";
 
+const index = () => {
+  const navigation = useNavigate();
+  const onSubmit = async (values) => {
+    const obj = {
+      phoneOrGmail: values.phone,
+      password: values.pass,
+      rememberMe: true,
+    };
+    const res = await signInAPI(obj);
+    console.log(res)
+    if (res.success) {
+      setData("login", res.token);
+      navigation("/");
+    } else {
+      alert(res.message);
+    }
+    console.log(res);
+  };
 
-
-const index = () => { 
   return (
-    <div className=" flex justify-center w-[90%] h-[600px] mx-auto mt-10">
-      <div className="flex w-[90%] h-[100%] ">
-        <NavLink to={'/'}>
-          <div className="relative top-5 right-[580px]">
-              <IoHome  className="size-7 fill-[#158B68]"/>
-              </div> 
-        </NavLink>
+    <section>
+      <div className="bg-[#eef3f9] dark:bg-[#22445D;]">
+        <div className="flex justify-center w-[90%] h-[700px] mx-auto">
+          <div className="bg-[#FBF6F6;] shadow-2xl sm:w-[100%] xl:w-[50%] mt-20 rounded-2xl  dark:bg-slate-900">
+            <h1 className=" relative right-14 top-12 text-2xl">
+              ورود به سیستم
+            </h1>
+            <div className="flex flex-wrap justify-center m-16 w-[70%] h-96 mt-12 sm:w-[80%]">
+              <Formik
+                initialValues={{ phone: "", pass: "" }}
+                onSubmit={onSubmit}
+              >
+                <Form>
+                  <Field
+                    name="phone"
+                    placeholder="شماره همراه"
+                    className="w-[100%] h-[50px] mt-4 px-5 border-2 rounded-xl border-blue-600 dark:bg-slate-700"
+                  />
+                  <Field
+                    name="pass"
+                    placeholder="رمز عبور"
+                    className="w-[100%] h-[50px] mt-4 relative px-5 border-2 rounded-xl  border-blue-600  dark:bg-slate-700"
+                  />
 
-        <div className="w-[50%] h-[100%] bg-[#FBF6F6;] rounded-r-2xl shadow-2xl">
-        <h1 className=" relative right-14 top-12 text-2xl">
-                ورود به سیستم
-              </h1>
-          <div className="flex flex-wrap justify-center m-16 w-[70%] h-[75%] mt-20">
-        
-            <Formik 
-            initialValues={{Mobile:"", PassWord:""}}
-            onSubmit={(values) => onsubmit(values)}
-            >
-              <Form>
-                <Field name='Mobile' placeholder='شماره همراه' 
-                className=' w-[100%] h-[50px] mt-4 px-5 border-2 rounded-xl border-[#158B68]'/>
-                <Field name='PassWord'placeholder='رمز عبور' 
-                className=" w-[100%] h-[50px] mt-4 relative px-5 border-2 rounded-xl border-[#158B68]"/>
+                  <div className=" ml-[90%] flex text-[#22445D] text-sm relative top-5 dark:text-white w-[200px]">
+                    <label className="label cursor-pointer">
+                      <input
+                        type="checkbox"
+                        defaultChecked
+                        className="checkbox checkbox-primary"
+                      />
+                      <span className="label-text w-[150px] relative text-center dark:text-white">
+                        {" "}
+                        مرا به خاطر بسپار
+                      </span>
+                    </label>
+                  </div>
 
-                <label className="font-inter text-[#22445D] text-sm relative top-5">
-                  <input type="checkbox" />مرا به خاطر بسپار
-                </label>
+                  <button className="btn btn-primary w-[100%] h-[50px] bg-blue-600 text-white rounded-lg relative top-10">
+                    تایید
+                  </button>
+                  <br />
 
-                <button className=" w-[100%] h-[50px] bg-[#158B68;] text-white rounded-lg relative top-10">
-                  تایید{" "}
-                </button>
-                <br />
+                  <NavLink to={"/"}>
+                    <button className="btn btn-outline btn-primary w-[100%] h-[50px] border-2 border-blue-600 text-[#22445D] rounded-lg relative top-14 hover:text-blue-500 dark:text-white ">
+                      {" "}
+                      بازگشت به صفحه اصلی
+                    </button>
+                  </NavLink>
 
-                <NavLink to={'/'}>
-                <button className="w-[100%] h-[50px] border-2 border-[#158B68] text-[#22445D] rounded-lg relative top-14 hover:text-blue-500">
-                  {" "}
-                  بازگشت به صفحه اصلی
-                </button>
-                </NavLink>
+                  <br />
 
+                  <NavLink to={"/Step1"}>
+                    <a
+                      className="font-inter text-[#22445D] text- underline relative top-32  hover:text-[#4982d1] dark:text-white"
+                      href="#"
+                    >
+                      یک حساب کاربری ایجاد کنید{" "}
+                    </a>
+                  </NavLink>
 
-                <br />
-
-                <NavLink to={'/Step1'}>
-                  <a
-                  className="font-inter text-[#22445D] text- underline relative top-20  hover:text-[#4982d1]"
-                  href="#"
-                >
-                  یک حساب کاربری ایجاد کنید{" "}
-                </a>
-  
-                </NavLink>
-              
-              <NavLink to={'/NewPass'}>
-                            <a
-                            className=" right-60 font-inter text-[#22445D] text-lg underline relative top-20 hover:text-[#4982d1]"
-                          href="#"
-                      >
+                  <NavLink to={"/NewPass"}>
+                    <a
+                      className="lg:right-52 font-inter text-[#22445D] text-lg underline relative top-32 hover:text-[#4982d1] dark:text-white sm:right-28 "
+                      href="#"
+                    >
+                      {" "}
                       فراموشی رمز
-                  </a>
-              </NavLink> 
-              </Form>
-            </Formik>
-          </div>
-        </div>
-
-        <div className="flex justify-center w-[50%] h-[100%] bg-[#A4F6DE;] rounded-l-2xl">
-          <div className="w-[80%] h-[70%] mt-20  ">
-            <img src="./verfy.png" alt="" />
+                    </a>
+                  </NavLink>
+                </Form>
+              </Formik>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

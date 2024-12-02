@@ -10,9 +10,7 @@ const index = () => {
   return (
     <div>
       <BarCourses />
-      <Filter />
-      <CardCours />
-      <SliderCourses />
+      {/* <SliderCourses /> */}
 
       <div></div>
     </div>

@@ -1,80 +1,75 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const index = () => {
   return (
-    <div className="bg-[#A4F6DE;] rounded-xl w-[90%] mx-auto mt-20 ">
-      <div className="flex flex-wrap justify-center gap-10 w-[90%] py-10 mx-auto ">
-
-        
-        <div  className="flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px]  hover:scale-75 duration-75">
-          <div className="w-[100px] h-[110px]">
-            <img className="w-[100%] h-[100%]" src="./pic2.png" alt="" />
-          </div>
-
-          <div className="w-[150px] h-[100px]">
-            <h1 className="text-[#158B68;] text-2xl text-center ">
-              {" "}
-              اساتید حرفه ای{" "}
-            </h1>
-            <h2 className="  text-[#158B68;] text-4xl text-center leading-[50px]">
-              {" "}
-              52{" "}
-            </h2>
+    <div className=" bg-white dark:bg-[#22445D] ">
+      <div className="border-transparent  w-[70%] h-[380px] flex justify-center flex-wrap mt-16 mr-[15%] gap-4">
+        <div className="w-[35%] h-[300px] mt-28">
+          <img src="./about us.png" alt="Img" className="max-sm:hidden" />
+          <div className="w-[25%] h-[120px] relative bottom-[380px] right-[220px]">
+            <img src="./live.png" alt="Img" />
           </div>
         </div>
-
-        <div className=" flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px]  hover:scale-75 duration-75">
-          <div className="w-[100px] h-[110px]">
-            <img className="w-[100%] h-[100%]" src="./pic3.png" alt="" />
-          </div>
-
-          <div className="w-[150px] h-[100px]">
-            <h1 className="text-[#158B68;] text-2xl text-center ">
-              {" "}
-               دانشجو {" "}
+        <div className="w-[40%] h-[400px]">
+          <button className=" shadow w-[160px] h-[28px] relative top-3 right-8 rounded-lg bg-[#EFEEFE]  dark:text-black">
+            {" "}
+            درباره ما بیشتر بدانید
+          </button>
+          <div className="div">
+            <h1 className=" text-2xl font-bold relative top-8 right-8">
+              هزاران
             </h1>
-            <h2 className="  text-[#158B68;] text-4xl text-center leading-[50px]">
-              {" "}
-              81{" "}
-            </h2>
+            <img
+              className="w-[100px] relative right-28"
+              src="./Vector.png "
+              alt="img"
+            />
+            <h1 className="text-white font-bold relative right-32 bottom-8">
+              دوره های
+            </h1>
+            <h1 className="text-2xl font-bold relative right-8 bottom-6 ">
+              برتر اکنون در یک مکان
+            </h1>
+            <div className="div">
+              <p className="w-[90%] h-[70px] text-xs relative right-8 bottom-3 ">
+                صندوق ورودی مشترک بصری Groove این کار را برای اعضای تیم آسان می
+                کند سازماندهی، اولویت بندی و. در این قسمت از Smashing Pod ما
+                هستیم صحبت در مورد پایه پلتفرم وب.
+              </p>
+            </div>
+
+            <div className="">
+              <p className="text-[12px] font-bold relative bottom-4 right-14  ">
+                بهترین مربیان
+              </p>
+              <button className="border-2 border-black w-6 h-6 rounded-full   bg-[#FFC224] relative bottom-10 right-6 shadow"></button>
+            </div>
+
+            <div className="">
+              <p className="text-[12px] font-bold relative bottom-6 right-14 ">
+                {" "}
+                از هر کجا به کلاس خود دسترسی داشته باشید
+              </p>
+              <button className="border-2 border-black w-6 h-6 rounded-full bg-[#FFC224] relative bottom-12 right-6 shadow"></button>
+            </div>
+
+            <div className="">
+              <p className="text-[12px] font-bold relative bottom-6 right-14  ">
+                {" "}
+                برنامه دوره ای انعطاف پذیر
+              </p>
+              <button className="border-2 border-black w-6 h-6 rounded-full  bg-[#FFC224] relative bottom-12 right-6 shadow"></button>
+            </div>
+
+            <NavLink to={"/courses"}>
+              <button className="border-2 border-black  w-[208px] h-[33px] shadow rounded-lg bg-[#5751E1] relative bottom-8 right-6 hover:bg-slate-500 ">
+                {" "}
+                <span className="text-[#FFFFFF]"> رایگان آزمایش کنید </span>
+              </button>
+            </NavLink>
           </div>
         </div>
-
-        <div className=" flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px]  hover:scale-75 duration-75 ">
-          <div className="w-[100px] h-[110px]">
-            <img className="w-[100%] h-[100%]" src="./pic4.png" alt="" />
-          </div>
-
-          <div className="w-[150px] h-[100px]">
-            <h1 className="text-[#158B68;] text-2xl text-center">
-              {" "}
-                دوره آموزشی{" "}
-            </h1>
-            <h2 className="  text-[#158B68;] text-4xl text-center leading-[50px]">
-              {" "}
-              182{" "}
-            </h2>
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center w-full sm:w-[40%] xl:w-[20%] h-[220px] hover:scale-75 duration-75 ">
-          <div className="w-[100px] h-[110px]">
-            <img className="w-[100%] h-[100%]" src="./pic5.png" alt="" />
-          </div>
-
-          <div className="w-[150px] h-[100px]">
-            <h1 className="text-[#158B68;] text-2xl text-center ">
-              {" "}
-                مقاله آموزشی{" "}
-            </h1>
-            <h2 className="  text-[#158B68;] text-4xl text-center leading-[50px]">
-              {" "}
-              28{" "}
-            </h2>
-          </div>
-        </div>
-
-       
       </div>
     </div>
   );

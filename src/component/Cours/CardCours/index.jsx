@@ -1,105 +1,176 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Examples from "../../../component/Cours/CardCours/Examples";
+import http from "../../../core/Servises/interceptor";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { AiOutlineLike } from "react-icons/ai";
-import { BiDislike } from "react-icons/bi";
-import { IoStarOutline } from "react-icons/io5";
-import { TbNumber5 } from "react-icons/tb";
+import { AiOutlineDislike } from "react-icons/ai";
+import {
+  deletliked,
+  disLiked,
+  liked,
+} from "../../../core/Servises/api/Like/Like.api";
 
-const index = () => {
-  const [List, setList] = useState(null);
+const index = ({ List, PageNumber, setPageNumber, setRand }) => {
 
-  const getCourseList =async () => {
-    const res =await axios.get("https://classapi.sepehracademy.ir/api/Home/GetCoursesWithPagination?PageNumber=1&RowsOfPage=9&SortingCol=Active&SortType=DESC&TechCount=0");
-    console.log('res' , res.data.courseFilterDtos);
-    setList(res.data.courseFilterDtos)
+
+  const likee = async (id, userIsLiked) => {
+    try {
+      if (!userIsLiked) {
+        const res = await http.post(`/Course/AddCourseLike?CourseId=${id}`);
+        console.log(res);
+        setRand(Math.random());
+      } else {
+        const data = new FormData();
+        data.append("CourseLikeId", id);
+        const result = await http.delete(`/Course/DeleteCourseLike`, {data: data,});
+        console.log(result);
+        setRand(Math.random());
+      }
+    } catch (error) {
+      throw new Error("ERROR:", error);
+    }
   };
 
-  useEffect(() => {
-    getCourseList();
-  }, []);
+  const disLikee = async (id , currentUserDissLike) => {
+    try {
+      if (!currentUserDissLike) {
+        const res = await http.post(`/Course/AddCourseDissLike?CourseId=${id}`);
+        console.log(res);
+        setRand(Math.random());
+      } 
+    } catch (error) {
+      throw new Error("ERROR:", error);
+    }
+  };
+
+  const handleFavorite =async (id , userFavorite)=>{
+
+    try{
+      if(!userFavorite){
+        const res = await http.post(`/Course/AddCourseFavorite` , {courseId:id})
+        console.log(res);
+        setRand(Math.random());
+      }
+      else{
+      const data = new FormData();
+        data.append('CourseFavoriteId' , id)
+       const result = await http.delete('/Course/DeleteCourseFavorite' , {data:data} )
+       setRand(Math.random());
+
+      }
+
+    }catch{
+      throw new Error("ERROR:", error);
+
+    }
+    
+  }
 
   return (
-    <div className="flex  justify-center flex-wrap  w-[1260px] mr-[370px] -mt-[42%] rounded-3xl shadow-xl ">
-      <div className=" w-[100%] flex flex-wrap-reverse justify-center gap-[50px] mt-[80px]">
-        {List?.map((item, index) => {
+    <div className="mr-[370px] -mt-[72%] shadow-xl dark:bg-[#22445D] max-sm:mr-0 ">
+      <div className=" w-[100%] h-[90%] flex flex-wrap-reverse justify-center gap-[50px] mb-[10px] rounded-lg ">
+        {List?.courseFilterDtos.map((item, index) => {
           return (
             <div
               key={index}
-              className=" h-[510px] w-[345px] bg-[#FBF6F6] rounded-3xl  mb-20 "
+              className=" shadow-2xl w-[30%] h-[480px] mx-auto bg-white rounded-2xl "
             >
-              <div className="w-[100px] h-[100px]  mr-[120px] animate-pulse">
-                <img src={item.tumbImageAddress} alt="" className="icons8.png" />
+              <div className="">
+                <img
+                  src="./Lastimg.jpg"
+                  className="w-[90%] h-[100%] mx-3 bottom-5 rounded-2xl"
+                  alt=""
+                />
               </div>
 
-              <button className="h-11 w-32 bg-[#BFF4E4] rounded-[8px] relative mr-4 mt-14 ">
-                {item.statusName}
-              </button>
+              <div className="w-[90%] mx-auto">
+                {" "}
+                <h1 className="text-red-500 mt-3">{item.statusName}</h1>
+                <h1>{item.title}</h1>
+                <h1 className="text-blue-700 text-sm">
+                  نام مدرس:
+                  {item.teacherName}
+                </h1>
+                <h2 className="text-gray-600">
+                  نوع دوره:
+                  {item.levelName}
+                </h2>
+                <h3 className="text-sm text-gray-600 mt-2">تکنولوژی دوره:</h3>
+                <p className="text-sm text-gray-500 mt-2">
+                  {item.technologyList}
+
+                  <div className="card-actions justify-end ">
+                    {!item.userFavorite ? (
+                    <div className="badge badge-outline p-5 cursor-pointer " onClick={()=>handleFavorite(item.courseId , item.userFavorite)}>
+                    <MdOutlineFavoriteBorder className="" />
+                  </div>
+                    ):(
+                      <div className="badge badge-outline p-5 bg-blue-300 cursor-pointer "  onClick={()=>handleFavorite(item.userFavoriteId , item.userFavorite)}>
+                      <MdOutlineFavoriteBorder className="" />
+                    </div>
+                    )}
+
+                    {2>3 ? console.log(1) : console.log(2)}
 
 
-              <div className="flex flex-wrap">
-                <AiOutlineLike className=" w-9 h-9  relative mr-[290px] -mt-[40px]" />
-                <BiDislike className="w-9 h-9  relative mr-[255px] -mt-[40px]" />
-                <IoStarOutline className=" w-9 h-9 -mt-[40px] mr-[210px] " />
+                    {item.userIsLiked === false ? (
+                      <div className="badge badge-outline p-5   hover:border-none   dark:text-white">
+                        {item.likeCount}
+                        <AiOutlineLike
+                          onClick={() => {
+                            likee(item.courseId, item.userIsLiked);
+                          }}
+                          className="w-[20px] h-[20px] cursor-pointer "
+                        />
+                      </div>
+                    ) : (
+                      <div className="badge badge-outline p-5  bg-[#41d3a7]   hover:border-none   dark:text-white">
+                        {item.likeCount}
+                        <AiOutlineLike
+                          onClick={() => {
+                            likee(item.userLikedId, item.userIsLiked);
+                          }}
+                          className="w-[20px] h-[20px] cursor-pointer "
+                        />
+                      </div>
+                    )}
+
+                    {item.currentUserDissLike === false ? (
+                      <div className="badge badge-outline p-5   hover:border-none  dark:text-white">
+                        {item.dissLikeCount}
+                        <AiOutlineDislike
+                          onClick={() => {
+                            disLikee(item.courseId, item.currentUserDissLike);
+                            className = "mt-1 w-[20px] h-[20px]";
+                          }}
+                        />
+                      </div>
+                    ) : (
+                      <div className="badge badge-outline p-5 bg-red-400  hover:border-none  dark:text-white">
+                        {item.dissLikeCount}
+                        <AiOutlineDislike
+  
+                        />
+                      </div>
+                    )}
+                  </div>
+                </p>
+                <h1 className="mt-2">قیمت دوره:</h1>
+                <h3 className="text-red-500 -mt-5 mr-32">{item.cost}</h3>
+                <button className="btn btn-outline btn-primary h-3 mt-3 mr-9 ">
+                  مشاهده اطلاعات دوره
+                </button>
               </div>
-
-              <div className=" h-10 w-96 text-start text-2xl font-sans font-normal mt-[20px] mr-[10px] animate-pulse">
-                {item.title}
-              </div>
-              <div>{item.technologyList}</div>
-              <div className=" w-[380px] h-[40px] relative mt-[20px] mr-[10px] ">
-                <img src={item.teacherName} alt="" className="./star1.png" />
-              </div>
-
-              <div>
-                {/* <TbNumber5 className="w-8 h-8 mr-[260px] -mt-[30px]" /> */}
-                <div>{item.likeCount}</div>
-
-                <IoStarOutline className="w-8 h-8  mr-[300px] -mt-[36px]" />
-              </div>
-
-              <div className="text-xs text-[#41A789] relative mr-[10px] mt-[20px]">
-                {item.speech}
-              </div>
-
-              <div className="text-[16px] text-[#6D6767] relative mt-[20px] mr-[10px]">
-                {item.describe}
-              </div>
-              <div className="border w-[90%] relative mr-[18px] mt-[10px] border-[#5BE1B9]"></div>
-
-              <div className="text-[14px] text-[#12926C] relative mt-[10px] mr-[10px]">
-                {item.text}
-              </div>
-              <div className="text-[14px] text-[#E11818] relative -mt-[17px] mr-[225px]">
-                {item.price}
-              </div>
-
-              <button className="border-2 border-[#5BE1B9] h-[40px] w-[100px] bg-[#ffff] rounded-[8px] relative mr-[60px] mt-[20px]">
-                {item.detail}
-              </button>
-              <button className="border-2 border-[#5BE1B9] h-[40px] w-[100px] bg-[#5BE1B9] rounded-[8px] relative mr-[10px] mt-[20px]">
-                {item.reservation}
-              </button>
             </div>
           );
         })}
       </div>
 
-      <div className="mr-[420px] mb-[100px]">
-        <div className="join">
-          <button className="join-item btn btn-xs bg-[#5BE1B9] w-[70px] h-[70px]">
-            1
-          </button>
-          <button className="join-item btn btn-xs btn-active bg-[#FBF6F6] w-[70px] h-[70px]">
-            2
-          </button>
-          <button className="join-item btn btn-xs bg-[#5BE1B9] w-[70px] h-[70px]">
-            3
-          </button>
-          <button className="join-item btn btn-xs bg-[#FBF6F6] w-[70px] h-[70px]">
-            4
-          </button>
-        </div>
-      </div>
+      <Examples
+        totalCount={List?.totalCount}
+        PageNumber={PageNumber}
+        setPageNumber={setPageNumber}
+      />
     </div>
   );
 };
