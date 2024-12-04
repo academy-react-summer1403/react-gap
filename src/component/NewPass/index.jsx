@@ -21,10 +21,10 @@ const index = () => {
     navigate("");
   };
   return (
-    <div className=" flex justify-center w-[90%] h-[600px] mx-auto mt-10">
-      <div className="w-[50%] h-[100%] bg-[#FBF6F6;] rounded-2xl shadow-2xl  sm:w-[100%] xl:w-[50%]">
-        <h1 className=" relative right-14 top-32 text-2xl">تغییر رمز</h1>
-        <div className="flex flex-wrap justify-center mr-16 w-[90%] h-[75%] mt-40 sm:w-[80%]">
+    <div className=" flex justify-center w-[100%] h-[730px] mx-auto bg-slate-100">
+      <div className="w-[30%] h-[500px] bg-white mt-40 rounded-2xl max-sm:w-[100%]">
+        <h1 className=" mr-14 mt-7 text-2xl">تغییر رمز</h1>
+        <div className="flex flex-wrap justify-center mr-11 w-[90%] h-[75%] mt-10 sm:w-[80%]">
           <Formik
             initialValues={{ Mobile: "", PassWord: "" }}
             onSubmit={(values) => onsubmit(values)}
@@ -33,17 +33,17 @@ const index = () => {
               <Field
                 name="Mobile"
                 placeholder="رمز عبور"
-                className="w-[100%] h-[60px] mt-10 px-6 border-2 rounded-xl border-blue-600 outline-none"
+                className="w-[100%] h-[60px] mt-10 px-6 rounded-xl bg-slate-200 outline-none"
               />
               <Field
                 name="Mobile"
-                className="w-[100%] h-[60px] mt-4 px-6 border-2 rounded-xl border-blue-600 outline-none"
+                className="w-[100%] h-[60px] mt-4 px-6 bg-slate-200 rounded-xl outline-none"
                 placeholder=" تکرار رمز عبور"
               />
 
               <NavLink to={"/Login"}>
                 {" "}
-                <button className="btn btn-active btn-primary  w-[100%] h-[50px] bg-blue- text-white rounded-lg relative top-14">
+                <button className="btn btn-active bg-green-600  w-[100%] h-[50px] bg-blue- text-white rounded-lg relative top-14">
                   تایید{" "}
                 </button>
               </NavLink>

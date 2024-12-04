@@ -18,10 +18,17 @@ const index = () => {
   // }
 
   return (
-    <div className=" flex justify-center w-[90%] h-[600px] mx-auto mt-20  dark:[#000000]">
-      <div className=" w-[50%] h-[100%] bg-[#FBF6F6;] rounded-2xl shadow-2xl sm:w-[100%] xl:w-[50%]  dark:bg-[#34445D;]">
-        <h1 className=" relative right-14 top-12 text-2xl dark:text-white">ورود به سیستم</h1>
-        <div className="flex flex-wrap justify-center mr-16 w-[90%] h-[55%] mt-32  sm:w-[80%]">
+    <div className=" flex justify-center w-[100%] h-[730px] mx-auto bg-slate-100 ">
+        {/* <div className="w-[180px] h-[120px] -ml-36 max-sm:-mr-[48px] max-sm:mt-[2%]  ">
+          <img
+            src="./logoabi.png "
+            className=" max-sm:w-[85%] max-sm:justify-center max-sm:block relative top-16 right-56 "
+          />
+        </div> */}
+      <div className="w-[500px] h-[550px] mt-44 bg-white rounded-xl ">
+        
+        <h1 className="text-center top-10 text-2xl dark:text-white relative font-bold">ورود به سیستم</h1>
+        <div className="flex flex-wrap justify-center mr-16 w-[90%] h-[55%] mt-32  max-sm:w-[80%]">
           <Formik
             initialValues={{ Mobile: "", PassWord: "" }}
             onSubmit={(values) => onsubmit(values)}
@@ -30,16 +37,18 @@ const index = () => {
               <Field
                 name="PassWord"
                 placeholder="کد تایید"
-                className=" w-[100%] h-[60px] relative px-12 border-2 rounded-xl border-blue-600"
+                className=" w-[90%] h-[60px] relative px-12 bg-slate-200 rounded-xl "
               />
 
-              <button className="w-[100%] h-[60px] bg-blue-600 text-white rounded-lg relative top-20">
+              <button className="btn w-[90%] h-[60px] bg-green-600 text-white rounded-lg relative top-20">
                 {" "}
                 ورود{" "}
               </button>
 
+            
+
               <NavLink to={"/Login"}>
-                <button className=" w-[100%] h-[60px] border-2 border-blue-600 text-[#22445D] rounded-lg relative top-24 hover:text-blue-500">
+                <button className=" w-[90%] h-[60px] bg-slate-200 text-[#22445D] rounded-lg relative top-24 hover:text-blue-500">
                   {" "}
                   بازگشت به صفحه قبل
                 </button>

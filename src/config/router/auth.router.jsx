@@ -65,7 +65,31 @@ export const Routers = createBrowserRouter([
      
     ],
   },
-
+  {
+    path: "/Login",
+    element: <Login />,
+    errorElement: <Error404 />,
+  },
+  {
+    path: "/LoginSystem",
+    element: <LoginSystem />,
+  },
+  {
+    path: "/Step1",
+    element: <Register />,
+  },
+  {
+    path: "/Step2",
+    element: <RegisterStep2 />,
+  },
+  {
+    path: "/Step3",
+    element: <RegisterStep3 />,
+  },
+  {
+    path: "/NewPass",
+    element: <ResetPass />,
+  },
   {
     path: "/Login",
     element: <Login />,
