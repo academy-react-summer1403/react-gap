@@ -24,10 +24,10 @@ const index = () => {
   };
 
   return (
-    <div className=" flex justify-center w-[90%] h-[600px] mx-auto mt-10">
-      <div className="w-[40%] h-[100%] bg-[#FBF6F6;] rounded-2xl shadow-2xl sm:w-[100%] xl:w-[50%]">
-        <h1 className=" relative right-14 top-5 text-2xl">ثبت نام</h1>
-        <div className="flex flex-wrap justify-center mr-16 w-[90%] h-[75%] mt-20 sm:w-[80%]">
+    <div className="flex justify-center w-full h-[730px] bg-slate-100">
+      <div className=" w-[30%] h-[500px] bg-white rounded-2xl mt-48 max-sm:w-[100%] max-md:[100%]">
+        <h1 className=" relative top-5 text-center text-2xl">ثبت نام</h1>
+        <div className=" w-[90%] mr-10 flex flex-wrap justify-center h-[500px] max-sm:w-[80%] mt-10">
           <Formik
             initialValues={{ Mobile: "" }}
             onSubmit={(values) => onsubmit(values)}
@@ -36,17 +36,17 @@ const index = () => {
               <Field
                 name="Mobile"
                 placeholder="شماره همراه"
-                className="w-[100%] h-[60px] mt-4 px-36 border-2 rounded-xl border-blue-600"
+                className="w-[90%] h-[60px] mt-4 px-36 border-2 rounded-xl"
               />
 
-              <button className="btn btn-active btn-primary w-[100%] h-[50px] bg-blue- text-white rounded-lg relative top-14">
+              <button className="btn btn-active bg-green-600 w-[90%] h-[50px] bg-blue- text-white rounded-lg relative top-14">
                 ادامه{" "}
               </button>
               <br />
             
 
               <NavLink to={"/"}>
-                <button className="mt-5 w-[100%] h-[60px] border-2 border-blue-600 text-[#22445D] rounded-lg relative top-14 hover:text-blue-500">
+                <button className="mt-5 w-[90%] h-[50px] bg-slate-200 text-[#22445D] rounded-lg relative top-14 hover:text-blue-500">
                   {" "}
                   بازگشت به صفحه اصلی
                 </button>

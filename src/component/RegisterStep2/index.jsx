@@ -24,8 +24,8 @@ const index = () => {
   };
 
   return (
-    <div className=" flex justify-center w-[90%] h-[600px] mx-auto mt-10">
-      <div className="w-[50%] h-[100%] bg-[#FBF6F6;] rounded-2xl shadow-2xl sm:w-[100%] xl:w-[50%]">
+    <div className=" flex justify-center w-[100%] h-[735px] bg-slate-100">
+      <div className="w-[30%] h-[500px] bg-white mt-40 rounded-2xl max-sm:w-[100%]">
         <h1 className=" relative right-14 top-10 text-2xl">ثبت نام</h1>
         <div className="flex flex-wrap justify-center mr-16 w-[90%] h-[75%] mt-14  sm:w-[80%]">
           <Formik
@@ -36,25 +36,22 @@ const index = () => {
               <Field
                 name="verCode"
                 placeholder="کد تایید"
-                className="w-[100%] h-[60px] mt-10 px-36 border-2 rounded-xl border-blue-600"
+                className="w-[90%] h-[60px] mt-10 px-36 border-2 rounded-xl bg-slate-200"
               />
 
               <button
                 type="submit"
-                className=" w-[100%] h-[50px] bg-blue-600 text-white rounded-lg relative top-10"
+                className=" w-[90%] h-[50px] bg-green-600 text-white rounded-lg relative top-10"
               >
                 ادامه{" "}
               </button>
 
+              <button className=" w-[90%] h-[50px] bg-slate-200 text-blue-800 rounded-lg relative top-14">
+                <Link to="/Step1">بازگشت به صفحه قبل </Link>
+              </button>
               <br />
             </Form>
           </Formik>
-
-          <button
-            className=" w-[92%] h-[50px] border-2 border-blue-600  text-blue-800 rounded-lg relative -top-14"
-          >
-            <Link to="/Step1">بازگشت به صفحه قبل </Link>
-          </button>
         </div>
       </div>
     </div>
