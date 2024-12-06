@@ -55,6 +55,7 @@ const index = () => {
               <h2> ایمیل :</h2>
               <h2 htmlFor=""> {MyInfo?.email} </h2>
             </div>
+            
 
 
           </div>

@@ -94,7 +94,7 @@ const index = () => {
                 />
                 
                 <br />
-                <label className="mr-2 font-bold">نام خانوادگی:</label>
+                <label className="mr-2 font-bold"> خانوادگی:</label>
                 <Field
                   name="LName"
                   className="border-2 w-[40%] h-[50px] rounded-xl mr-5 mt-4  border-slate-600 dark:bg-slate-600"
@@ -104,22 +104,22 @@ const index = () => {
                 <label className="ml-3 font-bold"> درباره :</label>
                 <Field
                   name="UserAbout"
-                  className="border-2 w-[40%] h-[50px] rounded-xl  ml-8  border-slate-600 dark:bg-slate-600"
-                  placeholder=" UserAbout"
+                  className="border-2 w-[40%] h-[50px] mt-10 rounded-xl  ml-8  border-slate-600 dark:bg-slate-600"
+                  placeholder="درباره"
                 />
                 <br />
                 <label className="ml-3 font-bold"> آدرس :</label>
                 <Field
                   name="HomeAdderess"
                   className="border-2 w-[40%] h-[50px] rounded-xl mt-10   border-slate-600 dark:bg-slate-600"
-                  placeholder=" HomeAdderess"
+                  placeholder="آدرس"
                 />
                 <br />
                 <label className="ml-3 font-bold"> شماره :</label>
                 <Field
                   name="NationalCode"
                   className="border-2 w-[40%] h-[50px] rounded-xl mt-10  border-slate-600 dark:bg-slate-600"
-                  placeholder="NationalCode"
+                  placeholder="شماره"
                 />
                 <div className=" w-[40%] h-[50px] rounded-xl mt-10 mr-5   border-slate-300 dark:bg-slate-600">
                   <h2>جنسیت</h2>

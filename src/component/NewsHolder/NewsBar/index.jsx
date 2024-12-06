@@ -9,7 +9,7 @@ const index = ({setSearchQuery}) => {
   };
 
   return (
-    <div className="  flex justify-center flex-wrap">
+    <div className="flex justify-center flex-wrap">
       <div>
         <div className="breadcrumbs text-sm mt-10">
           <ul>
@@ -28,7 +28,7 @@ const index = ({setSearchQuery}) => {
         {" "}
       </h1>
 
-      <div className="navbar bg-base-100 w-[90%] dark:bg-orange-500">
+      <div className="navbar bg-base-100 w-[90%] dark:bg-slate-950 max-sm:w-[80%]">
         <label className="input input-bordered flex items-center gap-2 mr-10">
           <input
             type="text"
@@ -51,13 +51,13 @@ const index = ({setSearchQuery}) => {
         </label>
 
         <div className="flex-1"></div>
-        <div className="flex-none">
+        <div className="flex-none max-sm:hidden">
           <ul className="menu menu-horizontal px-1">
             <li>
               <a className="text-[24px] font-sans"> آرشیو مقالات کد دات</a>
             </li>
             <li>
-              {/* <details>
+              <details>
                 <summary>دسته بندی</summary>
                 <ul className="bg-base-100 rounded-t-none p-7  dark:bg-orange-500">
                   <li>
@@ -67,7 +67,7 @@ const index = ({setSearchQuery}) => {
                     <a>قدیمی</a>
                   </li>
                 </ul>
-              </details> */}
+              </details>
             </li>
           </ul>
         </div>
